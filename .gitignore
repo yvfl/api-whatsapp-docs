@@ -48,3 +48,6 @@ coverage/
 
 # Old project structure (removed)
 whatsapp-docs-mcp/
+
+# Generated index file
+url-index.json

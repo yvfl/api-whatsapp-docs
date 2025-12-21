@@ -138,3 +138,4 @@ it('deve encontrar documento sobre áudio', async () => {
 - **Atualizar mocks**: Se estrutura de dados mudar, atualize os mocks nos testes
 - **Revisar asserções**: Se testes começarem a falhar após atualizações, revise se estão testando comportamento ou conteúdo
 - **Adicionar casos edge**: Quando encontrar bugs, adicione testes que reproduzem o problema
+

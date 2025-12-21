@@ -228,3 +228,4 @@ describe('getPrompt - casos de erro', () => {
     await expect(getPrompt('nonexistent_prompt', {})).rejects.toThrow();
   });
 });
+

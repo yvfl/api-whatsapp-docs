@@ -389,3 +389,4 @@ describe('calculateRelevance com expansão de termos', () => {
     expect(relevance).toBeGreaterThan(0);
   });
 });
+

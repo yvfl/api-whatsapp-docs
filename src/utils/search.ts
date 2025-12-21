@@ -563,3 +563,4 @@ export function calculateRelevance(content: string, query: string, filePath?: st
   return Math.min(100, score);
 }
 
+

@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/catalogs/sell-products-and-services -->
-<!-- Scraped: 2025-12-20T17:43:39.089Z -->
+<!-- Scraped: 2025-12-21T14:42:47.315Z -->
 
 # Vender produtos e serviços
 

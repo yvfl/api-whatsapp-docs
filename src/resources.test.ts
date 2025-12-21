@@ -132,3 +132,4 @@ describe('readResource', () => {
     await expect(readResource(uri)).rejects.toThrow('Failed to read resource');
   });
 });
+

@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/messaging-limits/upcoming-changes -->
-<!-- Scraped: 2025-12-20T17:27:59.788Z -->
+<!-- Scraped: 2025-12-21T14:44:16.116Z -->
 
 ## Esta página não está disponível no momento
 
