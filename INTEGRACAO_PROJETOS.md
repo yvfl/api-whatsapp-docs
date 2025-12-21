@@ -4,7 +4,33 @@ Este guia mostra como integrar esta documentação em seus projetos para uso com
 
 ## 🎯 Opções de Integração
 
-### Opção 1: Link Simbólico (Recomendado) ⭐
+### Opção 0: Workspace Multi-root (MAIS RECOMENDADO) ⭐⭐⭐
+
+**Vantagens:**
+- ✅ Não precisa copiar arquivos
+- ✅ Não precisa criar links
+- ✅ Não adiciona nada ao projeto
+- ✅ Atualizações automáticas
+- ✅ Funciona para toda a equipe
+
+**Como fazer:**
+
+1. Abra seu projeto no Cursor normalmente
+2. File > Add Folder to Workspace...
+3. Selecione a pasta `docs-waba`
+4. Use: `@docs-waba/docs/AGENTS.md`
+
+**Ou use o script:**
+```bash
+cd /caminho/do/seu/projeto
+/caminho/para/docs-waba/scripts/create_workspace.sh .
+```
+
+Depois abra o arquivo `.code-workspace` gerado no Cursor.
+
+**Veja guia completo**: [USAR_SEM_COPIAR.md](./USAR_SEM_COPIAR.md)
+
+### Opção 1: Link Simbólico
 
 **Vantagens:**
 - Não duplica arquivos
