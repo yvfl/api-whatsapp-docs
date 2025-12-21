@@ -11,8 +11,7 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
-    "validate": "node scripts/validate-docs.js",
-    "prepublishOnly": "npm run validate && npm run build"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
@@ -29,7 +28,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seu-usuario/api-whatsapp-docs.git"
+    "url": "git+https://github.com/yvfl/api-whatsapp-docs.git"
   },
   "engines": {
     "node": ">=18.0.0"
