@@ -29,6 +29,7 @@ vi.mock('./utils/fileLoader', async () => {
     findAllMarkdownFiles: vi.fn(() => [
       '/mock/docs/mensagens/tipos_de_mensagens/audio_messages.md',
       '/mock/docs/mensagens/tipos_de_mensagens/text_messages.md',
+      '/mock/docs/mensagens/recursos_adicionais/typing_indicators.md',
       '/mock/docs/referencia/midias/media_upload_api.md',
     ]),
     loadMarkdownFile: vi.fn((filePath: string) => {
@@ -36,10 +37,22 @@ vi.mock('./utils/fileLoader', async () => {
         '/mock/docs/mensagens/tipos_de_mensagens/audio_messages.md': `# Mensagens de áudio
 
 É possível usar a API para enviar mensagens de voz e mensagens de áudio básicas.
-As mensagens de áudio são suportadas pela API.`,
+As mensagens de áudio são suportadas pela API.
+As mensagens de áudio podem ser gravadas e enviadas.
+A gravação de áudio é suportada pela API.
+You can record audio messages using the API for recording purposes.`,
         '/mock/docs/mensagens/tipos_de_mensagens/text_messages.md': `# Mensagens de texto
 
 Os SMS contêm somente um corpo de texto e uma prévia de link opcional.`,
+        '/mock/docs/mensagens/recursos_adicionais/typing_indicators.md': `# Indicadores de digitação
+
+Quando você recebe um webhook de mensagens indicando uma mensagem recebida, é possível usar o valor message.id para marcar a mensagem como lida e exibir um indicador de digitação. Dessa forma, o usuário do WhatsApp saberá que você está escrevendo uma resposta.
+
+O indicador de digitação será removido depois que você responder ou após 25 segundos.
+
+"typing_indicator": {
+  "type": "text"
+}`,
         '/mock/docs/referencia/midias/media_upload_api.md': `# API de Upload de Mídia
 
 Envie arquivos de mídia (imagens, vídeos, áudio, documentos) para o WhatsApp.`,
@@ -52,6 +65,41 @@ Envie arquivos de mídia (imagens, vídeos, áudio, documentos) para o WhatsApp.
 describe('searchDocumentation', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    // Garante que os mocks padrão estão ativos
+    vi.mocked(getDocsPath).mockReturnValue('/mock/docs');
+    vi.mocked(findAllMarkdownFiles).mockReturnValue([
+      '/mock/docs/mensagens/tipos_de_mensagens/audio_messages.md',
+      '/mock/docs/mensagens/tipos_de_mensagens/text_messages.md',
+      '/mock/docs/mensagens/recursos_adicionais/typing_indicators.md',
+      '/mock/docs/referencia/midias/media_upload_api.md',
+    ]);
+    vi.mocked(loadMarkdownFile).mockImplementation((filePath: string) => {
+      const mockFiles: Record<string, string> = {
+        '/mock/docs/mensagens/tipos_de_mensagens/audio_messages.md': `# Mensagens de áudio
+
+É possível usar a API para enviar mensagens de voz e mensagens de áudio básicas.
+As mensagens de áudio são suportadas pela API.
+As mensagens de áudio podem ser gravadas e enviadas.
+A gravação de áudio é suportada pela API.
+You can record audio messages using the API for recording purposes.`,
+        '/mock/docs/mensagens/tipos_de_mensagens/text_messages.md': `# Mensagens de texto
+
+Os SMS contêm somente um corpo de texto e uma prévia de link opcional.`,
+        '/mock/docs/mensagens/recursos_adicionais/typing_indicators.md': `# Indicadores de digitação
+
+Quando você recebe um webhook de mensagens indicando uma mensagem recebida, é possível usar o valor message.id para marcar a mensagem como lida e exibir um indicador de digitação. Dessa forma, o usuário do WhatsApp saberá que você está escrevendo uma resposta.
+
+O indicador de digitação será removido depois que você responder ou após 25 segundos.
+
+"typing_indicator": {
+  "type": "text"
+}`,
+        '/mock/docs/referencia/midias/media_upload_api.md': `# API de Upload de Mídia
+
+Envie arquivos de mídia (imagens, vídeos, áudio, documentos) para o WhatsApp.`,
+      };
+      return mockFiles[filePath] || '';
+    });
   });
 
   it('deve encontrar documentos por nome de arquivo', async () => {
@@ -146,6 +194,77 @@ describe('searchDocumentation', () => {
     expect(firstResult.excerpt).toBeDefined();
     expect(firstResult.path).toBeDefined();
     expect(firstResult.relevance).toBeGreaterThanOrEqual(0);
+  });
+
+  it('deve encontrar typing_indicators.md com diferentes queries', async () => {
+    // Testa diferentes variações da query que o usuário pode usar
+    const queries = [
+      'typing indicator',
+      'typing indicator digitando',
+      'indicador digitação',
+      'indicadores de digitação',
+      'typing_indicators',
+    ];
+
+    for (const query of queries) {
+      const results = await searchDocumentation(query);
+      
+      // Deve encontrar pelo menos um resultado relacionado a typing indicators
+      const typingResult = results.find(r => 
+        r.path.includes('typing_indicators') || 
+        r.path.includes('typing-indicators') ||
+        (r.title.toLowerCase().includes('indicador') && r.title.toLowerCase().includes('digitação'))
+      );
+      
+      expect(typingResult).toBeDefined();
+      if (!typingResult) {
+        throw new Error(`Query "${query}" não encontrou typing_indicators.md. Resultados: ${results.map(r => r.path).join(', ')}`);
+      }
+      expect(typingResult.relevance).toBeGreaterThan(0);
+    }
+  });
+
+  it('deve encontrar typing_indicators.md mesmo com query em inglês e português misturado', async () => {
+    const results = await searchDocumentation('typing indicator digitando');
+    
+    expect(results.length).toBeGreaterThan(0);
+    const typingResult = results.find(r => 
+      r.path.includes('typing_indicators') ||
+      (r.title.toLowerCase().includes('indicador') && r.title.toLowerCase().includes('digitação'))
+    );
+    
+    // Deve encontrar o arquivo typing_indicators.md
+    expect(typingResult).toBeDefined();
+    if (typingResult) {
+      expect(typingResult.path).toContain('typing_indicators');
+      expect(typingResult.relevance).toBeGreaterThan(0);
+    }
+  });
+
+  it('deve encontrar documentos sobre gravação de áudio', async () => {
+    const queries = [
+      'gravação audio',
+      'gravação de áudio',
+      'recording audio',
+      'audio recording',
+    ];
+
+    for (const query of queries) {
+      const results = await searchDocumentation(query);
+      
+      // Deve encontrar pelo menos um resultado relacionado a áudio
+      const audioResult = results.find(r => 
+        r.path.includes('audio') || 
+        r.title.toLowerCase().includes('áudio') ||
+        r.title.toLowerCase().includes('audio')
+      );
+      
+      expect(audioResult).toBeDefined();
+      if (!audioResult) {
+        throw new Error(`Query "${query}" não encontrou documentos de áudio. Resultados: ${results.map(r => r.path).join(', ')}`);
+      }
+      expect(audioResult.relevance).toBeGreaterThan(0);
+    }
   });
 });
 

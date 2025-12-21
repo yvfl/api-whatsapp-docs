@@ -60,6 +60,63 @@ describe('searchInContent', () => {
     // Palavras com menos de 3 caracteres são ignoradas
     expect(searchInContent(content, 'de')).toBe(true); // Mas ainda busca a string completa
   });
+
+  it('deve encontrar typing indicator no arquivo typing_indicators.md', () => {
+    const content = `# Indicadores de digitação
+
+Quando você recebe um webhook de mensagens indicando uma mensagem recebida, é possível usar o valor message.id para marcar a mensagem como lida e exibir um indicador de digitação. Dessa forma, o usuário do WhatsApp saberá que você está escrevendo uma resposta.
+
+O indicador de digitação será removido depois que você responder ou após 25 segundos.
+
+"typing_indicator": {
+  "type": "text"
+}`;
+    const filePath = 'mensagens/recursos_adicionais/typing_indicators.md';
+    
+    // Deve encontrar com diferentes variações da query
+    expect(searchInContent(content, 'typing indicator', filePath)).toBe(true);
+    expect(searchInContent(content, 'typing indicator digitando', filePath)).toBe(true);
+    expect(searchInContent(content, 'typing indicator digitando typing', filePath)).toBe(true);
+    expect(searchInContent(content, 'indicador digitação', filePath)).toBe(true);
+    expect(searchInContent(content, 'indicadores de digitação', filePath)).toBe(true);
+    expect(searchInContent(content, 'typing_indicators', filePath)).toBe(true);
+  });
+
+  it('deve encontrar typing indicator mesmo quando algumas palavras não estão no conteúdo', () => {
+    const content = `# Indicadores de digitação
+É possível usar o valor message.id para marcar a mensagem como lida e exibir um indicador de digitação.`;
+    const filePath = 'mensagens/recursos_adicionais/typing_indicators.md';
+    
+    // Mesmo que a query tenha palavras extras, deve encontrar porque o arquivo tem "typing_indicators" no nome
+    expect(searchInContent(content, 'typing indicator digitando typing', filePath)).toBe(true);
+  });
+
+  it('deve considerar underscores e hífens como separadores', () => {
+    const content = 'Conteúdo sobre indicadores de digitação';
+    const filePath1 = 'mensagens/recursos_adicionais/typing_indicators.md';
+    const filePath2 = 'mensagens/recursos_adicionais/typing-indicators.md';
+    
+    expect(searchInContent(content, 'typing indicator', filePath1)).toBe(true);
+    expect(searchInContent(content, 'typing indicator', filePath2)).toBe(true);
+    expect(searchInContent(content, 'typing_indicators', filePath1)).toBe(true);
+  });
+
+  it('deve encontrar gravação de áudio', () => {
+    const content = `# Mensagens de áudio
+É possível usar a API para enviar mensagens de voz e mensagens de áudio básicas.
+As mensagens de áudio podem ser gravadas e enviadas.
+Você pode gravar áudio usando a API para recording messages.
+A gravação de áudio é suportada pela API.`;
+    const filePath = 'mensagens/tipos_de_mensagens/audio.md';
+    
+    // "audio" está no conteúdo e no nome do arquivo, então deve encontrar
+    expect(searchInContent(content, 'audio gravadas', filePath)).toBe(true);
+    expect(searchInContent(content, 'audio gravar', filePath)).toBe(true);
+    expect(searchInContent(content, 'recording audio', filePath)).toBe(true);
+    expect(searchInContent(content, 'audio recording', filePath)).toBe(true);
+    // "gravação" e "audio" estão ambos no conteúdo
+    expect(searchInContent(content, 'gravação audio', filePath)).toBe(true);
+  });
 });
 
 describe('calculateRelevance', () => {
@@ -97,6 +154,32 @@ As mensagens de áudio são suportadas pela API.`;
     const content = 'áudio áudio áudio áudio';
     const relevance = calculateRelevance(content, 'audio', 'test.md');
     expect(relevance).toBeGreaterThan(0);
+  });
+
+  it('deve dar alta relevância para typing indicator no arquivo correto', () => {
+    const content = `# Indicadores de digitação
+É possível usar o valor message.id para marcar a mensagem como lida e exibir um indicador de digitação.
+"typing_indicator": {
+  "type": "text"
+}`;
+    const filePath = 'mensagens/recursos_adicionais/typing_indicators.md';
+    
+    const relevance1 = calculateRelevance(content, 'typing indicator', filePath);
+    const relevance2 = calculateRelevance(content, 'typing indicator digitando', filePath);
+    const relevance3 = calculateRelevance(content, 'indicador digitação', filePath);
+    
+    // Todas devem ter relevância alta porque o arquivo corresponde
+    expect(relevance1).toBeGreaterThan(30);
+    expect(relevance2).toBeGreaterThan(20);
+    expect(relevance3).toBeGreaterThan(20);
+  });
+
+  it('deve considerar palavras com underscore no cálculo de relevância', () => {
+    const content = 'Conteúdo sobre typing indicators';
+    const filePath = 'mensagens/recursos_adicionais/typing_indicators.md';
+    
+    const relevance = calculateRelevance(content, 'typing indicator', filePath);
+    expect(relevance).toBeGreaterThan(30); // Deve dar bônus por estar no nome do arquivo
   });
 });
 
