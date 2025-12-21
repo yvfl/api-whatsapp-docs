@@ -37,7 +37,7 @@ A documentação está organizada em seções principais:
 
 **Método 1: Adicionar arquivos diretamente**
 ```
-@docs/AGENTS.md                    # Índice principal
+@AGENTS.md                         # Índice principal
 @docs/QUICK_REFERENCE.md          # Referência rápida
 ```
 
@@ -49,7 +49,7 @@ npm run serve
 ./scripts/serve_docs.sh
 
 # 2. No Cursor > Docs > Add Doc
-# URL: http://localhost:8000/docs/AGENTS.md
+# URL: http://localhost:8000/AGENTS.md
 ```
 
 ### Para Sistemas de IA
@@ -64,7 +64,7 @@ Cada pasta contém um arquivo `AGENTS.md` que serve como índice e guia para:
 ### Navegação Manual
 
 - Cada pasta tem um `AGENTS.md` com links para documentos e subpastas
-- Use o [AGENTS.md raiz](./docs/AGENTS.md) como ponto de entrada principal
+- Use o [AGENTS.md](./AGENTS.md) como ponto de entrada principal
 
 ### Para Sistemas de IA
 

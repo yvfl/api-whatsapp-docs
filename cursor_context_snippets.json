@@ -138,7 +138,7 @@
         "QUICK_REFERENCE.md",
         "referencia/AGENTS.md"
       ],
-      "cursor_command": "@docs/AGENTS.md @docs/QUICK_REFERENCE.md @docs/referencia/AGENTS.md"
+      "cursor_command": "@AGENTS.md @docs/QUICK_REFERENCE.md @docs/referencia/AGENTS.md"
     },
     "error_handling": {
       "description": "Contexto para tratamento de erros",
@@ -151,7 +151,7 @@
     }
   },
   "usage": {
-    "basic": "@docs/AGENTS.md",
+    "basic": "@AGENTS.md",
     "quick_reference": "@docs/QUICK_REFERENCE.md",
     "full_context": "@docs/"
   }
