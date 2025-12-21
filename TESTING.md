@@ -139,3 +139,4 @@ it('deve encontrar documento sobre áudio', async () => {
 - **Revisar asserções**: Se testes começarem a falhar após atualizações, revise se estão testando comportamento ou conteúdo
 - **Adicionar casos edge**: Quando encontrar bugs, adicione testes que reproduzem o problema
 
+

@@ -390,3 +390,4 @@ describe('calculateRelevance com expansão de termos', () => {
   });
 });
 
+

@@ -110,3 +110,4 @@ index.ts
 A mudança de arquitetura não removeu nenhum arquivo, apenas mudou a forma como os arquivos markdown são encontrados (de download dinâmico para leitura do filesystem local).
 
 
+

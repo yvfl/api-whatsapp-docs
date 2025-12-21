@@ -48,3 +48,4 @@ USER nodejs
 # Entry point
 ENTRYPOINT ["node", "dist/index.js"]
 
+

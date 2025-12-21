@@ -86,11 +86,19 @@ export function extractUpdatedDate(content: string): Date | null {
  * Baseado na estrutura de pastas existente
  */
 export function urlToFilePath(url: string): string {
-  // Extrair o path da URL após /whatsapp/
-  const match = url.match(/\/whatsapp\/(.+)$/);
-  if (!match) return "unknown.md";
-
-  const pathPart = match[1];
+  // Detectar padrão /docs/whatsapp/* ou /documentation/business-messaging/whatsapp/*
+  let pathPart: string;
+  
+  // Padrão /docs/whatsapp/*
+  const docsMatch = url.match(/\/docs\/whatsapp\/(.+)$/);
+  if (docsMatch) {
+    pathPart = docsMatch[1];
+  } else {
+    // Padrão /documentation/business-messaging/whatsapp/*
+    const docMatch = url.match(/\/whatsapp\/(.+)$/);
+    if (!docMatch) return "unknown.md";
+    pathPart = docMatch[1];
+  }
 
   // Mapear segmentos da URL para estrutura de pastas
   // Exemplo: /messages/text-messages -> mensagens/tipos_de_mensagens/text_messages.md
@@ -117,9 +125,21 @@ export function urlToFilePath(url: string): string {
     analytics: "insights",
     ctwa: "anuncios_com_clique_para_whatsapp",
     "get-started": "comecar",
+    // Mapeamentos para /docs/whatsapp/*
+    flows: "flows",
+  };
+
+  // Mapeamento específico para subpastas de flows
+  const flowsSubMap: Record<string, string> = {
+    reference: "referencia",
+    guides: "guias",
+    "getting-started": "comecar",
+    changelogs: "changelog",
+    playground: "playground",
   };
 
   const mappedSegments: string[] = [];
+  const isFlowsPath = url.includes("/docs/whatsapp/");
 
   for (let i = 0; i < segments.length; i++) {
     const segment = segments[i];
@@ -127,6 +147,12 @@ export function urlToFilePath(url: string): string {
     // Se for o primeiro segmento e tiver mapeamento, usar
     if (i === 0 && segmentMap[segment]) {
       mappedSegments.push(segmentMap[segment]);
+      continue;
+    }
+
+    // Mapeamentos específicos para subpastas de flows
+    if (isFlowsPath && i === 1 && flowsSubMap[segment]) {
+      mappedSegments.push(flowsSubMap[segment]);
       continue;
     }
 
@@ -265,3 +291,4 @@ export async function extractUpdatedDateFromPage(
     return null;
   }
 }
+

@@ -101,3 +101,4 @@ if (isDirectExecution && !process.env._BUILD_INDEX_IMPORTED_) {
 
 export { buildIndex };
 export type { UrlIndex };
+

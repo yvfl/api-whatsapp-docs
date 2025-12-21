@@ -49,8 +49,35 @@ function createTurndownService(): TurndownService {
 /**
  * Extrai conteúdo HTML da página
  */
-async function scrapePageContent(page: Page): Promise<string> {
-  const htmlContent = await page.evaluate(() => {
+async function scrapePageContent(page: Page, url: string): Promise<string> {
+  const isFlowsPage = url.includes("/docs/whatsapp/flows");
+  
+  const htmlContent = await page.evaluate((isFlows: boolean) => {
+    // Para páginas /flows, usar seletor específico
+    if (isFlows) {
+      const mainSpan = document.querySelector('span[data-click-area="main"]');
+      if (mainSpan) {
+        const clone = mainSpan.cloneNode(true) as HTMLElement;
+        
+        const selectorsToRemove = [
+          "script",
+          "style",
+          "noscript",
+          "[type='application/json']",
+          "header",
+          "footer",
+          "nav",
+        ];
+
+        selectorsToRemove.forEach((selector) => {
+          clone.querySelectorAll(selector).forEach((el) => el.remove());
+        });
+
+        return clone.innerHTML;
+      }
+    }
+
+    // Para outras páginas, usar lógica padrão
     const navElements = document.getElementsByTagName("nav");
 
     if (navElements.length >= 2) {
@@ -79,6 +106,7 @@ async function scrapePageContent(page: Page): Promise<string> {
     }
 
     const fallbackSelectors = [
+      'span[data-click-area="main"]', // Fallback para flows
       '[role="main"] article',
       '[role="main"]',
       "article",
@@ -97,7 +125,7 @@ async function scrapePageContent(page: Page): Promise<string> {
     }
 
     return document.body.innerHTML;
-  });
+  }, isFlowsPage);
 
   return htmlContent;
 }
@@ -110,15 +138,31 @@ async function scrapeUrl(
   url: string,
   turndownService: TurndownService
 ): Promise<{ markdown: string; updatedDate: Date | null }> {
+  const isFlowsPage = url.includes("/docs/whatsapp/flows");
+  
   await page.goto(url, {
     waitUntil: "networkidle2",
     timeout: 30000,
   });
 
-  await page.waitForSelector("nav", { timeout: 10000 });
+  // Para páginas /flows, usar seletor específico
+  if (isFlowsPage) {
+    try {
+      await page.waitForSelector('span[data-click-area="main"]', { timeout: 10000 });
+    } catch (e) {
+      await page.waitForSelector("body", { timeout: 10000 });
+    }
+  } else {
+    try {
+      await page.waitForSelector("nav", { timeout: 10000 });
+    } catch (e) {
+      await page.waitForSelector("body", { timeout: 10000 });
+    }
+  }
+  
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-  const htmlContent = await scrapePageContent(page);
+  const htmlContent = await scrapePageContent(page, url);
   const updatedDate = await extractUpdatedDateFromPage(page);
 
   let markdown = turndownService.turndown(htmlContent);
