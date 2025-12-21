@@ -8,13 +8,40 @@ export interface SearchResult {
 }
 
 /**
- * Busca textual simples em conteúdo markdown
+ * Normaliza texto removendo acentos e convertendo para minúsculas
  */
-export function searchInContent(content: string, query: string): boolean {
-  const normalizedQuery = query.toLowerCase().trim();
-  const normalizedContent = content.toLowerCase();
+export function normalizeText(text: string): string {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+/**
+ * Busca textual melhorada em conteúdo markdown
+ * Busca por palavras individuais e considera nome do arquivo
+ */
+export function searchInContent(content: string, query: string, filePath?: string): boolean {
+  const normalizedQuery = normalizeText(query.trim());
+  const normalizedContent = normalizeText(content);
+  const normalizedFilePath = filePath ? normalizeText(filePath) : '';
   
-  return normalizedContent.includes(normalizedQuery);
+  // Busca no nome do arquivo primeiro (maior relevância)
+  if (filePath && normalizedFilePath.includes(normalizedQuery)) {
+    return true;
+  }
+  
+  // Divide query em palavras (filtra palavras muito curtas)
+  const queryWords = normalizedQuery.split(/\s+/).filter(w => w.length > 2);
+  
+  // Se query tem múltiplas palavras, busca por todas (AND)
+  if (queryWords.length > 1) {
+    return queryWords.every(word => 
+      normalizedContent.includes(word) || 
+      normalizedFilePath.includes(word)
+    );
+  }
+  
+  // Busca simples para query de uma palavra
+  return normalizedContent.includes(normalizedQuery) || 
+         normalizedFilePath.includes(normalizedQuery);
 }
 
 /**
@@ -66,11 +93,20 @@ export function extractDescription(content: string, maxLength: number = 200): st
  * Extrai trecho relevante ao redor da busca
  */
 export function extractExcerpt(content: string, query: string, contextLines: number = 3): string {
-  const normalizedQuery = query.toLowerCase();
+  const normalizedQuery = normalizeText(query);
   const lines = content.split('\n');
   
+  // Busca por palavras individuais também
+  const queryWords = normalizedQuery.split(/\s+/).filter(w => w.length > 2);
+  
   for (let i = 0; i < lines.length; i++) {
-    if (lines[i].toLowerCase().includes(normalizedQuery)) {
+    const normalizedLine = normalizeText(lines[i]);
+    
+    // Verifica se linha contém query completa ou todas as palavras
+    const matchesQuery = normalizedLine.includes(normalizedQuery) ||
+      (queryWords.length > 0 && queryWords.every(word => normalizedLine.includes(word)));
+    
+    if (matchesQuery) {
       const start = Math.max(0, i - contextLines);
       const end = Math.min(lines.length, i + contextLines + 1);
       const excerpt = lines.slice(start, end).join('\n');
@@ -88,21 +124,54 @@ export function extractExcerpt(content: string, query: string, contextLines: num
 }
 
 /**
- * Calcula relevância simples baseada em ocorrências
+ * Calcula relevância melhorada baseada em ocorrências, nome do arquivo e título
  */
-export function calculateRelevance(content: string, query: string): number {
-  const normalizedQuery = query.toLowerCase();
-  const normalizedContent = content.toLowerCase();
+export function calculateRelevance(content: string, query: string, filePath?: string): number {
+  const normalizedQuery = normalizeText(query);
+  const normalizedContent = normalizeText(content);
+  const normalizedFilePath = filePath ? normalizeText(filePath) : '';
+  const queryWords = normalizedQuery.split(/\s+/).filter(w => w.length > 2);
   
-  const words = normalizedQuery.split(/\s+/).filter(w => w.length > 2);
   let score = 0;
   
-  words.forEach(word => {
-    const occurrences = (normalizedContent.match(new RegExp(word, 'g')) || []).length;
-    score += occurrences;
+  // Bônus alto se encontra no nome do arquivo
+  if (filePath && normalizedFilePath.includes(normalizedQuery)) {
+    score += 50;
+  }
+  
+  // Bônus se encontra no título (primeiro H1)
+  const h1Match = content.match(/^#\s+(.+)$/m);
+  if (h1Match) {
+    const normalizedTitle = normalizeText(h1Match[1]);
+    if (normalizedTitle.includes(normalizedQuery)) {
+      score += 30;
+    }
+    // Bônus adicional se cada palavra da query está no título
+    queryWords.forEach(word => {
+      if (normalizedTitle.includes(word)) {
+        score += 5;
+      }
+    });
+  }
+  
+  // Conta ocorrências de cada palavra no conteúdo
+  queryWords.forEach(word => {
+    const contentMatches = (normalizedContent.match(new RegExp(word, 'g')) || []).length;
+    score += contentMatches * 2;
+    
+    // Bônus adicional se palavra está no nome do arquivo
+    if (normalizedFilePath.includes(word)) {
+      score += 10;
+    }
   });
   
-  // Normaliza para 0-1
-  return Math.min(1, score / 10);
+  // Se query de uma palavra, também conta ocorrências da query completa
+  if (queryWords.length === 0 && normalizedQuery.length > 2) {
+    const fullMatches = (normalizedContent.match(new RegExp(normalizedQuery, 'g')) || []).length;
+    score += fullMatches * 2;
+  }
+  
+  // Normaliza para 0-100
+  return Math.min(100, score);
 }
 

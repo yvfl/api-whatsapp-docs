@@ -43,5 +43,8 @@ coverage/
 *.tgz
 *.tar.gz
 
+# npm tokens (NUNCA commitar!)
+.npmrc
+
 # Old project structure (removed)
 whatsapp-docs-mcp/

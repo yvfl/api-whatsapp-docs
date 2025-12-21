@@ -14,7 +14,7 @@ import * as fs from 'fs';
 /**
  * Busca textual em todos os documentos
  */
-async function searchDocumentation(query: string, section?: string): Promise<SearchResult[]> {
+export async function searchDocumentation(query: string, section?: string): Promise<SearchResult[]> {
   const docsPath = getDocsPath();
   let markdownFiles = findAllMarkdownFiles(docsPath);
 
@@ -29,12 +29,13 @@ async function searchDocumentation(query: string, section?: string): Promise<Sea
 
   for (const filePath of markdownFiles) {
     const content = loadMarkdownFile(filePath);
+    const relativePath = path.relative(docsPath, filePath).replace(/\\/g, '/');
     
-    if (searchInContent(content, query)) {
-      const relativePath = path.relative(docsPath, filePath).replace(/\\/g, '/');
+    // Passa filePath para busca melhorada
+    if (searchInContent(content, query, relativePath)) {
       const title = extractTitle(content, relativePath);
       const excerpt = extractExcerpt(content, query);
-      const relevance = calculateRelevance(content, query);
+      const relevance = calculateRelevance(content, query, relativePath);
 
       results.push({
         path: relativePath,
@@ -54,7 +55,7 @@ async function searchDocumentation(query: string, section?: string): Promise<Sea
 /**
  * Obtém documento por caminho
  */
-async function getDocumentByPath(docPath: string): Promise<string> {
+export async function getDocumentByPath(docPath: string): Promise<string> {
   const docsPath = getDocsPath();
   const fullPath = path.join(docsPath, docPath);
 
@@ -69,7 +70,7 @@ async function getDocumentByPath(docPath: string): Promise<string> {
 /**
  * Lista seções da documentação
  */
-async function listDocumentationSections(filterSection?: string): Promise<{
+export async function listDocumentationSections(filterSection?: string): Promise<{
   sections: Array<{ name: string; path: string; documentCount: number }>;
 }> {
   const docsPath = getDocsPath();
@@ -101,7 +102,7 @@ async function listDocumentationSections(filterSection?: string): Promise<{
 /**
  * Busca referência de endpoint
  */
-async function getEndpointReference(endpoint: string): Promise<string> {
+export async function getEndpointReference(endpoint: string): Promise<string> {
   const docsPath = getDocsPath();
   const referencePath = path.join(docsPath, 'referencia');
   
@@ -133,7 +134,7 @@ async function getEndpointReference(endpoint: string): Promise<string> {
 /**
  * Busca informações sobre código de erro
  */
-async function getErrorCodeInfo(errorCode: number): Promise<{
+export async function getErrorCodeInfo(errorCode: number): Promise<{
   code: number;
   message: string;
   description: string;
@@ -171,7 +172,7 @@ async function getErrorCodeInfo(errorCode: number): Promise<{
 /**
  * Obtém referência rápida para operação comum
  */
-async function getQuickReference(operation: string): Promise<string> {
+export async function getQuickReference(operation: string): Promise<string> {
   const docsPath = getDocsPath();
   const quickRefPath = path.join(docsPath, 'QUICK_REFERENCE.md');
 
