@@ -5,6 +5,26 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { registerResourceHandlers } from './resources.js';
 import { registerToolHandlers } from './tools.js';
 import { registerPromptHandlers } from './prompts.js';
+import * as path from 'path';
+import * as fs from 'fs';
+
+// Importa versão do package.json dinamicamente
+function loadPackageJson(): { name: string; version: string; description: string } {
+  // Tenta encontrar o package.json subindo na hierarquia de diretórios
+  let currentDir = __dirname;
+  for (let i = 0; i < 5; i++) {
+    const packagePath = path.join(currentDir, 'package.json');
+    if (fs.existsSync(packagePath)) {
+      const content = fs.readFileSync(packagePath, 'utf-8');
+      return JSON.parse(content);
+    }
+    currentDir = path.dirname(currentDir);
+  }
+  // Fallback
+  return { name: 'whatsapp-docs-mcp', version: '1.0.0', description: 'WhatsApp Docs MCP' };
+}
+
+export const packageJson = loadPackageJson();
 
 // Configuração de logging baseada em variáveis de ambiente
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
@@ -34,8 +54,8 @@ async function main() {
   // Cria servidor MCP
   const server = new Server(
     {
-      name: 'whatsapp-docs-mcp',
-      version: '1.0.0',
+      name: packageJson.name,
+      version: packageJson.version,
     },
     {
       capabilities: {

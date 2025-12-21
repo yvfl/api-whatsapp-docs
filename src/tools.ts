@@ -11,6 +11,24 @@ import {
 import * as path from 'path';
 import * as fs from 'fs';
 
+// Importa informações do package.json dinamicamente
+function loadPackageJson(): { name: string; version: string; description: string } {
+  // Tenta encontrar o package.json subindo na hierarquia de diretórios
+  let currentDir = __dirname;
+  for (let i = 0; i < 5; i++) {
+    const packagePath = path.join(currentDir, 'package.json');
+    if (fs.existsSync(packagePath)) {
+      const content = fs.readFileSync(packagePath, 'utf-8');
+      return JSON.parse(content);
+    }
+    currentDir = path.dirname(currentDir);
+  }
+  // Fallback
+  return { name: 'whatsapp-docs-mcp', version: '1.0.0', description: 'WhatsApp Docs MCP' };
+}
+
+const packageJson = loadPackageJson();
+
 /**
  * Busca textual em todos os documentos
  */
@@ -204,6 +222,38 @@ export async function getQuickReference(operation: string): Promise<string> {
 }
 
 /**
+ * Retorna informações sobre o MCP server
+ */
+export async function getMcpInfo(): Promise<{
+  name: string;
+  version: string;
+  description: string;
+  docsCount: number;
+  sections: string[];
+}> {
+  const docsPath = getDocsPath();
+  const markdownFiles = findAllMarkdownFiles(docsPath);
+  
+  // Coleta seções únicas
+  const sectionsSet = new Set<string>();
+  markdownFiles.forEach((filePath) => {
+    const relativePath = path.relative(docsPath, filePath).replace(/\\/g, '/');
+    const parts = relativePath.split('/');
+    if (parts.length > 1) {
+      sectionsSet.add(parts[0]);
+    }
+  });
+  
+  return {
+    name: packageJson.name,
+    version: packageJson.version,
+    description: packageJson.description,
+    docsCount: markdownFiles.length,
+    sections: Array.from(sectionsSet).sort(),
+  };
+}
+
+/**
  * Registra handlers de ferramentas no servidor MCP
  */
 export function registerToolHandlers(server: Server): void {
@@ -298,6 +348,14 @@ export function registerToolHandlers(server: Server): void {
             required: ['operation'],
           },
         },
+        {
+          name: 'get_mcp_info',
+          description: 'Retorna informações sobre o MCP server (versão, nome, quantidade de docs, seções disponíveis)',
+          inputSchema: {
+            type: 'object',
+            properties: {},
+          },
+        },
       ],
     };
   });
@@ -382,6 +440,18 @@ export function registerToolHandlers(server: Server): void {
               {
                 type: 'text',
                 text: quickRef,
+              },
+            ],
+          };
+        }
+
+        case 'get_mcp_info': {
+          const mcpInfo = await getMcpInfo();
+          return {
+            content: [
+              {
+                type: 'text',
+                text: JSON.stringify(mcpInfo, null, 2),
               },
             ],
           };

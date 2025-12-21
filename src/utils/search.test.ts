@@ -5,6 +5,9 @@ import {
   calculateRelevance,
   extractTitle,
   extractExcerpt,
+  stemWord,
+  expandQueryTerms,
+  SYNONYMS,
 } from './search';
 
 describe('normalizeText', () => {
@@ -233,5 +236,156 @@ Linha 5`;
     const contentWithoutMatch = 'Linha 1\nLinha 2\nLinha 3';
     const excerpt = extractExcerpt(contentWithoutMatch, 'xyz');
     expect(excerpt.length).toBeGreaterThan(0);
+  });
+});
+
+describe('stemWord', () => {
+  it('deve retornar palavra original', () => {
+    const stems = stemWord('audio');
+    expect(stems).toContain('audio');
+  });
+
+  it('deve fazer stemming de gerúndio português (-ando)', () => {
+    const stems = stemWord('digitando');
+    expect(stems).toContain('digitando');
+    expect(stems).toContain('digit');
+    expect(stems).toContain('digitar');
+  });
+
+  it('deve fazer stemming de gerúndio português (-endo)', () => {
+    const stems = stemWord('escrevendo');
+    expect(stems).toContain('escrevendo');
+    expect(stems).toContain('escrev');
+    expect(stems).toContain('escrever');
+  });
+
+  it('deve fazer stemming de gerúndio inglês (-ing)', () => {
+    const stems = stemWord('typing');
+    expect(stems).toContain('typing');
+    expect(stems).toContain('typ');
+    expect(stems).toContain('type');
+  });
+
+  it('deve fazer stemming de substantivos (-cao/-ção)', () => {
+    const stems = stemWord('digitacao');
+    expect(stems).toContain('digitacao');
+    expect(stems).toContain('digita');
+  });
+
+  it('deve fazer stemming de plural inglês', () => {
+    const stems = stemWord('messages');
+    expect(stems).toContain('messages');
+    expect(stems).toContain('message');
+  });
+
+  it('deve fazer stemming de plural inglês (-ies)', () => {
+    const stems = stemWord('categories');
+    expect(stems).toContain('categories');
+    expect(stems).toContain('category');
+  });
+
+  it('não deve alterar palavras curtas', () => {
+    const stems = stemWord('msg');
+    expect(stems).toEqual(['msg']);
+  });
+});
+
+describe('expandQueryTerms', () => {
+  it('deve expandir termo único', () => {
+    const expanded = expandQueryTerms(['typing']);
+    expect(expanded.has('typing')).toBe(true);
+    expect(expanded.has('digitacao')).toBe(true); // sinônimo
+    expect(expanded.has('digitando')).toBe(true); // sinônimo
+  });
+
+  it('deve expandir múltiplos termos', () => {
+    const expanded = expandQueryTerms(['typing', 'indicator']);
+    expect(expanded.has('typing')).toBe(true);
+    expect(expanded.has('digitacao')).toBe(true);
+    expect(expanded.has('indicator')).toBe(true);
+    expect(expanded.has('indicador')).toBe(true);
+  });
+
+  it('deve incluir stems e sinônimos dos stems', () => {
+    const expanded = expandQueryTerms(['digitando']);
+    expect(expanded.has('digitando')).toBe(true);
+    expect(expanded.has('digitar')).toBe(true); // stem
+    expect(expanded.has('typing')).toBe(true); // sinônimo
+  });
+});
+
+describe('SYNONYMS', () => {
+  it('deve ter sinônimos para typing/digitação', () => {
+    expect(SYNONYMS['typing']).toContain('digitacao');
+    expect(SYNONYMS['digitacao']).toContain('typing');
+  });
+
+  it('deve ter sinônimos para message/mensagem', () => {
+    expect(SYNONYMS['message']).toContain('mensagem');
+    expect(SYNONYMS['mensagem']).toContain('message');
+  });
+
+  it('deve ter sinônimos para indicator/indicador', () => {
+    expect(SYNONYMS['indicator']).toContain('indicador');
+    expect(SYNONYMS['indicador']).toContain('indicator');
+  });
+});
+
+describe('searchInContent com expansão de termos', () => {
+  it('deve encontrar via sinônimo (typing -> digitação)', () => {
+    const content = 'Indicadores de digitação são úteis para UX.';
+    expect(searchInContent(content, 'typing')).toBe(true);
+  });
+
+  it('deve encontrar via sinônimo (digitação -> typing)', () => {
+    const content = 'Use typing indicators for better UX.';
+    expect(searchInContent(content, 'digitacao')).toBe(true);
+  });
+
+  it('deve remover duplicatas da query', () => {
+    const content = 'Indicadores de digitação';
+    const filePath = 'typing_indicators.md';
+    // "typing" aparece 2x na query, não deve afetar negativamente
+    expect(searchInContent(content, 'typing typing indicator', filePath)).toBe(true);
+  });
+
+  it('deve encontrar com query mista pt/en', () => {
+    const content = '# Indicadores de digitação\nUse typing indicators.';
+    const filePath = 'typing_indicators.md';
+    // Query mista: "typing" (en) + "indicador" (pt) + "digitando" (pt)
+    expect(searchInContent(content, 'typing indicador digitando', filePath)).toBe(true);
+  });
+
+  it('deve encontrar via stemming (gravando -> gravação)', () => {
+    const content = 'A gravação de áudio é suportada.';
+    const filePath = 'audio.md';
+    expect(searchInContent(content, 'gravando audio', filePath)).toBe(true);
+  });
+
+  it('deve encontrar via stemming (messages -> message)', () => {
+    const content = 'Send a message to the user.';
+    expect(searchInContent(content, 'messages')).toBe(true);
+  });
+
+  it('deve encontrar recording via sinônimo de gravação', () => {
+    const content = 'Recording audio is supported.';
+    expect(searchInContent(content, 'gravacao')).toBe(true);
+  });
+});
+
+describe('calculateRelevance com expansão de termos', () => {
+  it('deve dar relevância alta para match via sinônimo no arquivo', () => {
+    const content = 'Indicadores de digitação';
+    const filePath = 'typing_indicators.md';
+    // "digitacao" é sinônimo de "typing" que está no nome do arquivo
+    const relevance = calculateRelevance(content, 'digitacao indicador', filePath);
+    expect(relevance).toBeGreaterThan(20);
+  });
+
+  it('deve dar relevância para sinônimos no conteúdo', () => {
+    const content = 'Use typing indicators for better user experience.';
+    // "digitacao" é sinônimo de "typing" que está no conteúdo
+    const relevance = calculateRelevance(content, 'digitacao', 'test.md');
+    expect(relevance).toBeGreaterThan(0);
   });
 });
