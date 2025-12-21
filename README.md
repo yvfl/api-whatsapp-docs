@@ -21,6 +21,22 @@ A documentação está organizada em seções principais:
 2. **Primeira Mensagem**: Siga o guia em [Mensagens > Visão Geral](./docs/mensagens/visao_geral/)
 3. **Configurar Webhooks**: [Webhooks > Visão Geral](./docs/webhooks/visao_geral/)
 
+### Para Usar com Cursor AI 🤖
+
+**⚡ Início Rápido**: Veja [INICIO_RAPIDO.md](./INICIO_RAPIDO.md)
+
+**📖 Guias Completos**:
+- [Passo a Passo Detalhado](./PASSO_A_PASSO_CURSOR.md) - Como usar no Cursor
+- [Guia de Contexto](./CURSOR_CONTEXT_GUIDE.md) - Guia completo de uso
+- [Integração em Projetos](./INTEGRACAO_PROJETOS.md) - Como integrar em outros projetos
+- [Snippets Prontos](./CURSOR_SNIPPETS.md) - Comandos prontos para copiar
+
+**Uso Básico no Cursor:**
+```
+@docs/AGENTS.md                    # Índice principal
+@docs/QUICK_REFERENCE.md          # Referência rápida
+```
+
 ### Para Sistemas de IA
 
 Cada pasta contém um arquivo `AGENTS.md` que serve como índice e guia para:

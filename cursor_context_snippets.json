@@ -1,0 +1,158 @@
+{
+  "project": "WhatsApp Business API Documentation",
+  "base_path": "docs",
+  "agents_files": [
+    "AGENTS.md",
+    "insights/AGENTS.md",
+    "mensagens_de_marketing/AGENTS.md",
+    "ligacoes/AGENTS.md",
+    "grupos/AGENTS.md",
+    "pagamentos/AGENTS.md",
+    "modelos/AGENTS.md",
+    "mensagens/AGENTS.md",
+    "ativos_da_conta/AGENTS.md",
+    "suporte/AGENTS.md",
+    "catalogos/AGENTS.md",
+    "visao_geral/AGENTS.md",
+    "parceiros/AGENTS.md",
+    "referencia/AGENTS.md",
+    "dados_privacidade_e_politica/AGENTS.md",
+    "webhooks/AGENTS.md",
+    "comecar/AGENTS.md",
+    "recado/AGENTS.md",
+    "anuncios_com_clique_para_whatsapp/AGENTS.md",
+    "recado/precos/AGENTS.md",
+    "recado/sobre_a_plataforma/AGENTS.md",
+    "webhooks/visao_geral/AGENTS.md",
+    "webhooks/referencia/AGENTS.md",
+    "webhooks/referencia/messages/AGENTS.md",
+    "webhooks/referencia/outros_webhooks/AGENTS.md",
+    "referencia/perfil_do_whatsapp_business/AGENTS.md",
+    "referencia/solucao_do_whatsapp_business/AGENTS.md",
+    "referencia/conta_do_whatsapp_business/AGENTS.md",
+    "referencia/intencao_de_migracao_da_conta_do_whatsapp_business/AGENTS.md",
+    "referencia/business/AGENTS.md",
+    "referencia/numero_da_conta_do_whatsapp/AGENTS.md",
+    "referencia/usuario/AGENTS.md",
+    "referencia/midias/AGENTS.md",
+    "referencia/inscricao/AGENTS.md",
+    "referencia/webhooks/AGENTS.md",
+    "referencia/bot_do_whatsapp_business/AGENTS.md",
+    "referencia/grupo/AGENTS.md",
+    "referencia/telefone_pre_verificado_do_whatsapp_business/AGENTS.md",
+    "referencia/historico_de_mensagens/AGENTS.md",
+    "referencia/telefone_do_whatsapp_business/AGENTS.md",
+    "parceiros/gerenciamento/AGENTS.md",
+    "parceiros/integracao_de_clientes/AGENTS.md",
+    "parceiros/seja_um_parceiro/AGENTS.md",
+    "parceiros/analise_do_app/AGENTS.md",
+    "parceiros/visao_geral/AGENTS.md",
+    "parceiros/integracao_de_clientes/outras_opcoes_de_integracao/AGENTS.md",
+    "parceiros/integracao_de_clientes/cadastro_incorporado/AGENTS.md",
+    "parceiros/integracao_de_clientes/cadastro_incorporado/versions/AGENTS.md",
+    "parceiros/gerenciamento/suporte_ao_parceiro/AGENTS.md",
+    "parceiros/gerenciamento/gerenciar_ativos_do_cliente/AGENTS.md",
+    "parceiros/gerenciamento/gerenciar_ativos_do_cliente/numeros_de_telefone/AGENTS.md",
+    "ativos_da_conta/telefones_comerciais/AGENTS.md",
+    "ativos_da_conta/outros_ativos/AGENTS.md",
+    "mensagens/recursos_adicionais/AGENTS.md",
+    "mensagens/tipos_de_mensagens/AGENTS.md",
+    "mensagens/limites_de_mensagens/AGENTS.md",
+    "mensagens/visao_geral/AGENTS.md",
+    "modelos/modelos_de_marketing/AGENTS.md",
+    "modelos/modelos_de_utilidade/AGENTS.md",
+    "modelos/gerenciamento_de_modelos/AGENTS.md",
+    "modelos/visao_geral/AGENTS.md",
+    "modelos/modelos_de_autenticacao/AGENTS.md",
+    "pagamentos/pagamentos_no_brasil/AGENTS.md",
+    "pagamentos/pagamentos_na_india/AGENTS.md",
+    "pagamentos/pagamentos_na_india/upi_intent/AGENTS.md",
+    "mensagens_de_marketing/implementacao/AGENTS.md",
+    "mensagens_de_marketing/visao_geral/AGENTS.md",
+    "mensagens_de_marketing/recursos/AGENTS.md"
+  ],
+  "key_documents": {
+    "getting_started": [
+      "comecar/get_started.md",
+      "recado/sobre_a_plataforma/access_tokens.md",
+      "recado/sobre_a_plataforma/permissions.md"
+    ],
+    "messages": [
+      "mensagens/AGENTS.md",
+      "mensagens/visao_geral/send_messages.md",
+      "mensagens/tipos_de_mensagens/text_messages.md",
+      "mensagens/tipos_de_mensagens/image_messages.md",
+      "mensagens/tipos_de_mensagens/template_messages.md"
+    ],
+    "webhooks": [
+      "webhooks/AGENTS.md",
+      "webhooks/visao_geral/overview.md",
+      "webhooks/referencia/messages/"
+    ],
+    "templates": [
+      "modelos/AGENTS.md",
+      "modelos/gerenciamento_de_modelos/template_management.md"
+    ],
+    "api_reference": [
+      "referencia/AGENTS.md",
+      "referencia/telefone_do_whatsapp_business/message_api.md"
+    ],
+    "support": [
+      "suporte/error_codes.md",
+      "suporte/AGENTS.md"
+    ]
+  },
+  "snippets": {
+    "send_messages": {
+      "description": "Contexto para desenvolver funcionalidade de envio de mensagens",
+      "files": [
+        "QUICK_REFERENCE.md",
+        "mensagens/AGENTS.md",
+        "mensagens/tipos_de_mensagens/text_messages.md",
+        "mensagens/tipos_de_mensagens/image_messages.md"
+      ],
+      "cursor_command": "@docs/QUICK_REFERENCE.md @docs/mensagens/AGENTS.md @docs/mensagens/tipos_de_mensagens/"
+    },
+    "webhooks": {
+      "description": "Contexto para implementar sistema de webhooks",
+      "files": [
+        "webhooks/AGENTS.md",
+        "webhooks/visao_geral/overview.md",
+        "webhooks/referencia/messages/"
+      ],
+      "cursor_command": "@docs/webhooks/AGENTS.md @docs/webhooks/visao_geral/ @docs/webhooks/referencia/"
+    },
+    "templates": {
+      "description": "Contexto para criar e gerenciar templates",
+      "files": [
+        "modelos/AGENTS.md",
+        "modelos/gerenciamento_de_modelos/template_management.md",
+        "mensagens/tipos_de_mensagens/template_messages.md"
+      ],
+      "cursor_command": "@docs/modelos/AGENTS.md @docs/modelos/gerenciamento_de_modelos/ @docs/mensagens/tipos_de_mensagens/template_messages.md"
+    },
+    "full_api": {
+      "description": "Contexto completo da API",
+      "files": [
+        "AGENTS.md",
+        "QUICK_REFERENCE.md",
+        "referencia/AGENTS.md"
+      ],
+      "cursor_command": "@docs/AGENTS.md @docs/QUICK_REFERENCE.md @docs/referencia/AGENTS.md"
+    },
+    "error_handling": {
+      "description": "Contexto para tratamento de erros",
+      "files": [
+        "suporte/error_codes.md",
+        "suporte/AGENTS.md",
+        "mensagens/limites_de_mensagens/messaging_limits.md"
+      ],
+      "cursor_command": "@docs/suporte/error_codes.md @docs/suporte/AGENTS.md @docs/mensagens/limites_de_mensagens/"
+    }
+  },
+  "usage": {
+    "basic": "@docs/AGENTS.md",
+    "quick_reference": "@docs/QUICK_REFERENCE.md",
+    "full_context": "@docs/"
+  }
+}
