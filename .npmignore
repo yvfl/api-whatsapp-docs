@@ -1,0 +1,41 @@
+# Source files (only dist/ is needed)
+src/
+*.ts
+!*.d.ts
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Git
+.git/
+.github/
+
+# Build artifacts
+*.tsbuildinfo
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.cursorrules
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+*.test.ts
+*.spec.ts
+coverage/
+.nyc_output/
+
+# Documentation (keep only what's needed)
+# cursor_context_snippets.json and docs_url.json are not needed in npm package
+
+# Old project structure
+whatsapp-docs-mcp/
+

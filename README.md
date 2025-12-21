@@ -1,3 +1,43 @@
+# whatsapp-docs-mcp
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/whatsapp-docs-mcp.svg)](https://www.npmjs.com/package/whatsapp-docs-mcp)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
+
+A Model Context Protocol (MCP) server that provides AI assistants with comprehensive access to WhatsApp Business API documentation. Deploy in minutes to give Claude and other AI assistants deep knowledge about WhatsApp Business API endpoints, webhooks, templates, and more.
+
+## 🚀 Quick Start (MCP Server)
+
+### Via npx (Easiest!)
+
+```bash
+npx whatsapp-docs-mcp
+```
+
+Add to Claude Desktop config (`~/Library/Application Support/Claude/claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "whatsapp-docs-mcp": {
+      "command": "npx",
+      "args": ["whatsapp-docs-mcp"],
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true"
+      }
+    }
+  }
+}
+```
+
+**Restart Claude Desktop** - That's it! 🎉
+
+See [MCP_SETUP.md](./MCP_SETUP.md) for detailed setup instructions.
+
+---
+
 # Documentação WhatsApp Business API
 
 Esta é a documentação completa da WhatsApp Business API, organizada de forma hierárquica para facilitar o desenvolvimento e o uso por sistemas de IA.
