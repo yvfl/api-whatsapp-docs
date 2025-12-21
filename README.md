@@ -29,12 +29,27 @@ A documentação está organizada em seções principais:
 - [Passo a Passo Detalhado](./PASSO_A_PASSO_CURSOR.md) - Como usar no Cursor
 - [Guia de Contexto](./CURSOR_CONTEXT_GUIDE.md) - Guia completo de uso
 - [Integração em Projetos](./INTEGRACAO_PROJETOS.md) - Como integrar em outros projetos
+- [Usar SEM Copiar Arquivos](./USAR_SEM_COPIAR.md) - Workspace multi-root
+- [Usar com Feature "Docs"](./USAR_COM_DOCS_FEATURE.md) - Servir localmente via HTTP ⭐
 - [Snippets Prontos](./CURSOR_SNIPPETS.md) - Comandos prontos para copiar
 
 **Uso Básico no Cursor:**
+
+**Método 1: Adicionar arquivos diretamente**
 ```
 @docs/AGENTS.md                    # Índice principal
 @docs/QUICK_REFERENCE.md          # Referência rápida
+```
+
+**Método 2: Usar feature "Docs" do Cursor** (Recomendado para equipe)
+```bash
+# 1. Servir localmente
+npm run serve
+# ou
+./scripts/serve_docs.sh
+
+# 2. No Cursor > Docs > Add Doc
+# URL: http://localhost:8000/docs/AGENTS.md
 ```
 
 ### Para Sistemas de IA
