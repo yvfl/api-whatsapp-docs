@@ -57,23 +57,25 @@ describe('findAllMarkdownFiles', () => {
   it('deve encontrar todos os arquivos .md recursivamente', () => {
     const calls: string[] = [];
     
-    vi.mocked(fs.readdirSync).mockImplementation((dir: string) => {
-      calls.push(dir);
-      if (dir === '/docs') {
-        return ['file1.md', 'subdir', 'file2.md'] as any;
+    vi.mocked(fs.readdirSync).mockImplementation(((dir: fs.PathLike) => {
+      const dirStr = String(dir);
+      calls.push(dirStr);
+      if (dirStr === '/docs') {
+        return ['file1.md', 'subdir', 'file2.md'];
       }
-      if (dir === '/docs/subdir') {
-        return ['file3.md'] as any;
+      if (dirStr === '/docs/subdir') {
+        return ['file3.md'];
       }
-      return [] as any;
-    });
+      return [];
+    }) as any);
 
-    vi.mocked(fs.statSync).mockImplementation((filePath: string) => {
-      const isDir = filePath.includes('subdir') && !filePath.endsWith('.md');
+    vi.mocked(fs.statSync).mockImplementation(((filePath: fs.PathLike) => {
+      const filePathStr = String(filePath);
+      const isDir = filePathStr.includes('subdir') && !filePathStr.endsWith('.md');
       return {
         isDirectory: () => isDir,
-      } as any;
-    });
+      } as fs.Stats;
+    }) as any);
 
     const result = findAllMarkdownFiles('/docs');
     
@@ -84,10 +86,10 @@ describe('findAllMarkdownFiles', () => {
   });
 
   it('deve ignorar arquivos que não são .md', () => {
-    vi.mocked(fs.readdirSync).mockReturnValue(['file1.md', 'file2.txt', 'file3.js']);
+    vi.mocked(fs.readdirSync).mockReturnValue(['file1.md', 'file2.txt', 'file3.js'] as any);
     vi.mocked(fs.statSync).mockReturnValue({
       isDirectory: () => false,
-    } as any);
+    } as fs.Stats);
 
     const result = findAllMarkdownFiles('/docs');
     
@@ -97,7 +99,7 @@ describe('findAllMarkdownFiles', () => {
   });
 
   it('deve retornar array vazio para diretório vazio', () => {
-    vi.mocked(fs.readdirSync).mockReturnValue([]);
+    vi.mocked(fs.readdirSync).mockReturnValue([] as any);
     
     const result = findAllMarkdownFiles('/empty');
     
@@ -128,10 +130,10 @@ describe('getDocsPath', () => {
 
   it('deve validar que docs/ contém arquivos markdown', () => {
     vi.mocked(fs.existsSync).mockReturnValue(true);
-    vi.mocked(fs.readdirSync).mockReturnValue(['file.txt', 'subdir']); // Sem .md
+    vi.mocked(fs.readdirSync).mockReturnValue(['file.txt', 'subdir'] as any); // Sem .md
     vi.mocked(fs.statSync).mockReturnValue({
       isDirectory: () => true,
-    } as any);
+    } as fs.Stats);
 
     const result = getDocsPath();
     
