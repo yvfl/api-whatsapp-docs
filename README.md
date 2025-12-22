@@ -1,20 +1,19 @@
-# whatsapp-docs-mcp
+# WhatsApp Business API Docs - MCP Server
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://img.shields.io/npm/v/whatsapp-docs-mcp.svg)](https://www.npmjs.com/package/whatsapp-docs-mcp)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
+Servidor MCP (Model Context Protocol) que fornece acesso completo à documentação da WhatsApp Business API para assistentes de IA como Claude e Cursor.
 
-A Model Context Protocol (MCP) server that provides AI assistants with comprehensive access to WhatsApp Business API documentation. Deploy in minutes to give Claude and other AI assistants deep knowledge about WhatsApp Business API endpoints, webhooks, templates, and more.
+## 🚀 Como Usar
 
-## 🚀 Quick Start (MCP Server)
+### Configuração MCP (Cursor e Claude Desktop)
 
-### Via npx (Easiest!)
+Tanto o **Cursor** quanto o **Claude Desktop** usam o mesmo método de configuração MCP:
 
-```bash
-npx whatsapp-docs-mcp
-```
+1. **Edite o arquivo de configuração MCP:**
+   - **Cursor**: `~/.cursor/mcp.json` ou via Settings > Features > MCP
+   - **Claude Desktop (macOS)**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+   - **Claude Desktop (Windows)**: `%APPDATA%\Claude\claude_desktop_config.json`
 
-Add to Claude Desktop config (`~/Library/Application Support/Claude/claude_desktop_config.json`):
+2. **Adicione a configuração do servidor MCP:**
 
 ```json
 {
@@ -24,158 +23,67 @@ Add to Claude Desktop config (`~/Library/Application Support/Claude/claude_deskt
       "args": ["whatsapp-docs-mcp"],
       "env": {
         "MCP_MODE": "stdio",
-        "LOG_LEVEL": "error",
-        "DISABLE_CONSOLE_OUTPUT": "true"
+        "LOG_LEVEL": "error"
       }
     }
   }
 }
 ```
 
-**Restart Claude Desktop** - That's it! 🎉
+3. **Reinicie o Cursor ou Claude Desktop**
 
-See [MCP_SETUP.md](./MCP_SETUP.md) for detailed setup instructions.
+4. **Pronto!** Agora você pode usar as ferramentas MCP diretamente:
+   - `search_documentation` - Buscar na documentação
+   - `get_document_by_path` - Obter documento específico
+   - `get_endpoint_reference` - Referência de endpoint
+   - `get_error_code_info` - Informações sobre códigos de erro
+   - `get_quick_reference` - Referência rápida de operações comuns
 
----
+### Método Alternativo: Usar arquivos diretamente
 
-# Documentação WhatsApp Business API
+Se preferir não usar MCP, você pode adicionar os arquivos diretamente no chat:
 
-Esta é a documentação completa da WhatsApp Business API, organizada de forma hierárquica para facilitar o desenvolvimento e o uso por sistemas de IA.
-
-## 📚 Estrutura da Documentação
-
-A documentação está organizada em seções principais:
-
-- **[Visão Geral](./docs/visao_geral/)** - Introdução à plataforma
-- **[Começar](./docs/comecar/)** - Guias rápidos para iniciar
-- **[Mensagens](./docs/mensagens/)** - Envio e recebimento de mensagens
-- **[Webhooks](./docs/webhooks/)** - Notificações e eventos
-- **[Referência da API](./docs/referencia/)** - Documentação completa de endpoints
-- **[Suporte](./docs/suporte/)** - Resolução de problemas e códigos de erro
-
-## 🚀 Início Rápido
-
-### Para Desenvolvedores
-
-1. **Configuração Inicial**: Veja [Começar](./docs/comecar/get_started.md)
-2. **Primeira Mensagem**: Siga o guia em [Mensagens > Visão Geral](./docs/mensagens/visao_geral/)
-3. **Configurar Webhooks**: [Webhooks > Visão Geral](./docs/webhooks/visao_geral/)
-
-### Para Usar com Cursor AI 🤖
-
-**⚡ Início Rápido**: Veja [INICIO_RAPIDO.md](./INICIO_RAPIDO.md)
-
-**📖 Guias Completos**:
-- [Passo a Passo Detalhado](./PASSO_A_PASSO_CURSOR.md) - Como usar no Cursor
-- [Guia de Contexto](./CURSOR_CONTEXT_GUIDE.md) - Guia completo de uso
-- [Integração em Projetos](./INTEGRACAO_PROJETOS.md) - Como integrar em outros projetos
-- [Usar SEM Copiar Arquivos](./USAR_SEM_COPIAR.md) - Workspace multi-root
-- [Usar com Feature "Docs"](./USAR_COM_DOCS_FEATURE.md) - Servir localmente via HTTP ⭐
-- [Snippets Prontos](./CURSOR_SNIPPETS.md) - Comandos prontos para copiar
-
-**Uso Básico no Cursor:**
-
-**Método 1: Adicionar arquivos diretamente**
 ```
-@AGENTS.md                         # Índice principal
-@docs/QUICK_REFERENCE.md          # Referência rápida
+@AGENTS.md                         # Índice principal da documentação
+@docs/QUICK_REFERENCE.md          # Referência rápida de endpoints
 ```
 
-**Método 2: Usar feature "Docs" do Cursor** (Recomendado para equipe)
+## 📚 Documentação
+
+A documentação está organizada em `docs/` com os seguintes arquivos principais:
+
+- **`AGENTS.md`** - Índice principal com links para todas as seções
+- **`docs/QUICK_REFERENCE.md`** - Referência rápida de endpoints e exemplos
+- **`docs/comecar/get_started.md`** - Guia para começar
+- **`docs/mensagens/`** - Documentação sobre mensagens
+- **`docs/webhooks/`** - Webhooks e notificações
+- **`docs/referencia/`** - Referência completa da API
+- **`docs/suporte/`** - Códigos de erro e troubleshooting
+
+Cada pasta contém um arquivo `AGENTS.md` com índice e links para facilitar a navegação.
+
+## 🔧 Instalação Local (Desenvolvimento)
+
 ```bash
-# 1. Servir localmente
-npm run serve
-# ou
-./scripts/serve_docs.sh
+# Clone o repositório
+git clone https://github.com/yvfl/api-whatsapp-docs.git
+cd api-whatsapp-docs
 
-# 2. No Cursor > Docs > Add Doc
-# URL: http://localhost:8000/AGENTS.md
+# Instale as dependências
+npm install
+
+# Compile o projeto
+npm run build
+
+# Execute os testes
+npm test
 ```
 
-### Para Sistemas de IA
 
-Cada pasta contém um arquivo `AGENTS.md` que serve como índice e guia para:
-- Entender o conteúdo da seção
-- Encontrar documentos relacionados
-- Navegar pela estrutura hierárquica
+## 🤝 Contribuindo
 
-## 📖 Como Usar Esta Documentação
+Contribuições são bem-vindas! Por favor, abra uma issue ou pull request.
 
-### Navegação Manual
+## 📄 Licença
 
-- Cada pasta tem um `AGENTS.md` com links para documentos e subpastas
-- Use o [AGENTS.md](./AGENTS.md) como ponto de entrada principal
-
-### Para Sistemas de IA
-
-- Os arquivos `AGENTS.md` fornecem contexto e estrutura
-- Documentos markdown contêm a documentação completa
-- Links relativos facilitam a navegação programática
-
-## 🔑 Endpoints Principais
-
-### Enviar Mensagens
-- **Texto**: `POST /v23.0/{phone-number-id}/messages`
-- **Mídia**: Ver [Mensagens > Tipos de Mensagens](./docs/mensagens/tipos_de_mensagens/)
-- **Templates**: Ver [Modelos](./docs/modelos/)
-
-### Webhooks
-- **Configurar**: Ver [Webhooks > Visão Geral](./docs/webhooks/visao_geral/)
-- **Referência**: Ver [Webhooks > Referência](./docs/webhooks/referencia/)
-
-### Gerenciamento
-- **Contas**: Ver [Referência > Conta do WhatsApp Business](./docs/referencia/conta_do_whatsapp_business/)
-- **Números**: Ver [Referência > Telefone do WhatsApp Business](./docs/referencia/telefone_do_whatsapp_business/)
-
-## 📝 Casos de Uso Comuns
-
-1. **Enviar Mensagem de Texto**: [Mensagens > Texto](./docs/mensagens/tipos_de_mensagens/text_messages.md)
-2. **Enviar Imagem**: [Mensagens > Imagem](./docs/mensagens/tipos_de_mensagens/image_messages.md)
-3. **Configurar Webhook**: [Webhooks > Visão Geral](./docs/webhooks/visao_geral/overview.md)
-4. **Criar Template**: [Modelos > Gerenciamento](./docs/modelos/gerenciamento_de_modelos/)
-5. **Tratar Erros**: [Suporte > Códigos de Erro](./docs/suporte/error_codes.md)
-
-## 🛠️ Recursos Adicionais
-
-- **Autenticação**: [Recado > Sobre a Plataforma > Tokens de Acesso](./docs/recado/sobre_a_plataforma/access_tokens.md)
-- **Permissões**: [Recado > Sobre a Plataforma > Permissões](./docs/recado/sobre_a_plataforma/permissions.md)
-- **Preços**: [Recado > Preços](./docs/recado/precos/)
-
-## 📊 Estrutura de Arquivos
-
-```
-docs/
-├── AGENTS.md                    # Índice principal
-├── visao_geral/                 # Visão geral da plataforma
-├── comecar/                     # Guias de início rápido
-├── mensagens/                   # Documentação de mensagens
-│   ├── tipos_de_mensagens/     # Tipos específicos
-│   ├── limites_de_mensagens/   # Limites e restrições
-│   └── recursos_adicionais/     # Recursos extras
-├── webhooks/                    # Webhooks e notificações
-├── referencia/                  # Referência completa da API
-└── suporte/                     # Suporte e troubleshooting
-```
-
-## 🤖 Para Desenvolvimento com IA
-
-Esta documentação foi estruturada para facilitar o uso por sistemas de IA:
-
-1. **Estrutura Hierárquica**: Organização clara por funcionalidade
-2. **AGENTS.md**: Cada pasta tem um índice com contexto
-3. **Links Relativos**: Facilita navegação programática
-4. **Documentação Completa**: Todos os endpoints e recursos documentados
-
-## 📞 Suporte
-
-- **Códigos de Erro**: [Suporte > Códigos de Erro](./docs/suporte/error_codes.md)
-- **Status da API**: [Suporte > API Status Page](./docs/suporte/api_status_page.md)
-- **Testes**: [Suporte > Load Testing](./docs/suporte/load_testing.md)
-
-## 🔄 Atualizações
-
-Esta documentação é atualizada regularmente. Verifique a data de atualização em cada documento.
-
----
-
-**Última atualização**: Dezembro 2025
+MIT License
