@@ -1,19 +1,19 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/display-names -->
-<!-- Scraped: 2025-12-20T17:24:37.432Z -->
+<!-- Scraped: 2026-01-24T00:31:18.155Z -->
 
 # Nomes de exibição
 
-Updated: 31 de out de 2025
+Updated: 12 de dez de 2025
 
-É preciso fornecer um nome de exibição ao [registrar](#registering-business-phone-numbers) um número de telefone comercial. O nome de exibição aparece no perfil do WhatsApp do seu número de telefone comercial:
+É preciso fornecer um nome de exibição ao [registrar](/documentation/business-messaging/whatsapp/business-phone-numbers/registration) um número de telefone comercial. O nome de exibição aparece no perfil do WhatsApp do seu número de telefone comercial:
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/507127951_698062976515521_2852142619234157074_n.png?_nc_cat=110&ccb=1-7&_nc_sid=e280be&_nc_ohc=pbMww2NEdikQ7kNvwFBkSWG&_nc_oc=AdmldPwNHM8XO8PWwN_Ig9eRq0mQaHt17-BlGny3M1ZgxwUKEtxeToxI6rfs_J0cYPk&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=VkFKTMDRA9mDsrYP-ywO-w&oh=00_AfmXJ_jCHPHm6MdM9OoYES4xyxRSiu1CjClUMZ-34qyKEw&oe=69610969)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/507127951_698062976515521_2852142619234157074_n.png?_nc_cat=110&ccb=1-7&_nc_sid=e280be&_nc_ohc=UBd6oRC6VJoQ7kNvwFf1_I-&_nc_oc=AdlpZ_h0E5ubUcOFuJDUk1h-g_UFYc2PhcKdeks8M0Bwpg16I1kZK8J86pVvchCIAFk&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=wUJqMrC9YoLOU6B8iqyZlA&oh=00_Afrz43N6wsavQJ8Z4X7O49zpNsvjGkvfGiU_3WhbN-CkyA&oe=698E4CE9)
 
 Esse nome também poderá aparecer no topo de **conversas individuais** e da **lista de conversas** se o número de telefone comercial for aprovado por meio da [verificação de nome de exibição](#display-name-verification). Observe que, se um usuário editar seu nome de perfil no cliente do WhatsApp, o nome definido por ele será exibido em vez do seu.
 
 ## Diretrizes para nomes de exibição
 
-Consulte nosso artigo [Diretrizes para nomes de exibição na Plataforma do WhatsApp Business](https://www.facebook.com/business/help/757569725593362) da Central de Ajuda para saber mais sobre a nomenclatura.
+Consulte nosso artigo da Central de Ajuda [Diretrizes para nomes de exibição na Plataforma do WhatsApp Business](https://www.facebook.com/business/help/757569725593362) para saber mais sobre a nomenclatura.
 
 ## Verificação do nome de exibição
 
@@ -42,7 +42,7 @@ curl 'https://graph.facebook.com/v24.0/106540352242922?fields=verified_name%2Cna
 
 ### Exemplo de resposta
 
-Caso a solicitação seja bem-sucedida:
+Caso o pedido seja bem-sucedido:
 
 ```
 {  "verified_name": "Lucky Shrub",  "name_status": "APPROVED",  "id": "106540352242922"}
@@ -52,7 +52,7 @@ Caso a solicitação seja bem-sucedida:
 
 Para atualizar seu nome de exibição via Gerenciador do WhatsApp:
 
--   Acesse [Gerenciador do WhatsApp](https://business.facebook.com/latest/whatsapp_manager/) > **Ferramentas da conta** > **Números de telefone**.-   Selecione seu número de telefone comercial.-   Clique na aba **Perfil**.-   Na seção **Nome de exibição**, clique no botão **Editar** e complete o fluxo.
+-   Acesse [Gerenciador do WhatsApp](https://business.facebook.com/latest/whatsapp_manager/) > **Ferramentas da conta** > **Números de telefone**.-   Selecione o número de telefone da empresa.-   Clique na aba **Perfil**.-   Na seção **Nome de exibição**, clique no botão **Editar** e complete o fluxo.
 
 Após concluir o fluxo, seu nome de exibição passará pelo [processo de verificação](#display-name-verification) novamente.
 
@@ -71,7 +71,7 @@ curl -X POST 'https://graph.facebook.com/v24.0/106540352242922?new_display_name=
 
 ### Exemplo de resposta
 
-Caso a solicitação seja bem-sucedida:
+Caso o pedido seja bem-sucedido:
 
 ```
 {  "success": true}
@@ -87,7 +87,7 @@ curl 'https://graph.facebook.com/v23.0/106540352242922?fields=new_display_name,
 
 ### Exemplo de resposta
 
-Caso a solicitação seja bem-sucedida:
+Caso o pedido seja bem-sucedido:
 
 ```
 {  "new_display_name": "New Lucky Shrub",  "new_name_status": "PENDING_REVIEW",  "id": "106540352242922"}

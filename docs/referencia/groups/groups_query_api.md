@@ -1,0 +1,8 @@
+<!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/groups/groups-query-api -->
+<!-- Scraped: 2026-01-24T00:48:55.828Z -->
+
+## Esta página não está disponível no momento
+
+Isso pode ter ocorrido devido a um erro técnico que estamos trabalhando para corrigir. Tente recarregar esta página.
+
+Recarregar página

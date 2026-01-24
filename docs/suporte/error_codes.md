@@ -1,24 +1,23 @@
-
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/support/error-codes -->
-<!-- Scraped: 2025-12-20T18:06:06.064Z -->
+<!-- Scraped: 2026-01-24T01:01:03.002Z -->
 
 # Códigos de erro
 
-Updated: 14 de nov de 2025
+Updated: 12 de dez de 2025
 
-A API de Nuvem é desenvolvida na Graph API. Por isso, caso você não tenha familiaridade com o tratamento de respostas de erro da Graph API, consulte a documentação [Como solucionar erros](/docs/graph-api/guides/error-handling).
+A API de Nuvem é desenvolvida na Graph API. Caso não saiba como lidar com as respostas de erro da Graph API, consulte a documentação [Como solucionar erros da Graph API](/docs/graph-api/guides/error-handling).
 
 Em geral, recomendamos desenvolver a lógica de tratamento de erros do app em torno de valores `code` e propriedades da carga `details`. Essas propriedades e valores são um indicador mais confiável do erro subjacente.
 
-Os títulos de código, que não têm uma propriedade dedicada nas cargas de respostas de erro de API, são incluídos como parte do valor `message`. No entanto, não recomendamos que você dependa deles na lógica de tratamento de erros, pois eles podem estar obsoletos.
+Os títulos de código, que não têm uma propriedade dedicada nas cargas de respostas de erro de API, são incluídos como parte do valor `message`. No entanto, não recomendamos que você dependa deles na lógica de como lidar com erros, pois eles podem estar obsoletos.
 
 **Recebimento de erros síncronos e assíncronos**
 
 Os erros da API de Nuvem são retornados como resposta da Graph API de modo síncrono, via Webhook de forma assíncrona ou pelos dois métodos.
 
-Se você usar a API de Nuvem, recomendamos monitorar tanto a resposta da Graph API quanto o webhook `messages` para a solução de erros. Se tiver assinado o campo `messages` de webhooks, você receberá notificações dos tipos de erros assíncronos compatíveis quando eles ocorrerem.
+Ao trabalhar com a API de Nuvem, recomendamos monitorar tanto a resposta da Graph API quanto o webhook `messages` para a solução de erros. Se tiver assinado o campo `messages` do webhook, você receberá notificações dos tipos de erros assíncronos compatíveis quando eles ocorrerem.
 
-## Sintaxe e webhooks de resposta a erros
+## Webhooks de resposta a erros e sintaxe
 
 Os erros da API de Nuvem podem aparecer nos seguintes objetos de webhook:
 
@@ -54,7 +53,7 @@ Descrição
 
 Número inteiro
 
-[Código de erro](#error-codes). Recomendamos desenvolver o tratamento de erros do app em torno de códigos de erro em vez de subcódigos ou códigos de status da resposta HTTP.
+Código de erro. Recomendamos desenvolver o tratamento de erros do app em torno de códigos de erro em vez de subcódigos ou códigos de status da resposta HTTP.
 
 `details`
 
@@ -69,7 +68,7 @@ Número inteiro
 **Obsoleto. Não será retornado em respostas da versão 16.0 ou posteriores.**
 
   
-Subcódigo da Graph API. Nem todas as respostas incluirão um subcódigo. Por isso, recomendamos que você desenvolva a própria lógica de tratamento de erros em relação ao valor `code` e à propriedade `details`.
+Subcódigo da Graph API. Nem todas as respostas incluirão um subcódigo. Por isso, recomendamos que você desenvolva a própria lógica de como lidar com erros em relação ao valor `code` e à propriedade `details`.
 
 `fbtrace_id`
 
@@ -125,7 +124,7 @@ Não autorizado
 
 `3`
 
-Método de API
+Método da API
 
 Indica um problema que envolve recursos ou permissões.
 
@@ -205,7 +204,7 @@ A conta comercial está impedida de enviar mensagens a usuários neste país.
 
 A conta do WhatsApp Business está impedida de enviar mensagens para usuários em determinados países.
 
-Para ver quais são os países permitidos para o envio de mensagens na categoria da sua empresa, consulte a [Política de Mensagens do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fpolicy&h=AT03o8ghtUOBKFeLhsEPDVKLqquTCVwhiHp--fIddr2z5u2vBWXgcG8cGVk76j5md-hbpk5SPfA1fXdh_GAUFYg5N694atgMMctWSu6t_xppu969GClUC-wZhFBfpxHdJY8yH_3t3-jhujsI8HM7P-te9aM).
+Para ver quais são os países permitidos para o envio de mensagens na categoria da sua empresa, consulte a [Política de Mensagens do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fpolicy&h=AT325UD1Oe-Hxpwf5oHc75zEwF9aaU9TMd0RwcXT7e7ZPpNlcxPc_x7tDlxt6qD3bSwlPvwCOQbdIMcyOeRP1fj4OkWdMSn49puOHaa8H7qiAKMFJNVpksTJhDf9kjVPVljFjAbxXbqQiN8vCYKCi75Bed0).
 
 `403`
 
@@ -213,7 +212,7 @@ Proibido
 
 `131031`
 
-Conta bloqueada
+A conta foi bloqueada
 
 A conta do WhatsApp Business associada ao app foi restringida ou desabilitada por violar uma política da plataforma ou não foi possível verificar os dados incluídos no pedido em relação ao conjunto de dados na conta do WhatsApp Business (por exemplo, o pin de duas etapas incluído no pedido está incorreto).
 
@@ -232,37 +231,37 @@ Descrição
 
 Solução possível
 
-`2388040` – Limite de caracteres excedido
+`2388040` – limite de caracteres excedido
 
 Um campo do modelo excedeu o limite máximo de caracteres permitido.
 
 Verifique a mensagem de erro para ver detalhes específicos sobre o campo afetado e os limites de caracteres correspondentes.
 
-`2388047` – O formato do cabeçalho da mensagem está incorreto
+`2388047` – o formato do cabeçalho da mensagem está incorreto
 
 O cabeçalho da mensagem contém formatação inválida.
 
 Verifique a mensagem de erro para ver detalhes sobre a formatação válida.
 
-`2388072` – Formato do corpo da mensagem incorreto
+`2388072` – formato do corpo da mensagem incorreto
 
 O corpo da mensagem contém formatação inválida.
 
 Verifique a mensagem de erro para ver detalhes sobre a formatação válida.
 
-`2388073` – O formato do rodapé da mensagem está incorreto
+`2388073` – o formato do rodapé da mensagem está incorreto
 
 O rodapé da mensagem contém formatação inválida.
 
 Verifique a mensagem de erro para ver detalhes sobre a formatação válida.
 
-`2388293` – A proporção entre palavras e parâmetros excede o limite
+`2388293` – a proporção entre palavras e parâmetros excede o limite
 
 Esse modelo contém muitas variáveis para sua extensão. Reduza o número de variáveis ou aumente a extensão da mensagem.
 
 Verifique a mensagem de erro para ver detalhes sobre a formatação válida.
 
-`2388299` – Parâmetros iniciais ou finais não permitidos
+`2388299` – parâmetros iniciais ou finais não permitidos
 
 As variáveis não podem estar no início ou no fim do modelo.
 
@@ -276,9 +275,9 @@ Descrição
 
 Solução possível
 
-`2388019` – Limite de modelo de mensagem excedido
+`2388019` – limite de modelo de mensagem excedido
 
-Você excedeu o máximo de modelos de mensagem permitidos para esta conta comercial do WhatsApp.
+Você excedeu o máximo de modelos de mensagem permitidos para esta conta do WhatsApp Business.
 
 Uma conta do WhatsApp Business pode ter até 250 modelos de mensagem. Consulte [Limites de modelos](/documentation/business-messaging/whatsapp/templates/overview#template-limits).
 
@@ -290,87 +289,87 @@ Descrição
 
 Solução possível
 
-`2388001` – Confirme a propriedade do número de telefone em questão.
+`2388001` – confirme a propriedade do número de telefone em questão.
 
 Só é possível baixar o certificado depois da confirmação da propriedade do número de telefone que está sendo migrado.
 
 Para baixar o certificado e dar continuidade ao registro, [registre e verifique o número](/documentation/business-messaging/whatsapp/solution-providers/registering-phone-numbers).
 
-`2388001` – Verifique se a autenticação em duas etapas está desabilitada.
+`2388001` – verifique se a autenticação em duas etapas está desabilitada.
 
 A autenticação em duas etapas deve estar desabilitada para esse número de telefone.
 
 Nas configurações do Gerenciador de Negócios do WhatsApp, desative a [verificação em duas etapas](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#two-step-verification).
 
-`2388012` – O número já existe na sua lista de números de telefone.
+`2388012` – o número já existe na sua lista de números de telefone.
 
 O número de telefone que você está tentando migrar já está presente na sua conta do WhatsApp.
 
 Tente novamente com um número de telefone que ainda não esteja presente na sua conta do WhatsApp.
 
-`2388091`, `2388093` – O número de telefone não está qualificado para receber/verificar um código de registro porque não está sendo migrado.
+`2388091`, `2388093` – o número de telefone não está qualificado para receber/verificar um código de registro porque não está sendo migrado.
 
 As APIs de verificação de propriedade do telefone não estão disponíveis para esse caso de uso.
 
 [Registre e verifique o número](/documentation/business-messaging/whatsapp/solution-providers/registering-phone-numbers).
 
-`2388103` – Não é possível migrar o número de telefone.
+`2388103` – não é possível migrar o número de telefone.
 
 Os webhooks não foram configurados para a conta de destino do WhatsApp Business.
 
 [Assine webhooks para seu app](/documentation/business-messaging/whatsapp/webhooks/overview) na conta do WhatsApp Business de destino.
 
-`2388103` – Adicione esse número de telefone à sua conta do WhatsApp
+`2388103` – adicione esse número de telefone à sua conta do WhatsApp
 
 Esse número de telefone pode ser adicionado diretamente e não requer o uso de APIs de migração de telefone.
 
 [Registre e verifique o número](/documentation/business-messaging/whatsapp/solution-providers/registering-phone-numbers).
 
-`2388103` – O nome registrado deve estar presente e aprovado.
+`2388103` – o nome registrado deve estar presente e aprovado.
 
 O número de telefone comercial deve ter um nome de exibição aprovado (`name_status` é `APPROVED`) e não pode ter pedidos de alteração de nome de exibição pendentes.
 
 O [nome de exibição](/documentation/business-messaging/whatsapp/display-names) do seu número de telefone comercial precisa ser aprovado.
 
-`2388103` – A conta do WhatsApp em que o número de telefone está registrado não está configurada corretamente.
+`2388103` – a conta do WhatsApp em que o número de telefone está registrado não está configurada corretamente.
 
 A conta do WhatsApp Business de origem e a opção "enviar mensagem em nome de" devem ser aprovadas.
 
 A conta do WhatsApp Business pode estar usando o [modelo de propriedade "Em nome de", que agora está obsoleto](/documentation/business-messaging/whatsapp/solution-providers/obo-model-deprecation).
 
-Entrar em contato com o suporte.
+Entre em contato com o suporte.
 
-`2388103` – Sua conta do WhatsApp não tem uma conta de pagamento.
+`2388103` – sua conta do WhatsApp não tem uma conta de pagamento.
 
 Sua conta do WhatsApp deve ter uma linha de crédito ativa para que você possa enviar mensagens após a migração.
 
 [Configure uma linha de crédito](https://www.facebook.com/business/help/1684730811624773) e [compartilhe-a com o cliente empresarial](/documentation/business-messaging/whatsapp/solution-providers/share-and-revoke-credit-lines).
 
-`2388103` – Ocorreu um erro ao migrar o número de telefone.
+`2388103` – ocorreu um erro ao migrar o número de telefone.
 
 Ocorreu um erro ao migrar seu número de telefone.
 
 Tente novamente mais tarde. Se isso não funcionar, [entre em contato com o suporte](/documentation/business-messaging/whatsapp/support).
 
-`2388103` – Esse número de telefone pertence a uma conta diferente do Gerenciador de Negócios.
+`2388103` – esse número de telefone pertence a uma conta diferente do Gerenciador de Negócios.
 
 As contas do WhatsApp Business de origem e destino devem representar a mesma empresa.
 
 [Migre o número de telefone](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-phone-numbers-among-solution-partners-programmatically) para uma conta do WhatsApp Business que envia mensagens para a mesma empresa que a conta do WhatsApp Business de origem.
 
-`2388103` – Sua conta do WhatsApp deve ser aprovada
+`2388103` – sua conta do WhatsApp precisa ser aprovada
 
 Para que você possa migrar números de telefone, a conta do WhatsApp Business de destino precisa ser aprovada.
 
 Confira se a [verificação da empresa](https://www.facebook.com/business/help/2058515294227817) foi concluída e se o status de análise da conta do WhatsApp Business está aprovado.
 
-`2388103` – O pedido "Mensagens para" da sua conta do WhatsApp deve ser aprovado
+`2388103` – o pedido "Mensagens para" da sua conta do WhatsApp deve ser aprovado
 
 O cliente precisa aprovar o pedido "Mensagens para" da conta do WhatsApp Business de destino.
 
 Peça ao cliente para aceitar seu pedido de "Mensagens para" no Meta Business Suite.
 
-`2494100` – A conta está no modo de manutenção.
+`2494100` – a conta está no modo de manutenção.
 
 O número de telefone comercial está em modo de manutenção.
 
@@ -384,19 +383,19 @@ Descrição
 
 Solução possível
 
-`200005` – Insights sobre o modelo indisponíveis
+`200005` – insights sobre o modelo indisponíveis
 
-Os insights sobre o modelo ainda não estão disponíveis para essa conta do WhatsApp Business.
+Os insights sobre o modelo ainda não estão disponíveis para esta conta do WhatsApp Business.
 
 No momento, não é possível habilitar insights sobre o modelo para esta conta do WhatsApp Business.
 
-`200006` – Não é possível desabilitar insights sobre o modelo
+`200006` – não é possível desabilitar insights sobre o modelo
 
 Operação inválida. Depois de habilitados, os insights sobre o modelo não poderão ser desabilitados.
 
 Depois de habilitados para uma conta do WhatsApp Business, os insights sobre o modelo não podem ser desabilitados.
 
-`200007` – Insights sobre o modelo não habilitados
+`200007` – insights sobre o modelo não habilitados
 
 Os insights sobre o modelo não foram habilitados para esta conta do WhatsApp Business
 
@@ -414,19 +413,19 @@ Solução possível
 
 Insights sobre o modelo indisponíveis
 
-Esta conta do WhatsApp Business já foi marcada para migração para uma identificação de solução diferente
+Esta WABA já foi marcada para migração para uma identificação de solução diferente
 
 O modelo de propriedade da conta OBO está [obsoleto](/documentation/business-messaging/whatsapp/solution-providers/obo-model-deprecation). Entre em contato com o suporte para obter ajuda.
 
 `2593085`
 
-Conta do WhatsApp Business inválida para OBO Mobility
+Conta do WhatsApp Business inválida para mobilidade OBO
 
 A WABA não é qualificada para transferência de propriedade do tipo OBO. Os motivos possíveis são os seguintes:
 
--   A WABA já pertence ao cliente comercial (ou seja, já usa o modelo de compartilhamento da WABA).-   O cliente comercial ainda não aceitou o pedido OBO no Meta Business Suite.
+-   A WABA já pertence ao cliente comercial (ou seja, já usa o modelo de compartilhamento da WABA).-   O cliente comercial ainda não aceitou o pedido de OBO no Meta Business Suite.
 
-Observe que o modelo de propriedade da conta OBO está [obsoleto](/documentation/business-messaging/whatsapp/solution-providers/obo-model-deprecation). Entre em contato com o suporte para obter ajuda.
+Informamos que o modelo de propriedade da conta OBO está [obsoleto](/documentation/business-messaging/whatsapp/solution-providers/obo-model-deprecation). Entre em contato com o suporte para obter ajuda.
 
 ## Erros de sincronização
 
@@ -456,7 +455,7 @@ Solicitação incorreta
 
 Pedido de sincronização feito fora do intervalo de tempo permitido
 
-O pedido de sincronização só pode ser feito em até 24 horas depois da integração.
+O pedido de sincronização só pode ser feito em até 24 horas depois da integração
 
 Só é possível iniciar a sincronização dos contatos e do histórico de mensagens de um usuário integrado do app WhatsApp Business dentro de 24 horas depois da integração do usuário. Consulte [Como integrar usuários do app de negócios](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users#synchronizing-whatsapp-business-app-data).
 
@@ -478,7 +477,7 @@ Código de status HTTP
 
 `4`
 
-Muitas chamadas de API
+Quantidade excessiva de chamadas à API
 
 O app atingiu o limite da taxa de chamadas de API.
 
@@ -530,7 +529,7 @@ Limite de volume de emparelhamento atingido (conta comercial, conta de consumido
 
 Foram enviadas muitas mensagens do número de telefone do remetente para o mesmo número de telefone do destinatário em um curto período.
 
-Aguarde e realize novamente a operação se quiser enviar mensagens para o mesmo número de telefone. Você ainda pode enviar mensagens para um número diferente sem esperar.
+Aguarde e realize novamente a operação se quiser enviar mensagens para o mesmo número de telefone. Você ainda pode enviar mensagens para um número diferente sem esperar
 
 `400`
 
@@ -540,9 +539,9 @@ Solicitação incorreta
 
 Limite de taxa de registro/exclusão de contas excedido
 
-O registro ou a exclusão do registro falhou porque foram feitas muitas tentativas neste número de telefone em um curto período de tempo.
+O registro ou a exclusão do registro falhou porque foram feitas muitas tentativas neste número de telefone em um curto período de tempo
 
-O número de telefone comercial está sendo bloqueado porque atingiu o limite de tentativas de registro/cancelamento do registro. Tente novamente assim que o número for desbloqueado. Consulte a seção "Limitações" no documento [Inscrição](/documentation/business-messaging/whatsapp/business-phone-numbers/registration).
+O número de telefone comercial está sendo bloqueado porque atingiu o limite de tentativas de registro/cancelamento do registro. Tente novamente assim que o número for desbloqueado. Consulte a seção "Limitações" no documento [Registro](/documentation/business-messaging/whatsapp/business-phone-numbers/registration).
 
 `400`
 
@@ -564,7 +563,7 @@ API desconhecida
 
 Pedido inválido ou possível erro do servidor.
 
-Consulte a página [WhatsApp Business API Status](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT03o8ghtUOBKFeLhsEPDVKLqquTCVwhiHp--fIddr2z5u2vBWXgcG8cGVk76j5md-hbpk5SPfA1fXdh_GAUFYg5N694atgMMctWSu6t_xppu969GClUC-wZhFBfpxHdJY8yH_3t3-jhujsI8HM7P-te9aM) para ver as informações de status da API. Se não houver interrupções no servidor, consulte a referência do ponto de extremidade para verificar se o pedido está formatado corretamente e atende a todos os requisitos necessários.
+Consulte a página [Status da API do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT325UD1Oe-Hxpwf5oHc75zEwF9aaU9TMd0RwcXT7e7ZPpNlcxPc_x7tDlxt6qD3bSwlPvwCOQbdIMcyOeRP1fj4OkWdMSn49puOHaa8H7qiAKMFJNVpksTJhDf9kjVPVljFjAbxXbqQiN8vCYKCi75Bed0) para ver as informações de status da API. Se não houver interrupções no servidor, consulte a referência do ponto de extremidade para verificar se o pedido está formatado corretamente e cumpre todos os requisitos necessários.
 
 `400`
 
@@ -576,7 +575,7 @@ Serviço de API
 
 Há um erro temporário por inatividade ou sobrecarga.
 
-Antes de tentar de novo, consulte a página [Status da API do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT03o8ghtUOBKFeLhsEPDVKLqquTCVwhiHp--fIddr2z5u2vBWXgcG8cGVk76j5md-hbpk5SPfA1fXdh_GAUFYg5N694atgMMctWSu6t_xppu969GClUC-wZhFBfpxHdJY8yH_3t3-jhujsI8HM7P-te9aM) para ver as informações de status da API.
+Antes de tentar de novo, consulte a página [Status da API do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT325UD1Oe-Hxpwf5oHc75zEwF9aaU9TMd0RwcXT7e7ZPpNlcxPc_x7tDlxt6qD3bSwlPvwCOQbdIMcyOeRP1fj4OkWdMSn49puOHaa8H7qiAKMFJNVpksTJhDf9kjVPVljFjAbxXbqQiN8vCYKCi75Bed0) para ver as informações de status da API.
 
 `503`
 
@@ -584,7 +583,7 @@ Serviço indisponível
 
 `33`
 
-O valor do parâmetro é inválido
+Valor do parâmetro não é válido
 
 O número de telefone comercial foi excluído.
 
@@ -604,7 +603,7 @@ Consulte a referência do ponto de extremidade para determinar quais parâmetros
 
 Para o WhatsApp Flows com ponto de extremidade: ao configurar a chave pública da empresa, verifique se ela é uma [chave RSA pública e válida de 2.048 bits no formato PEM](/docs/whatsapp/cloud-api/reference/whatsapp-business-encryption#gen).
 
-Verifique se não há incompatibilidade entre a identificação do número de telefone que você [está registrando](/documentation/business-messaging/whatsapp/solution-providers/registering-phone-numbers) e outro armazenado anteriormente.
+Verifique se não há incompatibilidade entre o ID do número de telefone que você [está registrando](/documentation/business-messaging/whatsapp/solution-providers/registering-phone-numbers) e outro armazenado anteriormente.
 
 Verifique se o parâmetro está dentro de qualquer restrição de tamanho para o tipo.
 
@@ -632,7 +631,7 @@ Falha ao enviar a mensagem devido a um erro desconhecido.
 
 Tente novamente. Se o erro persistir, abra um tíquete de [Suporte Direto](https://business.facebook.com/direct-support).
 
-Para o WhatsApp Flows com ponto de extremidade: ao [definir a chave pública da empresa](/docs/whatsapp/cloud-api/reference/whatsapp-business-encryption#set-business-public-key), ocorreu uma falha ao calcular a assinatura, fazer uma chamada ao ponto de extremidade do GraphQL ou o ponto de extremidade do GraphQL retornou um erro.
+Para o WhatsApp Flows com ponto de extremidade: durante a [definição da chave pública da empresa](/docs/whatsapp/cloud-api/reference/whatsapp-business-encryption#set-business-public-key), ocorreu uma falha ao calcular a assinatura, fazer uma chamada ao ponto de extremidade do GraphQL ou o ponto de extremidade do GraphQL retornou um erro.
 
 `500`
 
@@ -652,7 +651,7 @@ Proibido
 
 `131008`
 
-Parâmetro obrigatório ausente
+O parâmetro obrigatório está ausente
 
 Falta um parâmetro obrigatório no pedido.
 
@@ -664,7 +663,7 @@ Solicitação incorreta
 
 `131009`
 
-O valor do parâmetro é inválido
+Valor do parâmetro não é válido
 
 Um ou mais valores de parâmetros são inválidos.
 
@@ -680,7 +679,7 @@ Serviço indisponível
 
 Um serviço está temporariamente indisponível.
 
-Antes de tentar de novo, consulte a página [Status da API do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT03o8ghtUOBKFeLhsEPDVKLqquTCVwhiHp--fIddr2z5u2vBWXgcG8cGVk76j5md-hbpk5SPfA1fXdh_GAUFYg5N694atgMMctWSu6t_xppu969GClUC-wZhFBfpxHdJY8yH_3t3-jhujsI8HM7P-te9aM) para ver as informações de status da API.
+Antes de tentar de novo, consulte a página [Status da API do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT325UD1Oe-Hxpwf5oHc75zEwF9aaU9TMd0RwcXT7e7ZPpNlcxPc_x7tDlxt6qD3bSwlPvwCOQbdIMcyOeRP1fj4OkWdMSn49puOHaa8H7qiAKMFJNVpksTJhDf9kjVPVljFjAbxXbqQiN8vCYKCi75Bed0) para ver as informações de status da API.
 
 `500`
 
@@ -709,7 +708,7 @@ Não foi possível entregar a mensagem. Os motivos podem ser os seguintes:
 
 Usando um método de comunicação diferente do WhatsApp, peça ao usuário do WhatsApp para fazer o seguinte:
 
--   Confirmar se é possível enviar uma mensagem para seu número de telefone do WhatsApp Business.-   Confirmar se nossos Termos de Serviço mais recentes foram aceitos (caso contrário, será necessário acessar **Configurações** > **Ajuda**, ou **Configurações** > **Informações sobre o app**, para aceitá-los).-   Atualizar para a versão mais recente do cliente do WhatsApp.
+-   Confirmar se é possível enviar uma mensagem para seu número de telefone do WhatsApp Business.-   Confirmar se nossos Termos de Serviço mais recentes foram aceitos (caso contrário, será necessário acessar **Configurações** > **Ajuda**, ou **Configurações** > **Informações sobre o app**, para aceitá-los)-   Atualizar para a versão mais recente do cliente do WhatsApp.
 
 `400`
 
@@ -729,15 +728,15 @@ Solicitação incorreta
 
 `131042`
 
-Elegibilidade da empresa – Problema com pagamento
+Qualificação da empresa – problema com o pagamento
 
 Ocorreu um erro relacionado à forma de pagamento.
 
-Consulte [Sobre a cobrança da sua conta do WhatsApp Business](https://www.facebook.com/business/help/2225184664363779) e verifique se a faturação está configurada corretamente.
+Consulte [Sobre a cobrança da sua conta do WhatsApp Business](https://www.facebook.com/business/help/2225184664363779) e verifique se a cobrança foi configurada corretamente.
 
 Problemas comuns:
 
--   A conta de pagamento não está associada a uma conta do WhatsApp Business.-   A linha de crédito está acima do limite.-   A linha de crédito (conta de pagamento) não foi definida nem ativada.-   A conta do WhatsApp Business foi excluída.-   A conta do WhatsApp Business foi suspensa.-   O fuso horário não foi definido.-   A moeda não foi definida.-   O pedido MessagingFor (Em nome de) está pendente ou foi recusado
+-   A conta de pagamento não está associada a uma conta do WhatsApp Business-   A linha de crédito está acima do limite-   A linha de crédito (conta de pagamento) não foi definida nem ativada-   A conta do WhatsApp Business foi excluída-   A conta do WhatsApp Business foi suspensa-   Fuso horário não definido-   Moeda não definida-   O pedido MessagingFor (Em nome de) está pendente ou foi recusado
 
 `400`
 
@@ -757,11 +756,11 @@ Erro interno do servidor
 
 `131047`
 
-Mensagem de novo envolvimento
+Mensagem de reengajamento
 
 Mais de 24 horas se passaram desde que o destinatário respondeu pela última vez ao número do remetente.
 
-Envie uma [mensagem de modelo](/documentation/business-messaging/whatsapp/templates/overview) ao destinatário.
+Envie um [modelo de mensagem](/documentation/business-messaging/whatsapp/templates/overview) ao destinatário.
 
 `400`
 
@@ -769,9 +768,9 @@ Solicitação incorreta
 
 `131049`
 
-A Meta escolheu não entregar a mensagem
+A Meta escolheu não entregar a mensagem.
 
-Para manter o engajamento saudável do ecossistema.
+Essa mensagem não foi entregue para manter o engajamento saudável do ecossistema.
 
 Se você receber esse código de erro e suspeitar que seja devido ao limite, espere pelo menos 24 horas antes de reenviar a mensagem de modelo. Fazer isso só resultará em outra resposta de erro, já que o limite pode estar em vigor em diferentes períodos.
 
@@ -829,7 +828,7 @@ Não foi possível carregar a mídia por um ou mais motivos, por exemplo, um tip
 
 Para saber mais, consulte o valor `error.error_data.details` em webhooks de **mensagens** disparados quando houver falha no envio desta mensagem.
 
-Recomendamos que você inspecione os arquivos de mídia que estão causando erros e confirme se eles são realmente compatíveis. Por exemplo, no UNIX, é possível usar a inspeção de arquivos por meio da linha de comando para determinar seu tipo MIME:
+Recomendamos que você inspecione os arquivos de mídia que estão causando erros e confirme se eles são realmente compatíveis. Por exemplo, no UNIX, é possível usar a inspeção de arquivos por meio da linha de comando para determinar o tipo MIME:
 
 `file -I rejected-file.mov`
 
@@ -937,11 +936,11 @@ Solicitação incorreta
 
 `132068`
 
-Fluxo bloqueado
+O flow está bloqueado
 
-O Flow está no estado bloqueado.
+O flow está no estado bloqueado.
 
-Corrija o Flow.
+Corrija o flow
 
 `400`
 
@@ -949,11 +948,11 @@ Solicitação incorreta
 
 `132069`
 
-Flow limitado
+O flow é limitado
 
-O Flow está no estado limitado, e 10 mensagens usando esse fluxo já foram enviadas na última hora.
+O flow está no estado limitado e 10 mensagens usando esse flow já foram enviadas na última hora.
 
-Corrija o fluxo.
+Corrija o flow
 
 `400`
 
@@ -977,7 +976,7 @@ Servidor temporariamente indisponível
 
 O servidor está temporariamente indisponível.
 
-Antes de tentar novamente, consulte a página [Status da plataforma do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT03o8ghtUOBKFeLhsEPDVKLqquTCVwhiHp--fIddr2z5u2vBWXgcG8cGVk76j5md-hbpk5SPfA1fXdh_GAUFYg5N694atgMMctWSu6t_xppu969GClUC-wZhFBfpxHdJY8yH_3t3-jhujsI8HM7P-te9aM) para ver as informações de status da API e verifique o valor da resposta `details`.
+Antes de tentar novamente, consulte a página [Status da plataforma do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT325UD1Oe-Hxpwf5oHc75zEwF9aaU9TMd0RwcXT7e7ZPpNlcxPc_x7tDlxt6qD3bSwlPvwCOQbdIMcyOeRP1fj4OkWdMSn49puOHaa8H7qiAKMFJNVpksTJhDf9kjVPVljFjAbxXbqQiN8vCYKCi75Bed0) para ver as informações de status da API e verifique o valor da resposta `details`.
 
 `503`
 
@@ -991,7 +990,7 @@ O PIN de confirmação em duas etapas está incorreto.
 
 Verifique se o PIN incluído no pedido está correto.
 
-Para redefinir o PIN, desative a confirmação em duas etapas e defina um novo PIN. Consulte [Verificação em duas etapas](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#two-step-verification).
+Para redefinir o PIN, desative a confirmação em duas etapas e defina um novo PIN. Veja [Confirmação em duas etapas](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#two-step-verification).
 
 `400`
 
@@ -999,7 +998,7 @@ Solicitação incorreta
 
 `133006`
 
-Reverificação do número de telefone necessária
+É necessária uma nova verificação do número de telefone
 
 O número de telefone precisa ser verificado antes do registro.
 
@@ -1037,7 +1036,7 @@ Solicitação incorreta
 
 Número de telefone não registrado
 
-O número de telefone não está registrado na plataforma do WhatsApp Business.
+O número de telefone não está registrado na Plataforma do WhatsApp Business.
 
 [Registre o número de telefone](/documentation/business-messaging/whatsapp/business-phone-numbers/registration) e tente novamente.
 
@@ -1047,9 +1046,9 @@ Solicitação incorreta
 
 `133015`
 
-Aguarde alguns minutos antes de tentar registrar este número de telefone
+Aguarde alguns minutos antes de tentar registrar o número de telefone
 
-O número de telefone que você está tentando registrar foi excluído recentemente, e a exclusão ainda não foi concluída.
+O número de telefone que você está tentando registrar foi excluído recentemente e a exclusão ainda não foi concluída.
 
 Espere 5 minutos antes de tentar novamente.
 
@@ -1063,7 +1062,7 @@ Os Termos de Serviço do Pagamentos no WhatsApp não foram aceitos
 
 O envio da mensagem falhou porque a aceitação dos Termos de Serviço do Pagamentos no WhatsApp por esta conta do WhatsApp Business está pendente.
 
-Aceite os Termos de Serviço do Pagamentos no WhatsApp usando o link fornecido na mensagem de erro antres de tentar novamente.
+Aceite os Termos de Serviço do Pagamentos no WhatsApp usando o link fornecido na mensagem de erro antes de tentar novamente.
 
 `400`
 
@@ -1081,9 +1080,9 @@ Consulte a [referência](/documentation/business-messaging/whatsapp/overview) do
 
 Solicitação incorreta
 
-## Códigos de erro da API de MM Lite
+## Códigos de erro da API de Mensagens de Marketing para o WhatsApp
 
-A API de MM Lite usa os mesmos códigos de erro que a API de Nuvem, com algumas adições listadas abaixo.
+A API de MM do WhatsApp usa os mesmos códigos de erro que a API de Nuvem, com algumas adições listadas abaixo.
 
 ### Exemplo
 
@@ -1113,7 +1112,7 @@ code
 
 Você está tentando enviar uma mensagem sem modelo. O tipo de mensagem deve ser `template`. Tente novamente usando um modelo de marketing.
 
-400 Solicitação inválida
+400 Bad Request
 
 `131009`
 
@@ -1125,7 +1124,7 @@ Você pode estar usando um parâmetro inválido. Verifique se você está usando
 
 A sincronização de anúncios pode estar incompleta. Aguarde dez minutos e tente novamente. Se o problema persistir, entre em contato com o suporte.
 
-400 Solicitação inválida
+400 Bad Request
 
 `131055`
 
@@ -1135,7 +1134,7 @@ A sincronização de anúncios pode estar incompleta. Aguarde dez minutos e tent
 
 É possível que você tenha tentado enviar uma mensagem sem modelo ou usando um modelo de autenticação ou utilidade. Experimente enviar novamente usando um modelo de mensagem de marketing.
 
-400 Solicitação inválida
+400 Bad Request
 
 `134100`
 
@@ -1147,7 +1146,7 @@ _Disponível na versão 23.0 da API Graph._
 
 Você está tentando enviar um modelo de utilidade ou autenticação. Somente modelos categorizados como `MARKETING` são compatíveis.
 
-400 Solicitação inválida
+400 Bad Request
 
 `134101`
 
@@ -1159,7 +1158,7 @@ _Disponível na versão 23.0 da API Graph._
 
 Você está tentando enviar um modelo criado recentemente antes de concluir a sincronização de anúncios. A sincronização de anúncios pode levar até dez minutos. Aguarde dez minutos e tente novamente.
 
-400 Solicitação inválida
+400 Bad Request
 
 `134102`
 
@@ -1169,11 +1168,11 @@ Você está tentando enviar um modelo criado recentemente antes de concluir a si
 
 _Disponível na versão 23.0 da API Graph._
 
-Não foi possível concluir a sincronização de anúncios para o modelo que você está tentando enviar ou sua conta pode não estar qualificada para a API de MM Lite.
+Não foi possível concluir a sincronização de anúncios para o modelo que você está tentando enviar ou sua conta pode não estar qualificada para a API de MM para WhatsApp.
 
 [Verifique seu status de qualificação](/documentation/business-messaging/whatsapp/marketing-messages/onboarding#check-waba-onboarding-status-and-eligibility). Se o valor `marketing_messages_lite_api_status` da conta do WhatsApp Business for `ONBOARDED` e o problema persistir, [entre em contato com o suporte](https://business.facebook.com/direct-support/).
 
-500 Erro de servidor interno
+500 - Erro de servidor interno
 
 `1752041`
 
@@ -1181,11 +1180,11 @@ Não foi possível concluir a sincronização de anúncios para o modelo que voc
 
 `Duplicate Request is thrown when a client has already been invited to onboard by any partner.`
 
-Cada cliente empresarial pode ter apenas um pedido de integração, e somente o primeiro parceiro que chamar a API de intenção poderá enviar o pedido com sucesso. Quando um cliente é integrado, todas as contas do WhatsApp Business qualificadas são incluídas no processo de forma automática.
+Cada cliente empresarial pode ter apenas um pedido de integração. Somente o primeiro parceiro que chamar a API de intenção poderá enviar o pedido com sucesso. Quando um cliente é integrado, todas as contas do WhatsApp Business qualificadas são incluídas no processo de forma automática.
 
 Se você receber um erro indicando que o pedido de integração já foi feito, não será necessária nenhuma ação adicional, pois todas as contas do WhatsApp Business qualificadas desse cliente serão integradas automaticamente.
 
-400 Solicitação inválida
+400 Bad Request
 
 Você achou esta página útil?
 

@@ -1,13 +1,13 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview -->
-<!-- Scraped: 2025-12-20T17:30:10.547Z -->
+<!-- Scraped: 2026-01-24T01:04:46.745Z -->
 
 # Modelos
 
-Updated: 14 de nov de 2025
+Updated: 5 de dez de 2025
 
 Saiba mais sobre modelos, seus usos e limitações e os vários tipos de modelos que você pode criar.
 
-Os modelos dos ativos da conta do WhatsApp Business podem ser enviados em mensagens de modelo por meio da API de Nuvem ou da API de Mensagens de Marketing Lite. As mensagens de modelo são o único tipo de mensagem que pode ser enviado aos usuários do WhatsApp fora de uma[janela de atendimento ao cliente](/documentation/business-messaging/whatsapp/messages/send-messages#customer-service-windows).Normalmente, essas mensagens são usadas para envios em massa ou quando é necessário enviar uma comunicação a um usuário, mas nenhuma janela de atendimento ao cliente está aberta entre ele e você.
+Os modelos dos ativos da conta do WhatsApp Business podem ser enviados em mensagens de modelo por meio da API de Nuvem ou da API de Mensagens de Marketing para WhatsApp. As mensagens de modelo são o único tipo de mensagem que pode ser enviado aos usuários do WhatsApp fora de uma[janela de atendimento ao cliente](/documentation/business-messaging/whatsapp/messages/send-messages#customer-service-windows). Normalmente, essas mensagens são usadas para envios em massa ou quando é necessário enviar uma comunicação a um usuário, mas nenhuma janela de atendimento ao cliente está aberta entre ele e você.
 
 ## Criação
 
@@ -41,33 +41,33 @@ Os nomes dos modelos estão limitados a um máximo de 512 caracteres com caracte
 
 ### Categorias
 
-Cada modelo deve ser categorizado como **autenticação**, **marketing** ou **utilidade**. Nosso documento [categorização de modelos](/documentation/business-messaging/whatsapp/templates/template-categorization) descreve como atribuir a categoria adequada a um modelo e o que pode acontecer se determinarmos que um modelo foi incorretamente categorizado.
+Cada modelo deve ser categorizado como **autenticação**, **marketing** ou **utilidade**. Nosso documento [categorização de modelos](/documentation/business-messaging/whatsapp/templates/template-categorization) descreve como atribuir a categoria adequada a um modelo e o que pode acontecer se determinarmos que um modelo foi categorizado incorretamente.
 
-Observe que as categorias de modelos também são considerados nos [preços](/documentation/business-messaging/whatsapp/pricing).
+As categorias dos modelos também são considerados nos [preços](/documentation/business-messaging/whatsapp/pricing).
 
 ### Componentes
 
 Os modelos são compostos de vários componentes de texto, mídia e interface do usuário, que você define na criação de modelos. Nosso documento [Componentes de modelos](/documentation/business-messaging/whatsapp/templates/components) descreve todos os componentes possíveis e como defini-los.
 
-Como há muitos componentes para escolher, dedicamos documentos e subdocumentos de modelos de [autenticação](/documentation/business-messaging/whatsapp/templates/authentication-templates/authentication-templates), [marketing](/documentation/business-messaging/whatsapp/templates/marketing-templates) e [utilidade](/documentation/business-messaging/whatsapp/templates/utility-templates/utility-templates), cada um com exemplos de código que mostram como criar vários modelos com componentes comumente usados.
+Como há muitos componentes para escolher, disponibilizamos documentos e subdocumentos de modelos de [autenticação](/documentation/business-messaging/whatsapp/templates/authentication-templates/authentication-templates), [marketing](/documentation/business-messaging/whatsapp/templates/marketing-templates) e [utilidade](/documentation/business-messaging/whatsapp/templates/utility-templates/utility-templates), cada um com exemplos de código que mostram como criar vários modelos com componentes comumente usados.
 
 ### Idiomas
 
-Você deve atribuir um [código de idioma para o modelo](/documentation/business-messaging/whatsapp/templates/supported-languages) no momento da criação. Strings e variáveis de modelos não são traduzidas pela Meta, portanto, você é responsável por fornecer strings e parâmetros de exemplo no idioma adequado.
+É necessário atribuir um [código de idioma para o modelo](/documentation/business-messaging/whatsapp/templates/supported-languages) no momento da criação. Strings e variáveis de modelos não são traduzidas pela Meta, portanto, você é responsável por fornecer strings e parâmetros de exemplo no idioma adequado.
 
-Se você criar vários modelos com o mesmo nome, mas com idiomas diferentes, cada modelo conta para seu [limite de modelos](#template-limits).
+Se você criar vários modelos com o mesmo nome, mas com idiomas diferentes, cada modelo contará para seu [limite de modelos](#template-limits).
 
 ### Formatos de parâmetros
 
-Alguns componentes do modelo permitem definir strings que contêm um ou mais parâmetros (descritos como "variáveis" no Gerenciador do WhatsApp). Estes são substituídos por valores incluídos por você na sua carga de envio de mensagens quando você envia o modelo.
+Alguns componentes do modelo permitem definir strings que contêm um ou mais parâmetros (descritos como "variáveis" no Gerenciador do WhatsApp). Estes são substituídos por valores incluídos por você na sua carga de envio de mensagens quando o modelo é enviado.
 
-Após a criação do modelo, se uma string incluir um ou mais parâmetros, você pode especificar o formato deles, seja `named` ou `positional`, e você deve incluir um valor de exemplo para cada parâmetro. Se não especificar um formato, o modelo usará o formato `positional` por padrão.
+Após a criação do modelo, se uma string incluir um ou mais parâmetros, você pode especificar o formato deles, seja `named` ou `positional`, e deve incluir um valor de exemplo para cada parâmetro. Se você não especificar um formato, o modelo usará o formato `positional` por padrão.
 
 #### Parâmetros nomeados
 
 Os parâmetros que usam o formato nomeado devem ser strings únicas, compostas por caracteres minúsculos e sublinhados, envoltos em chaves duplas, por exemplo, `{{first_name}}`. Valores de exemplo em cargas de criação de modelos e valores reais em cargas de envio de modelos podem aparecer em qualquer ordem.
 
-Exemplo de carga de criação de modelos com parâmetros nomeados:
+Exemplo de carga de criação de modelo com parâmetros nomeados:
 
 ```
 ```
@@ -97,13 +97,13 @@ Os componentes do cabeçalho do modelo podem mostrar ativos de mídia. Se estive
 
 ## Análise do modelo
 
-Os modelos são automaticamente analisados após a criação ou após a edição. Se o seu modelo for aprovado, o status será definido como `APPROVED` e você poderá começar a enviá-lo em mensagens de modelo. Se for rejeitado ou se o seu estado mudar para qualquer outro valor, não poderá ser enviado em mensagens de modelo.
+Os modelos são analisados automaticamente após a criação ou após a edição. Se o seu modelo for aprovado, o status será definido como `APPROVED` e você poderá começar a enviá-lo em mensagens de modelo. Se for rejeitado ou se o seu estado mudar para qualquer outro valor, não poderá ser enviado em mensagens de modelo.
 
-Consulte o documento sobre [análise do modelo](/documentation/business-messaging/whatsapp/templates/template-review) para saber mais sobre o processo de análise, motivos comuns de rejeição e o que pode fazer se seu modelo for rejeitado.
+Consulte o documento sobre [análise do modelo](/documentation/business-messaging/whatsapp/templates/template-review) para saber mais sobre o processo de análise, motivos comuns de rejeição e o que pode fazer se o seu modelo for rejeitado.
 
 ## Status do modelo
 
-Os modelos precisam ter o status `APPROVED`, antes de serem enviados em mensagens. O status de um modelo é inicialmente definido pelo processo de análise de modelos, mas pode ser alterado para outro valor baseado no uso e no [feedback de qualidade](/documentation/business-messaging/whatsapp/templates/template-quality).
+Os modelos precisam ter o status `APPROVED` antes de serem enviados em mensagens. O status de um modelo é inicialmente definido pelo processo de análise de modelos, mas pode ser alterado para outro valor baseado no uso e no [feedback de qualidade](/documentation/business-messaging/whatsapp/templates/template-quality).
 
 As alterações de status do modelo são comunicadas via webhooks de [message\_template\_status\_update](/documentation/business-messaging/whatsapp/webhooks/reference/message_template_status_update), mas você pode usar o ponto de extremidade[GET /<TEMPLATE\_ID>](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/template-api#fields) e pedir o campo `status` para obter o status de um modelo a qualquer momento.
 
@@ -124,7 +124,7 @@ Consulte a referência do ponto de extremidade [GET /<TEMPLATE\_ID>](/documentat
 
 O painel [Gerenciar modelos](https://business.facebook.com/latest/whatsapp_manager/message_templates) no Gerenciador do WhatsApp também exibe os status dos modelos e adiciona classificações de qualidade para modelos aprovados (`active`):
 
--   **Em análise**: indica que o modelo ainda está em análise. A análise pode levar até 24 horas.-   **Rejeitado**: o modelo foi rejeitado durante o processo de análise ou viola nossas políticas.-   **Ativo – Qualidade pendente**: o modelo de mensagem ainda precisa receber feedback sobre a qualidade ou informações a respeito do índice de leitura dos clientes. Os modelos de mensagem com esse status podem ser enviados aos clientes.-   **Ativo – Alta qualidade**: o modelo recebeu pouco ou nenhum feedback negativo dos clientes. Os modelos de mensagem com esse status podem ser enviados aos clientes.-   **Ativo – Qualidade média**: o modelo recebeu feedback negativo de diversos clientes ou apresenta um baixo índice de leitura e pode ser pausado ou desabilitado em breve. Os modelos de mensagem com esse status podem ser enviados aos clientes.-   **Ativo – Qualidade baixa**: o modelo recebeu feedback negativo de diversos clientes ou apresenta um baixo índice de leitura. Os modelos com esse status podem ser enviados aos clientes, mas talvez sejam suspensos ou desabilitados em breve. Por isso, recomendamos que você resolva os problemas relatados pelos clientes.-   **Pausado**: o modelo foi pausado devido ao feedback negativo recorrente dos clientes ou ao baixo índice de leitura. Os modelos de mensagem com esse status não podem ser enviados aos clientes. Confira [Pausa de modelos](/documentation/business-messaging/whatsapp/templates/template-pausing).-   **Desabilitado**: o modelo foi desabilitado devido a feedback negativo recorrente dos clientes. Os modelos de mensagem com esse status não podem ser enviados aos clientes.-   **Apelação solicitada**: indica que foi feita uma apelação.
+-   **Em análise**: indica que o modelo ainda está em análise. Esse processo pode levar até 24 horas.-   **Rejeitado**: o modelo foi rejeitado durante o processo de análise ou viola nossas políticas.-   **Ativo – Qualidade pendente**: o modelo de mensagem ainda precisa receber feedback sobre a qualidade ou informações a respeito do índice de leitura dos clientes. Os modelos de mensagem com esse status podem ser enviados aos clientes.-   **Ativo – Alta qualidade**: o modelo recebeu pouco ou nenhum feedback negativo dos clientes. Os modelos de mensagem com esse status podem ser enviados aos clientes.-   **Ativo – Qualidade média**: o modelo recebeu feedback negativo de diversos clientes ou apresenta um baixo índice de leitura e pode ser pausado ou desabilitado em breve. Os modelos de mensagem com esse status podem ser enviados aos clientes.-   **Ativo – Qualidade baixa**: o modelo recebeu feedback negativo de diversos clientes ou apresenta um baixo índice de leitura. Os modelos com esse status podem ser enviados aos clientes, mas talvez sejam suspensos ou desabilitados em breve. Por isso, recomendamos que você resolva os problemas relatados pelos clientes.-   **Pausado**: o modelo foi pausado devido ao feedback negativo recorrente dos clientes ou ao baixo índice de leitura. Os modelos de mensagem com esse status não podem ser enviados aos clientes. Confira [Pausa de modelos](/documentation/business-messaging/whatsapp/templates/template-pausing).-   **Desabilitado**: o modelo foi desabilitado devido a feedback negativo recorrente dos clientes. Os modelos de mensagem com esse status não podem ser enviados aos clientes.-   **Apelação solicitada**: indica que foi feita uma apelação.
 
 ## Limites de modelos
 
@@ -144,7 +144,7 @@ Confira o documento [Tempo de vida](/documentation/business-messaging/whatsapp/t
 
 ## Classificação de qualidade
 
-Classificação de qualidade do modelo é um sistema usado para avaliar a qualidade dos modelos de mensagem com base no uso, no feedback dos clientes e no engajamento. Essa classificação ajuda a manter um ecossistema de mensagens de alta qualidade e ajuda a garantir o envio de mensagens que sejam relevantes e bem recebidas.
+A classificação de qualidade do modelo é um sistema usado para avaliar a qualidade dos modelos de mensagem com base no uso, no feedback dos clientes e no engajamento. Essa classificação ajuda a manter um ecossistema de mensagens de alta qualidade e ajuda a garantir o envio de mensagens que sejam relevantes e bem recebidas.
 
 Confira o documento [classificação de qualidade dos modelos](/documentation/business-messaging/whatsapp/templates/template-quality) para saber mais sobre classificações de qualidade, como elas podem afetar o status de um modelo e como receber notificações sobre mudanças nas pontuações de qualidade dos modelos.
 
@@ -154,7 +154,7 @@ Se você enviar várias mensagens, talvez elas não sejam entregues na mesma ord
 
 ## Gerenciamento de modelos
 
-Confira o documento [Gerencimaento de modelos](/documentation/business-messaging/whatsapp/templates/template-management) para ver uma lista de pontos de extremidade frequentemente usados para obter, atualizar e excluir modelos.
+Confira o documento [Gerenciamento de modelos](/documentation/business-messaging/whatsapp/templates/template-management) para ver uma lista de pontos de extremidade frequentemente usados para obter, atualizar e excluir modelos.
 
 Você achou esta página útil?
 

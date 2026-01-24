@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/in-progress-on-behalf-requests-api -->
-<!-- Scraped: 2025-12-20T17:59:39.775Z -->
+<!-- Scraped: 2026-01-24T00:50:36.085Z -->
 
 ## Esta página não está disponível no momento
 

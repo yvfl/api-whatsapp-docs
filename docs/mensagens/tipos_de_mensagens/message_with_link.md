@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/messages/message-with-link -->
-<!-- Scraped: 2025-12-20T17:26:51.264Z -->
+<!-- Scraped: 2026-01-24T00:40:49.240Z -->
 
 ## Esta página não está disponível no momento
 

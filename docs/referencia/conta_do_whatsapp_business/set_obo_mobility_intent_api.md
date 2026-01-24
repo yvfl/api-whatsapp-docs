@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/set-obo-mobility-intent-api -->
-<!-- Scraped: 2025-12-20T18:00:22.001Z -->
+<!-- Scraped: 2026-01-24T00:51:14.230Z -->
 
 ## Esta página não está disponível no momento
 

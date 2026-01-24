@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/docs/whatsapp/flows -->
-<!-- Scraped: 2025-12-21T15:23:48.758Z -->
+<!-- Scraped: 2026-01-24T00:23:27.419Z -->
 
 ![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1765810345)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
 
@@ -65,7 +65,7 @@ This guide is ideal for engaging users in promotional events.
 
 ![](https://lookaside.fbsbx.com/elementpath/media/?media_id=1198754311128909&version=1761854237)
 
-You will need to conform to relevant local regulations when handling user data, and ensure that your use case adheres to our [Business Messaging Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fpolicy%23overview&h=AT2VA421LKaBpC_CCQIUWjX5sIgudw7EVblIZuE4CE0BaNw5iUP4CPR2OlZtWQlk10kisbCdSR9ZXNQyJKE6UfSFo7ZLXJeqwblFBxQUJN7raTveBNPGlchK6PRA2Mvt2VF1AaA78ZTtyi8gbSSLKuW7FeM).
+You will need to conform to relevant local regulations when handling user data, and ensure that your use case adheres to our [Business Messaging Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fpolicy%23overview&h=AT1ryG2Xtb4uUDdQixhk0iVU_PR7rWPaOCrqu-FTg9bMkoBzDmhIyidJ8N8btArGxzmOb-b15p4xNZudbT5mLklqavAYsp1aJe8-jun-WvbpvnWURqPBP5YXj6SeC-pbabxZY1u2tzOPVtfrvaa7EfJgJ4U).
 
 [](#)
 

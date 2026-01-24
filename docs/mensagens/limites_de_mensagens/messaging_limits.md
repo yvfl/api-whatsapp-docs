@@ -1,9 +1,11 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/messaging-limits -->
-<!-- Scraped: 2025-12-20T17:27:40.761Z -->
+<!-- Scraped: 2026-01-24T00:42:00.923Z -->
 
 # Limites de mensagens
 
-Updated: 30 de out de 2025
+Updated: 26 de nov de 2025
+
+O campo `messaging_limit_tier`, que era usado para retornar o limite de mensagens de um número de telefone comercial, ficou obsoleto. [Peça](#via-api) o campo `whatsapp_business_manager_messaging_limit`.
 
 Este documento descreve os limites de mensagens para a plataforma do WhatsApp Business.
 
@@ -11,13 +13,13 @@ Os limites de mensagens representam o número máximo de telefones de usuários 
 
 Esses limites são calculados e definidos no nível do portfólio empresarial, sendo compartilhados por todos os números de telefone comerciais do portfólio. Isso significa que, se um portfólio empresarial tiver vários números de telefone comerciais, pode ser que um deles consuma toda a capacidade de envio de mensagens do portfólio em determinado período.
 
-Os novos portfólios empresariais têm um limite de 250 mensagens, mas ele pode ser aumentado para:
+Os novos portfólios empresariais têm um limite de 250 mensagens, mas esse limite pode ser aumentado para:
 
 -   2.000 (com a conclusão de um [caminho de ajuste](#scaling-paths))-   10.000 (via [ajuste automático](#automatic-scaling))-   100.000 (via ajuste automático)-   Ilimitado (via ajuste automático)
 
-## Aumentar o limite
+## Como aumentar o limite
 
-Você pode aumentar seu limite de mensagens para 2.000 concluindo um dos [caminhos de ajuste](#scaling-paths) descritos abaixo. Depois disso, aumentaremos automaticamente seu limite para o próximo nível superior se você atender aos nossos [critérios de ajuste automático](#automatic-scaling).
+Você pode aumentar seu limite de mensagens para 2.000 concluindo um dos [caminhos de ajuste](#scaling-paths) descritos abaixo. Depois disso, aumentaremos automaticamente seu limite para o próximo nível superior se você cumprir nossos [critérios de ajuste automático](#automatic-scaling).
 
 ### Caminhos de ajuste
 
@@ -41,7 +43,7 @@ O que você pode fazer
 
 `INCREASED_CAPABILITIES_ELIGIBILITY_DEFERRED`
 
-Enviar 2.000 mensagens entregues fora das janelas de atendimento ao cliente para números de telefone únicos de usuários do WhatsApp, em um período móvel de 30 dias, usando modelos com uma alta [classificação de qualidade](/documentation/business-messaging/whatsapp/templates/template-quality).
+Envie 2.000 mensagens entregues fora das janelas de atendimento ao cliente para números de telefone únicos de usuários do WhatsApp, em um período móvel de 30 dias, usando modelos com uma alta [classificação de qualidade](/documentation/business-messaging/whatsapp/templates/template-quality).
 
 `INCREASED_CAPABILITIES_ELIGIBILITY_FAILED`
 
@@ -49,13 +51,13 @@ Envie 2.000 mensagens entregues fora das janelas de atendimento ao cliente para 
 
 `INCREASED_CAPABILITIES_ELIGIBILITY_NEED_MORE_INFO`
 
-[Verificar sua identidade](https://www.facebook.com/business/help/587323819101032), ou enviar 2.000 mensagens entregues fora das janelas de atendimento ao cliente para números de telefone únicos de usuários do WhatsApp, em um período móvel de 30 dias, usando modelos com uma alta [classificação de qualidade](/documentation/business-messaging/whatsapp/templates/template-quality).
+[Verifique sua identidade](https://www.facebook.com/business/help/587323819101032) ou envie 2.000 mensagens entregues fora das janelas de atendimento ao cliente para números de telefone únicos de usuários do WhatsApp, em um período móvel de 30 dias, usando modelos com uma alta [classificação de qualidade](/documentation/business-messaging/whatsapp/templates/template-quality).
 
 ## Ajuste automático
 
 Depois que o limite de mensagens do portfólio empresarial chegar a 2.000, determinaremos se ele deverá ser aumentado ainda mais de acordo com os seguintes critérios:
 
--   Você envia [mensagens de alta qualidade](/documentation/business-messaging/whatsapp/messages/send-messages#message-quality) com todos os seus modelos e números de telefone comerciais.-   Nos últimos sete dias, sua empresa usou pelo menos metade do limite de mensagens atual
+-   Você envia [mensagens de alta qualidade](/documentation/business-messaging/whatsapp/messages/send-messages#message-quality) com todos os seus modelos e números de telefone comerciais-   Nos últimos sete dias, sua empresa usou pelo menos metade do limite de mensagens atual
 
 Se esses critérios forem atendidos, aumentaremos o limite do seu portfólio em um nível dentro de seis horas.
 
@@ -63,15 +65,17 @@ Se esses critérios forem atendidos, aumentaremos o limite do seu portfólio em 
 
 ### Via Meta Business Suite
 
-O atual limite de mensagens do seu número de telefone comercial aparece no painel [Gerenciador do WhatsApp](https://business.facebook.com/wa/manage/home/) > **Ferramentas da conta** > **Limites de mensagens**:
+O limite de mensagens atual do seu número de telefone comercial aparece no painel [Gerenciador do WhatsApp](https://business.facebook.com/wa/manage/home/) > **Ferramentas da conta** > **Limites de mensagens**:
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/535132607_2167690997071606_2519788358245522587_n.png?_nc_cat=103&ccb=1-7&_nc_sid=e280be&_nc_ohc=UYubGzjD7CkQ7kNvwH797T2&_nc_oc=AdlOkAh9lDKFTwRhREVnkqV5kT-5O50x8V2X7BRRfGL37HjmchWEii780z5z2nCxvwU&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=2cFVgWlRp4yxk49VYLBt-A&oh=00_Afmr_l16cSKv9HG-3w1PD9rCZkuno3X48Ypq893vWhrmNQ&oe=69612A99)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/535132607_2167690997071606_2519788358245522587_n.png?_nc_cat=103&ccb=1-7&_nc_sid=e280be&_nc_ohc=t8rbfrRerAgQ7kNvwFviXA-&_nc_oc=AdmwuFe_THp6Md2Ul3lhMaqqYri6zCZVdDeHO7bn54lfP1rQJGY57w5_dK68_eMyXkk&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=z9xf4ASxsJWIW4QvQwJYxQ&oh=00_Afo_E5_9TQS3ZU6whUgPGcPZhJv4nGklaIThOFB5UIHpwQ&oe=698E6E19)
 
 ### Via API
 
-Use o ponto de extremidade [GET /<BUSINESS\_PHONE\_NUMBER\_ID>](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-phone-number-api#Reading) e peça o campo `whatsapp_business_manager_messaging_limit` (para a versão v24.0 e posteriores) ou o campo `messaging_limit_tier` (para a versão 23.0 e anteriores) para obter o limite de mensagens atual de um número de telefone comercial.
+Use o ponto de extremidade [GET /<BUSINESS\_PHONE\_NUMBER\_ID>](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-phone-number-api#Reading) e peça o campo `whatsapp_business_manager_messaging_limit`.
 
-#### Exemplo de solicitação
+Observe que o `messaging_limit_tier`, que era usado para retornar o limite de mensagens do número de telefone, está obsoleto.
+
+### Exemplo de pedido
 
 ```
 curl 'https://graph.facebook.com/v24.0/106540352242922?fields=whatsapp_business_manager_messaging_limit' \

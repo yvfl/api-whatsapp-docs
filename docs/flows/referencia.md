@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/docs/whatsapp/flows/reference -->
-<!-- Scraped: 2025-12-21T15:25:03.240Z -->
+<!-- Scraped: 2026-01-24T00:24:43.081Z -->
 
 ![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1765810345)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
 

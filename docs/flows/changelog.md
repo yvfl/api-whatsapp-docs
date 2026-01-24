@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/docs/whatsapp/flows/changelogs -->
-<!-- Scraped: 2025-12-21T15:23:56.739Z -->
+<!-- Scraped: 2026-01-24T00:23:33.582Z -->
 
 ![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1765810345)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
 
@@ -236,12 +236,12 @@ We are also adding some features to the API, and making some of those available 
 
 #### API to migrate (copy) Flows from one WABA to another
 
--   Flows can be migrated from one WhatsApp Business Account (WABA) to another owned by the same business. Migration doesn't move the source Flows, it creates copies of them with the same names in the destination WABA. [The migration API is documented here](https://developers.facebook.com/docs/whatsapp/flows/reference/flowsapi/#migrate) and included in [the Flows API Postman collection.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.postman.com%2Fmeta%2Fwhatsapp-business-platform%2Frequest%2Funjqd6w%2Fmigrate-flows&h=AT1kGE24EyeVc9XR26PAHXaUCFJm2AaHuLxd0NhYQ-EI0FSVyqAaIWyrtnWwj58nydoLplf-wOLVnBh6ET5oX1R2r7akfCB5KtiL_MK0zeP0wzLvntgGeD-SQRK_yWk_7LneN3X3I0aNOfuzjZQixKGdyNY)
+-   Flows can be migrated from one WhatsApp Business Account (WABA) to another owned by the same business. Migration doesn't move the source Flows, it creates copies of them with the same names in the destination WABA. [The migration API is documented here](https://developers.facebook.com/docs/whatsapp/flows/reference/flowsapi/#migrate) and included in [the Flows API Postman collection.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.postman.com%2Fmeta%2Fwhatsapp-business-platform%2Frequest%2Funjqd6w%2Fmigrate-flows&h=AT3DtEiWNMqoLNoZ9LvgGvwjgPmSvyLxXKQFr07HyOlenqvWwQdbUZEJuDM85fvkgnrJlujcnJ_bgn56wIWzijPpps20PzO0OsVtE8CDEr4mvBJ7yfwj2_JFGA4L-YMVQ2LjbAMln5ulOL5779We_6bL1sM)
   
 
 #### Endpoint encryption examples in C# & Go
 
--   We added example code for Flows endpoint [in C# here](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fcsharp%2FFlowsEndpoint&h=AT3kQISVMwCUbLjezL_uGbUcaW1-vICJI0A2Vex4Hk6jMCHiRMbeyXh4ayXx8tpUD-YOWLd1gGDdsJwQrWrFzjLMscDLEodC5rx_JikDRVa3JNF2fl7tgUTtzBNG8QBP0ff7mzkWBpHJxMOBH4a7jgqOUuY) and [in Go here.](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fgo%2Fflows-endpoint&h=AT0xmNnCMuoJsNP1iyeYvhyJ_Fe38FKhaCIQJwh3rUXbX-xJzYfzmyfqebe33r9ImBk7WBYiHT9wfjGAeK1YbFvK5qWS9Fw3_hQsbmdMf_nva9STvoGboi6Eg9f0hGGcRJpnpdHyxxvaxFqBf04POCvEO4k)
+-   We added example code for Flows endpoint [in C# here](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fcsharp%2FFlowsEndpoint&h=AT0VjUzsdbBNAKTwc4ZYBHXn-DRFaDuSdH2JfCxLMNtNEzz_j_yT29hBJzLoR_Mh4WJbe70yDUlqX8RZYhikgGAdC7-2gnpjwO0NgliRj4fjEcfAszXso2HvGJXtwWYac6OniRThn06zSx_j3q780V_CWQ8) and [in Go here.](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fgo%2Fflows-endpoint&h=AT3bNLjUEVWAnu9AgHtR3sUabK4VQFi3Mc52cbMLda3Mt6foBXPF41pT5NJLCw9A7C16puSQ0qR41ls_O6awSak1Cxqr2KObrhID1WR_VSjOA03ECKRDZWdvoI5Aa9pC3hJF6hHYI8ut1TSBro8x0eOhi7RwkgjuwDUAhfwG)
   
 
 #### Flow previews can be shared from the Builder
@@ -557,8 +557,8 @@ As announced in [May](https://developers.facebook.com/docs/whatsapp/flows/change
 #### New flow template: appointment booking template
 
 -   Add a new flow JSON template “Book an Appointment” which can be used when creating a flow in Builder. The [flow template can be found here](https://developers.facebook.com/docs/whatsapp/flows/examples/templates#book-an-appointment).
--   Add an endpoint example in NodeJS that works with the “Book an Appointment” flow JSON end to end. The endpoint code is available on [Github](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fnodejs%2Fbook-appointment&h=AT1GzG_MwbrCXQy9e5iFrE-0VbQXUAStlBlAUm2QWMVNHh-YlK_6BQsPLR6_E1vyQQ2rh-Y6md7WVZ0Rr4aIgZYwISo-1ACXZ5vHHAgkFCaYV7Hfz2FeW5OaqZvAE4288KIfNSiRejnXg0dIbYgLD_H_i70) and [Glitch](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fedit%2F%23%21%2Fwhatsapp-flows-appointment&h=AT2dx19Ruk8ySR5VFjbvo-H_oJ3Y4v-kY_DiHb4CAQ95632UfNOMFJrUR_UARq2SSxXhZXaz73wD_H5GqcIUHEXzcGXDSiJICphW_iVCAPt8epiCy2ggehu_NfdsiNQitqlzgYCxeBubQn9c-exz1mbSz1o).
--   Enhance the endpoint example on [Github](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fnodejs%2Fbasic&h=AT3nV8NYkCop_WnzQ-m1e-eVZj1rNC5uASNl4c9lWwa-ChILpKook-pdkAeFnBS4HeVWRYoilRztWX4bV-_7Jgy2tj2tILO2R-pkAYTsNXbhLxRKqwSeVLSXZaWzbhkPCmQwaFSLdqGxJc3wVHwd7u5ESFM) and [Glitch](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fedit%2F%23%21%2Fwhatsapp-flows-endpoint&h=AT0opXqowxvv3ApwtyLFqCdxjrhW32eOwIeP-9D-oggQnXn3SRku6lkustp1igTSbY701343OMs497IFF9vxFaNBYOhhlc3Ej2aTMtQ1bi2VaWUtAON3EP8ypZWmaUJV8xYXKnR-IU8F1buNaqGmZvs1oqQ) to include app secret validation, endpoint error codes, script to create public/private keys, and other improvements.
+-   Add an endpoint example in NodeJS that works with the “Book an Appointment” flow JSON end to end. The endpoint code is available on [Github](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fnodejs%2Fbook-appointment&h=AT13-gg_bmRJdKwJbZbCSFUsfsYD-uhquXFaZPoBcxCAAH6mEOb7gV5uaky-qVNIcv6QuICiHkSSbOXq651rwK9q-5uwijHFIrWZGz0zzb8SMAFUGtsmKcRcNqgsd30FjEqCL_8WZtcvBjWUZmmsuSYfueU) and [Glitch](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fedit%2F%23%21%2Fwhatsapp-flows-appointment&h=AT3xsyOjB_UK1OVhJJtm4huVxHM5TIUb9_Jg78JC-ACgGy5wuFtMnbGQp6FSHt5Jcee5-yGFJnRtlgA-Cjo5iikZeKhSyOj42IjWy5KmmgvwKywUrYG7JFiBP7sYGiQKys6yD3AiLm87nR6xl6RyZVX4wjk).
+-   Enhance the endpoint example on [Github](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fnodejs%2Fbasic&h=AT0HU2YBbT_g2BdteP7FQ1jCxRUW4RI0jW9_R-X9H8n8Pvcpp-7t8kV3tLGiUOO2pQb-k62lcV8x0tQHLhhh2Bxah8-ZTWHppjmTQSgj7jPKiO7NEctG7OeUr73ckhepsp3asgDEKv9XnrY7E-eRcvKQ_34) and [Glitch](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fedit%2F%23%21%2Fwhatsapp-flows-endpoint&h=AT1pj674jhOUMQy5QkLT7U4mwI-I-r3lJl16_tPFhzivKPLToN64UanGJrX1aFXJ3HjtithCxfjcEKetfVCdughv_3zptdpKfRQ0lyX50bUo6_2yZ7PJ77MXKxsjd5SNdc1zUkYWEqU26I8VDaSQRDLioeI) to include app secret validation, endpoint error codes, script to create public/private keys, and other improvements.
 
 #### Endpoint public key setup validation during sending flow messages via OnPrem
 
@@ -579,7 +579,7 @@ As announced in [May](https://developers.facebook.com/docs/whatsapp/flows/change
 
 ### December 2023 release
 
-Adds an [end-to-end example](/docs/whatsapp/flows/guides/implementingyourflowendpoint#implementing-endpoint-for-flows) for an endpoint server in Node.js that can be edited online on Glitch. The source code is also available on [Github](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fnodejs%2Fbasic&h=AT2ITfyVmtKjF6BWlpT4r_9OCfMcUzP70dCy5i17boroL9OZnFSKwzQw253hZtRkj7y4Q_jkeGjw-Nondql1OM0ltqb1bAHnN96t_K2l0kjV2w9oMXT3k511YHA9Tu9lTrMLo4Obk3M75c1ktcEDQdM3eZw).
+Adds an [end-to-end example](/docs/whatsapp/flows/guides/implementingyourflowendpoint#implementing-endpoint-for-flows) for an endpoint server in Node.js that can be edited online on Glitch. The source code is also available on [Github](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fnodejs%2Fbasic&h=AT1m_ERHLpe7CMmhkCky42-HdF8yT2gNVxOm6bWH6WAYVpHb1-FC-egIkpuezwN_Sw1ORsUYSGaQs5n6DFW367iirLRgobJKAcsUfj3tErXzx_6vzwHzKcnIZn9rZA-IQrKLloBak66u6QPMbspapFq8G_A).
 
 #### Introduces support for Flow JSON version 3.0
 

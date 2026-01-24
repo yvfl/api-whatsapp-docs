@@ -1,9 +1,9 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/authentication-international-rates -->
-<!-- Scraped: 2025-12-20T17:23:34.171Z -->
+<!-- Scraped: 2026-01-24T00:46:04.131Z -->
 
-# Tarifas de autenticação internacional
+# Taxas internacionais de autenticação
 
-Updated: 14 de nov de 2025
+Updated: 12 de dez de 2025
 
 Países específicos têm uma taxa **authentication-international** em nossas [tabelas de tarifas](/documentation/business-messaging/whatsapp/pricing#rate-cards). Se você enviar uma mensagem de modelo de autenticação para um usuário do WhatsApp cujo código de ligação do país tenha uma taxa internacional de autenticação, a mensagem entregue será cobrada por essa taxa se:
 
@@ -11,7 +11,7 @@ Países específicos têm uma taxa **authentication-international** em nossas [t
 
 Por exemplo, se a sua empresa estiver sediada na Indonésia e você enviar uma mensagem de modelo de autenticação para um usuário do WhatsApp que tenha um código de ligação de país +62 (Indonésia), e a mensagem for entregue, a taxa internacional de autenticação não será cobrada, porque você e o usuário estão no mesmo país. No entanto, se a sua empresa for sediada na Índia, a taxa internacional de autenticação será cobrada de você caso todos os critérios acima sejam atendidos.
 
-Consulte [Exemplos](#examples) para ver outros exemplos de cenários.
+Confira [Exemplos](#examples) para ver outros exemplos de cenários.
 
 Webhooks de status [mensagens](/documentation/business-messaging/whatsapp/webhooks/reference/messages/status) (que incluem detalhes de preços) e [análise de preços](/documentation/business-messaging/whatsapp/analytics#pricing-analytics) indicarão se uma mensagem ou um conjunto de mensagens foi cobrado por uma taxa internacional de autenticação.
 
@@ -31,7 +31,7 @@ Os países a seguir estão sujeitos a taxas internacionais de autenticação:
 
 -   Egito-   Índia-   Indonésia-   Malásia-   Nigéria-   Paquistão-   Arábia Saudita-   África do Sul-   Emirados Árabes Unidos
 
-Consulte [Tabela de tarifas](/documentation/business-messaging/whatsapp/pricing#rate-cards) para saber mais sobre as tarifas.
+Veja [Tabela de tarifas](/documentation/business-messaging/whatsapp/pricing#rate-cards) para saber mais sobre as tarifas.
 
 ## Horas de início
 
@@ -80,13 +80,13 @@ v24.0
 
 **Obrigatório.**
 
-É a identificação da conta do WhatsApp Business.
+Identificação da conta do WhatsApp Business.
 
 `102290129340398`
 
 ### Resposta
 
-Caso a solicitação seja bem-sucedida:
+Caso o pedido seja bem-sucedido:
 
 ```
 {
@@ -112,7 +112,7 @@ Valor de exemplo
 
 `<WABA_ID>`
 
-ID da conta do WhatsApp Business (WABA).
+Identificação da conta do WhatsApp Business (WABA).
 
 `102290129340398`
 
@@ -145,11 +145,11 @@ As informações disponíveis publicamente abaixo são usadas para determinar a 
 
 Tentaremos determinar a localização da sua empresa quando:
 
--   For considerada [não qualificada](#eligibility) para as taxas internacionais de autenticação.-   Você [editar o ponto comercial principal](#editing-your-primary-business-location) usando o Gerenciador de Negócios.
+-   For considerada [não qualificada](#eligibility) para as taxas internacionais de autenticação.-   Você [editar o ponto comercial principal](#set-or-edit-your-primary-business-location) usando o Gerenciador de Negócios.
 
-Esse processo pode levar até três dias úteis. O resultado dessa determinação pode ser o seguinte:
+Esse processo pode levar até três dias úteis. O resultado dessa determinação pode ser um dos seguintes:
 
--   **Verificada**: determinamos o lugar onde a empresa está sediada e definimos o ponto comercial principal para esse país (o que também dispara um webhook).-   **Precisamos de mais informações**: exigimos mais informações para tomar uma decisão.-   **Rejeitado**: discordamos do país que você designou no Gerenciador de Negócios (se ele foi usado para editar o campo **Localização principal da empresa**).
+-   **Verificada:** determinamos o lugar onde a empresa está sediada e definimos o ponto comercial principal para esse país (o que também dispara um webhook).-   **Precisamos de mais informações:** exigimos mais informações para tomar uma decisão.-   **Rejeitado:** discordamos do país que você designou no Gerenciador de Negócios (se ele foi usado para editar o campo **Localização principal da empresa**).
 
 Você receberá uma notificação sobre o resultado no seu [email de qualificação](#eligibility-email) inicial ou em um email separado se tiver usado o Gerenciador de Negócios para editar a sua localização.
 
@@ -157,13 +157,11 @@ Caso a solicitação seja rejeitada, se precisarmos de mais informações ou se 
 
 Caso o status do seu ponto comercial principal não seja verificado, mas a hora de início para um determinado país já tenha passado, qualquer mensagem de autenticação enviada a um usuário do WhatsApp nesse país será cobrada com a taxa internacional.
 
-[](#editing-your-primary-business-location)
-
 ### Definir ou editar seu ponto comercial principal
 
 Para definir ou editar seu ponto comercial principal:
 
--   [Clique aqui para acessar as configurações do negócio](https://business.facebook.com/settings/info?edit_pbl=true)-   Selecione o país do ponto comercial principal de operação da empresa no menu suspenso ou insira-o no campo de texto. Esse é o local onde a empresa tem sede e mantém os registros contabilísticos.-   Clique em **Avançar**.-   Responda às perguntas na tela. Essas respostas ajudarão a Meta a verificar seu ponto comercial principal.-   Clique em **Avançar**.-   Clique em **Enviar para análise**
+-   [Clique aqui para acessar as configurações do negócio](https://business.facebook.com/settings/info?edit_pbl=true)-   Selecione o país do ponto comercial principal de operação da empresa no menu suspenso ou insira-o no campo de texto. Esse é o local onde a empresa tem sede e mantém os registros contabilísticos.-   Clique em **Avançar**.-   Responda às perguntas na tela. Essas respostas ajudarão a Meta a verificar seu ponto comercial principal.-   Clique em **Avançar**.-   Clique em **Enviar para análise**.
 
 _Observação: não será possível fazer alterações enquanto a verificação estiver em análise._
 
@@ -171,11 +169,11 @@ _Observação: não será possível fazer alterações enquanto a verificação 
 
 O campo **Localização principal da empresa** no Gerenciador de Negócios também exibirá um status:
 
--   **Verificado**: verificamos a localização principal da empresa.-   **Verificação pendente**: estamos determinando a localização principal da sua empresa.-   **Rejeitado**: discordamos do país que você designou com base em informações disponíveis publicamente e no que você incluiu ao editar a localização. É possível editar de forma manual sua localização novamente e incluir informações diferentes como parte do envio.
+-   **Verificado:** verificamos a localização principal da empresa.-   **Verificação pendente:** estamos determinando a localização principal da sua empresa.-   **Rejeitado:** discordamos do país que você designou com base em informações disponíveis publicamente e no que você incluiu ao editar a localização. Você pode editar de forma manual sua localização novamente e incluir informações diferentes como parte do envio.
 
 ### Obter a localização via API
 
-É possível usar a API para verificar se o ponto comercial principal da empresa está definido solicitando o campo `primary_business_location` na conta do WhatsApp Business (WABA):
+Você pode usar a API para verificar se o ponto comercial principal da empresa está definido solicitando o campo `primary_business_location` na conta do WhatsApp Business (WABA):
 
 #### Solicitação
 
@@ -186,7 +184,7 @@ curl 'https://graph.facebook.com/<API_VERSION>/<WABA_ID>?fields=primary_business
 
 ### Resposta:
 
-Caso a solicitação seja bem-sucedida:
+Caso o pedido seja bem-sucedido:
 
 ```
 {
@@ -215,7 +213,7 @@ Sempre cobraremos a taxa doméstica referente ao seu principal ponto comercial, 
 
 Nos exemplos a seguir, considere o seguinte cenário:
 
--   Há três países, identificados por três códigos de país fictícios: A, B e C.-   Os países A e B têm tarifas de autenticação internacional.-   O país C não tem uma taxa internacional de autenticação.-   O portfólio empresarial tem uma WABA com o ID 12345.
+-   Há três países, identificados por três códigos de país fictícios: A, B e C-   Os países A e B têm tarifas de autenticação internacional-   O país C não tem uma taxa internacional de autenticação-   O portfólio empresarial tem uma WABA com o ID 12345
 
 A solicitação do campo `auth_international_rate_eligibility` na WABA 12345 retorna:
 

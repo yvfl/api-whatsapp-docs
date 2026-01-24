@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/template-media -->
-<!-- Scraped: 2025-12-20T17:33:31.199Z -->
+<!-- Scraped: 2026-01-24T01:06:03.801Z -->
 
 ## Esta página não está disponível no momento
 

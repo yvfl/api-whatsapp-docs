@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/overview -->
-<!-- Scraped: 2025-12-20T17:22:46.313Z -->
+<!-- Scraped: 2026-01-24T00:42:36.710Z -->
 
         
 
@@ -29,7 +29,7 @@ Visão geral
 
 [
 
-Recado
+Sobre
 
 ](#)
 
@@ -65,19 +65,13 @@ Preços
 
 [
 
-Atualizações de preços
-
-](/documentation/business-messaging/whatsapp/pricing/updates-to-pricing/)
-
-[
-
-Taxas internacionais de autenticação
+Tarifas de autenticação internacional
 
 ](/documentation/business-messaging/whatsapp/pricing/authentication-international-rates/)
 
 [
 
-Preços baseados em conversas
+Preços baseados em conversa
 
 ](/documentation/business-messaging/whatsapp/pricing/conversation-based-pricing/)
 
@@ -95,13 +89,13 @@ Ativos da conta
 
 [
 
-Telefones comerciais
+Números de telefone comerciais
 
 ](#)
 
 [
 
-Telefones comerciais
+Números de telefone comerciais
 
 ](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers/)
 
@@ -125,9 +119,15 @@ Componentes de conversa
 
 [
 
-Perfil comercial
+IDs de usuário no escopo da empresa
 
-](/documentation/business-messaging/whatsapp/business-phone-numbers/business-profiles/)
+](/documentation/business-messaging/whatsapp/business-scoped-user-ids/)
+
+[
+
+Perfis empresariais
+
+](/documentation/business-messaging/whatsapp/business-profiles/)
 
 [
 
@@ -152,6 +152,150 @@ Contas do WhatsApp Business
 QR codes e links de mensagens
 
 ](/documentation/business-messaging/whatsapp/qr-codes/)
+
+[
+
+Mensagens de marketing
+
+](#)
+
+[
+
+Visão geral
+
+](/documentation/business-messaging/whatsapp/marketing-messages/overview/)
+
+[
+
+Começar
+
+](/documentation/business-messaging/whatsapp/marketing-messages/get-started/)
+
+[
+
+Recursos
+
+](/documentation/business-messaging/whatsapp/marketing-messages/features/)
+
+[
+
+Guias
+
+](#)
+
+[
+
+Integração
+
+](/documentation/business-messaging/whatsapp/marketing-messages/onboarding/)
+
+[
+
+Mensurar conversões
+
+](/documentation/business-messaging/whatsapp/marketing-messages/measure-conversion/)
+
+[
+
+Rastrear eventos de clique
+
+](/documentation/business-messaging/whatsapp/marketing-messages/track-click-events/)
+
+[
+
+Ver métricas
+
+](/documentation/business-messaging/whatsapp/marketing-messages/view-metrics/)
+
+[
+
+Deep links
+
+](/documentation/business-messaging/whatsapp/marketing-messages/deep-links/)
+
+[
+
+Enviar mensagens de marketing
+
+](/documentation/business-messaging/whatsapp/marketing-messages/send-marketing-messages/)
+
+[
+
+Fazer a integração de clientes empresarias
+
+](/documentation/business-messaging/whatsapp/marketing-messages/onboard-business-customers/)
+
+[
+
+Registro de alterações
+
+](/documentation/business-messaging/whatsapp/marketing-messages/changelog/)
+
+[
+
+Mensagens de utilidade
+
+](#)
+
+[
+
+Visão geral
+
+](/documentation/business-messaging/whatsapp/templates/utility-templates/utility-templates/)
+
+[
+
+Mensagens de autenticação
+
+](#)
+
+[
+
+Visão geral
+
+](/documentation/business-messaging/whatsapp/templates/authentication-templates/authentication-templates/)
+
+[
+
+Autenticação de usuários
+
+](/documentation/business-messaging/whatsapp/templates/authentication-templates/authentication-best-practices/)
+
+[
+
+Preenchimento automático com um toque
+
+](/documentation/business-messaging/whatsapp/templates/authentication-templates/autofill-button-authentication-templates/)
+
+[
+
+Sem toque
+
+](/documentation/business-messaging/whatsapp/templates/authentication-templates/zero-tap-authentication-templates/)
+
+[
+
+Copiar código
+
+](/documentation/business-messaging/whatsapp/templates/authentication-templates/copy-code-button-authentication-templates/)
+
+[
+
+Sinais de erro
+
+](/documentation/business-messaging/whatsapp/templates/authentication-templates/error-signals/)
+
+[
+
+Gerenciamento em massa
+
+](/documentation/business-messaging/whatsapp/templates/authentication-templates/bulk-management/)
+
+[
+
+Prévias
+
+](/documentation/business-messaging/whatsapp/templates/authentication-templates/template-preview/)
 
 [
 
@@ -197,25 +341,19 @@ Documento
 
 [
 
-Fluxo
-
-](/documentation/business-messaging/whatsapp/messages/interactive-flow-messages/)
-
-[
-
 Imagem
 
 ](/documentation/business-messaging/whatsapp/messages/image-messages/)
 
 [
 
-Interativos
+Interativo
 
 ](#)
 
 [
 
-Botão de URL
+Botão URL
 
 ](/documentation/business-messaging/whatsapp/messages/interactive-cta-url-messages/)
 
@@ -224,6 +362,18 @@ Botão de URL
 Botões de lista
 
 ](/documentation/business-messaging/whatsapp/messages/interactive-list-messages/)
+
+[
+
+Carrossel de mídia
+
+](/documentation/business-messaging/whatsapp/messages/interactive-media-carousel-messages/)
+
+[
+
+Carrossel de produtos
+
+](/documentation/business-messaging/whatsapp/messages/interactive-product-carousel-messages/)
 
 [
 
@@ -293,9 +443,9 @@ Limites de mensagens
 
 [
 
-Próximas mudanças nos limites de mensagens
+Próximas alterações nos limites de mensagens
 
-](/documentation/business-messaging/whatsapp/messaging-limits/upcoming-changes/)
+](/documentation/business-messaging/whatsapp/upcoming-messaging-limits-changes/)
 
 [
 
@@ -335,69 +485,9 @@ Criptografia de carga
 
 [
 
-Mensagens de marketing
+Taxa de transferência
 
-](#)
-
-[
-
-Visão geral
-
-](/documentation/business-messaging/whatsapp/marketing-messages/overview/)
-
-[
-
-Recursos
-
-](#)
-
-[
-
-Otimização automática de criativos
-
-](/documentation/business-messaging/whatsapp/marketing-messages/automatic-creative-optimization/)
-
-[
-
-Mensurar conversões
-
-](/documentation/business-messaging/whatsapp/marketing-messages/conversion-measurement/)
-
-[
-
-Rastrear eventos de clique
-
-](/documentation/business-messaging/whatsapp/marketing-messages/track-click-events/)
-
-[
-
-Consultar métricas
-
-](/documentation/business-messaging/whatsapp/marketing-messages/view-metrics/)
-
-[
-
-Deep links
-
-](/documentation/business-messaging/whatsapp/marketing-messages/deep-links/)
-
-[
-
-Começar
-
-](/documentation/business-messaging/whatsapp/marketing-messages/get-started/)
-
-[
-
-Enviar mensagens de marketing
-
-](/documentation/business-messaging/whatsapp/marketing-messages/send-marketing-messages/)
-
-[
-
-Fazer a integração de clientes empresarias
-
-](/documentation/business-messaging/whatsapp/marketing-messages/onboard-business-customers/)
+](/documentation/business-messaging/whatsapp/throughput/)
 
 [
 
@@ -410,48 +500,6 @@ Modelos
 Visão geral
 
 ](/documentation/business-messaging/whatsapp/templates/overview/)
-
-[
-
-Modelos de autenticação
-
-](#)
-
-[
-
-Visão geral
-
-](/documentation/business-messaging/whatsapp/templates/authentication-templates/authentication-templates/)
-
-[
-
-Autenticação de usuários
-
-](/documentation/business-messaging/whatsapp/templates/authentication-templates/authentication-best-practices/)
-
-[
-
-Preenchimento automático com um toque
-
-](/documentation/business-messaging/whatsapp/templates/authentication-templates/autofill-button-authentication-templates/)
-
-[
-
-Sem zero
-
-](/documentation/business-messaging/whatsapp/templates/authentication-templates/zero-tap-authentication-templates/)
-
-[
-
-Copiar código
-
-](/documentation/business-messaging/whatsapp/templates/authentication-templates/copy-code-button-authentication-templates/)
-
-[
-
-Sinais de erro
-
-](/documentation/business-messaging/whatsapp/templates/authentication-templates/error-signals/)
 
 [
 
@@ -473,7 +521,7 @@ Modelos de marketing personalizados
 
 [
 
-Modelos de solicitação de permissão para ligação
+Modelos de solicitação de permissão de ligação
 
 ](/documentation/business-messaging/whatsapp/templates/marketing-templates/call-permission-request-message-template/)
 
@@ -518,18 +566,6 @@ Modelos de carrossel de cartão de produto
 Modelos de mensagem de produto único
 
 ](/documentation/business-messaging/whatsapp/templates/marketing-templates/spm-templates/)
-
-[
-
-Modelos de utilidade
-
-](#)
-
-[
-
-Visão geral
-
-](/documentation/business-messaging/whatsapp/templates/utility-templates/utility-templates/)
 
 [
 
@@ -581,7 +617,13 @@ Migração
 
 [
 
-Regularidade
+Regularidade do portfólio
+
+](/documentation/business-messaging/whatsapp/templates/portfolio-pacing/)
+
+[
+
+Regularidade do modelo
 
 ](/documentation/business-messaging/whatsapp/templates/template-pacing/)
 
@@ -635,7 +677,13 @@ Visão geral
 
 [
 
-App para webhooks de teste
+Criar um ponto de extremidade de webhook
+
+](/documentation/business-messaging/whatsapp/webhooks/create-webhook-endpoint/)
+
+[
+
+Criar um ponto de extremidade de webhook de teste
 
 ](/documentation/business-messaging/whatsapp/webhooks/set-up-whatsapp-echo-bot/)
 
@@ -644,12 +692,6 @@ App para webhooks de teste
 Substituir o URL de retorno de chamada
 
 ](/documentation/business-messaging/whatsapp/webhooks/override/)
-
-[
-
-Ecos de mensagens
-
-](/documentation/business-messaging/whatsapp/webhooks/message_echoes/)
 
 [
 
@@ -719,97 +761,103 @@ Visão geral
 
 [
 
-audio messages
+mensagens de áudio
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/audio/)
 
 [
 
-button messages
+mensagens de botões
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/button/)
 
 [
 
-contacts messages
+mensagens de contatos
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/contacts/)
 
 [
 
-document messages
+mensagens de documento
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/document/)
 
 [
 
-errors messages
+mensagens de erro
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/errors/)
 
 [
 
-image messages
+mensagens de grupo
+
+](/documentation/business-messaging/whatsapp/webhooks/reference/messages/group/)
+
+[
+
+mensagens de imagem
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/image/)
 
 [
 
-interactive messages
+mensagens interativas
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/interactive/)
 
 [
 
-location messages
+mensagens de localização
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/location/)
 
 [
 
-order messages
+mensagens de pedido
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/order/)
 
 [
 
-reaction messages
+mensagens de reação
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/reaction/)
 
 [
 
-status messages
+mensagens de status
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/status/)
 
 [
 
-sticker messages
+mensagens com figurinhas
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/sticker/)
 
 [
 
-system messages
+mensagens do sistema
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/system/)
 
 [
 
-text messages
+mensagens de texto
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/text/)
 
 [
 
-unsupported messages
+mensagens incompatíveis
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/unsupported/)
 
 [
 
-video messages
+mensagens de vídeo
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/video/)
 
@@ -839,7 +887,7 @@ phone\_number\_quality\_update
 
 [
 
-security
+segurança
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/security/)
 
@@ -899,6 +947,12 @@ Obter permissões de ligação do usuário
 
 [
 
+Ligação de vídeo
+
+](/documentation/business-messaging/whatsapp/calling/video-calling/)
+
+[
+
 Ligações iniciadas pelo usuário
 
 ](/documentation/business-messaging/whatsapp/calling/user-initiated-calls/)
@@ -923,15 +977,27 @@ Padrões de integração
 
 [
 
+Exemplos de integração
+
+](/documentation/business-messaging/whatsapp/calling/integration-examples/)
+
+[
+
 Referência
 
 ](/documentation/business-messaging/whatsapp/calling/reference/)
 
 [
 
-Resolução de problemas
+Solução de problemas
 
 ](/documentation/business-messaging/whatsapp/calling/troubleshooting/)
+
+[
+
+Conta de sandbox para chamadas
+
+](/documentation/business-messaging/whatsapp/calling/sandbox/)
 
 [
 
@@ -971,7 +1037,7 @@ Começar
 
 [
 
-Gerenciamento de grupo
+Gerenciamento de grupos
 
 ](/documentation/business-messaging/whatsapp/groups/reference/)
 
@@ -1007,13 +1073,13 @@ Perguntas frequentes
 
 [
 
-Insights
+Informações
 
 ](/documentation/business-messaging/whatsapp/analytics/)
 
 [
 
-Anúncios com clique para o WhatsApp
+Anúncios de clique para o WhatsApp
 
 ](#)
 
@@ -1115,7 +1181,7 @@ Billdesk
 
 [
 
-CC Avenue
+CCAvenue
 
 ](/documentation/business-messaging/whatsapp/payments/payments-in/upi-intent/pg-guide-ccavenue/)
 
@@ -1133,7 +1199,7 @@ Links de pagamento aprimorados
 
 [
 
-Portal de pagamento
+Gateway de pagamento
 
 ](/documentation/business-messaging/whatsapp/payments/payments-in/pg/)
 
@@ -1205,6 +1271,12 @@ Modelos de detalhes do pedido
 
 [
 
+Cartões de crédito e de débito
+
+](/documentation/business-messaging/whatsapp/payments/payments-br/cards)
+
+[
+
 Parceiros
 
 ](#)
@@ -1217,31 +1289,31 @@ Visão geral
 
 [
 
-Seja um parceiro
+Tornar-se um parceiro
 
 ](#)
 
 [
 
-Seja um Provedor de Tecnologia
+Tornar-se um Provedor de Tecnologia
 
 ](/documentation/business-messaging/whatsapp/solution-providers/get-started-for-tech-providers/)
 
 [
 
-Seja um Parceiro de Soluções
+Tornar-se um parceiro de soluções
 
 ](/documentation/business-messaging/whatsapp/solution-providers/get-started-for-solution-partners/)
 
 [
 
-Seja um Parceiro de Mensuração
+Tornar-se um parceiro de mensuração
 
 ](/documentation/business-messaging/whatsapp/solution-providers/measurement-partners/)
 
 [
 
-Seja um Parceiro de Tecnologia
+Tornar-se um parceiro de tecnologia
 
 ](/documentation/business-messaging/whatsapp/solution-providers/upgrade-to-tech-partner/)
 
@@ -1337,7 +1409,7 @@ Tornar o site opcional
 
 [
 
-Instalar somente o app
+Instalação apenas do app
 
 ](/documentation/business-messaging/whatsapp/embedded-signup/app-only-install/)
 
@@ -1385,7 +1457,7 @@ Prévia pública da versão 3
 
 [
 
-Prévia pública da v2
+Prévia pública da versão 2
 
 ](/documentation/business-messaging/whatsapp/embedded-signup/version-2-public-preview/)
 
@@ -1397,19 +1469,19 @@ Erros
 
 [
 
-Criação de WABA iniciada pelo parceiro
+Criação da WABA iniciada pelo parceiro
 
 ](/documentation/business-messaging/whatsapp/solution-providers/partner-initiated-waba-creation/)
 
 [
 
-Soluções multiparceiros
+Soluções multiparceiro
 
 ](#)
 
 [
 
-Soluções multiparceiros
+Soluções multiparceiro
 
 ](/documentation/business-messaging/whatsapp/solution-providers/multi-partner-solutions/)
 
@@ -1418,6 +1490,42 @@ Soluções multiparceiros
 Criação Incorporada
 
 ](/documentation/business-messaging/whatsapp/solution-providers/multi-partner-solution-embedded-creation/)
+
+[
+
+Migrar WABAs entre soluções via Cadastro incorporado
+
+](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-wabas-among-solutions-via-embedded-signup/)
+
+[
+
+Migrar WABAs entre soluções via Meta Business Suite
+
+](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-wabas-among-solutions-via-meta-business-suite/)
+
+[
+
+Migrar WABAs entre parceiros via Cadastro incorporado
+
+](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-wabas-among-solution-partners-via-embedded-signup/)
+
+[
+
+Migrar clientes de soluções via Cadastro Incorporado
+
+](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-customers-off-solutions-via-embedded-signup/)
+
+[
+
+Migrar clientes de soluções via Meta Business Suite
+
+](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-customers-off-solutions-via-meta-business-suite/)
+
+[
+
+Adicionar WABAs a uma solução multiparceiros
+
+](/documentation/business-messaging/whatsapp/solution-providers/support/adding-waba-to-mps/)
 
 [
 
@@ -1499,48 +1607,6 @@ Suporte
 
 [
 
-Migrar WABAs entre soluções via Cadastro incorporado
-
-](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-wabas-among-solutions-via-embedded-signup/)
-
-[
-
-Migrar WABAs entre soluções via Meta Business Suite
-
-](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-wabas-among-solutions-via-meta-business-suite/)
-
-[
-
-Migrar WABAs entre parceiros via Cadastro incorporado
-
-](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-wabas-among-solution-partners-via-embedded-signup/)
-
-[
-
-Migrar clientes de soluções via Cadastro Incorporado
-
-](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-customers-off-solutions-via-embedded-signup/)
-
-[
-
-Migrar clientes de soluções via Meta Business Suite
-
-](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-customers-off-solutions-via-meta-business-suite/)
-
-[
-
-Transferir a propriedade da WABA
-
-](/documentation/business-messaging/whatsapp/solution-providers/support/transferring-wabas-to-customers/)
-
-[
-
-Adicionar WABAs a uma solução multiparceiros
-
-](/documentation/business-messaging/whatsapp/solution-providers/support/adding-waba-to-mps/)
-
-[
-
 Migrar números entre parceiros via Cadastro Incorporado
 
 ](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-phone-numbers-among-solution-partners-via-embedded-signup/)
@@ -1556,6 +1622,12 @@ Migrar números entre parceiros de forma programática
 Suporte ao cliente empresarial
 
 ](/documentation/business-messaging/whatsapp/solution-providers/support/business-customer-support/)
+
+[
+
+Descontinuação do modelo OBO
+
+](/documentation/business-messaging/whatsapp/solution-providers/obo-model-deprecation/)
 
 [
 
@@ -1637,13 +1709,13 @@ Página de status da API
 
 [
 
-Estado de saúde
+Status de integridade
 
 ](/documentation/business-messaging/whatsapp/support/health-status/)
 
 [
 
-Carregar teste
+Teste de carga
 
 ](/documentation/business-messaging/whatsapp/support/load-testing/)
 
@@ -1652,6 +1724,18 @@ Carregar teste
 Experimentos
 
 ](/documentation/business-messaging/whatsapp/support/experiments/)
+
+[
+
+Migrar da API Local e a API de Nuvem
+
+](/documentation/business-messaging/whatsapp/support/migrating-from-onprem-to-cloud/)
+
+[
+
+Usar um número existente do WhatsApp
+
+](/documentation/business-messaging/whatsapp/solution-providers/migrate-existing-whatsapp-number-to-a-business-account/)
 
 * * *
 
@@ -1665,7 +1749,7 @@ Referência da API
 
 [
 
-Inscrição
+App
 
 ](#)
 
@@ -1677,7 +1761,7 @@ Empresas clientes conectadas ao app
 
 [
 
-API de Soluções do Aplicativo
+API de Soluções do App
 
 ](/documentation/business-messaging/whatsapp/reference/application/application-solutions-api)
 
@@ -1689,7 +1773,7 @@ API de Criação de Soluções
 
 [
 
-Business
+Negócios
 
 ](#)
 
@@ -1698,6 +1782,12 @@ Business
 API de Adição de Números de Telefone
 
 ](/documentation/business-messaging/whatsapp/reference/business/add-phone-numbers-api)
+
+[
+
+API de Conta Comercial
+
+](/documentation/business-messaging/whatsapp/reference/business/business-account-api)
 
 [
 
@@ -1731,13 +1821,13 @@ API de Compartilhamento de Telefones Pré-Verificados do WhatsApp Business
 
 [
 
-API de Telefones Pré-Verificados do WhatsApp Business
+API de Números de Telefone Pré-Verificados do WhatsApp Business
 
 ](/documentation/business-messaging/whatsapp/reference/business/whatsapp-business-pre-verified-phone-numbers-api)
 
 [
 
-Grupo
+Grupos
 
 ](#)
 
@@ -1745,29 +1835,29 @@ Grupo
 
 API de Link de Convite para Grupos
 
-](/documentation/business-messaging/whatsapp/reference/group/groups-invite-link-api)
+](/documentation/business-messaging/whatsapp/reference/groups/groups-invite-link-api)
 
 [
 
 API de Pedidos para Participação em Grupos
 
-](/documentation/business-messaging/whatsapp/reference/group/groups-join-requests-api)
+](/documentation/business-messaging/whatsapp/reference/groups/groups-join-requests-api)
 
 [
 
 API de Membros do Grupo
 
-](/documentation/business-messaging/whatsapp/reference/group/groups-participants-api)
+](/documentation/business-messaging/whatsapp/reference/groups/groups-participants-api)
 
 [
 
 API de Consulta de Grupos
 
-](/documentation/business-messaging/whatsapp/reference/group/groups-query-api)
+](/documentation/business-messaging/whatsapp/reference/groups/groups-query-api)
 
 [
 
-Mídias
+Mídia
 
 ](#)
 
@@ -1845,45 +1935,15 @@ API de Gerenciamento de Usuários Atribuídos
 
 [
 
-API de Conta Comercial
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/business-account-api)
-
-[
-
-API de Créditos Estendidos da Conta Comercial
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/business-account-extended-credits-api)
-
-[
-
 API de Automação de Conversa
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/conversational-automation-api)
 
 [
 
-API de Fluxos
+API de Créditos Estendidos
 
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/flows-api)
-
-[
-
-API de Solicitações "Em Nome De" em andamento
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/in-progress-on-behalf-requests-api)
-
-[
-
-API de Intenção de Migração
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/migration-intent-api)
-
-[
-
-API de Intenção de Mobilidade OBO
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/obo-mobility-intent-api)
+](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/extended-credits-api)
 
 [
 
@@ -1899,19 +1959,7 @@ API de Programações
 
 [
 
-Definir a API de Intenção de Mobilidade OBO
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/set-obo-mobility-intent-api)
-
-[
-
-API de Intenção de Migração de Solução
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/set-solution-migration-intent-api)
-
-[
-
-API de Aplicativos Inscritos
+API de Apps Inscritos
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/subscribed-apps-api)
 
@@ -1965,7 +2013,7 @@ API de Detalhes do Bot
 
 [
 
-Telefone do WhatsApp Business
+Número de telefone do WhatsApp Business
 
 ](#)
 
@@ -1995,6 +2043,12 @@ API de Ligações
 
 [
 
+API de Configurações Comerciais
+
+](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/commerce-settings-api)
+
+[
+
 API de Mensagens Criptografadas
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/encrypted-messages-api)
@@ -2019,9 +2073,9 @@ API de Carregamento de Mídias
 
 [
 
-API de Telefones
+API de Mensagem
 
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/phone-number-api)
+](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/message-api)
 
 [
 
@@ -2031,7 +2085,7 @@ API de Cancelamento do Registro de Telefone
 
 [
 
-Registro do telefone
+Registro do número de telefone
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/phone-number-registration)
 
@@ -2040,12 +2094,6 @@ Registro do telefone
 API de Código de Solicitação de Verificação de Número de Telefone
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/phone-number-verification-request-code-api)
-
-[
-
-API de Registro
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/register-api)
 
 [
 
@@ -2094,12 +2142,6 @@ API de QR Code do WhatsApp Business
 API de Gerenciamento do QR Code do WhatsApp Business
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-qr-code-management-api)
-
-[
-
-API de Mensagens
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/message-api)
 
 [
 
@@ -2169,7 +2211,7 @@ API de Recusa de Solicitação de Desativação
 
 [
 
-API de Envio de Solicitação de Desativação
+Send Deactivation Request API
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-solution/send-deactivation-request-api)
 
@@ -2187,7 +2229,7 @@ API de Detalhes da Solução
 
 [
 
-API de Recusa de Solução
+API de Rejeição de Solução
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-solution/solution-reject-api)
 
@@ -2217,7 +2259,7 @@ Começar
 
 Veja uma prévia de uma experiência interativa que mostra como o Jasper's Market (nossa empresa varejista de demonstração) se conecta com os clientes usando a Plataforma do WhatsApp Business.
 
-Empresa varejista de demonstração![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.8562-6/547429620_764982376167016_715228206216507834_n.png?stp=dst-webp&_nc_cat=105&ccb=1-7&_nc_sid=9a942e&_nc_ohc=pUs-TAWcvMcQ7kNvwH_sAvR&_nc_oc=AdkzJQbhPXqf9RjLyZkvn3Yy-OLedbeinEGt3od9QzwNqXI7Hl3sp2FMm62nIvAcav0&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=EibrDF_LY-kj2NP6PtSd4A&oh=00_AflOQ3xTzZzzyGc1lAqQ7Sto4S4A1rj0AhYsE4jZ5t3Whg&oe=694CADBE)
+Empresa varejista de demonstração![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.8562-6/547429620_764982376167016_715228206216507834_n.png?stp=dst-webp&_nc_cat=105&ccb=1-7&_nc_sid=9a942e&_nc_ohc=coFUZE644WQQ7kNvwFQdY68&_nc_oc=AdnSFEjeh263CIhzJJjXj_t_kt4qwsLEQaL_yPAbm-gKPRgAYuylI_-Tm_-XH9rgOD0&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=UIarBY6flvdKR9Fwzkumww&oh=00_AfqlSglF5hcAFmpCzWxe1ZQTLHeR-V0nbXXI4KNXutZngA&oe=6979F13E)
 
 Experimente a demonstração
 
@@ -2247,7 +2289,7 @@ Saiba mais
 
 ](/documentation/business-messaging/whatsapp/about-the-platform)
 
-Mensagem
+Mensagens
 
 Saiba mais sobre os diferentes tipos de mensagens e como enviá-las.
 
@@ -2311,7 +2353,7 @@ Saiba mais
 
 ](/documentation/business-messaging/whatsapp/about-the-platform#whatsapp-cloud-api)
 
-API de Mensagens de Marketing Lite
+API de Mensagens de Marketing para o WhatsApp
 
 Acesse novos recursos não disponíveis na API de Nuvem e receba otimizações automáticas para que as mensagens de alto engajamento alcancem mais clientes.
 
@@ -2335,7 +2377,7 @@ Saiba mais
 
 Explore nossos novos recursos e lançamentos
 
-Chamadas à API do WhatsApp
+Ligações da API do WhatsApp
 
 Realize ligações de voz nativas no WhatsApp de forma integrada, segura e personalizada para alcançar melhores resultados comerciais.
 
@@ -2371,7 +2413,7 @@ Crie soluções do WhatsApp para os clientes da sua empresa.
 
 Torne-se um Provedor de Tecnologia
 
-Siga este guia para se integrar ao WhatsApp como Provedor de Tecnologia para fornecer serviços de mensagens aos seus clientes.
+Siga este guia para integrar seu provedor de tecnologia do WhatsApp e começar a fornecer serviços de mensagens aos seus clientes.
 
 [
 
@@ -2389,9 +2431,9 @@ Saiba mais
 
 ](/documentation/business-messaging/whatsapp/embedded-signup/overview)
 
-Guia para parceiros da API do MM Lite
+Guia para parceiros da API de Mensagens de Marketing para o WhatsApp
 
-Saiba como integrar a API do MM Lite e fazer a integração dos seus clientes para enviar mensagens de marketing com otimizações.
+Saiba como integrar a API de Mensagens de Marketing para o WhatsApp e fazer a integração dos seus clientes para enviar mensagens de marketing com otimizações.
 
 [
 
@@ -2399,7 +2441,7 @@ Saiba mais
 
 ](/documentation/business-messaging/whatsapp/marketing-messages/onboard-business-customers)
 
-![](https://lookaside.fbsbx.com/elementpath/media/?media_id=1822211262016548&version=1764967636&transcode_extension=webp)
+![](https://lookaside.fbsbx.com/elementpath/media/?media_id=1822211262016548&version=1766494212&transcode_extension=webp)
 
 ## Não é desenvolvedor?
 
@@ -2411,29 +2453,35 @@ Encontrar um parceiro
 
 ](https://business.facebook.com/messaging/partner-showcase)
 
+Você achou esta página útil?
+
+![Ícone de polegar para cima](https://static.xx.fbcdn.net/rsrc.php/yR/r/OEXJ0_DJeZv.svg)
+
+![Ícone de polegar para baixo](https://static.xx.fbcdn.net/rsrc.php/yb/r/qKPgNVNeatU.svg)
+
 * * *
 
 * * *
 
 ![Meta](https://static.xx.fbcdn.net/rsrc.php/y9/r/tL_v571NdZ0.svg)
 
-[![Facebook](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/425860105_925920989121941_6933048753023841367_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=zG-Wfva9hlUQ7kNvwFLLF3W&_nc_oc=AdkpPqDXZHnDyqjtO9qa-XNZ_ZzhC3ROF9JGRh1T4_jGm64NR9vPWxCDpVNhlmAQZwo&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=_dDpTXZOXsnMcttCeaRUHw&oh=00_AfmSuykDsrlhqOnnlHrS5nIBsMxhGyltjj4boIcjuK991Q&oe=694CAF22)](https://www.facebook.com/MetaforDevelopers)[![Instagram](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/425804778_757649995874129_6917476492193301523_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=CGAi4i13d0AQ7kNvwEjXSJT&_nc_oc=AdmwCkj4XlrkAmVDvWJ4Hy0DCphvHKaau5kVzSpBYrBYqJYVSPHMjU2DBmvTHnpDgw4&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=_dDpTXZOXsnMcttCeaRUHw&oh=00_Afl-lob52OVzpSS0dXxrsx2uHE8VfbCPphjqrRSHOOFeVA&oe=694C9938)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmetafordevelopers%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)[![X](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/426747931_385023204117867_5811151062540225287_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=Kx3-gDhubrkQ7kNvwGdlNDj&_nc_oc=AdlbI575JZETfZJLfyymlm5FLUDG2iyTz5D8W3-ZdaxhIsY9v4Y3COKSyEk10sdfZOo&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=_dDpTXZOXsnMcttCeaRUHw&oh=00_AfngPWNTfYVF8HKCWjefjrSkajDZZ3k_B9ms-b108uKi3A&oe=694CB7AA)](https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2Fmetafordevs&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)[![LinkedIn](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/467689750_1684384502343829_7561568713040200172_n.svg?_nc_cat=103&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=vXR8Dd4EVtcQ7kNvwG8PwYW&_nc_oc=AdlYNbkReKdOvlh79iiDjMvupQm7KENMaiS0rDuoQ6RyRwtcyc3CRuKW5ex6NF3U-0c&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=_dDpTXZOXsnMcttCeaRUHw&oh=00_AflasQE3D2yBQskcCVJW-WPiphIP3aDNUAkh32DA8Qt9Qg&oe=694CC73E)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fshowcase%2Fmeta-for-developers%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)[![YouTube](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/425519002_724756916408357_7491658959807896355_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=-X9U3hFEQ6IQ7kNvwFcyN1u&_nc_oc=Adn4eVayDjCwhQ4AG2VloQ7Rrczidly-z6VrB0BhbZMbPSB83WHe7A32EPONoSwPs6c&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=_dDpTXZOXsnMcttCeaRUHw&oh=00_AfmHhNAxdgNmUjDAZbc9kejk5IumLDtSD_bUl1ZBi5rAvA&oe=694CB25F)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2FMetaDevelopers%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[![Facebook](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/425860105_925920989121941_6933048753023841367_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=acobLcd_XDsQ7kNvwE2d1wz&_nc_oc=Adkl7sfGJBLcz94vCNwhVhPj99R-_hPW39-bXP5xhctWb07BAfX9ypYoUX7vWEPTr4Y&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_Afo0Cm4Of-NRcxsdi4x0X1q4-nL-5srrk9uFyRO2gA8x6Q&oe=6979F2A2)](https://www.facebook.com/MetaforDevelopers)[![Instagram](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/425804778_757649995874129_6917476492193301523_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=5NIxzaFbvlsQ7kNvwHhwOKx&_nc_oc=AdnWJ_HC9BK-s5N3rfZ466jUR6stDxfIJyHVd1CMwdcrX9hdWWqEYNICeH6fjnKVKVQ&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_AfpU9p9N-DVoLMm1S0wziDOmxGJnbXqUxWC6_ifONyX-zQ&oe=6979DCB8)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmetafordevelopers%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[![X](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/426747931_385023204117867_5811151062540225287_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=uJtcecfk28UQ7kNvwEaVw7C&_nc_oc=AdnGVyk9br-4ekadVa9R97KlHCkPpieAdQoI3m2XMpt_UR31NP9T6RUIKzyr_972WPk&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_AfqUwuOHKL_kBLSWmE5_JgVwidieOcd6wFIAUQrtiNePcA&oe=6979FB2A)](https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2Fmetafordevs&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[![LinkedIn](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/467689750_1684384502343829_7561568713040200172_n.svg?_nc_cat=103&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=Ij-MvYKxM9YQ7kNvwHMAPSj&_nc_oc=AdkooTNz6ArgyPG-eX66EEvv6Gcz43KuWoYz4UQnppZHHKlcJCarXO9t0ITZUFAwntg&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_AfrO5UxirjDoyfwskYS6CPRblSc5xtxeBjakq5YG7usjcg&oe=6979D27E)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fshowcase%2Fmeta-for-developers%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[![YouTube](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/425519002_724756916408357_7491658959807896355_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=KZytKdgN__0Q7kNvwGSY-Ie&_nc_oc=AdkvyyJaMh8lmS72tIill6_FwNUwEGkxGJGRzvpK9Km-DPtKLXCbiFtVh0qOturykKQ&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_AfocnC6hmIfJWHy3_jDpVW1v2uKDMQArbZRKlCM0jHT8yw&oe=6979F5DF)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2FMetaDevelopers%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 Desenvolva com a Meta
 
-[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4) [Tecnologias sociais](/social-technologies/)
+[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw) [Tecnologias sociais](/social-technologies/)
 
 * * *
 
 Notícias
 
-[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)[Blog](/blog/)[Casos de sucesso](/success-stories/)
+[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[Blog](/blog/)[Casos de sucesso](/success-stories/)
 
 * * *
 
 Suporte
 
-[Suporte ao desenvolvedor](/support/)[Ferramenta de bug](/support/bugs/)[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)[Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)[Relatar um incidente](/incident/report/)
+[Suporte ao desenvolvedor](/support/)[Ferramenta de bug](/support/bugs/)[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)[Relatar um incidente](/incident/report/)
 
 * * *
 
@@ -2445,21 +2493,21 @@ Termos e políticas
 
 Quem somos
 
-[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)[Carreiras](https://www.facebook.com/careers)
+[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[Carreiras](https://www.facebook.com/careers)
 
 * * *
 
 Desenvolva com a Meta
 
-[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
-[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Tecnologias sociais](/social-technologies/)
 
 Notícias
 
-[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Blog](/blog/)
 
@@ -2471,7 +2519,7 @@ Suporte
 
 [Ferramenta de bug](/support/bugs/)
 
-[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)
 
@@ -2479,7 +2527,7 @@ Suporte
 
 Quem somos
 
-[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Carreiras](https://www.facebook.com/careers)
 
@@ -2497,15 +2545,15 @@ Termos e políticas
 
 Desenvolva com a Meta
 
-[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
-[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Tecnologias sociais](/social-technologies/)
 
 Notícias
 
-[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Blog](/blog/)
 
@@ -2517,7 +2565,7 @@ Suporte
 
 [Ferramenta de bug](/support/bugs/)
 
-[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)
 
@@ -2525,7 +2573,7 @@ Suporte
 
 Quem somos
 
-[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Carreiras](https://www.facebook.com/careers)
 
@@ -2543,15 +2591,15 @@ Termos e políticas
 
 Desenvolva com a Meta
 
-[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
-[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Tecnologias sociais](/social-technologies/)
 
 Notícias
 
-[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Blog](/blog/)
 
@@ -2563,7 +2611,7 @@ Suporte
 
 [Ferramenta de bug](/support/bugs/)
 
-[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)
 
@@ -2571,7 +2619,7 @@ Suporte
 
 Quem somos
 
-[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT0zn-jCloL2r0rYkaxEMQBrG4aVtim3l6p5WQcBsR8lf2j6E89Lu7FthkUZ4xkLgSaoQLO4qmRTjcLUbptlP7GPL0r1pp10UWo7J0yB2SWX_ZAMYhI5mU-bNWLXspZrMVT5TAspAWol3haA_LizAtk-qp4)
+[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
 
 [Carreiras](https://www.facebook.com/careers)
 

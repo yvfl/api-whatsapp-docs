@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/messages/interactive-flow-messages -->
-<!-- Scraped: 2025-12-20T17:25:55.812Z -->
+<!-- Scraped: 2026-01-24T00:39:46.649Z -->
 
 ## Esta página não está disponível no momento
 

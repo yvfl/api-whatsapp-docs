@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/set-solution-migration-intent-api -->
-<!-- Scraped: 2025-12-20T18:00:28.922Z -->
+<!-- Scraped: 2026-01-24T00:51:22.165Z -->
 
 ## Esta página não está disponível no momento
 

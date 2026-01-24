@@ -1,13 +1,13 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/reference/account_update -->
-<!-- Scraped: 2025-12-20T17:35:45.924Z -->
+<!-- Scraped: 2026-01-24T01:08:22.310Z -->
 
 # Referência do webhook account\_update
 
-Updated: 14 de nov de 2025
+Updated: 5 de dez de 2025
 
 Esta referência descreve os eventos de gatilho e o conteúdo da carga do webhook **account\_update** da conta do WhatsApp Business.
 
-O webhook **account\_update** notifica sobre alterações no envio da [verificação da empresa conduzida pelo parceiro](/documentation/business-messaging/whatsapp/solution-providers/partner-led-business-verification), na [taxa internacional de autenticação](/documentation/business-messaging/whatsapp/pricing/authentication-international-rates), na qualificação ou na localização comercial principal de uma conta do WhatsApp Business, quando compartilhada com um [provedor de soluções](/documentation/business-messaging/whatsapp/solution-providers/overview), em caso de [violações de políticas ou termos](/documentation/business-messaging/whatsapp/policy-enforcement) ou quando é excluída.
+O webhook **account\_update** notifica sobre alterações no envio da [verificação da empresa conduzida pelo parceiro](/documentation/business-messaging/whatsapp/solution-providers/partner-led-business-verification) de uma conta do WhatsApp Business, na qualificação para a [taxa internacional de autenticação](/documentation/business-messaging/whatsapp/pricing/authentication-international-rates) ou no ponto comercial principal, quando é compartilhado com um [provedor de soluções](/documentation/business-messaging/whatsapp/solution-providers/overview), em caso de [violações de políticas ou termos](/documentation/business-messaging/whatsapp/policy-enforcement) ou quando é excluída.
 
 ## Gatilhos
 
@@ -136,11 +136,11 @@ Evento da conta do WhatsApp Business ("WABA").
 
 Os valores podem ser os seguintes:
 
-`ACCOUNT_DELETED` – Indica que a WABA foi excluída.
+`ACCOUNT_DELETED`: indica que a WABA foi excluída.
 
 `ACCOUNT_VIOLATION`: indica que a WABA violou uma das nossas [políticas ou termos](/documentation/business-messaging/whatsapp/policy-enforcement).
 
-`AD_ACCOUNT_LINKED` – Indica que a WABA foi integrada à API de Mensagens de Marketing Lite por meio do Cadastro Incorporado ou API de Intenção e dá ao parceiro acesso às contas de anúncios.
+`AD_ACCOUNT_LINKED`: indica que a WABA foi integrada à API de Mensagens de Marketing para o WhatsApp por meio do Cadastro Incorporado ou Intent API e dá ao parceiro acesso às contas de anúncios.
 
 `AUTH_INTL_PRICE_ELIGIBILITY_UPDATE`: indica que a WABA está qualificada para as [tarifas de autenticação internacional](/documentation/business-messaging/whatsapp/pricing/authentication-international-rates).
 
@@ -148,13 +148,13 @@ Os valores podem ser os seguintes:
 
 `DISABLED_UPDATE`: indica que a WABA violou uma das nossas [políticas ou termos](/documentation/business-messaging/whatsapp/policy-enforcement).
 
-`MM_LITE_TERMS_SIGNED` – Indica que a WABA aceitou com sucesso os Termos de Serviço da MM Lite.
+`MM_LITE_TERMS_SIGNED`: indica que a WABA aceitou com sucesso os Termos de Serviço da API de MM para WhatsApp.
 
 `PARTNER_ADDED`: indica que a WABA foi compartilhada com um [provedor de soluções](/documentation/business-messaging/whatsapp/solution-providers/overview).
 
-`PARTNER_APP_INSTALLED` – Indica que um cliente empresarial concedeu mais uma permissão ao app.
+`PARTNER_APP_INSTALLED`: indica que um cliente empresarial concedeu mais uma permissão ao app.
 
-`PARTNER_APP_UNINSTALLED` – Indica que um cliente empresarial desautenticou ou desinstalou o app.
+`PARTNER_APP_UNINSTALLED`: indica que um cliente empresarial desautenticou ou desinstalou o app.
 
 `PARTNER_CLIENT_CERTIFICATION_STATUS_UPDATE`: indica que o envio da [verificação da empresa conduzida por parceiro](/documentation/business-messaging/whatsapp/solution-providers/partner-led-business-verification) da WABA foi aprovado, rejeitado ou descartado.
 
@@ -182,7 +182,7 @@ Registro de data e hora UNIX que indica a hora de início da taxa internacional 
 
 _Matriz_
 
-As strings com identificações de portfólios empresariais pertencentes ao provedor de tecnologia (ou parceiro de tecnologia) e ao parceiro de solução associado à [solução multiparceiro](/documentation/business-messaging/whatsapp/solution-providers/multi-partner-solutions).
+As strings com identificações de portfólios empresariais pertencentes ao Provedor de Tecnologia (ou Parceiro de Tecnologia) e ao Parceiro de Soluções associado à [solução multiparceiro](/documentation/business-messaging/whatsapp/solution-providers/multi-partner-solutions).
 
 `"506914307656634","116133292427920"`
 
@@ -194,21 +194,21 @@ O motivo da rejeição do envio da verificação da empresa conduzida por parcei
 
 Os valores podem ser os seguintes:
 
-`ADDRESS NOT MATCHING` – O endereço no envio não corresponde ao endereço no perfil empresarial do cliente. Edite o envio ou peça à empresa para atualizar o perfil e tente novamente.
+`ADDRESS NOT MATCHING`: o endereço no envio não corresponde ao endereço no perfil empresarial do cliente. Edite o envio ou peça à empresa para atualizar o perfil e tente novamente.
 
-`BUSINESS NOT ELIGIBLE` – Esta empresa não está qualificada para verificação por meio de informações fornecidas por parceiros. Ainda será possível se inscrever para a verificação da empresa da Meta.
+`BUSINESS NOT ELIGIBLE`: esta empresa não está qualificada para verificação por meio de informações fornecidas por parceiros. Ainda será possível se inscrever para a verificação da empresa da Meta.
 
-`LEGAL NAME NOT MATCHING` – A razão social no envio não corresponde à razão social no perfil empresarial do cliente. Edite o envio ou peça à empresa para atualizar o perfil e tente novamente.
+`LEGAL NAME NOT MATCHING`: a razão social no envio não corresponde à razão social no perfil empresarial do cliente. Edite o envio ou peça à empresa para atualizar o perfil e tente novamente.
 
-`LEGAL NAME NOT FOUND IN DOCUMENTS` – Não foi possível verificar esta empresa devido a um problema com os documentos enviados. Isso pode acontecer por diversos motivos, incluindo os seguintes:
+`LEGAL NAME NOT FOUND IN DOCUMENTS`: não foi possível verificar esta empresa devido a um problema com os documentos enviados. Isso pode acontecer por diversos motivos, incluindo os seguintes:
 
 -   A razão social da empresa não é mencionada nos documentos-   O texto do documento não está claro ou é difícil de ler.
 
-`MALFORMED DOCUMENTS` – Não foi possível abrir os documentos fornecidos. Isso pode acontecer se os arquivos estiverem corrompidos, protegidos por senha ou se houver outros problemas ao abrir o documento.
+`MALFORMED DOCUMENTS`: não foi possível abrir os documentos fornecidos. Isso pode acontecer se os arquivos estiverem corrompidos, protegidos por senha ou se houver outros problemas ao abrir o documento.
 
-`NONE` – Indica que o envio não foi rejeitado.
+`NONE`: indica que o envio não foi rejeitado.
 
-`WEBSITE NOT MATCHING` – O site no envio não corresponde ao site no perfil empresarial do cliente. Edite o envio ou peça à empresa para atualizar o perfil e tente novamente.
+`WEBSITE NOT MATCHING`: o site no envio não corresponde ao site no perfil empresarial do cliente. Edite o envio ou peça à empresa para atualizar o perfil e tente novamente.
 
 `LEGAL NAME NOT FOUND IN DOCUMENTS`
 
@@ -236,15 +236,15 @@ O status do envio da [verificação da empresa conduzida pelo parceiro](/documen
 
 Os valores podem ser os seguintes:
 
-`APPROVED` – O envio foi analisado e aprovado.
+`APPROVED`: o envio foi analisado e aprovado.
 
-`DISCARDED` – O envio foi descartado devido a problemas técnicos ou não há progresso há algum tempo.
+`DISCARDED`: o envio foi descartado devido a problemas técnicos ou não há progresso há algum tempo.
 
-`FAILED` – O envio foi analisado e rejeitado. Consulte o campo rejection\_reasons para ver mais informações sobre o motivo.
+`FAILED`: o envio foi analisado e rejeitado. Consulte o campo rejection\_reasons para ver mais informações sobre o motivo.
 
-`PENDING` – O envio está aguardando análise.
+`PENDING`: o envio está aguardando análise.
 
-`REVOKED` – O envio foi revogado.
+`REVOKED`: o envio foi revogado.
 
 `APPROVED`
 
@@ -254,7 +254,7 @@ _String_
 
 O tipo de violação.
 
-Veja [Violações](/documentation/business-messaging/whatsapp/policy-enforcement-violations) para consultar uma lista de valores possíveis.
+Consulte [Violações](/documentation/business-messaging/whatsapp/policy-enforcement-violations) para ver uma lista de valores possíveis.
 
 `ADULT`
 
@@ -266,11 +266,11 @@ Estado de banimento da WABA.
 
 Os valores podem ser os seguintes:
 
-`DISABLE` – Indica que a WABA está desabilitada.
+`DISABLE`: indica que a WABA está desabilitada.
 
-`REINSTATE` – Indica que a WABA foi restabelecida.
+`REINSTATE`: indica que a WABA foi restabelecida.
 
-`SCHEDULE_FOR_DISABLE` – Indica que a WABA foi programada para ser desabilitada.
+`SCHEDULE_FOR_DISABLE`: indica que a WABA foi programada para ser desabilitada.
 
 `REINSTATE`
 
@@ -330,7 +330,7 @@ Identificação da conta do WhatsApp Business.
 {  "object": "whatsapp_business_account",  "entry": [    {      "id": "102290129340398",      "time": 1743451903,      "changes": [        {          "value": {            "event": "DISABLED_UPDATE",            "ban_info": {              "waba_ban_state": "REINSTATE",              "waba_ban_date": "April 17, 2025"            }          },          "field": "account_update"        }      ]    }  ]}
 ```
 
-### Termos de Serviço da MM Lite
+### Termos de Serviço da API de MM para WhatsApp
 
 ```
 {  "object": "whatsapp_business_account",  "entry": [    {      "id": "2949482758682047",      "time": 1744823932,      "changes": [        {          "field": "account_update",          "value": {            "event": "MM_LITE_TERMS_SIGNED",            "waba_info": {              "owner_business_id": "2329417887457253",              "waba_id": "980198427658004"            }          }        }      ]    }  ]}
@@ -369,7 +369,7 @@ Identificação da conta do WhatsApp Business.
 ### Atualização de níveis de preços
 
 ```
-{  "object": "whatsapp_business_account",  "entry": [    {      "id": "102290129340398",      "time": 1743451903,      "changes": [        {          "value": {            "volume_tier_info": {                "tier_update_time": 1743451903,                "pricing_category": "UTILITY",                "tier": "25000001:50000000",                "effective_month": "2025-11",                "region": "INDIA"            },            "event": "VOLUME_BASED_PRICING_TIER_UPDATE"          },          "field": "account_update"        }      ]    }  ]}
+{  "object": "whatsapp_business_account",  "entry": [    {      "id": "102290129340398",      "time": 1743451903,      "changes": [        {          "value": {            "volume_tier_info": {                "tier_update_time": 1743451903,                "pricing_category": "UTILITY",                "tier": "25000001:50000000",                "effective_month": "2025-11",                "region": "India"            },            "event": "VOLUME_BASED_PRICING_TIER_UPDATE"          },          "field": "account_update"        }      ]    }  ]}
 ```
 
 Você achou esta página útil?

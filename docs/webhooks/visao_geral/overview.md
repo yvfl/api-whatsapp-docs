@@ -1,9 +1,9 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/overview -->
-<!-- Scraped: 2025-12-20T17:34:58.443Z -->
+<!-- Scraped: 2026-01-24T01:07:53.165Z -->
 
 # Webhooks
 
-Updated: 7 de nov de 2025
+Updated: 2 de dez de 2025
 
 Este documento descreve o que são webhooks e como eles são usados ​​pela Plataforma do WhatsApp Business.
 
@@ -27,13 +27,15 @@ Você precisará das seguintes permissões para receber webhooks:
 
 -   **whatsapp\_business\_messaging**: para webhooks de **mensagens**-   **whatsapp\_business\_management**: para todos os outros webhooks
 
-Caso você seja um desenvolvedor direto, use o usuário do sistema para conceder essas permissões ao app ao gerar o [token do sistema](/documentation/business-messaging/whatsapp/access-tokens#system-user-access-tokens)).
+Caso você seja um desenvolvedor direto, utilize o usuário do sistema para conceder essas permissões ao app ao gerar o [token do sistema](/documentation/business-messaging/whatsapp/access-tokens#system-user-access-tokens)).
 
-Caso seja um [provedor de soluções](/documentation/business-messaging/whatsapp/solution-providers/overview) e precise dessas permissões para fornecer serviços adequados aos clientes, você deverá receber aprovação para acesso avançado às permissões por meio da [Análise do App](/docs/app-review). Depois disso, os clientes empresariais poderão conceder essas permissões ao seu app durante a integração.
+Caso seja um [provedor de soluções](/documentation/business-messaging/whatsapp/solution-providers/overview) e precise dessas permissões para fornecer serviços adequados aos clientes, você deverá receber aprovação para acesso avançado às permissões por meio da [Análise do App](/docs/app-review). Depois disso, os clientes comerciais poderão conceder essas permissões ao seu app durante a integração.
 
 ## Campos
 
-Depois de criar e configurar o ponto de extremidade do webhook, você pode assinar os campos de webhook a seguir.
+Depois de [criar e configurar](/documentation/business-messaging/whatsapp/webhooks/create-webhook-endpoint) seu ponto de extremidade de webhook (ou de configurar um [ponto de extremidade de webhook de teste](/documentation/business-messaging/whatsapp/webhooks/set-up-whatsapp-echo-bot)), use o painel **[Painel de Apps](/apps)** > **WhatsApp** > **Configuração** para assinar campos específicos de webhook.
+
+Se você criou o app usando o caso de uso **Conectar-se com clientes pelo WhatsApp**, navegue até **[Painel de Apps](/apps)** > **Casos de uso** > **Personalizar** > **Configuração**.
 
 Nome do campo
 
@@ -41,7 +43,7 @@ Descrição
 
 [account\_alerts](/documentation/business-messaging/whatsapp/webhooks/reference/account_alerts)
 
-O webhook **account\_alerts** notifica você sobre alterações no [limite de mensagens](/documentation/business-messaging/whatsapp/messaging-limits), [perfil empresarial](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#business-profiles) e status da [](/documentation/business-messaging/whatsapp/whatsapp-business-accounts#official-business-account)conta comercial oficial de um número de telefone comercial.
+O webhook **account\_alerts** notifica você sobre alterações no [limite de mensagens](/documentation/business-messaging/whatsapp/messaging-limits), [perfil empresarial](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#business-profiles) e status da [conta comercial oficial](/documentation/business-messaging/whatsapp/whatsapp-business-accounts#official-business-account) de um número de telefone comercial.
 
 [account\_review\_update](/documentation/business-messaging/whatsapp/webhooks/reference/account_review_update)
 
@@ -61,7 +63,7 @@ O webhook **business\_capability\_update** notifica você sobre alterações de 
 
 [history](/documentation/business-messaging/whatsapp/webhooks/reference/history)
 
-O webhook de **history** é usado para sincronizar o [histórico de conversas do app WhatsApp Business](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users) de um cliente empresarial integrado por um provedor de soluções.
+O webhook **history** é usado para sincronizar o [histórico de conversas do app WhatsApp Business](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users) de um cliente comercial integrado por um provedor de soluções.
 
 [message\_template\_components\_update](/documentation/business-messaging/whatsapp/webhooks/reference/message_template_components_update)
 
@@ -105,7 +107,7 @@ O webhook **smb\_app\_state\_sync** é usado para sincronizar contatos de [usuá
 
 [smb\_message\_echoes](/documentation/business-messaging/whatsapp/webhooks/reference/smb_message_echoes)
 
-O webhook **smb\_message\_echoes** avisa você sobre as mensagens enviadas por meio do app WhatsApp Business ou um [dispositivo adicional ("conectado")](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users#linked-devices) por um cliente empresarial que fez a [integração com a API de Nuvem](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users) por meio de um provedor de soluções.
+O webhook **smb\_message\_echoes** avisa você sobre as mensagens enviadas por meio do app WhatsApp Business ou um [dispositivo adicional ("conectado")](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users#linked-devices) por um cliente comercial que fez a [integração com a API de Nuvem](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users) por meio de um provedor de soluções.
 
 [template\_category\_update](/documentation/business-messaging/whatsapp/webhooks/reference/template_category_update)
 
@@ -117,9 +119,9 @@ O webhook **user\_preferences** notifica você sobre as alterações nas [prefer
 
 ## Como substituir webhooks
 
-É possível usar um ponto de extremidade de webhook alternativo para webhooks de mensagens na sua conta do WhatsApp Business (WABA, nas iniciais em inglês) ou número de telefone comercial. Isso pode ser útil para fins de teste ou se você for um provedor de soluções e quiser usar pontos de extremidade de webhook únicos para cada um dos seus clientes integrados.
+É possível usar um ponto de extremidade de webhook alternativo para webhooks de mensagens na sua conta do WhatsApp Business (WABA) ou número de telefone comercial. Isso pode ser útil para fins de teste ou se você for um provedor de soluções e quiser usar pontos de extremidade de webhook únicos para cada um dos seus clientes integrados.
 
-Consulte o documento [Substituições de webhook](/docs/whatsapp/embedded-signup/webhooks/override) para saber como substituir webhooks.
+Consulte o documento [Substituições de webhook](/documentation/business-messaging/whatsapp/webhooks/override) para saber como substituir webhooks.
 
 ## Tamanho da carga
 
@@ -127,29 +129,35 @@ As cargas de webhook podem ter até 3 MB.
 
 ## Falha na entrega do webhook
 
-Se enviarmos um pedido de webhook para seu ponto de extremidade e o servidor responder com um código de status HTTP que não seja 200, ou se não pudermos enviar o webhook por outro motivo, continuaremos fazendo tentativas diminuindo a frequência durante 7 dias.
+Se enviarmos um pedido de webhook para seu ponto de extremidade e o servidor responder com um código de status HTTP que não seja 200, ou se não pudermos enviar o webhook por outro motivo, continuaremos fazendo tentativas com uma frequência menor durante 7 dias.
 
 Essas tentativas serão enviadas a todos os apps que assinaram os webhooks (e os campos relacionados) na conta do WhatsApp Business. Isso pode fazer com que as notificações de webhook sejam duplicadas.
 
+## TLS mútuo
+
+Os webhooks são compatíveis com o protocolo TLS mútuo (mTLS) para aumentar a segurança. Para saber como habilitar e usar o mTLS, consulte o documento [mTLS para webhooks](/docs/graph-api/webhooks/getting-started#mtls-for-webhooks) da Graph API.
+
 ## Endereços IP
 
-É possível receber endereços IP dos nossos servidores de webhook ao executar este comando no seu terminal:
+É possível receber endereços IP dos nossos servidores de webhook executando este comando no seu terminal:
 
 ```
 whois -h whois.radb.net — '-i origin AS32934' | grep '^route' | awk '{print $2}' | sort
 ```
 
-De tempo em tempo, alteramos os endereços IP. Por isso, se você estiver fazendo uma lista de permissão de servidores, será preciso gerar a lista de novo periodicamente para atualizar a lista de permissão.
+Também é possível usar nosso feed geográfico para [baixar um arquivo CSV](https://facebook.com/peering/geofeed) com a lista de endereços IP.
+
+No entanto, mudamos nossos endereços IP com frequência. Por isso, para não precisar gerar novamente sua lista de endereços IP permitidos, recomendamos [usar o mTLS](/docs/graph-api/webhooks/getting-started#mtls-for-webhooks).
 
 ## Solução de problemas
 
 Se você não estiver recebendo webhooks:
 
--   Verifique se o seu ponto de extremidade está aceitando pedidos.-   Envie uma carga de teste ao ponto de extremidade via **[Painel de Apps](/apps)** > **WhatsApp** > **Configurações**.-   Verifique se o app está no modo **Publicado**. Alguns webhooks não serão enviados se o app estiver no modo **Desenvolvimento**.
+-   Verifique se o seu ponto de extremidade está aceitando pedidos.-   Envie uma carga de teste ao ponto de extremidade pelo painel **[Painel de Apps](/apps)** > **WhatsApp** > **Configurações**.-   Verifique se o app está no modo **Live**. Alguns webhooks não serão enviados se o app estiver no modo **Desenvolvimento**.-   Use nosso [ponto de extremidade do webhook de teste](/documentation/business-messaging/whatsapp/webhooks/set-up-whatsapp-echo-bot). Se o ponto de extremidade de teste estiver processando cargas de webhook e exibindo-as no console, o problema provavelmente está no código do seu ponto de extremidade.
 
 ## Saiba mais
 
--   Consulte o post de blog do WhatsApp Business [Como usar o Node.js para implementar webhooks](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fblog%2Fhow-to-use-webhooks-from-whatsapp-business-api&h=AT2V3QFhWGaWgFDiGCjJlbsJ9khPclL_2vLVnYBE87alUy6nNuyQ8_cvKBXljhKqJ08ES0Qqpm5c_oWqVjloEfXRceJ8KISWw0mibA1mK9OznPQfhuY3enwygkAzu7M9oBMG8yngZWh4EZcpMRZLp8cxQnM).
+-   Consulte o post de blog do WhatsApp Business [Como usar o Node.js para implementar webhooks](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fblog%2Fhow-to-use-webhooks-from-whatsapp-business-api&h=AT1LZL1sZjFlRsRCM_nXGnByYvewVOEPUlZOPXia96WqqdPpXYdONzop6XlFwjm1dl59exOgXb26VtsAT6hEizmmGP5dztrwc2PV26t4HsC4NwngyshNXuy_j3WRuSw4_AxA90aH4M_VS6kT-LEsg3RnqG8).
 
 Você achou esta página útil?
 

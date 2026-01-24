@@ -1,9 +1,9 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/calling -->
-<!-- Scraped: 2025-12-20T17:40:24.065Z -->
+<!-- Scraped: 2026-01-24T00:27:32.928Z -->
 
-# Ligação da API de Nuvem
+# Ligações da API de Nuvem
 
-Updated: 7 de nov de 2025
+Updated: 10 de dez de 2025
 
 ## Visão geral
 
@@ -11,7 +11,7 @@ Com a API de Ligações Comerciais do WhatsApp, você pode iniciar e receber lig
 
 ### Arquitetura
 
-![Image](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/564723412_1339317954593522_7943224529857744756_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=5XBnYYAz4TQQ7kNvwHHduDU&_nc_oc=AdmjoTib4RzW6j8R21vYAmXhHIBQmpBXn4BEmHcIxjr1cNSfpplEmAIYP8eIBQ69p1s&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=Cx4wumyWFgDrM0PeRh5lyg&oh=00_Afn3F8LtwNkkA8Q3Qc39BaIpaNcfA9MdLGznIAcG_p-cow&oe=69611085) (_Clique com o botão direito do mouse na imagem e escolha "Abrir em uma nova aba" para ampliar a imagem_)
+![Image](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/564723412_1339317954593522_7943224529857744756_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=0oJBi0Xcr6YQ7kNvwHpQIo7&_nc_oc=AdkGYMyGAzfMTG5C2WoNzm_8TsfNprrt_40AeedRqwrz_fn-P0uOVvK-F1KmpQ_ZCmw&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=tce5ezUy3Mx6gLBkNH6rWg&oh=00_AfoGloFNhQipvnKS0leGQpCHZhTDtwhNrRP0xKPgp6yLKw&oe=698E5405) (_Clique com o botão direito do mouse na imagem e escolha "Abrir em uma nova aba" para ampliar a imagem_)
 
 ## Começar
 
@@ -19,9 +19,9 @@ Com a API de Ligações Comerciais do WhatsApp, você pode iniciar e receber lig
 
 Antes de começar a usar a API de Ligações, verifique o seguinte:
 
--   [O número comercial está em uso com a API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers) (e não com o app WhatsApp Business)-   Inscreva o app no campo de webhook `calls` (a menos que você planeje usar [SIP](/documentation/business-messaging/whatsapp/calling/sip))-   O mesmo app deve estar [inscrito na conta do WhatsApp Business](/documentation/business-messaging/whatsapp/webhooks/create-webhook-endpoint#configure-webhooks) do seu número de telefone comercial.-   Esse app deve ter permissões de mensagens (`whatsapp_business_messaging`) para o número comercial-   A empresa precisa ter um limite de mensagens de pelo menos [dois mil conversas iniciadas pela empresa](/documentation/business-messaging/whatsapp/messaging-limits) em um período contínuo de 24 horas. Para saber mais, leia sobre [como dimensionar os recursos da sua conta](https://www.facebook.com/business/help/595597942906808).-   [Habilitar recursos de ligação no número de telefone comercial](/documentation/business-messaging/whatsapp/calling/call-settings)
+-   [O número comercial está em uso com a API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers) (e não com o app WhatsApp Business)-   Inscreva o app no campo de webhook `calls` (a menos que você planeje usar [SIP](/documentation/business-messaging/whatsapp/calling/sip))-   O mesmo app deve estar [inscrito na conta do WhatsApp Business](/documentation/business-messaging/whatsapp/webhooks/create-webhook-endpoint#configure-webhooks) do seu número de telefone comercial.-   Esse app deve ter permissões de mensagens (`whatsapp_business_messaging`) para o número comercial-   A empresa precisa ter um limite de mensagens de pelo menos [duas mil conversas iniciadas pela empresa](/documentation/business-messaging/whatsapp/messaging-limits) em um período contínuo de 24 horas. Para saber mais, leia sobre [como ampliar os recursos da sua conta](https://www.facebook.com/business/help/595597942906808).-   [Habilitar recursos de ligação no número de telefone comercial](/documentation/business-messaging/whatsapp/calling/call-settings)
 
-### Etapa 2: configurar recursos de ligação opcionais
+### Etapa 2. Configurar recursos de ligação opcionais
 
 A API de Ligações Comerciais do WhatsApp oferece diversos recursos que afetam quando e como os recursos de ligação são exibidos para os usuários no seu perfil do WhatsApp
 
@@ -29,11 +29,11 @@ A API de Ligações Comerciais do WhatsApp oferece diversos recursos que afetam 
 
 [Saiba mais sobre as configurações de controle de ligação](/documentation/business-messaging/whatsapp/calling/call-settings#parameter-details)
 
-### Etapa 3: fazer e receber ligações
+### Etapa 3. Fazer e receber ligações
 
-Você pode testar a integração de Ligação do WhatsApp usando números de teste público e uma conta do WhatsApp Business no sandbox.
+Você pode testar a integração de Ligações do WhatsApp usando números de teste público e uma conta do WhatsApp Business no sandbox.
 
-[Saiba mais sobre como testar a integração da API de Ligação do WhatsApp](/documentation/business-messaging/whatsapp/calling#testing-and-sandbox-accounts)
+[Saiba mais sobre como testar a integração da API de Ligações do WhatsApp](/documentation/business-messaging/whatsapp/calling#testing-and-sandbox-accounts)
 
 A ligação da API de Nuvem oferece dois caminhos de iniciação:
 
@@ -43,13 +43,18 @@ A ligação da API de Nuvem oferece dois caminhos de iniciação:
 
 As contas de sandbox estão disponíveis apenas para Parceiros de Tecnologia.
 
-Com as [contas de sandbox](/documentation/business-messaging/whatsapp/calling/sandbox) e os números de teste público, você pode testar a integração da API de Ligação do WhatsApp com limitações de ligação flexíveis.
+Com as [contas de sandbox](/documentation/business-messaging/whatsapp/calling/sandbox) e os números de teste público, você pode testar a integração da API de Ligações o do WhatsApp com limitações de ligação flexíveis. Especificamente para contas de sandbox e números de teste públicos, o limite de ligações iniciadas pela empresa é menos rigoroso a fim de facilitar a integração e os testes.
 
-Você pode receber um número de teste público depois de concluir o [fluxo para Começar.](/documentation/business-messaging/whatsapp/get-started)
+#### Limites (por par de empresa + usuário do WhatsApp)
 
-Além disso, não é necessário ter um limite de mensagens de pelo menos [dois mil conversas iniciadas pela empresa](/documentation/business-messaging/whatsapp/messaging-limits) em um período contínuo de 24 horas para testar os recursos da API de Ligações ao usar números de teste públicos e contas de sandbox.
+-   As contas de sandbox podem enviar **25 permissões de ligação por dia** e **100 por semana** (em comparação com 1 por dia e 2 por semana para contas de produção)-   Quando as ligações iniciadas pela empresa ficam sem resposta ou são recusadas
+    -   **5 ligações não respondidas consecutivas** resultam em uma mensagem do sistema para reconsiderar uma permissão aprovada (em comparação com 2 ligações não respondidas consecutivas para contas de produção)-   **10 ligações consecutivas sem resposta** resultam na revogação automática de uma permissão aprovada (em vez de 4 ligações consecutivas sem resposta para contas de produção)
 
-As ligações estão desabilitadas por padrão nos números de teste. Você deve [configurar os recursos de ligação nas definições de ligação do número de telefone](/documentation/business-messaging/whatsapp/calling/call-settings#configure-call-settings) antes de usar a API de Ligação em um número de teste.
+Você pode receber um número de teste público depois de concluir o [flow Começar.](/documentation/business-messaging/whatsapp/get-started)
+
+Além disso, não é necessário ter um limite de mensagens de pelo menos [duas mil conversas iniciadas pela empresa](/documentation/business-messaging/whatsapp/messaging-limits) em um período contínuo de 24 horas para testar os recursos da API de Ligações ao usar números de teste públicos e contas de sandbox.
+
+As ligações estão desabilitadas por padrão nos números de teste. Você deve [configurar os recursos de ligação nas definições de ligação do número de telefone](/documentation/business-messaging/whatsapp/calling/call-settings#configure-call-settings) antes de usar a API de Ligações em um número de teste.
 
 [Saiba mais sobre contas de sandbox para fazer ligações](/documentation/business-messaging/whatsapp/embedded-signup/overview#sandbox-accounts)
 
@@ -63,7 +68,7 @@ As ligações iniciadas pelo usuário estão disponíveis em [todas as localiza�
 
 As ligações iniciadas pela empresa estão disponíveis em [todas as localizações onde a API de Nuvem está disponível](/documentation/business-messaging/whatsapp/support#country-restrictions), **exceto os seguintes países:**
 
--   Estados Unidos-   Canadá-   Turquia-   Egito-   Vietnã-   Nigéria
+-   EUA-   Canadá-   Turquia-   Egito-   Vietnã-   Nigéria
 
 **Observação:** o código do país no número de telefone comercial deve estar nesta lista com suporte. O número de telefone do consumidor pode ser de qualquer [país em que a API de Nuvem esteja disponível.](/documentation/business-messaging/whatsapp/support#country-restrictions)
 
@@ -82,6 +87,18 @@ Data
 Título
 
 Descrição
+
+19 de dezembro de 2025
+
+Atualização no limite de ligações iniciadas pela empresa
+
+O número de ligações iniciadas pela empresa por usuário foi aumentado de 10 para 100 por dia.
+
+[Saiba mais sobre os limites de ligações iniciadas pela empresa](/documentation/business-messaging/whatsapp/calling/user-call-permissions#limits--per-business---whatsapp-user-pair-)
+
+Introduzimos `restrict_to_user_countries` para as configurações de ícone de ligação
+
+Agora, é possível controlar em quais países o ícone de ligação deve ficar visível. Saiba mais [neste link](/documentation/business-messaging/whatsapp/calling/call-settings#call-icons).
 
 13 de outubro de 2025
 
@@ -107,9 +124,9 @@ Especifique uma string opaca em botões de ligação ou deep links de ligação 
 
 8 de setembro de 2025
 
-Atualização sobre ligações da API de status de integridade
+Atualização sobre ligações da API de Status de Integridade
 
-[A API de Status de Integridade](/documentation/business-messaging/whatsapp/support/health-status) agora inclui um novo `can_receive_call_sip` campo para ajudar você a fazer o autodiagnóstico de problemas relacionados à configuração de [SIP](/documentation/business-messaging/whatsapp/calling/sip)
+[A API de Status de Integridade](/documentation/business-messaging/whatsapp/support/health-status) agora inclui um novo campo `can_receive_call_sip` para ajudar você a fazer o autodiagnóstico de problemas relacionados à configuração de [SIP](/documentation/business-messaging/whatsapp/calling/sip)
 
 5 de setembro de 2025
 

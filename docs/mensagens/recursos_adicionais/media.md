@@ -1,9 +1,11 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/business-phone-numbers/media -->
-<!-- Scraped: 2025-12-20T17:28:07.495Z -->
+<!-- Scraped: 2026-01-24T00:26:30.521Z -->
 
 # Mídia
 
-Updated: 17 de nov de 2025
+Updated: 11 de dez de 2025
+
+Os webhooks de mensagens de mídia recebidas ([mensagens de imagem](/documentation/business-messaging/whatsapp/webhooks/reference/messages/image), [mensagens de vídeo](/documentation/business-messaging/whatsapp/webhooks/reference/messages/video) etc.) agora incluem o URL de download da mídia (atribuída à propriedade `url`), que pode ser consultado diretamente com seu token de acesso para baixar o ativo de mídia da mensagem recebida.
 
 Você usa quatro pontos de extremidade diferentes para gerenciar mídias:
 
@@ -45,7 +47,7 @@ Autenticação
 
 `/PHONE_NUMBER_ID/media`
 
-(Consulte [Get Phone Number ID](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#get-all-phone-numbers))
+(Consulte [Obter o ID do número de telefone](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#get-all-phone-numbers))
 
 Os desenvolvedores podem autenticar as chamadas de API com o token de acesso gerado em **Painel de Apps** > **WhatsApp** > **Configuração da API**.
 
@@ -63,7 +65,7 @@ Descrição
 
 **Obrigatório.**
 
-O caminho do arquivo armazenado no diretório local. Por exemplo: "@/local/path/file.jpg".
+O caminho para o arquivo armazenado no diretório local. Por exemplo: "@/local/path/file.jpg".
 
 `type`
 
@@ -75,7 +77,7 @@ O tipo de arquivo de mídia que está sendo carregado. Consulte a seção [Tipos
 
 **Obrigatório.**
 
-O serviço de mensagens usado para a solicitação. Nesse caso, use `whatsapp`.
+Serviço de mensagens usado para a solicitação. Nesse caso, use `whatsapp`.
 
 ### Solicitação
 
@@ -113,11 +115,9 @@ curl 'https://graph.facebook.com/v24.0/106540352242922/media' \
 
 ## Obter o URL de mídia
 
-É possível consultar diretamente um [ID de mídia](#get-media-id) para obter um URL de mídia, que pode ser usado com seu token de acesso para [baixar o ativo de mídia](#download-media).
+É possível consultar diretamente um [ID de mídia](#get-media-id) para obter um URL de mídia, que pode ser usado com seu token de acesso para [baixar o ativo de mídia](#download-media). Os webhooks de mensagens de mídia recebidas ([mensagens de imagem](/documentation/business-messaging/whatsapp/webhooks/reference/messages/image), [mensagens de vídeo](/documentation/business-messaging/whatsapp/webhooks/reference/messages/video) etc.) entre outros) incluem o URL da mídia, que é atribuída à propriedade `url`.
 
-A partir de 12 de novembro de 2025, os webhooks de mídia recebida ([mensagens de imagem](/documentation/business-messaging/whatsapp/webhooks/reference/messages/image), [mensagens de vídeo](/documentation/business-messaging/whatsapp/webhooks/reference/messages/video) etc.) incluirão automaticamente o URL da mídia e vão atribuí-lo a uma nova propriedade `url`. **Essa propriedade será lançada de forma gradual para os desenvolvedores ao longo de várias semanas e talvez não esteja disponível para você imediatamente.**
-
-Os URLs de mídia **expiram após cinco minutos**. Você deve consultar o ID novamente para obter um novo URL.
+Os URLs de mídia **expiram após cinco minutos**. Você deve consultar o ID novamente para ter um novo URL.
 
 ### Sintaxe da solicitação
 
@@ -166,7 +166,7 @@ Observe que `phone_number_id` é opcional. Se incluída, a solicitação será p
 
 Para baixar mídias, faça uma solicitação `GET` no URL da mídia e inclua seu token de acesso. **Se o token for omitido, a solicitação falhará.**
 
-Observe que, ao recuperar uma mídia a partir de uma identificação de mídia recebida via webhook, a identificação de mídia só estará disponível para baixar por sete dias.
+Ao recuperar uma mídia a partir de uma identificação de mídia recebida via webhook, a identificação de mídia só estará disponível para baixar por sete dias.
 
 ### Sintaxe da solicitação
 
@@ -367,10 +367,9 @@ image/webp
 
 ### Vídeo
 
-Somente o codec de vídeo H.264 e o codec de áudio AAC são aceitos. Somente stream de áudio único ou sem stream de áudio.
+Apenas o codec de vídeo H.264 e o codec de áudio AAC são aceitos. Somente stream de áudio único ou sem stream de áudio.
 
-  
-  
+Vídeos codificados com o perfil H.264 "High" e B-frames não são compatíveis com os clientes do WhatsApp para Android. Recomendamos que você use o perfil H.264 "Main" sem B-frames ou o perfil H.264 "Baseline" ao codificar (ou recodificar com uma ferramenta como ffmpeg) e posicione caixas moov antes de caixas mdat para garantir uma compatibilidade mais ampla. Caso você esteja usando o ffmpeg, utilize a sinalização -movflags faststart para inserir caixas moov antes das caixas mdata.
 
 Tipo de vídeo
 
@@ -396,13 +395,13 @@ video/mp4
 
 16 MB
 
-Um tipo MIME incompatível (`131053`) é um erro comum. Recomendamos que você inspecione os arquivos de mídia para verificar o tipo MIME e confirme que as extensões do nome do arquivo reflitam os tipos deles. Por exemplo, se estiver usando UNIX, você pode inspecionar um arquivo por meio da linha de comando para determinar seu tipo MIME:
+Observe que um tipo MIME incompatível (`131053`) é um erro comum. Recomendamos que você inspecione os arquivos de mídia para verificar o tipo MIME e confirme que as extensões do nome do arquivo reflitam os tipos deles. Por exemplo, se estiver usando UNIX, você pode inspecionar um arquivo por meio da linha de comando para determinar seu tipo MIME:
 
 `file -I your-image-asset.png`
 
 ## Restrições de download de mensagens de mídia
 
-O tamanho máximo de arquivo aceito para mensagens de mídia na API de Nuvem é 100 MB. Caso o cliente envie um arquivo com mais de 100 MB, você receberá um webhook com o código de erro [131052](/documentation/business-messaging/whatsapp/support/error-codes#other-errors) e `title`:
+O tamanho máximo de arquivo aceito para mensagens de mídia na API de Nuvem é de 100 MB. Caso o cliente envie um arquivo com mais de 100 MB, você receberá um webhook com o código de erro [131052](/documentation/business-messaging/whatsapp/support/error-codes#other-errors) e `title`:
 
 _“O arquivo de mídia é muito grande. Tamanho máximo do arquivo aceito atualmente: 100 MB. Peça ao cliente para enviar um arquivo de mídia com tamanho inferior a 100 MB"_.
 
@@ -410,7 +409,7 @@ Recomendamos que você envie aos clientes uma mensagem de aviso informando que o
 
 ## Saiba mais
 
-Blog do WhatsApp Business – [Como enviar mensagens de mídia pelo WhatsApp em um app](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fblog%2Fmedia-messages-via-app&h=AT2c4gedJCTPU1DhUzZomqZyAJZ9jD8y6yY3WaisvWSIbC7BbVPoXCkvLcqjPbQ1vpfj6p55rp9vJKcw65BFrR7fsFfJ76xgEV_jDYtP93RruYc0E9KYsBCgBiG1SF1Mo7-yrunwY7uaA4Yq9Ga8pEkARWM)
+Blog do WhatsApp Business – [Como enviar mensagens de mídia pelo WhatsApp em um app](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fblog%2Fmedia-messages-via-app&h=AT0mZT57Tz_t_gCcZY6rmBHEjosuDQaCWAFIgVtzlkhH7ULfbhsKSnwQg73pmqW2yNB65rdZcybuVcvGaSgZ3y9blUo4coqKo5-lhKt8JOjypz59VyPSqwFodyMbjIWuiIo6U_8v1qoNekWOHHJK8ablq0c)
 
 Você achou esta página útil?
 

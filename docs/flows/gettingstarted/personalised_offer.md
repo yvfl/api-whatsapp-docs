@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/docs/whatsapp/flows/gettingstarted/personalised-offer -->
-<!-- Scraped: 2025-12-21T15:24:23.708Z -->
+<!-- Scraped: 2026-01-24T00:24:00.955Z -->
 
 ![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1765810345)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
 
@@ -29,7 +29,7 @@ This template can be adapted to any product or service that you want to offer to
 To follow this guide, ensure you have:
 
 -   Completed [prerequisites](/docs/whatsapp/flows/gettingstarted#prerequisites) for building Flows.
--   A [Glitch](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fsignup&h=AT3ZG-13kF1PaCWyIiBinuIrpwdyWJRlSIint1tlOlZjX5XZSlb3hQc12WaJc__4CgQBoGUgpdow4_snoVoeFk4d1aJ_nxyASd4fMrb3-v4To801ZM0lHl4zK0r3VbdF_Jrhi_B-L-v01IZNhsdOK1pi964) account
+-   A [Glitch](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fsignup&h=AT34RN0ie7iqA43uUBeRjUUYlUWZQiJvhU7HFFOjn6zimyHlEi8m5o5vCsdVNXYqab8i15XL3BpEyPmSjP0bWCEHNeSFF0K1o4Ztn3MPi7GDWX9iz2OnZSh9abRJI13Rs5HttyD3FGljmW_6_wvYh3haz6s) account
 
 [](#)
 
@@ -173,11 +173,11 @@ The Flow remains in the draft state as you edit it. You can share it with your t
 
 WhatsApp Flows lets you connect to an external endpoint. This endpoint can provide dynamic data for your Flow and control routing. It also receives user-submitted responses from the Flow.
 
-For testing purposes, this template uses Glitch to host the endpoint. Using Glitch is entirely optional, and not required to use Flows. You can [clone the endpoint code from GitHub](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fnodejs%2Fpersonalised-offer&h=AT3_iuCx4y6CJOsONJe84kq0TiojnfgQX9CYg54_ogcOs3jKyxiFDHNp_LF4fI6QlxKzisIAMRXBTmCt0hp568UhMIwaDDln5Y1YxGkKEufNQTB3vzWw2V7rktJHQ9tCKM43vhtXT7pZNfTh1LJf2hCP33c) and run it in any environment you prefer.
+For testing purposes, this template uses Glitch to host the endpoint. Using Glitch is entirely optional, and not required to use Flows. You can [clone the endpoint code from GitHub](https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FWhatsApp%2FWhatsApp-Flows-Tools%2Ftree%2Fmain%2Fexamples%2Fendpoint%2Fnodejs%2Fpersonalised-offer&h=AT3q1vfggvVj9lv-EgRrhZuEc421uaT6ctCvzRQEExfsqGNNobLlrzna5ScjVEfhm5HgSsPhBLl23ai4tBmMxAlSEWN_lwHCyuD7SXIWjtEVe_Mv3OwYyqOEpBu1e5kgHD9TGV6BVtr6FS7Y-Q4BxPmRnBg) and run it in any environment you prefer.
 
 ### 1\. Remix (fork) Glitch endpoint
 
-Access the [endpoint code in Glitch](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fedit%2F%23%21%2Fwhatsapp-flows-personalised-offer&h=AT0X9UCNHIm1SPOYd3vEEx4C8JxycCA2EdmuFNAe83Ms4fg2VaNA3ZBol7EBUYlTL1YWuWmqKnXx8XCgDtBQjrWtG-xg_00o1a7cwCmj7yFJCaaeIMWO_82g_shAxe_xcBC7fy73d6fKYGu0pbOhol-sVcU) and remix it to get your unique domain. To remix it, click **Remix** at the top of the page. A unique domain will appear as a placeholder in the input element on the right side of the Glitch page.
+Access the [endpoint code in Glitch](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fedit%2F%23%21%2Fwhatsapp-flows-personalised-offer&h=AT1h5VFaoAYTHgX4yYe56gMyrDh4qzD7DXPIk0fS2AoznPiJ_PnQD8_FZ1oENjcRyqPMWa_A7afuJ42HD0DFmPoTCeE-kXdIEcKreSfxOGCppKoLb9CPBANT2hFQkJY6DSaSxsp7WsXK2NOXTD-4BUSLt7M) and remix it to get your unique domain. To remix it, click **Remix** at the top of the page. A unique domain will appear as a placeholder in the input element on the right side of the Glitch page.
 
 ### 2\. Setup encryption key
 
@@ -255,7 +255,7 @@ You can publish your Flow once you have ensured that:
 
 -   All validation errors and [publishing checks](/docs/whatsapp/flows/guides/healthmonitoring#publishing-checks) have been resolved.
 -   The Flow meets the [design principles](https://developers.facebook.com/docs/whatsapp/flows/guides/bestpractices) of WhatsApp Flows
--   The Flow complies with [WhatsApp Terms of Service](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fterms-of-service%2F%3Flang%3Den&h=AT3qlOnUDAf8ywI0uoUYqO1yK-O6Zyl-ZEFNkQIlDiU3tTv0UGhiiD4Hudr6G_Xi4b8Ka2p-ePnIR8363FfmvnPtC4zxve-Y1U44N20jkW5_Aikcji1PaERmnPOJXCe6ShbhudT1gsnOFpB4Dq4P4qs4NAQ), the [WhatsApp Business Messaging Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F933578044281252&h=AT0o5u-A3llsjsPJcMGrZ6Enn_xN5-yrr4TYINJKeMFor_-sTChZHVG7kXBVmus9V5fcKvo83Fxj5sGG-vQA1HwjTTBeuE28Pee8NRQ7wdEhsSRVRWIjhr6T0Iviorgh881T86WETA-g1FS_c7Y7sNBDKQs) and, if applicable, the [WhatsApp Commerce Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fcommerce-policy%2F%3Flang%3Den&h=AT2yBEOzSWj5CVD862hi350QSODFZtvYrCnPOMhxhLrRc8m9q70rJ36OAmxfVj31YcsXomoSMHHgqRdwLTbbQfBCRTIczT_bNXdEk7pF_5JX8JH5F3Z9SGZzkC_8GgVBpt9oI9Te5DOlyhK8_xGwcnBAaIQ)
+-   The Flow complies with [WhatsApp Terms of Service](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fterms-of-service%2F%3Flang%3Den&h=AT2PPMaqf5iGsMulkx_fCBEXieBeG-VQJdOK1QjPUlY3NV0sG2X8RDHdF7I1lhs6gcXKtlyrfljSbarNa1SzCJBL9dPnpfrRdKzsyEclj-lT-RWJGtvbDoSuJ5hluHW6IQDHmbWQB7exR0CrlYnTlWKuOZM), the [WhatsApp Business Messaging Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F933578044281252&h=AT1OipAtCxxJxnmsniHjivVkHXOt0nmuHnwJSCSKQi2u-iM0appz_qW7gv5NdEEcPN7qO0andW3Okgb6HvhZstOhoBHX06Yj6C9zgRnCPsMlcovZXsKpCL6LB6LxkvEJzM6QAexlSKoGt5Bpwvbd4uy06zc) and, if applicable, the [WhatsApp Commerce Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fcommerce-policy%2F%3Flang%3Den&h=AT0dgrHmsrz_faVut9XJoUuh_6cY7UpKL0JGS9rfoZ7z7iYzkVVWC2d1-Pt-s_3wM9Y0EtRklOm6NK-g8bOZTDAAcDH1VVu05bo9NYX1dH3hISfmarrmoNFuuhdeTrI994PQnw1-2re6gU8ZXaIAfWjz9R0)
 
 Remember, once a Flow has been published it can no longer be modified. See [Flow Status Lifecycle](/docs/whatsapp/flows/gettingstarted/flows-lifecycle) for more information on the different Flow states.
 
@@ -309,7 +309,7 @@ Now that you have successfully completed this guide, learn more about what you c
 
 ## Overview of demo backend
 
-There are four JavaScript files in the [Glitch example src directory](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fedit%2F%23%21%2Fwhatsapp-flows-personalised-offer&h=AT2JNHg9CyeA5gA9S8bC8rXvAy7XLleIb4m5SplK4wYwMBrDirAvIci0lWHTHmDDYU9vFEjpTI05LGtyVYff8KvpatcIf4brfztG3EsFH_SjQpm1fliOyQGbvPRZiSXD6dnK--9dljrYkUh1YlgZBeslbFw): `encryption.js`, `flow.js`, `keyGenerator.js`, and `server.js`. The entry file is `server.js`, so let’s look at it first.
+There are four JavaScript files in the [Glitch example src directory](https://l.facebook.com/l.php?u=https%3A%2F%2Fglitch.com%2Fedit%2F%23%21%2Fwhatsapp-flows-personalised-offer&h=AT0j7utnf1AzDjLxKw4MPHLxfW-ciIX2HdrxCuM2qiBFTpWdLmFLXbNAy7M6JgVEGjJUCzJrOawJh7qH9o64zo3s4A-j14LD-9c0xnzb8-Oh0r3MsiJo3O03uo0IrEniZ3CtAhN6lQh3bbKIZAM9LirjodI): `encryption.js`, `flow.js`, `keyGenerator.js`, and `server.js`. The entry file is `server.js`, so let’s look at it first.
 
 ### server.js
 

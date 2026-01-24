@@ -1,11 +1,11 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/components -->
-<!-- Scraped: 2025-12-20T17:33:01.663Z -->
+<!-- Scraped: 2026-01-24T01:02:59.219Z -->
 
 # Componentes do modelo
 
-Updated: 6 de nov de 2025
+Updated: 21 de nov de 2025
 
-Os modelos são feitos de quatro componentes principais, definidos no momento da criação: cabeçalho, corpo, rodapé e botões. Escolha os componentes dos modelos com base nas necessidades dos seus negócios. O único componente obrigatório é o corpo.
+Os modelos são feitos de quatro componentes principais, definidos no momento da criação: cabeçalho, corpo, rodapé e botões. Escolha os componentes dos modelos com base nas necessidades da sua empresa. O único componente obrigatório é o corpo.
 
 Alguns componentes são compatíveis com variáveis, cujos valores você pode fornecer ao usar a API de Nuvem ou a API Local para enviar um modelo de mensagem. Quando as variáveis forem usadas, será preciso incluir valores de exemplo para elas no momento da criação do modelo.
 
@@ -107,7 +107,7 @@ Esse exemplo usa um parâmetro nomeado.
 
 Os cabeçalhos com mídia podem ser uma imagem, um vídeo, um GIF ou um documento, como um PDF. Todas as mídias devem ser carregadas com a [API de Carregamento Retomável](/docs/graph-api/guides/upload). A sintaxe para definir um cabeçalho com mídia é a mesma para todos os tipos de mídia.
 
-Observação: atualmente, os GIFs estão disponíveis apenas para a [API de MM Lite](/documentation/business-messaging/whatsapp/marketing-messages/features). Os GIFs são arquivos no formato mp4 com tamanho máximo de 3,5 MB. Arquivos maiores serão exibidos como mensagens de vídeo.
+Observação: atualmente, os GIFs estão disponíveis apenas para a [API de Mensagens de Marketing para o WhatsApp](/docs/whatsapp/marketing-messages-lite-api/features). Os GIFs são arquivos no formato mp4 com tamanho máximo de 3,5 MB. Arquivos maiores serão exibidos como mensagens de vídeo.
 
 ### Sintaxe de criação
 
@@ -139,7 +139,7 @@ Indica o tipo de ativo de mídia. Defina como `IMAGE`, `VIDEO`, `GIF` ou `DOCUME
 
 `<HEADER_HANDLE>`
 
-Nome de usuário do ativo de mídia carregado. Use a [API de Carregamento Retomável](/docs/graph-api/guides/upload) para gerar um identificador de ativo.
+Identificador do ativo de mídia carregado. Use a [API de Carregamento Retomável](/docs/graph-api/guides/upload) para gerar um identificador de ativo.
 
 `4::aW...`
 
@@ -149,9 +149,9 @@ Nome de usuário do ativo de mídia carregado. Use a [API de Carregamento Retom�
 {  "type": "HEADER",  "format": "IMAGE",  "example": {    "header_handle": [      "4::aW..."    ]  }}
 ```
 
-## Cabeçalho com localização
+## Cabeçalho de localização
 
-Os cabeçalhos com localização aparecem como mapas genéricos na parte superior do modelo e são úteis para rastreamento de pedidos, atualizações sobre entregas, embarque e desembarque no transporte por caronas, localização de lojas físicas etc. Quando o usuário toca neles, o app de mapas padrão do usuário é aberto e carrega a localização especificada. As localizações são especificadas quando você envia o modelo.
+Os cabeçalhos com localização aparecem como mapas genéricos na parte superior do modelo e são úteis para rastreamento de pedidos, atualizações sobre entregas, embarque e desembarque no transporte por caronas, localização de lojas físicas etc. Quando o usuário toca neles, o app de mapas padrão é aberto e carrega a localização especificada. As localizações são especificadas quando você envia o modelo.
 
 Os cabeçalhos com localização só podem ser usados em modelos categorizados como `UTILITY` ou `MARKETING`. A localização em tempo real não é compatível.
 
@@ -230,9 +230,9 @@ Nome da localização.
 
 ## Corpo
 
-O componente corpo representa o texto principal do seu modelo de mensagem e inclui somente texto. Os modelos podem ter apenas um componente de corpo.
+O componente do corpo representa o texto principal do seu modelo de mensagem e inclui somente texto. Os modelos podem ter apenas um componente de corpo.
 
-O texto da mensagem no componente de corpo aceita vários [parâmetros](/documentation/business-messaging/whatsapp/templates/overview#parameter-formats).
+O texto da mensagem no componente do corpo aceita vários [parâmetros](/documentation/business-messaging/whatsapp/templates/overview#parameter-formats).
 
 ### Sintaxe de criação
 
@@ -319,7 +319,7 @@ Exemplo de valor do [parâmetro](/documentation/business-messaging/whatsapp/temp
 
 ## Rodapé
 
-Os rodapés são componentes opcionais somente de texto que são exibidos imediatamente após o componente corpo. Os modelos podem ter apenas um componente de rodapé.
+Os rodapés são componentes opcionais somente de texto que são exibidos imediatamente após o componente do corpo. Os modelos podem ter apenas um componente de rodapé.
 
 ### Sintaxe
 
@@ -343,7 +343,7 @@ Valor de exemplo
 Texto a ser exibido no rodapé do modelo enviado.
 
   
-Pode ter, no máximo, 60 caracteres.
+Máximo de 60 caracteres.
 
 `Use the buttons below to manage your marketing subscriptions`
 
@@ -367,7 +367,7 @@ Os botões são definidos em um único objeto do componente de botão, agrupados
 
 Se o modelo tiver mais de três botões, dois deles aparecerão na mensagem entregue e os restantes serão substituídos por um botão **Ver todas as opções**. Os botões restantes são exibidos quando o usuário toca em **Ver todas as opções**.
 
-![](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/362692024_651522560374555_6131765669860446689_n.png?_nc_cat=111&ccb=1-7&_nc_sid=e280be&_nc_ohc=gCpKsp2CVhUQ7kNvwEZsV4f&_nc_oc=AdmnCRH9gRbMdjYB-R_OGjA_R121VsUA5O9Qo9k0Is6Xkiwtu1lI0U1-uWCx8y0zp08&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=vWrtLvI58_0NFLku3D828A&oh=00_AfnBE0yAiW7nqRkh9XbsX4jfW47W_DatT9eqKd9GUrnXtQ&oe=69611CFB)
+![](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/362692024_651522560374555_6131765669860446689_n.png?_nc_cat=111&ccb=1-7&_nc_sid=e280be&_nc_ohc=umKiKjSbyt0Q7kNvwFgN3qQ&_nc_oc=AdldybsE7ZlZUQwOMuJmoY2dMU7xJLqkJhy0sFWc7wAjjFcVIERzxGovFCGrGAJQykU&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=z8zMdyhZpqKa7vKAUxXyHw&oh=00_Afq-CyUj8U1vocWflKdhym34rWSc7L55ImgFJTYQHGFA0g&oe=698E607B)
 
 ### Botões de copiar código
 
@@ -409,7 +409,7 @@ Máximo de 15 caracteres.
 
 ### Botões de mensagem para vários produtos
 
-Os botões de mensagem para vários produtos (MPM, nas iniciais em inglês) são botões especiais e não personalizáveis ​​que, quando tocados, exibem até 30 produtos do seu catálogo de comércio eletrônico (organizados em até 10 seções) em uma única mensagem. Consulte [Modelos de mensagem para vários produtos](/documentation/business-messaging/whatsapp/templates/marketing-templates/mpm-templates).
+Os botões de mensagem para vários produtos são botões especiais e não personalizáveis ​​que, quando tocados, exibem até 30 produtos do seu catálogo de comércio eletrônico (organizados em até dez seções) em uma única mensagem. Consulte [Modelos de mensagem para vários produtos](/documentation/business-messaging/whatsapp/templates/marketing-templates/mpm-templates).
 
 ### Botões de senha descartável
 
@@ -417,7 +417,7 @@ Os botões de senha descartável são um tipo especial do componente [botão de 
 
 ### Botões de número de telefone
 
-Os botões de número de telefone ligam para os telefones comerciais especificados quando o usuário do app clica neles. Os modelos podem ter apenas um componente de botão de número de telefone.
+Os botões de número de telefone ligam para os telefones comerciais especificados quando o usuário do app clica neles. Os modelos podem ter apenas um botão de número de telefone.
 
 #### Sintaxe
 
@@ -451,7 +451,7 @@ Pode ter, no máximo, 20 caracteres.
 
 `<TEXT>`
 
-Texto do botão.
+Texto do rótulo do botão.
 
   
 Máximo de 25 caracteres.
@@ -466,7 +466,7 @@ Máximo de 25 caracteres.
 
 ### Botões de resposta rápida
 
-Os botões de resposta rápida são botões personalizados somente de texto que, quando tocados pelo usuário, enviam imediatamente a você uma mensagem com a string especificada. Um caso de uso comum é um botão para o usuário cancelar com facilidade a assinatura de mensagens de marketing.
+Os botões de resposta rápida são botões personalizados somente de texto que, quando tocados pelo usuário, enviam uma mensagem com a string especificada imediatamente a você. Um caso de uso comum é um botão para o usuário cancelar com facilidade a assinatura de mensagens de marketing.
 
 Os modelos podem ter até 10 botões de resposta rápida. Caso você use botões de resposta rápida com outros tipos de botão, será preciso organizá-los em dois grupos: botões de resposta rápida e outros botões. Se eles forem agrupados incorretamente, a API retornará um erro informando uma combinação inválida.
 
@@ -501,7 +501,7 @@ Valor de exemplo
 
 `<TEXT>`
 
-Texto do botão.
+Texto do rótulo do botão.
 
   
 Máximo de 25 caracteres.
@@ -516,11 +516,11 @@ Máximo de 25 caracteres.
 
 ### Botões de mensagem de produto único
 
-Os botões de mensagem de produto único (SPM, nas iniciais em inglês) são botões especiais e não personalizáveis ​​que podem ser mapeados para um produto no seu catálogo. Quando tocados, eles carregam detalhes sobre o produto, que são extraídos do seu catálogo. Os usuários podem então adicionar o produto ao carrinho de compras e fazer o pedido. Consulte [Modelos de mensagem de produto único](/documentation/business-messaging/whatsapp/templates/marketing-templates/spm-templates) e [Modelos de carrossel com cartões de produtos](/documentation/business-messaging/whatsapp/templates/marketing-templates/product-card-carousel-templates).
+Os botões de mensagem de produto único (SPM) são botões especiais e não personalizáveis ​​que podem ser mapeados para um produto no seu catálogo. Quando tocados, eles carregam detalhes sobre o produto, que são extraídos do seu catálogo. Os usuários podem então adicionar o produto ao carrinho de compras e fazer o pedido. Consulte [Modelos de mensagem de produto único](/documentation/business-messaging/whatsapp/templates/marketing-templates/spm-templates) e [Modelos de carrossel com cartões de produtos](/documentation/business-messaging/whatsapp/templates/marketing-templates/product-card-carousel-templates).
 
 ### Botões de URL
 
-Os botões de URL carregam o URL especificado no navegador da web padrão do dispositivo quando o usuário do app clica neles. Os modelos podem ter até dois botões URL.
+Os botões de URL carregam o URL especificado no navegador da web padrão do dispositivo quando o usuário do app clica neles. Os modelos podem ter até dois botões de URL.
 
 #### Sintaxe
 
@@ -561,13 +561,13 @@ Pode ter, no máximo, 2.000 caracteres.
 
 `<TEXT>`
 
-Texto do botão. Máximo de 25 caracteres.
+Texto do rótulo do botão. Máximo de 25 caracteres.
 
 `Shop Now`
 
 `<URL>`
 
-URL do site que é carregada no navegador da web para celular padrão do dispositivo quando o usuário do app toca no botão.
+URL do site que é carregado no navegador da web para celular padrão do dispositivo quando o usuário do app toca no botão.
 
   
 Compatível com 1 variável, adicionada ao final da string do URL.
@@ -593,7 +593,7 @@ Os componentes de oferta por tempo limitado são tipos especiais usados para cri
 
 Um exemplo de pedido para criar um modelo de marketing com os seguintes componentes:
 
--   Um cabeçalho com texto com uma variável e um valor de exemplo-   Um corpo com texto com variáveis e valores de exemplo-   Um rodapé com texto-   dois botões de resposta rápida
+-   um cabeçalho com texto com uma variável e um valor de exemplo-   Um corpo com texto com variáveis e valores de exemplo-   Um rodapé com texto-   dois botões de resposta rápida
 
 ```
 curl -L 'https://graph.facebook.com/v24.0/102290129340398/message_templates' \
@@ -661,7 +661,7 @@ curl -L 'https://graph.facebook.com/v16.0/102290129340398/message_templates' 
 
 Um exemplo de pedido para criar um modelo de utilidade com os seguintes componentes:
 
--   Um cabeçalho com localização-   Um corpo com texto com variáveis e valores de exemplo-   um rodapé-   Um botão de resposta rápida
+-   Um cabeçalho com localização-   Um corpo com texto com variáveis e valores de exemplo-   Um rodapé-   Um botão de resposta rápida
 
 ```
 curl 'https://graph.facebook.com/v24.0/102290129340398/message_templates' \

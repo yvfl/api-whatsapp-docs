@@ -1,13 +1,13 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform -->
-<!-- Scraped: 2025-12-20T17:22:53.708Z -->
+<!-- Scraped: 2026-01-24T00:25:18.617Z -->
 
 # Sobre a Plataforma do WhatsApp Business
 
-Updated: 4 de nov de 2025
+Updated: 5 de dez de 2025
 
-A Plataforma do WhatsApp Business permite que as empresas se comuniquem com os clientes em escala.
+A Plataforma do WhatsApp Business permite que as empresas se comuniquem com os clientes em grande escala.
 
-Esta documentação é destinada a desenvolvedores que usam as nossas APIs. Para saber mais sobre outras maneiras de usar o WhatsApp para sua empresa, consulte o [site do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2F&h=AT001waIUZz9Fc5T-qM9lo1Z3T5ZDs4ZHFbBm-tTTnV6nplSN-SUBcI4Dm7aVD3y_V9-P5LymWWUuvgfe46kQ-M4zAibbrdEMgAWIt2xsfaWoAEJFEfQVOs2E-7uBnW-ZQwbHx1N_vrRgDGaDazGGOOhehk).
+Esta documentação é destinada a desenvolvedores que usam as nossas APIs. Para saber mais sobre outras maneiras de usar o WhatsApp para sua empresa, consulte o [site do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2F&h=AT05vuyLKRp-F6V6FULZtidUYERaRk1Nd2pksyWTlkY4wy9rw0_C0zYVV7mCAJ9KYLmo6j2fKAe0HyzHXywDvV3BWczb0CunoVHEQiF9w6QtvJQ0bbSMaADEnbjfOnCGSTALhuO-IBPr6eljqgDzAsj1xso).
 
 ## Principais APIs e recursos
 
@@ -17,7 +17,7 @@ A API de Nuvem do WhatsApp permite que você envie mensagens e faça ligações 
 
 A API de Nuvem do WhatsApp inclui o seguinte:
 
--   **Mensagem:** envie SMSs, mídias avançadas e mensagens interativas-   **Ligações:** faça e receba ligações de clientes-   **Grupos:** crie, gerencie e envie mensagens em conversas em grupo do WhatsApp.
+-   **Mensagens:** envie SMSs, mídias avançadas e mensagens interativas-   **Ligações:** faça e receba ligações de clientes-   **Grupos:** crie, gerencie e envie mensagens em conversas em grupo do WhatsApp.
 
 As mensagens do WhatsApp oferecem uma maneira eficiente e privada de interagir com os clientes. Use a API de Nuvem para:
 
@@ -38,17 +38,17 @@ A API de Gerenciamento do WhatsApp Business também dá acesso a análises da co
 -   **Análise de mensagens:** o número e o tipo de mensagens enviadas e entregues.-   **Análise de preços:** detalhamentos de preços granulares para mensagens entregues.-   **Análise de modelos:** métricas de modelos enviados/lidos/entregues, além de cliques no botão de mensagem do modelo.  
     -   [Saiba mais sobre modelos de mensagem.](/documentation/business-messaging/whatsapp/templates/overview)-   [Saiba mais sobre como gerenciar números de telefone comerciais.](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers)-   [Saiba mais sobre análises de conta.](/documentation/business-messaging/whatsapp/analytics)
 
-### API de Mensagens de Marketing Lite
+### API de Mensagens de Marketing para o WhatsApp
 
-A MM Lite é uma API para enviar mensagens de marketing otimizadas no WhatsApp.
+A API de Mensagens de Marketing é uma API para enviar mensagens de marketing otimizadas no WhatsApp.
 
-Ao enviar mensagens de marketing por meio da API de MM Lite, você pode acessar novos recursos não disponíveis na API de Nuvem e receber otimizações automáticas para que as mensagens de alto engajamento alcancem mais clientes.
+Ao enviar mensagens de marketing por meio da API de Mensagens de Marketing para o WhatsApp, você pode acessar novos recursos não disponíveis na API de Nuvem e receber otimizações automáticas para que as mensagens de alto engajamento alcancem mais clientes.
 
-A API de MM Lite inclui:
+A API de Mensagens de Marketing para o WhatsApp inclui:
 
--   **Entrega baseada em qualidade:** até 9% de aumento na entrega de mensagens de marketing via API de Nuvem para conteúdo de alto engajamento.-   **Otimizações de criativos automatizadas:** aprimore automaticamente o criativo de marketing para melhorar o desempenho das mensagens.-   **Referências de desempenho e recomendações:** comparação de taxas de leitura e cliques em relação a modelos semelhantes de empresas na sua região.-   **Métricas de conversão:** mensure as mensagens de marketing que levam os usuários a realizar eventos no app, como "Adicionar ao carrinho", "Finalização de compra iniciada" ou "Comprar".
+-   **Entrega baseada em qualidade:** até 9% de aumento na entrega de mensagens de marketing via API de Nuvem para conteúdo de alto engajamento.-   **Otimizações de criativos automatizadas:** aprimore automaticamente o criativo de marketing para melhorar o desempenho das mensagens.-   **Referências de desempenho e recomendações:** comparação de taxas de leitura e cliques em relação a modelos semelhantes de empresas na sua região.-   **Métricas de conversão:** mensure as mensagens de marketing que levam os usuários a realizar eventos no app, como "Adicionar ao carrinho", "Finalização da compra iniciada" ou "Comprar".
 
-[Saiba mais sobre a API de Mensagens de Marketing Lite.](/documentation/business-messaging/whatsapp/marketing-messages/overview)
+[Saiba mais sobre a API de Mensagens de Marketing para o WhatsApp.](/documentation/business-messaging/whatsapp/marketing-messages/overview)
 
 ### Webhooks
 
@@ -60,9 +60,9 @@ A plataforma depende totalmente dos webhooks. Isso porque o conteúdo de qualque
 
 ## Fundamentos técnicos
 
-### Protocolo HTTP e pedidos de API
+### Protocolo HTTP e solicitações de API
 
-A Plataforma do WhatsApp Business foi desenvolvida com base na [Graph API](/docs/graph-api/overview) e usa o protocolo HTTP. Os pedidos de API incluem parâmetros de caminho, corpo e cabeçalho.
+A Plataforma do WhatsApp Business foi desenvolvida com base na [Graph API](/docs/graph-api/overview) e usa o protocolo HTTP. As solicitações de API incluem parâmetros de caminho, corpo e cabeçalho.
 
 #### Exemplo: como enviar uma mensagem de texto usando cURL
 
@@ -96,7 +96,7 @@ Com o portfólio empresarial, as organizações podem reunir todos os ativos de 
 
 Os portfólios empresariais podem ser verificados, e o status de verificação contribui para melhorar a funcionalidade, como maior taxa de transferência de dados e o status de [conta comercial oficial](/documentation/business-messaging/whatsapp/official-business-accounts).
 
-[Saiba mais sobre os portfólios empresariais](https://www.facebook.com/business/help/486932075688253).
+Saiba mais [sobre portfólios empresariais](https://www.facebook.com/business/help/486932075688253).
 
 ### Contas do WhatsApp Business (WABA)
 
@@ -112,7 +112,7 @@ Os números de telefone comerciais, reais ou virtuais, são usados para enviar e
 
 ### Modelos de mensagem
 
-Os modelos são mensagens personalizáveis que você pode criar antes do envio. Em geral, as mensagens de modelo precisam ser aprovadas antes do envio.
+Os modelos são mensagens personalizáveis que você pode criar antes do envio. Em geral, os modelos de mensagem precisam ser aprovados antes do envio.
 
 Os modelos são úteis para enviar mensagens em escala. Além disso, eles são o único tipo de mensagem que pode ser enviado a usuários do WhatsApp fora da [janela de atendimento ao cliente](/documentation/business-messaging/whatsapp/messages/send-messages#customer-service-windows).
 
@@ -134,7 +134,7 @@ Para excluir seu portfólio empresarial e os respectivos recursos de teste:
 
 Recomendamos usar o API Playground ao testar os pontos de extremidade. A área de teste está disponível na seção "Referência da API", na barra lateral esquerda desta página. Em cada referência, existe um botão "Experimentar" que abre o playground.
 
-Além disso, a [coleção Postman](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.postman.com%2Fmeta%2Fwhatsapp-business-platform%2F&h=AT001waIUZz9Fc5T-qM9lo1Z3T5ZDs4ZHFbBm-tTTnV6nplSN-SUBcI4Dm7aVD3y_V9-P5LymWWUuvgfe46kQ-M4zAibbrdEMgAWIt2xsfaWoAEJFEfQVOs2E-7uBnW-ZQwbHx1N_vrRgDGaDazGGOOhehk) é útil para testes.
+Além disso, a [coleção Postman](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.postman.com%2Fmeta%2Fwhatsapp-business-platform%2F&h=AT05vuyLKRp-F6V6FULZtidUYERaRk1Nd2pksyWTlkY4wy9rw0_C0zYVV7mCAJ9KYLmo6j2fKAe0HyzHXywDvV3BWczb0CunoVHEQiF9w6QtvJQ0bbSMaADEnbjfOnCGSTALhuO-IBPr6eljqgDzAsj1xso) é útil para testes.
 
 ## Ferramentas e integrações
 
@@ -146,17 +146,17 @@ O Gerenciador do WhatsApp é um app para web que permite o gerenciamento de WABA
 
 ### SDKs de terceiros
 
-Alguns SDKs, como [PyWa](https://l.facebook.com/l.php?u=https%3A%2F%2Fpywa.readthedocs.io%2Fen%2F2.0.1%2F&h=AT001waIUZz9Fc5T-qM9lo1Z3T5ZDs4ZHFbBm-tTTnV6nplSN-SUBcI4Dm7aVD3y_V9-P5LymWWUuvgfe46kQ-M4zAibbrdEMgAWIt2xsfaWoAEJFEfQVOs2E-7uBnW-ZQwbHx1N_vrRgDGaDazGGOOhehk) (wrapper Python), estão disponíveis, mas não são mantidos ou endossados pela Meta.
+Alguns SDKs, como [PyWa](https://l.facebook.com/l.php?u=https%3A%2F%2Fpywa.readthedocs.io%2Fen%2F2.0.1%2F&h=AT05vuyLKRp-F6V6FULZtidUYERaRk1Nd2pksyWTlkY4wy9rw0_C0zYVV7mCAJ9KYLmo6j2fKAe0HyzHXywDvV3BWczb0CunoVHEQiF9w6QtvJQ0bbSMaADEnbjfOnCGSTALhuO-IBPr6eljqgDzAsj1xso) (wrapper Python), estão disponíveis, mas não são mantidos ou endossados pela Meta.
 
 ### Coleção Postman
 
 A coleção Postman oficial permite executar consultas comuns de API.
 
-[Acesse a coleção Postman da Plataforma do WhatsApp Business.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.postman.com%2Fmeta%2Fwhatsapp-business-platform%2F&h=AT001waIUZz9Fc5T-qM9lo1Z3T5ZDs4ZHFbBm-tTTnV6nplSN-SUBcI4Dm7aVD3y_V9-P5LymWWUuvgfe46kQ-M4zAibbrdEMgAWIt2xsfaWoAEJFEfQVOs2E-7uBnW-ZQwbHx1N_vrRgDGaDazGGOOhehk)
+[Acesse a coleção Postman da Plataforma do WhatsApp Business.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.postman.com%2Fmeta%2Fwhatsapp-business-platform%2F&h=AT05vuyLKRp-F6V6FULZtidUYERaRk1Nd2pksyWTlkY4wy9rw0_C0zYVV7mCAJ9KYLmo6j2fKAe0HyzHXywDvV3BWczb0CunoVHEQiF9w6QtvJQ0bbSMaADEnbjfOnCGSTALhuO-IBPr6eljqgDzAsj1xso)
 
 ## Segurança e desempenho
 
-### Taxa de transferência de dados
+### Taxa de transferência
 
 Os números de telefone comercial podem enviar até 80 mensagens por segundo por padrão, com atualizações de capacidade disponíveis.
 
@@ -168,7 +168,7 @@ Com a API de Nuvem, todas as mensagens do WhatsApp continuam sendo protegidas pe
 
 A API de Nuvem aplica técnicas padrão de criptografia da indústria para proteger dados em trânsito e em repouso. Ela usa a Graph API para enviar mensagens e Webhooks a fim de receber eventos. Ambos operam com HTTPS padrão da indústria protegido por TLS. Consulte o documento técnico Visão Geral da Criptografia para saber mais.
 
-Para saber mais, consulte o [relatório técnico Visão Geral da Criptografia do WhatsApp](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Fsecurity%2FWhatsApp-Security-Whitepaper.pdf&h=AT001waIUZz9Fc5T-qM9lo1Z3T5ZDs4ZHFbBm-tTTnV6nplSN-SUBcI4Dm7aVD3y_V9-P5LymWWUuvgfe46kQ-M4zAibbrdEMgAWIt2xsfaWoAEJFEfQVOs2E-7uBnW-ZQwbHx1N_vrRgDGaDazGGOOhehk).
+Para saber mais, consulte o [relatório técnico Visão Geral da Criptografia do WhatsApp](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Fsecurity%2FWhatsApp-Security-Whitepaper.pdf&h=AT05vuyLKRp-F6V6FULZtidUYERaRk1Nd2pksyWTlkY4wy9rw0_C0zYVV7mCAJ9KYLmo6j2fKAe0HyzHXywDvV3BWczb0CunoVHEQiF9w6QtvJQ0bbSMaADEnbjfOnCGSTALhuO-IBPr6eljqgDzAsj1xso).
 
 ### Dimensionamento
 
@@ -176,13 +176,69 @@ A API de Nuvem dimensiona automaticamente o uso dentro dos limites de volume.
 
 ### Limites de volume
 
-A plataforma aplica vários limites de volume de mensagens:
+As solicitações feitas pelo seu app na sua conta do WhatsApp Business (WABA) são contabilizadas na contagem de solicitações do app. A contagem de solicitações de um app é o número de solicitações que ele pode fazer durante uma hora.
+
+Para os seguintes pontos de extremidade, por padrão, seu app pode fazer 200 solicitações por hora, por app e por WABA. Para WABAs ativas com pelo menos um número de telefone registrado, esse limite é de 5 mil solicitações por hora.
+
+Tipo de solicitação
+
+Ponto de extremidade
+
+`GET`
+
+`/<WHATSAPP_BUSINESS_ACCOUNT_ID>`
+
+`GET`, `POST` e `DELETE`
+
+`/<WHATSAPP_BUSINESS_ACCOUNT_ID>/assigned_users`
+
+`GET`
+
+`/<WHATSAPP_BUSINESS_ACCOUNT_ID>/phone_numbers`
+
+`GET`, `POST` e `DELETE`
+
+`/<WHATSAPP_BUSINESS_ACCOUNT_ID>/message_templates`
+
+`GET`, `POST` e `DELETE`
+
+`/<WHATSAPP_BUSINESS_ACCOUNT_ID>/subscribed_apps`
+
+`GET`
+
+`/<WHATSAPP_BUSINESS_ACCOUNT_TO_NUMBER_CURRENT_STATUS_ID>`
+
+Para as solicitações da [API de Linha de Crédito](/documentation/business-messaging/whatsapp/solution-providers/share-and-revoke-credit-lines) a seguir, o seu app pode fazer 5 mil solicitações por hora.
+
+Tipo de solicitação
+
+Ponto de extremidade
+
+`GET`
+
+`/<BUSINESS_ID>/extendedcredits`
+
+`POST`
+
+`/<EXTENDED_CREDIT_ID>/whatsapp_credit_sharing_and_attach`
+
+`GET` e `DELETE`
+
+`/<ALLOCATION_CONFIG_ID>`
+
+`GET`
+
+`/<EXTENDED_CREDIT_ID>/owning_credit_allocation_configs`
+
+Para ver informações adicionais sobre como obter a utilização do limite de volume atual, consulte [Cabeçalhos](/docs/graph-api/overview/rate-limiting#headers).
+
+Além disso, a plataforma aplica vários limites de volume de mensagens:
 
 -   Testar o limite de volume de mensagens (para WABAs não verificadas)-   Limites de mensagens e classificação de qualidade (para WABAs verificadas)-   Limite de volume de capacidade (para todas as contas)-   Limite de volume de telefonia comercial (por número de telefone)
 
 #### Limites de volume de pareamento
 
-Os números de telefone comercial podem enviar uma mensagem a cada seis segundos para o mesmo usuário do WhatsApp (0,17 mensagem por segundo), o que é equivalente a cerca de dez mensagens por minuto ou 600 por hora. Exceder esse limite gera o [código de erro 131056](/documentation/business-messaging/whatsapp/support/error-codes#throttling-errors) até que você fique dentro da taxa permitida novamente.
+Os números de telefone comercial podem enviar uma mensagem a cada 6 segundos para o mesmo usuário do WhatsApp (0,17 mensagem por segundo), o que é equivalente a cerca de 10 mensagens por minuto ou 600 por hora. Exceder esse limite gera o [código de erro 131056](/documentation/business-messaging/whatsapp/support/error-codes#throttling-errors) até que você fique dentro da taxa permitida novamente.
 
 É possível enviar até 45 mensagens em um período de seis segundos, mas essa ação tomará "emprestado" parte da sua cota futura. Após um pico no uso, é preciso esperar o tempo equivalente ao que levaria para enviar essas mensagens dentro da taxa normal (por exemplo, uma pico de 20 mensagens requer uma espera de aproximadamente dois minutos para enviar mais mensagens para o usuário).
 
@@ -194,13 +250,13 @@ Para gerenciar a limitação após o pico, se um pedido de envio falhar, tente n
 
 É preciso obter a [aceitação do usuário](/documentation/business-messaging/whatsapp/getting-opt-in) antes de enviar modelos de mensagem A aceitação deve esclarecer o nome e a intenção da empresa.
 
-[Saiba mais sobre a Política de Mensagens do WhatsApp Business.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fbusiness-policy%2F&h=AT001waIUZz9Fc5T-qM9lo1Z3T5ZDs4ZHFbBm-tTTnV6nplSN-SUBcI4Dm7aVD3y_V9-P5LymWWUuvgfe46kQ-M4zAibbrdEMgAWIt2xsfaWoAEJFEfQVOs2E-7uBnW-ZQwbHx1N_vrRgDGaDazGGOOhehk)
+[Saiba mais sobre a Política de Mensagens do WhatsApp Business.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fbusiness-policy%2F&h=AT05vuyLKRp-F6V6FULZtidUYERaRk1Nd2pksyWTlkY4wy9rw0_C0zYVV7mCAJ9KYLmo6j2fKAe0HyzHXywDvV3BWczb0CunoVHEQiF9w6QtvJQ0bbSMaADEnbjfOnCGSTALhuO-IBPr6eljqgDzAsj1xso)
 
 ### Termos e políticas
 
 O uso da plataforma deve estar em conformidade com os termos e políticas do WhatsApp. É proibido usar ferramentas não autorizadas de terceiros.
 
--   [Saiba mais sobre termos e políticas.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fbusiness-terms%2F&h=AT001waIUZz9Fc5T-qM9lo1Z3T5ZDs4ZHFbBm-tTTnV6nplSN-SUBcI4Dm7aVD3y_V9-P5LymWWUuvgfe46kQ-M4zAibbrdEMgAWIt2xsfaWoAEJFEfQVOs2E-7uBnW-ZQwbHx1N_vrRgDGaDazGGOOhehk)
+-   [Saiba mais sobre termos e políticas.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fbusiness-terms%2F&h=AT05vuyLKRp-F6V6FULZtidUYERaRk1Nd2pksyWTlkY4wy9rw0_C0zYVV7mCAJ9KYLmo6j2fKAe0HyzHXywDvV3BWczb0CunoVHEQiF9w6QtvJQ0bbSMaADEnbjfOnCGSTALhuO-IBPr6eljqgDzAsj1xso)
 
 ## Próximas etapas
 

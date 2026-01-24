@@ -1,17 +1,17 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers -->
-<!-- Scraped: 2025-12-20T17:23:56.844Z -->
+<!-- Scraped: 2026-01-24T00:26:43.238Z -->
 
 # Números de telefone comerciais
 
-Updated: 13 de nov de 2025
+Updated: 12 de dez de 2025
 
 Este documento descreve os números de telefone comerciais do WhatsApp, bem como os requisitos, as informações de gerenciamento e os recursos únicos relacionados.
 
 ## Como registrar números de telefone comerciais
 
-É preciso registrar um número de telefone comercial válido para enviar e receber mensagens via API de Nuvem. Os números registrados ainda funcionam ​para fins cotidianos, como ligações e mensagens de texto, mas não podem ser usados ​​com o WhatsApp Messenger ("WhatsApp").
+É preciso registrar um número de telefone comercial válido para enviar e receber mensagens via API de Nuvem. Os números registrados ainda funcionam ​para fins gerais, como ligações e mensagens de texto, mas não podem ser usados ​​com o WhatsApp Messenger ("WhatsApp").
 
-Os números que já estiverem em uso no WhatsApp não poderão ser registrados, a menos que sejam [excluídos](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F2138577903196467%2F%3Fhelpref%3Duf_share&h=AT1EIH5z4Kk4u2NrqfRIx5ocHT8G6iBdwMTetAfyTdXNkKaeDja7vzjmAEVHAxrfGcBjI-5Zk8mKggQgKCnt6KaEe2LurHF3cf0gAq3Z0yDfcsuRqRvImsSP9kvG2MhaYMLw6M7I58zQ7f-7GHl9Q2X4u24) primeiro. Se o seu número for banido do WhatsApp e você quiser registrá-lo, primeiro será preciso cancelar o banimento por meio do [processo de apelação](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F465883178708358&h=AT1EIH5z4Kk4u2NrqfRIx5ocHT8G6iBdwMTetAfyTdXNkKaeDja7vzjmAEVHAxrfGcBjI-5Zk8mKggQgKCnt6KaEe2LurHF3cf0gAq3Z0yDfcsuRqRvImsSP9kvG2MhaYMLw6M7I58zQ7f-7GHl9Q2X4u24).
+Os números que já estiverem em uso no WhatsApp não poderão ser registrados, a menos que sejam [excluídos](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F2138577903196467%2F%3Fhelpref%3Duf_share&h=AT2_EPridgnP0WpG0-lDn7STSgucX3r9hQaejziQovO90tyvaUv9xEK9jwsLsZeIkRshUPp6C4AcDOE1sVY6K0SxevXzJ3bBii3MfFi0tZ17nid_StIGvpM7kMw2DhRwKzOhEG5dnfSUOUA-TFNR8bRc83w) primeiro. Se o seu número for banido do WhatsApp e você quiser registrá-lo, primeiro será preciso cancelar o banimento por meio do [processo de apelação](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F465883178708358&h=AT2_EPridgnP0WpG0-lDn7STSgucX3r9hQaejziQovO90tyvaUv9xEK9jwsLsZeIkRshUPp6C4AcDOE1sVY6K0SxevXzJ3bBii3MfFi0tZ17nid_StIGvpM7kMw2DhRwKzOhEG5dnfSUOUA-TFNR8bRc83w).
 
 Após a conclusão das etapas descritas no nosso documento [Introdução](/documentation/business-messaging/whatsapp/get-started), um número de telefone comercial de **teste** será gerado e registrado para você automaticamente.
 
@@ -19,13 +19,137 @@ Após a conclusão das etapas descritas no nosso documento [Introdução](/docum
 
 Os números de telefone qualificados devem:
 
--   pertencer a você;-   ter código do país e código de área (códigos curtos não são compatíveis);-   poder receber chamadas de voz ou SMS;-   o número deve ter [recursos dimensionados](https://www.facebook.com/business/help/595597942906808)
+-   pertencer a você-   ter código do país e código de área (códigos curtos não são compatíveis)-   poder receber chamadas de voz ou SMS-   o número deve ter [recursos dimensionados](https://www.facebook.com/business/help/595597942906808)
 
-Para registrar um número 0800, consulte [Registrar 0800 e números gratuitos](#registering-1-800-and-toll-free-numbers).
+Para registrar um número 0800, consulte [0800 e números gratuitos](#1-800-and-toll-free-numbers).
 
 ### Métodos de registro
 
--   **Painel de Apps:** conclua as etapas descritas no nosso documento [Introdução](/documentation/business-messaging/whatsapp/get-started), caso ainda não tenha feito isso, e use o painel [Painel de Apps](https://developers.facebook.com/apps) > **WhatsApp** > **Configuração da API** para adicionar um número de telefone.-   **Meta Business Suite:** você pode registrar um número de telefone comercial ao [usar o Meta Business Suite para criar uma conta comercial do WhatsApp](/documentation/business-messaging/whatsapp/whatsapp-business-accounts#create-a-waba-via-meta-business-suite).-   **Gerenciador do WhatsApp:** consulte o artigo [Como conectar seu número de telefone à sua conta do WhatsApp Business](https://www.facebook.com/business/help/456220311516626) na Central de Ajuda.-   **Cadastro incorporado**: se você estiver trabalhando com um parceiro de soluções, ele fornecerá um link para o cadastro incorporado, que poderá ser usado para registrar um número.
+-   **Painel de Apps:** conclua as etapas descritas no nosso documento [Introdução](/documentation/business-messaging/whatsapp/get-started), caso ainda não tenha feito isso, e use o painel [Painel de Apps](https://developers.facebook.com/apps) > **WhatsApp** > **Configuração da API** para adicionar um número de telefone.-   **Meta Business Suite:** você pode registrar um número de telefone comercial ao [usar o Meta Business Suite para criar uma conta do WhatsApp Business](/documentation/business-messaging/whatsapp/whatsapp-business-accounts#create-a-waba-via-meta-business-suite).-   **Gerenciador do WhatsApp**: consulte o artigo [Como conectar seu número de telefone à sua conta do WhatsApp Business](https://www.facebook.com/business/help/456220311516626) na Central de Ajuda.-   **Cadastro incorporado**: se você estiver trabalhando com um parceiro de soluções, ele fornecerá um link para o cadastro incorporado, que poderá ser usado para registrar um número.
+
+## Tipos de número de telefone comercial
+
+Esta tabela categoriza os tipos de número de telefone e avalia a adequação deles para receber senhas descartáveis por SMS, ligações telefônicas internacionais e ligações rápidas. Ela fornece avaliações de probabilidade de entrega bem-sucedida com base no tipo de número e nas características da operadora. Além disso, faz recomendações úteis para os usuários melhorarem o sucesso da entrega sem mudar o tipo de número de telefone.
+
+Tipo de telefone
+
+Descrição
+
+Senha descartável por SMS
+
+Senha descartável por voz
+
+Ações
+
+Dispositivos móveis (recomendado)
+
+Atribuídos a dispositivos móveis/SIMs
+
+Básico
+
+Básico
+
+Habilite o recebimento internacional de SMS/ligações, verifique se o dispositivo está conectado à rede celular e conceda as permissões necessárias ao app
+
+Telefone fixo
+
+Atribuídos a localizações físicas (fixo)
+
+Não recomendado
+
+Básico
+
+Habilite o recebimento internacional de SMS/ligações, verifique se a linha está pronta para receber ligações e desabilite o encaminhamento de ligações ou recursos de IVR
+
+Gratuito
+
+0800, ligações a cobrar
+
+Não recomendado
+
+Básico
+
+Verifique com a operadora se o número de telefone pode receber SMS/ligações internacionais, confira se a linha está pronta para receber ligações e desabilite o encaminhamento de ligações ou recursos de IVR
+
+Taxa premium
+
+Cobranças mais altas para serviços especiais
+
+Não recomendado
+
+Básico
+
+Verifique com a operadora se o número de telefone pode receber SMS/ligações internacionais, confira se a linha está pronta para receber ligações e desabilite o encaminhamento de ligações ou recursos de IVR
+
+Custo compartilhado
+
+Custo compartilhado entre quem está ligando e quem está recebendo a ligação
+
+Não recomendado
+
+Não recomendado
+
+Verifique com a operadora se o número de telefone pode receber SMS/ligações internacionais, confira se a linha está pronta para receber ligações e desabilite o encaminhamento de ligações ou recursos de IVR
+
+Acesso universal
+
+Atendimento ao cliente disponível em todo o mundo
+
+Não recomendado
+
+Básico
+
+Verifique com a operadora se o número de telefone pode receber SMS/ligações internacionais, confira se a linha está pronta para receber ligações e desabilite o encaminhamento de ligações ou recursos de IVR
+
+Número pessoal
+
+Atribuído a indivíduos, não vinculado ao dispositivo
+
+Não recomendado
+
+Não recomendado
+
+Verifique com a operadora se o número de telefone pode receber SMS/ligações internacionais, confira se a linha está pronta para receber ligações e desabilite o encaminhamento de ligações ou recursos de IVR
+
+VoIP
+
+Telefonia pela internet, sem vínculo a uma linha física
+
+Não recomendado
+
+Básico
+
+Verifique se o provedor de VoIP é compatível com SMS/ligações internacionais para senhas descartáveis; confira as configurações de provisionamento e da conta; mantenha o app/serviço em execução e as notificações habilitadas; verifique se o dispositivo está online e as permissões foram concedidas
+
+Somente entrada
+
+Apenas ligações/mensagens recebidas
+
+Não recomendado
+
+Básico
+
+Verifique com a operadora se o número de telefone pode receber SMS/ligações internacionais, confira se a linha está pronta para receber ligações e desabilite o encaminhamento de ligações ou recursos de IVR
+
+Pager
+
+Atribuído a pagers (raro)
+
+Não compatível
+
+Não compatível
+
+Não compatível
+
+M2M/IoT
+
+Dispositivos inteligentes e máquina a máquina
+
+Não recomendado
+
+Não recomendado
+
+Verifique se o dispositivo e o chip são compatíveis com o recebimento de SMS/ligações internacionais
 
 ## Status
 
@@ -39,7 +163,7 @@ Consulte o artigo [Sobre a classificação por qualidade do seu número de telef
 
 ### Como receber o status via API
 
-Peça o campo `status` na sua identificação de número de telefone comercial do WhatsApp. Consulte a referência [GET /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-phone-number-api#Reading) para conferir uma lista de valores de status retornáveis ​​e os respectivos significados.
+Peça o campo `status` na sua identificação de número de telefone do WhatsApp Business. Consulte a referência [GET /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-phone-number-api#Reading) para conferir uma lista de valores de status retornáveis ​​e os respectivos significados.
 
 #### Exemplo de pedido
 
@@ -56,21 +180,21 @@ curl 'https://graph.facebook.com/v24.0/106540352242922?fields=status' \
 
 ## Nomes de exibição
 
-Você deve informar o nome de exibição ao registrar um número de telefone comercial. O nome de exibição aparece no perfil do WhatsApp do seu número de telefone comercial e também pode ser mostrado na parte superior de **conversas individuais** e na **lista de conversas** se determinadas condições forem atendidas. Consulte o documento [Nomes de exibição](/documentation/business-messaging/whatsapp/display-names) para saber como funcionam os nomes de exibição.
+Para registrar um número de telefone comercial, é preciso fornecer informações de nome de exibição. O nome de exibição aparece no perfil do WhatsApp do seu número de telefone comercial e também pode ser mostrado na parte superior de **conversas individuais** e na **lista de conversas** se determinadas condições forem atendidas. Consulte o documento [Nomes de exibição](/documentation/business-messaging/whatsapp/display-names) para saber como funcionam os nomes de exibição.
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/507127951_698062976515521_2852142619234157074_n.png?_nc_cat=110&ccb=1-7&_nc_sid=e280be&_nc_ohc=pbMww2NEdikQ7kNvwFBkSWG&_nc_oc=AdmldPwNHM8XO8PWwN_Ig9eRq0mQaHt17-BlGny3M1ZgxwUKEtxeToxI6rfs_J0cYPk&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=vnihTV3K65f7P59scPH3Ow&oh=00_AflZUo4rPDrtgNnML8ZCyGckXuhqU2dHkz-lS3EGl8A9yw&oe=69610969)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/507127951_698062976515521_2852142619234157074_n.png?_nc_cat=110&ccb=1-7&_nc_sid=e280be&_nc_ohc=UBd6oRC6VJoQ7kNvwFf1_I-&_nc_oc=AdlpZ_h0E5ubUcOFuJDUk1h-g_UFYc2PhcKdeks8M0Bwpg16I1kZK8J86pVvchCIAFk&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=AF3vsBi4RHaAYgHWPdtB8Q&oh=00_AfpSv707tPvdhQmAibBv_klzn4Md7yxyYNFA8oGZWhxlGw&oe=698E4CE9)
 
 ## Perfis empresariais
 
 O perfil empresarial fornece informações adicionais sobre sua empresa, como endereço, site, descrição, entre outras. Você pode fornecer essas informações ao registrar o número de telefone comercial. Consulte o documento [Perfis comerciais](/documentation/business-messaging/whatsapp/business-profiles) para saber como os perfis comerciais funcionam.
 
-![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/507476070_1379105613180336_7510619276605653298_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=WYj7EX9b86cQ7kNvwEHrhwL&_nc_oc=AdnbCh9nJ8F3lUNYk3TKWfNZpQohWfjIkXwvxNtafvHfq2Ti5x5z3GtNPn6FAIEXM4k&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=vnihTV3K65f7P59scPH3Ow&oh=00_AfmFGBz6bjsw6yOMvKufP3JKoZgr5aHwuNv9L3oeHfwZWA&oe=6961105D)
+![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/507476070_1379105613180336_7510619276605653298_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=-TeTRZmTTtoQ7kNvwGiPtwe&_nc_oc=Adk-p0nLL1LAVbuCJ8WZPgdHy5W2UDAMkWjxBFsQv-Fs6G7VEejbPnpqsF40zbT-A9s&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=AF3vsBi4RHaAYgHWPdtB8Q&oh=00_Afoqb-xBAFh4XvaxGUvyHrV3Zg4xQC0vGOximrJ6eN2q1A&oe=698E53DD)
 
 ## Status de conta comercial oficial
 
-Os números de telefone comerciais podem receber o status de conta empresarial oficial (OBA, pelas iniciais em inglês). Os números de OBA têm uma marca de seleção azul ao lado do nome na visualização de contatos.
+Os números de telefone comerciais podem receber o status de conta empresarial oficial ("OBA", nas iniciais em inglês). Os números de OBA têm uma marca de seleção azul ao lado do nome na visualização de contatos.
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/456954377_453386597161620_5745766558871976538_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=KglYN_0VuU8Q7kNvwFi3X7Q&_nc_oc=AdmZGf4eVc2hFsStkRME6IX68pTwPlHXe5vT2ccJm3i0gs_dHwbjcU_tfIyieuJ4EYY&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=vnihTV3K65f7P59scPH3Ow&oh=00_AfktAcIdorP7OM51T6ZFJ52MJFv9zrh5iG-hZEooUpjn3w&oe=696137F3)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/456954377_453386597161620_5745766558871976538_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=ZmNp0cvU_qsQ7kNvwGGAu7k&_nc_oc=Adl2mGooYcstUIdr-i0XlreSn4zMWcBJ7sagNeFwuCPyrLMWtpOIvHFMlhqPXw7VTlk&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=AF3vsBi4RHaAYgHWPdtB8Q&oh=00_AfqKHB6VR_x1xxTMsXlSiO5iU0SiAgbz4Vza21xCuRxl9Q&oe=698E4333)
 
 Consulte o documento sobre [contas comerciais oficiais](/documentation/business-messaging/whatsapp/official-business-accounts) para saber como pedir o status de OBA para um número de telefone comercial.
 
@@ -82,7 +206,7 @@ Consulte o documento sobre [contas comerciais oficiais](/documentation/business-
 
 Você precisará do código de identificação pessoal atual para alterar seu PIN via Gerenciador do WhatsApp. Para alterar seu PIN:
 
--   Acesse [Gerenciador do WhatsApp](https://business.facebook.com/latest/whatsapp_manager/) > **Ferramentas da conta** > **Números de telefone**.-   Selecione seu número de telefone comercial.-   Clique na aba **Confirmação em duas etapas**.-   Clique no botão **Alterar PIN** e complete o fluxo.
+-   Acesse [Gerenciador do WhatsApp](https://business.facebook.com/latest/whatsapp_manager/) > **Ferramentas da conta** > **Números de telefone**.-   Selecione o número de telefone da empresa.-   Clique na aba **Confirmação em duas etapas**.-   Clique no botão **Alterar PIN** e complete o flow.
 
 Caso você não tenha seu PIN, será possível alterá-lo usando a API.
 
@@ -118,13 +242,13 @@ Não é possível desabilitar a confirmação em duas etapas usando a API.
 
 ## 0800 e números gratuitos
 
-Talvez você queira registrar um 0800 ou outro número gratuito na plataforma. Porém, esses números normalmente têm um sistema de resposta interativa de voz (IVR, pelas iniciais em inglês) que não pode ser navegado por uma chamada de registro do WhatsApp. Esse tipo de número de telefone pode ser registrado, mas é necessário que ele aceite chamadas de números internacionais e redirecione o SMS ou a chamada de voz para um agente humano.
+Talvez você queira registrar um 0800 ou outro número gratuito na plataforma. Porém, esses números normalmente têm um sistema de resposta interativa de voz (IVR, nas iniciais em inglês) que não pode ser navegado por uma chamada de registro do WhatsApp. Esse tipo de número de telefone pode ser registrado, mas é necessário que ele aceite chamadas de números internacionais e redirecione o SMS ou a chamada de voz para um agente humano.
 
 Veja as etapas para registrar números de telefone com sistema IVR:
 
 -   O WhatsApp consegue compartilhar com você um ou dois números de telefone dos quais a ligação de registro será feita.-   Crie uma lista de permissão para esses números. Caso você não consiga criar uma lista de permissão para esses números, adicione o número de telefone à sua WABA. Além disso, abra um tíquete no Suporte Direto para pedir os números da chamada de registro e inclua o número de telefone que você deseja registrar.-   Redirecione a chamada de registro para um funcionário ou uma caixa de correio. Depois, acesse o código de registro.
 
-Não há compatibilidade com números de telefone com sistema de resposta interativa de voz (IVR) que não podem receber chamadas de registro.
+Não há compatibilidade com números de telefone com sistema IVR que não podem receber chamadas de registro.
 
 ## Limite de números registrados
 
@@ -230,7 +354,7 @@ Recomendamos que você inclua o sinal de adição e o código de ligação do pa
 
 Por exemplo, sua empresa está sediada na Índia (código de ligação do país `91`) e você envia uma mensagem para o seguinte número de telefone do cliente em vários formatos:
 
-Número no pedido de envio de mensagem
+Número na solicitação de envio de mensagem
 
 Número de mensagens entregues
 
@@ -260,7 +384,7 @@ Número possivelmente errado
 
 Número possivelmente errado
 
-Observação: para Brasil e México, o prefixo extra adicionado ao número de telefone poderá ser modificado pela API de Nuvem. Esse é um comportamento padrão do sistema e não é considerado um bug.
+Observação: no Brasil e no México, o prefixo extra adicionado ao número de telefone poderá ser modificado pela API de Nuvem. Esse é um comportamento padrão do sistema e não é considerado um bug.
 
 ## Verificação de alteração de identidade
 
@@ -337,7 +461,7 @@ Em webhooks de mensagens recebidas com o objeto `contacts`, como o [webhook de m
 
 Em webhooks de mensagens enviadas ([webhooks de mensagens de status](/documentation/business-messaging/whatsapp/webhooks/reference/messages/status)), o hash do cliente é atribuído à propriedade `recipient_identity_key_hash` no objeto `statuses`.
 
-## Como consultar o nível da taxa de transferência
+## Como consultar o nível da taxa de transferência de dados
 
 Use o ponto de extremidade [Número de telefone do WhatsApp Business](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-phone-number-api#Reading) para saber o [nível de taxa de transferência de dados](/documentation/business-messaging/whatsapp/throughput) atual de um número de telefone:
 
@@ -345,7 +469,7 @@ Use o ponto de extremidade [Número de telefone do WhatsApp Business](/documenta
 
 ## Recuperar todos os números de telefone
 
-Para receber uma lista de todos os números de telefone associados a uma conta do WhatsApp Business, envie um pedido GET para o ponto de extremidade de [Conta do WhatsApp Business > Números de telefone](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/phone-number-management-api).
+Para receber uma lista de todos os números de telefone associados a uma conta do WhatsApp Business, envie um pedido GET para o ponto de extremidade [Conta do WhatsApp Business > Números de telefone](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/phone-number-management-api).
 
 Além disso, os números de telefone podem ser classificados em ordem crescente ou decrescente de acordo com o `last_onboarded_time`, que é baseado em quando o usuário concluiu a integração do [Cadastro Incorporado](/documentation/business-messaging/whatsapp/embedded-signup/overview). Se não for especificada, a ordem padrão será decrescente.
 
@@ -379,7 +503,7 @@ Em caso de sucesso, um objeto JSON será retornado com uma lista de nomes, telef
 
 ### Filtrar números de telefone
 
-Consulte e filtre números de telefone com base em `account_mode`. No momento, essa opção de filtragem está sendo testada no modo beta. Nem todos os desenvolvedores têm acesso ao recurso.
+Consulte e filtre números de telefone com base em `account_mode`. No momento, essa opção de filtragem está sendo testada no modo beta. Nem todos os desenvolvedores têm acesso a ele.
 
 #### Parâmetros
 
@@ -389,11 +513,11 @@ Descrição
 
 `field`
 
-**Valor**: `account_mode`
+**Valor:**`account_mode`
 
 `operator`
 
-**Valor**: `EQUAL`
+**Valor:**`EQUAL`
 
 `value`
 
@@ -413,7 +537,7 @@ curl -i -X GET "https://graph.facebook.com/<API_VERSION>/<WABA_ID>/phone_numbers
 
 ## Recuperar um número de telefone único
 
-Para consultar informações sobre um número de telefone, envie um pedido GET ao ponto de extremidade de [Número de telefone do WhatsApp Business](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-phone-number-api):
+Para consultar informações sobre um número de telefone, envie um pedido GET ao ponto de extremidade [Número de telefone do WhatsApp Business](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-phone-number-api):
 
 ### Sintaxe do pedido
 
@@ -451,7 +575,7 @@ curl \'https://graph.facebook.com/v15.0/105954558954427?fields=name_status' \-
 
 O valor `name_status` pode ser um dos seguintes:
 
--   `APPROVED` – o nome foi aprovado. Você já pode baixar o certificado.-   `AVAILABLE_WITHOUT_REVIEW` – o certificado do telefone está disponível, e o nome de exibição está pronto para ser usado sem análise.-   `DECLINED` – o nome não foi aprovado. Não é possível baixar o certificado.-   `EXPIRED` – o certificado expirou e não é mais possível baixá-lo.-   `PENDING_REVIEW` – o pedido de nome está em análise. Não é possível baixar o certificado.-   `NONE` – não há certificados disponíveis.
+-   `APPROVED`: o nome foi aprovado. Você já pode baixar o certificado.-   `AVAILABLE_WITHOUT_REVIEW` – o certificado do telefone está disponível e o nome de exibição está pronto para ser usado sem análise.-   `DECLINED`: o nome não foi aprovado. Não é possível baixar o certificado.-   `EXPIRED` – o certificado expirou e não é mais possível baixá-lo.-   `PENDING_REVIEW` – o pedido de nome está em análise. Não é possível baixar o certificado.-   `NONE` – não há certificados disponíveis.
 
 Os certificados têm validade de sete dias.
 
@@ -463,7 +587,7 @@ Apenas os administradores do portfólio empresarial podem excluir números de te
 
 Caso o número de telefone comercial tenha o status "Conectado", você precisará do seu PIN de confirmação em duas etapas para excluir o número.
 
--   Carregue seu portfólio empresarial no [Gerenciador do WhatsApp](https://business.facebook.com/wa/manage/home/).-   Se o painel Números de telefone não carregar automaticamente, navegue até **Ferramentas da conta** (ícone de caixa de ferramentas) > **Telefones**.-   Clique no ícone da lixeira do número de telefone e conclua o fluxo.
+-   Carregue seu portfólio empresarial no [Gerenciador do WhatsApp](https://business.facebook.com/wa/manage/home/).-   Se o painel Números de telefone não carregar automaticamente, navegue até **Ferramentas da conta** (ícone de caixa de ferramentas) > **Telefones**.-   Clique no ícone da lixeira do número de telefone e conclua o flow.
 
 Caso o número tenha sido usado para enviar mensagens pagas nos últimos 30 dias, redirecionaremos você para o painel **Insights**, que mostra a data da última mensagem paga. A exclusão do número de telefone poderá ser feita 30 dias após a data listada.
 
@@ -473,7 +597,7 @@ Não é possível excluir um número de telefone comercial via API.
 
 ## Como migrar números de telefone comerciais
 
-É possível [migrar números de telefone de uma conta do WhatsApp Business para outra](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-phone-numbers-among-solution-partners-via-embedded-signup), bem como [migrar um número da API Local para a API de Nuvem](/documentation/business-messaging/whatsapp/support/migrating-from-onprem-to-cloud).
+É possível [migrar números de telefone de uma WABA para outra](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-phone-numbers-among-solution-partners-via-embedded-signup), bem como [migrar um número da API Local para a API de Nuvem](/documentation/business-messaging/whatsapp/support/migrating-from-onprem-to-cloud).
 
 ## Componentes de conversa
 
