@@ -20,7 +20,7 @@ Tanto o **Cursor** quanto o **Claude Desktop** usam o mesmo método de configura
   "mcpServers": {
     "whatsapp-docs-mcp": {
       "command": "npx",
-      "args": ["whatsapp-docs-mcp"],
+      "args": ["whatsapp-docs-mcp@latest"],
       "env": {
         "MCP_MODE": "stdio",
         "LOG_LEVEL": "error"
