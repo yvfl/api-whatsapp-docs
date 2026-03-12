@@ -1,25 +1,23 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/messages/interactive-product-carousel-messages -->
-<!-- Scraped: 2026-01-24T00:40:09.684Z -->
+<!-- Scraped: 2026-03-10T21:48:27.043Z -->
 
 # Mensagens interativas de carrossel de produtos
 
-Updated: 14 de nov de 2025
+Updated: 4 de dez de 2025
 
-Esse tipo de mensagem ficará disponível para entrega a usuários do WhatsApp em 11 de novembro.
+As mensagens interativas de carrossel de produtos permitem que as empresas enviem cartões de produtos com rolagem horizontal em conversas do WhatsApp, possibilitando que os usuários procurem e interajam com os itens diretamente na conversa.
 
-As mensagens de carrossel de produtos interativas permitem que as empresas enviem cartões de produtos com rolagem horizontal em conversas do WhatsApp, possibilitando que os usuários procurem e interajam com os itens diretamente na conversa.
-
-Esse formato é integrado ao catálogo de produtos e é compatível com ações de mensagem de produto único (SPM, pelas iniciais em inglês) em cada cartão, proporcionando uma experiência de compra interativa e contínua por meio das APIs do WhatsApp Business e dos clientes móveis.
+Esse formato é integrado ao catálogo de produtos e é compatível com ações de mensagem de produto único (SPM) em cada cartão, proporcionando uma experiência de compra interativa e contínua por meio das APIs do WhatsApp Business e dos clientes móveis
 
 ## Como criar uma mensagem de carrossel de produtos
 
-A mensagem do carrossel de produtos contém um objeto `card`. É preciso adicionar dois objetos de cartão à mensagem e é possível adicionar até dez. Cada cartão existe na matriz `cards[]` e deve receber um valor `"card_index"` de `0` a `9`.
+A mensagem do carrossel de produtos contém um objeto `card`. É preciso adicionar dois objetos de cartão à mensagem (o máximo são dez). Cada cartão existe em uma matriz `cards[]` e deve receber um valor `"card_index"` de `0` a `9`.
 
-O tipo de cada cartão deve ser definido como `"product"`, e cada cartão deve fazer referência ao mesmo `"catalog_id"`.
+O tipo de cada cartão deve ser definido como `"product"`. Cada cartão deve fazer referência ao mesmo `"catalog_id"`.
 
-É preciso adicionar um corpo à mensagem e não são permitidos cabeçalhos, rodapés ou botões.
+É preciso adicionar um corpo à mensagem. Não são permitidos cabeçalhos, rodapés ou botões.
 
-Por fim, cada cartão deve especificar os identificadores de produto e catálogo `"product_retailer_id"` (string, obrigatório) e `"catalog_id"`.
+Por fim, cada cartão deve especificar os identificadores de produto e catálogo `"product_retailer_id"` e `"catalog_id"`.
 
 ### O objeto `card`
 
@@ -86,7 +84,7 @@ _String_
 
 Versão da Graph API.
 
-v24.0
+v25.0
 
 `<MESSAGE_BODY_TEXT>`
 

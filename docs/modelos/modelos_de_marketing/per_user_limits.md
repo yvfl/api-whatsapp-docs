@@ -1,9 +1,9 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/marketing-templates/per-user-limits -->
-<!-- Scraped: 2026-01-24T01:04:18.739Z -->
+<!-- Scraped: 2026-03-10T22:10:55.956Z -->
 
 # Limites de mensagem de modelo de marketing por usuário
 
-Updated: 12 de dez de 2025
+Updated: 26 de fev de 2026
 
 **Próximas alterações**
 
@@ -16,6 +16,8 @@ _A partir de 1º de abril de 2025_, pausaremos temporariamente a entrega de toda
 O WhatsApp poderá limitar o número de mensagens de modelo de marketing que uma pessoa recebe de uma empresa em períodos com menos probabilidade de engajamento. Isso será determinado com base em vários fatores, incluindo uma visão dinâmica da taxa de leitura de mensagens de marketing recentes de uma pessoa e quantas mensagens de amigos, familiares e empresas existem na caixa de entrada.
 
 A partir de 1º de abril de 2025, para focar a criação da experiência do consumidor, o WhatsApp não entregará nenhuma mensagem de modelo de marketing para pessoas com números de telefone dos Estados Unidos (código de discagem +1 e código de área dos EUA).
+
+Não haverá otimizações de entrega para as mensagens enviadas de um número de telefone comercial no Espaço Econômico Europeu, no Reino Unido, no Japão ou na Coreia do Sul nem para consumidores nesses países. Os limites de modelo de mensagem de marketing por usuário também não estão ativos nesses países. Portanto, a falta de otimizações de entrega não terá nenhum efeito na entrega de mensagens.
 
 ## Por que isso é importante?
 

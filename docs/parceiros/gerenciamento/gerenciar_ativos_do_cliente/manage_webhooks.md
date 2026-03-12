@@ -1,23 +1,21 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/manage-webhooks -->
-<!-- Scraped: 2025-12-20T17:52:36.322Z -->
+<!-- Scraped: 2026-03-10T22:04:49.190Z -->
 
-# Como gerenciar Webhooks
+# Como gerenciar webhooks
 
-Updated: 5 de nov de 2025
+Updated: 12 de dez de 2025
 
-As contas do WhatsApp Business (WABAs, pelas iniciais em inglês) e os respectivos ativos são objetos no gráfico social do Facebook. Quando um evento é disparado para um desses objetos, o Facebook envia uma notificação para a URL de webhook especificada no painel do app do Facebook.
+As contas do WhatsApp Business e os respectivos ativos são objetos no gráfico social do Facebook. Quando um evento é disparado para um desses objetos, o Facebook envia uma notificação para o URL do webhook especificado no painel do app do Facebook.
 
-No caso de cadastros incorporados, você pode usar os webhooks para receber notificações sobre alterações a WABAs, números de telefone, modelos de mensagem e mensagens enviadas aos seus telefones.
+No caso do cadastro incorporado, você pode usar os webhooks para receber notificações sobre alterações em contas do WhatsApp Business, números de telefone, modelos de mensagem e mensagens enviadas aos seus telefones.
 
-**Você precisa [assinar individualmente cada WABA](#subscribe) para a qual deseja receber Webhooks.** Depois de obter a identificação da WABA, assine seu app com a identificação para começar a receber Webhooks.
+**Você precisa [assinar individualmente cada conta do WhatsApp Business](#subscribe-to-webhooks-on-a-business-customer-waba) para a qual deseja receber webhooks.** Depois de obter a identificação da conta do WhatsApp Business, assine seu app com a identificação para começar a receber webhooks.
 
-Consulte [Webhooks for WhatsApp Business Accounts](/docs/graph-api/webhooks/getting-started/webhooks-for-whatsapp) para saber mais sobre como assinar Webhooks.
+Consulte [Webhooks](/documentation/business-messaging/whatsapp/webhooks/overview) para saber mais sobre webhooks e campos.
 
-[](#subscribe-to-a-whatsapp-business-account)
+## Como assinar webhooks na conta do WhatsApp Business de um cliente corporativo
 
-## Como assinar webhooks na WABA de um cliente corporativo
-
-Use o ponto de extremidade [POST /<WABA\_ID>/subscribed\_apps](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/subscribed-apps-api#post-version-waba-id-subscribed-apps) para assinar webhooks na WABA do cliente empresarial. Se quiser que os webhooks do cliente sejam enviados para um URL de retorno de ligação diferente do definido no seu app, você terá várias opções de [substituição de webhook](/documentation/business-messaging/whatsapp/webhooks/override).
+Use o ponto de extremidade [POST/<WABA\_ID>/subscribed\_apps](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/subscribed-apps-api#post-version-waba-id-subscribed-apps) para assinar webhooks na WABA do cliente empresarial. Se quiser que os webhooks do cliente sejam enviados para um URL de retorno de ligação diferente do definido no seu app, você terá várias opções de [substituição de webhook](/documentation/business-messaging/whatsapp/webhooks/override).
 
 ### Solicitação
 
@@ -34,11 +32,11 @@ Caso a solicitação seja bem-sucedida:
 {  "success": true}
 ```
 
-Repita esse processo nas outras WABAs sobre as quais você quer receber notificações de webhooks. Se o app assinar webhooks de várias WABAs, todas as notificações serão enviadas ao URL de retorno de chamada especificado no painel do produto **Webhooks** do Painel de Apps, a menos que você [substitua webhooks](/documentation/business-messaging/whatsapp/webhooks/override).
+Repita esse processo nas outras contas do WhatsApp Business sobre as quais você quer receber notificações de webhooks. Se o app assinar webhooks de várias contas do WhatsApp Business, todas as notificações serão enviadas ao URL de retorno de chamada especificado no painel do produto **Webhooks** do Painel de Apps, a menos que você [substitua webhooks](/documentation/business-messaging/whatsapp/webhooks/override).
 
-## Obter todas as assinaturas em uma WABA
+## Como obter todas as assinaturas em uma conta do WhatsApp Business
 
-Para obter a lista dos apps inscritos em webhooks de uma WABA, envie uma solicitação GET ao ponto de extremidade `subscribed_apps` da WABA:
+Para obter a lista dos apps inscritos em webhooks de uma conta do WhatsApp Business, envie uma solicitação GET ao ponto de extremidade `subscribed_apps` dela:
 
 ### Sintaxe da solicitação
 
@@ -46,13 +44,13 @@ Para obter a lista dos apps inscritos em webhooks de uma WABA, envie uma solicit
 GET https://graph.facebook.com/<API_VERSION>/<WABA_ID>/subscribed_apps
 ```
 
-Uma resposta bem-sucedida inclui uma matriz de apps que assinaram a WABA com as propriedades link, nome e ID de cada um.
+Uma resposta bem-sucedida inclui uma matriz de apps que assinaram a conta do WhatsApp Business com as propriedades link, nome e ID de cada um.
 
 ### Exemplo de solicitação
 
 ```
 curl \
-'https://graph.facebook.com/v24.0/102289599326934/subscribed_apps' \
+'https://graph.facebook.com/v25.0/102289599326934/subscribed_apps' \
 -H 'Authorization: Bearer EAAJi...'
 ```
 
@@ -62,9 +60,9 @@ curl \
 {  "data" : [    {      "whatsapp_business_api_data" : {        "id" : "67084...",        "link" : "https://www.facebook.com/games/?app_id=67084...",        "name" : "Jaspers Market"      }    },    {      "whatsapp_business_api_data" : {        "id" : "52565...",        "link" : "https://www.facebook.com/games/?app_id=52565...",        "name" : "Jaspers Fresh Finds"      }    }  ]}
 ```
 
-## Cancelar a assinatura da WABA
+## Como cancelar a assinatura da conta do WhatsApp Business
 
-Para cancelar a assinatura do app dos webhooks em uma conta do WhatsApp Business, envie uma solicitação DELETE ao ponto de extremidade `subscribed_apps` da WABA.
+Para cancelar a assinatura do app dos webhooks em uma conta do WhatsApp Business, envie uma solicitação DELETE ao ponto de extremidade `subscribed_apps` dela.
 
 ### Sintaxe da solicitação
 
@@ -76,7 +74,7 @@ DELETE https://graph.facebook.com/<API_VERSION>/<WABA_ID>/subscribed_apps
 
 ```
 curl -X DELETE \
-'https://graph.facebook.com/v24.0/102289599326934/subscribed_apps' \
+'https://graph.facebook.com/v25.0/102289599326934/subscribed_apps' \
 -H 'Authorization: Bearer EAAJi...'
 ```
 
@@ -90,9 +88,9 @@ curl -X DELETE \
 
 Consulte [Substituições de Webhooks](/documentation/business-messaging/whatsapp/webhooks/override).
 
-## Configurar notificações
+## Como configurar notificações
 
-É possível configurar webhooks para receber notificações quando houver alterações nas suas contas assinadas do WhatsApp Business. Veja os tipos de notificação que você pode assinar:
+É possível configurar webhooks para receber notificações quando houver alterações nas contas assinadas do WhatsApp Business. Veja os tipos de notificação que você pode assinar:
 
 ### Campos de assinatura disponíveis
 
@@ -102,7 +100,7 @@ Descrição
 
 [account\_alerts](/documentation/business-messaging/whatsapp/webhooks/reference/account_alerts)
 
-O webhook **account\_alerts** notifica você sobre alterações no [limite de mensagens](/documentation/business-messaging/whatsapp/messaging-limits), [perfil empresarial](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#business-profiles) e status da [](/documentation/business-messaging/whatsapp/whatsapp-business-accounts#official-business-account)conta comercial oficial de um número de telefone comercial.
+O webhook **account\_alerts** notifica você sobre alterações no [limite de mensagens](/documentation/business-messaging/whatsapp/messaging-limits), [perfil empresarial](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#business-profiles) e status da [conta comercial oficial](/documentation/business-messaging/whatsapp/whatsapp-business-accounts#official-business-account) de um número de telefone comercial.
 
 [account\_review\_update](/documentation/business-messaging/whatsapp/webhooks/reference/account_review_update)
 
@@ -122,7 +120,7 @@ O webhook **business\_capability\_update** notifica você sobre alterações de 
 
 [history](/documentation/business-messaging/whatsapp/webhooks/reference/history)
 
-O webhook de **history** é usado para sincronizar o [histórico de conversas do app WhatsApp Business](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users) de um cliente empresarial integrado por um provedor de soluções.
+O webhook **history** é usado para sincronizar o [histórico de conversas do app WhatsApp Business](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users) de um cliente comercial integrado por um provedor de soluções.
 
 [message\_template\_components\_update](/documentation/business-messaging/whatsapp/webhooks/reference/message_template_components_update)
 
@@ -166,7 +164,7 @@ O webhook **smb\_app\_state\_sync** é usado para sincronizar contatos de [usuá
 
 [smb\_message\_echoes](/documentation/business-messaging/whatsapp/webhooks/reference/smb_message_echoes)
 
-O webhook **smb\_message\_echoes** avisa você sobre as mensagens enviadas por meio do app WhatsApp Business ou um [dispositivo adicional ("conectado")](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users#linked-devices) por um cliente empresarial que fez a [integração com a API de Nuvem](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users) por meio de um provedor de soluções.
+O webhook **smb\_message\_echoes** avisa você sobre as mensagens enviadas por meio do app WhatsApp Business ou um [dispositivo adicional ("conectado")](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users#linked-devices) por um cliente comercial que fez a [integração com a API de Nuvem](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users) por meio de um provedor de soluções.
 
 [template\_category\_update](/documentation/business-messaging/whatsapp/webhooks/reference/template_category_update)
 
@@ -175,20 +173,6 @@ O webhook **template\_category\_update** envia uma notificação sobre as altera
 [user\_preferences](/documentation/business-messaging/whatsapp/webhooks/reference/user_preferences)
 
 O webhook **user\_preferences** notifica você sobre as alterações nas [preferências de mensagens de marketing](/documentation/business-messaging/whatsapp/templates/marketing-templates#user-preferences-for-marketing-messages) de um usuário do WhatsApp.
-
-Consulte a documentação [Webhooks for WhatsApp Business Accounts](/docs/graph-api/webhooks/getting-started/webhooks-for-whatsapp) para saber mais.
-
-## Formato dos Webhooks
-
-Você receberá as notificações no seguinte formato geral:
-
-```
-{  "object": "whatsapp_business_account",  "entry": [    { // entry object, containing changes      "changes": [        { // changes object, containing value          "value": {            // value object          }        }      ]    }  ]}
-```
-
-Veja mais detalhes sobre cada campo:
-
--   [`object`](/documentation/business-messaging/whatsapp/webhooks/overview)-   [`entry`](/documentation/business-messaging/whatsapp/webhooks/overview)-   [`changes`](/documentation/business-messaging/whatsapp/webhooks/overview)-   [`value`](/documentation/business-messaging/whatsapp/webhooks/overview)
 
 ## Exemplos
 
@@ -242,7 +226,7 @@ Um webhook **account\_update** é disparado com `event` definido como `PARTNER_A
 {  "object": "whatsapp_business_account",  "entry": [    {      "id": "495709166956424",      "time": 1731617831,      "changes": [        {          "field": "phone_number_quality_update",          "value": {            "display_phone_number": "124545784358810",            "event": "FLAGGED",            "current_limit": "TIER_10K"          }        }      ]    }  ]}
 ```
 
-### Atualizações da WABA
+### Atualizações da conta do WhatsApp Business
 
 #### Número de sandbox atualizado para conta verificada
 

@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/conversion-measurement -->
-<!-- Scraped: 2026-01-24T00:36:48.491Z -->
+<!-- Scraped: 2026-03-10T21:45:21.754Z -->
 
 ## Esta página não está disponível no momento
 

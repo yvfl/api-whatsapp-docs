@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/message_echoes -->
-<!-- Scraped: 2026-01-24T01:07:32.995Z -->
+<!-- Scraped: 2026-03-10T22:13:40.068Z -->
 
 ## Esta página não está disponível no momento
 

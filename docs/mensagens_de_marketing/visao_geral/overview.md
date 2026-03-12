@@ -1,9 +1,9 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/overview -->
-<!-- Scraped: 2026-01-24T00:37:57.483Z -->
+<!-- Scraped: 2026-03-10T21:46:35.942Z -->
 
 # API de Mensagens de Marketing para o WhatsApp
 
-Updated: 18 de nov de 2025
+Updated: 10 de fev de 2026
 
 A API de Mensagens de Marketing para o WhatsApp (anteriormente conhecida como API de Mensagens de Marketing Lite) agora está disponível para todos.
 

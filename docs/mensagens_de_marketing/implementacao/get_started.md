@@ -1,9 +1,9 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/get-started -->
-<!-- Scraped: 2026-01-24T00:37:18.360Z -->
+<!-- Scraped: 2026-03-10T21:45:51.788Z -->
 
 # Primeiros passos
 
-Updated: 4 de dez de 2025
+Updated: 10 de fev de 2026
 
 A API de Mensagens de Marketing para o WhatsApp (anteriormente conhecida como API de Mensagens de Marketing Lite) agora está disponível para todos.
 
@@ -15,7 +15,7 @@ Saiba como enviar um modelo de mensagem com a API de Mensagens de Marketing para
 
 ## Etapa 1: aceitar os Termos de Serviço
 
--   Acesse [**Painel de Apps**](https://developers.facebook.com/apps) > **WhatsApp** > **Início rápido**.-   Localize o módulo "**Aumente o ROI com mensagens de marketing com otimizações**" e clique no botão "**Começar**".-   Clique em "**Continuar para o guia de integração**" e aceite os Termos de Serviço.
+-   Navegue até o painel [**Painel de Apps**](https://developers.facebook.com/apps) > **WhatsApp** > **Início rápido**.-   Localize o módulo "**Aumente o ROI com mensagens de marketing com otimizações**" e clique no botão "**Começar**".-   Clique em "**Continuar para o guia de integração**" e aceite os Termos de Serviço.
 
 ## Etapa 2: enviar uma mensagem de modelo de marketing
 
@@ -82,9 +82,10 @@ Alguns recursos avançados e funcionalidades de relatórios da API de MM para o 
 ### Estados Unidos
 
 -   A partir de 1º de abril de 2025, as mensagens de marketing enviadas a usuários do WhatsApp nos Estados Unidos não serão entregues (código de erro 131049). Essa política não é específica para a API de MM para o WhatsApp. Ela é válida para todas as APIs de Business Messaging (incluindo a API de Nuvem, [consulte os documentos](/documentation/business-messaging/whatsapp/templates/marketing-templates/per-user-limits)).-   Os números de telefone comerciais nos EUA ainda poderão usar a API de MM para o WhatsApp para enviar mensagens a usuários fora dos Estados Unidos.
-    
-    ### Cuba, Irã, Coreia do Norte, Síria e três regiões sancionadas na Ucrânia (Crimeia, Donetsk, Luhansk):
-    -   As empresas nessas regiões não estão qualificadas para integração, e não é possível enviar mensagens a consumidores que se encontrem nesses lugares. Essa política não é específica para a API de MM para o WhatsApp. Ela é válida para todas as APIs de Business Messaging (incluindo a API de Nuvem, [consulte os documentos](/documentation/business-messaging/whatsapp/support#country-restrictions)).
+
+### Cuba, Irã, Coreia do Norte, Síria e três regiões sancionadas na Ucrânia (Crimeia, Donetsk, Luhansk):
+
+-   As empresas nessas regiões não estão qualificadas para integração, e não é possível enviar mensagens a consumidores que se encontrem nesses lugares. Essa política não é específica para a API de MM para o WhatsApp. Ela é válida para todas as APIs de Business Messaging (incluindo a API de Nuvem, [consulte os documentos](/documentation/business-messaging/whatsapp/support#country-restrictions)).
 
 ### Rússia
 

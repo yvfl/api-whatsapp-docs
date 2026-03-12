@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/updates-to-pricing -->
-<!-- Scraped: 2026-01-24T00:46:21.491Z -->
+<!-- Scraped: 2026-03-10T21:53:50.326Z -->
 
 ## Esta página não está disponível no momento
 

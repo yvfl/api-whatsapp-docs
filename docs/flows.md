@@ -1,7 +1,7 @@
 <!-- Source: https://developers.facebook.com/docs/whatsapp/flows -->
-<!-- Scraped: 2026-01-24T00:23:27.419Z -->
+<!-- Scraped: 2026-03-10T21:34:09.328Z -->
 
-![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1765810345)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
+![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1770998864)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
 
 [](#)
 
@@ -11,7 +11,7 @@ WhatsApp Flows is a way to build structured interactions for business messaging.
 
 You can use Flows to generate leads, recommend products, get new sales leads, or anything else where structured communication is more natural or comfortable for your customers.
 
-![](https://lookaside.fbsbx.com/elementpath/media/?media_id=1198754311128909&version=1761854237)
+![](https://lookaside.fbsbx.com/elementpath/media/?media_id=1198754311128909&version=1772159541)
 
 Below you can find the most popular use cases, which we packaged together with templates, step-by-step guides and code for ease of use. You can build many more use cases with Flows.
 
@@ -24,7 +24,7 @@ In this guide, designed for businesses in the Financial Service sector, you will
 
 Includes the ability for the user to authenticate themselves to confirm their identity This guide can be adapted to suit other relevant use cases, including credit card offer, loan/credit limit calculators, loan offers for shopping, and full loan qualification.
 
-![](https://lookaside.fbsbx.com/elementpath/media/?media_id=1149564616339713&version=1761854237)
+![](https://lookaside.fbsbx.com/elementpath/media/?media_id=1149564616339713&version=1772159453)
 
 [](#)
 
@@ -37,7 +37,7 @@ This guide will help you create a Flow that enables users to seamlessly enroll i
 
 Although this guide is based on an _Insurance sales_ use case, it can be adapted for use cases such as insurance renewal, profile completion, and customer onboarding.
 
-![](https://lookaside.fbsbx.com/elementpath/media/?media_id=796193918999047&version=1761854237)
+![](https://lookaside.fbsbx.com/elementpath/media/?media_id=796193918999047&version=1772159496)
 
 [](#)
 
@@ -63,9 +63,9 @@ This guide will explain how to create a Flow that offers personalised offers to 
 
 This guide is ideal for engaging users in promotional events.
 
-![](https://lookaside.fbsbx.com/elementpath/media/?media_id=1198754311128909&version=1761854237)
+![](https://lookaside.fbsbx.com/elementpath/media/?media_id=1198754311128909&version=1772159541)
 
-You will need to conform to relevant local regulations when handling user data, and ensure that your use case adheres to our [Business Messaging Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fpolicy%23overview&h=AT1ryG2Xtb4uUDdQixhk0iVU_PR7rWPaOCrqu-FTg9bMkoBzDmhIyidJ8N8btArGxzmOb-b15p4xNZudbT5mLklqavAYsp1aJe8-jun-WvbpvnWURqPBP5YXj6SeC-pbabxZY1u2tzOPVtfrvaa7EfJgJ4U).
+You will need to conform to relevant local regulations when handling user data, and ensure that your use case adheres to our [Business Messaging Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fpolicy%23overview&h=AT7UCdjlDgSSBHgZ0gN5EKjG9kOa8WRctSfCfWGmet5AwUbf-xOjbhHhAZHQqjZGwPK9KibPLadq725U01BT1r-7QvlAOxDaM8DSfAfSNXXbTUF3yh_qZ7PYDUuPV6wrUu91M_Lm6zPgkSb2HQ7hDn61oBxNQFUv_EbmzFtS).
 
 [](#)
 

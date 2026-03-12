@@ -1,7 +1,7 @@
 <!-- Source: https://developers.facebook.com/docs/whatsapp/flows/gettingstarted -->
-<!-- Scraped: 2026-01-24T00:23:42.458Z -->
+<!-- Scraped: 2026-03-10T21:34:21.584Z -->
 
-![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1765810345)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
+![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1770998864)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
 
 [](#)
 
@@ -11,7 +11,7 @@ This section will help you get started with your very first (demo) Flow.
 
 ## Prerequisites
 
-1.  Set up [WhatsApp Business Platform](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fproducts%2Fbusiness-platform&h=AT15qHXic3gzVeQoUcAqZ5sBX1ZbP4UI4JtsL49hUSNnKWhIGkadcqitR1xQzce0kMWjmsIs1YoLP5YQUJeSg461xJjGFhr-JW2Y7a49ePzH5_A9NAIJFPaWQJs3x6LPnICbffFh-1uIdAaiwsmRcM9ACuE)
+1.  Set up [WhatsApp Business Platform](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fproducts%2Fbusiness-platform&h=AT4ZGTmupfn_2g8-o3wzDMmH7E7XvpDSuNdDeyHeJZDDUJUWen2TQsYNbzZQb2h4K6lgA9Abj1wIjUZfDK4Nt4HFjgvMFy05wGaPeDCfUMyDUcPLP5FrBs7JVRy9SGMzdEFLv-8Xl--ly71dKl2Apf0jZDM)
     
     -   This will give you access to the [WhatsApp Manager](https://business.facebook.com/wa/manage/partner_home/) as part of your WhatsApp Business Account.
 2.  [Set up the WhatsApp Business Platform Cloud API](/docs/whatsapp/cloud-api/get-started)
@@ -28,15 +28,15 @@ This section will help you get started with your very first (demo) Flow.
 
 Introductory video tutorials to learn how to build Flows
 
-#### [1\. Creating and Sending WhatsApp Flows with Message Templates](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D0s_0Y843h60&h=AT1Vd980eADtfXz6310CsrSqCL_l084OdpN5jXSrMoSQ0xPfb2E6a-l5o-8z6pDZI-TfHKc2vAFlQ7SjWPfeBisUkEA5EU3RDjgjB50KOa6jjSzDI-XqV3r6XqL3LBRAqbJ3ZX3ngPSficV-DPu-ae2eCM4)
+#### [1\. Creating and Sending WhatsApp Flows with Message Templates](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D0s_0Y843h60&h=AT4btwx-vnZUiEIP6IyupSlQz9M9V1FA0RONfs2Zw8vJBODYshFL_kxUZYqi7pPMzl8UA6yV4fAB97UJApW26gGjomDTHzgWLi6yic347VSeT59iNnyE--7RbEfWmT0wLRainI8KJAZVvfP-Deh9ZcdbVG4)
 
   
 
-#### [2\. Create a New WhatsApp Flows Using Flows Builder interface](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dgx_QGaSLoOA&h=AT0jeXrrEtLTRTAU-AjAo2EXd-5G0P2oatDRWIs699wZ2w-P7-fR8p7jTIpfExZXwf_LJ1Hf83BQxT_6k63njx6zqEBVzCTNhs2I785-6rRi7rHL096DJQjEPs5xNet2ZCMRqJ42Ktvzx9s3tASBSxwyJdg)
+#### [2\. Create a New WhatsApp Flows Using Flows Builder interface](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dgx_QGaSLoOA&h=AT72n_uz7Nx7MGQXbpj-BHnK4XkorJQHImMCwqYEzPD5gbGvPyZO8CIo-E7x3bhKOy2c0PP4fCpXGeZFAdbBW_6HAsdTn1CmtGesGlm6QhFGfRJEr7BCVn5Zfr1YDNLM4P3zyKYgrfl_w56u5lJLYw2zrlw)
 
   
 
-#### [3\. Connecting WhatsApp Flows to an Endpoint](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DQO_ngN8H5GU&h=AT2EvJo6crTTf5QRmI3n1D8R-2OBHnYssrsXo-9myOtlNVl4ic6aBPNavHA65t58Xp7FO-z3j38VrZ_YisECPjwLQYrfYdAvNHvBxNw1WhWAb6EpKwuQ3gaExRfJWiqvH52mzkHftFigz28hbs6QC8vsVKg)
+#### [3\. Connecting WhatsApp Flows to an Endpoint](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DQO_ngN8H5GU&h=AT5ttzJsJ0u7LCxEkUyXaQaBoYrxgSted1UYmK0W9HsgaqOHkUK1yAKrHaYawcugpJW4CNKKOXZJ5i1fTkl3mtpX5CJbv1JlA1Lp54ZrzBUv6PbPqs4ZA-nWs6YclWHyp9RU6Zi1m74PdReCA_i7LbMbyC8)
 
 [](#)
 

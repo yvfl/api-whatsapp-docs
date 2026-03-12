@@ -1,85 +1,41 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/calling/sip -->
-<!-- Scraped: 2025-12-20T17:41:07.774Z -->
+<!-- Scraped: 2026-03-10T21:38:58.061Z -->
 
 # Protocolo de Iniciação de Sessão (SIP)
 
-Updated: 10 de nov de 2025
+Updated: 15 de dez de 2025
 
-Quando o SIP está habilitado, **não é possível usar pontos de extremidade da Graph API relacionados a ligações**, além disso, **webhooks relacionados a ligações não são enviados**.
+Quando o SIP está habilitado, **não é possível usar pontos de extremidade da Graph API relacionados a ligações**. Além disso, **webhooks relacionados a ligações não são enviados**.
 
 ## Visão geral
 
-O Protocolo de Iniciação de Sessão ([SIP](https://l.facebook.com/l.php?u=https%3A%2F%2Fdatatracker.ietf.org%2Fdoc%2Fhtml%2Frfc3261&h=AT3mEXy5SQxoNBM16yWnv-zFRsnAcfQ6U9uaIiy3KJ_IsFv20vYy9FfH1Zr-bpe3yADDDWYthJ_icXcXnSRbf7ddIn_gudRWIOzOABCGQmxolfrrWCSmX2EU4FLIScyrD4dgDdWOeDTj0LrAWBhRYghsS9E)) é um protocolo de sinalização usado para iniciar, manter, modificar e encerrar sessões de comunicação em tempo real entre dois ou mais pontos de extremidade.
+O Protocolo de Iniciação de Sessão ([SIP⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fdatatracker.ietf.org%2Fdoc%2Fhtml%2Frfc3261&h=AT4pZkIG3QMqnUmD5mXz4zb0L1Tzo6091Nrzw5Ni2anBKs2CCRCpW53vuXNYejuz7gz-1VMqei9aOeek8vP0o5_-Agkt13H707eJI4HGIeL4F1yRJH1-9x4XbquyU9QP59U6O8Bw5NPEAz_qwt74s5ko86c)) é um protocolo de sinalização usado para iniciar, manter, modificar e encerrar sessões de comunicação em tempo real entre dois ou mais pontos de extremidade.
 
-A API de Ligações Comerciais do WhatsApp oferece suporte ao uso do SIP como protocolo de sinalização em vez dos pontos de extremidade da Graph API e Webhooks.
+A API de Ligações Comerciais do WhatsApp é compatível com o uso do SIP como protocolo de sinalização em vez dos pontos de extremidade da Graph API e Webhooks.
 
 ### Antes de começar
 
 Antes de começar com a sinalização de ligações do SIP, confirme o seguinte:
 
--   Você cumpre os pré-requisitos gerais de [ligação](/documentation/business-messaging/whatsapp/calling#step-1--prerequisites)-   Verifique se o app tem permissões de mensagem para o número de telefone comercial para o qual quer habilitar o SIP.
-    -   Para testar esse processo, envie e receba mensagens por meio dos pontos de extremidade de mensagens da Graph API. Depois, use o mesmo app para configurar o servidor SIP no número de telefone comercial para fazer ligações.-   Confirme usando a [API de Status de Integridade](/documentation/business-messaging/whatsapp/support/health-status) com `PHONE_NUMBER_ID`.-   O modo do app é "Publicado", não "Desenvolvimento".-   Você tem um servidor de SIP de terceiros compatível com padrões que oferece suporte para [TLS](/documentation/business-messaging/whatsapp/calling/sip#security) e autenticação de digestão
+-   Se você cumpre os [pré-requisitos gerais de ligação](/documentation/business-messaging/whatsapp/calling#step-1--prerequisites).-   Se o seu app tem permissões de mensagem para o número de telefone comercial para o qual você quer habilitar o SIP.
+    -   Para testar esse processo, envie e receba mensagens por meio dos pontos de extremidade de mensagens da Graph API. Depois, use o mesmo app para configurar o servidor SIP no número de telefone comercial para fazer ligações.-   Confirme usando a [API de Status de Integridade](/documentation/business-messaging/whatsapp/support/health-status) com `PHONE_NUMBER_ID`-   Se o modo do app é "Publicado", não "Desenvolvimento".-   Se você tem um servidor SIP de terceiros compatível com padrões que oferece suporte para transporte [TLS](/documentation/business-messaging/whatsapp/calling/sip#security) e autenticação de digestão.
 
-### Configurações possíveis de sinalização e mídia
-
-  
-
- 
-
-Configuração padrão após habilitar as ligações
-
-SIP com WebRTC
-
-SIP com mídia SDES
-
-Protocolo de sinalização
-
-Graph APIs + Webhooks
-
-SIP (precisa de [habilitação](/documentation/business-messaging/whatsapp/calling/sip#configure-update-sip-settings-on-business-phone-number) explícita)
-
-SIP (precisa de [habilitação](/documentation/business-messaging/whatsapp/calling/sip#configure-update-sip-settings-on-business-phone-number) explícita)
-
-Transporte de sinalização
-
-HTTPS
-
-TLS
-
-TLS
-
-Protocolo de mídia
-
-WebRTC (ICE + DTLS\* + SRTP)
-
-WebRTC (ICE + DTLS + SRTP)
-
-[SDES](https://l.facebook.com/l.php?u=https%3A%2F%2Fdatatracker.ietf.org%2Fdoc%2Fhtml%2Frfc4568&h=AT3mEXy5SQxoNBM16yWnv-zFRsnAcfQ6U9uaIiy3KJ_IsFv20vYy9FfH1Zr-bpe3yADDDWYthJ_icXcXnSRbf7ddIn_gudRWIOzOABCGQmxolfrrWCSmX2EU4FLIScyrD4dgDdWOeDTj0LrAWBhRYghsS9E) SRTP (precisa de [habilitação](/documentation/business-messaging/whatsapp/calling/sip#configure-sdes-for-srtp-key-exchange-protocol) explícita)
-
-Codec de áudio
-
-OPUS
-
-OPUS
-
-OPUS
-
-\*Observação: você pode usar SDES em vez de ICE+DTLS com a Graph API + sinalização de Webhook
+Para saber mais, consulte [Possíveis configurações de sinalização e mídia](/documentation/business-messaging/whatsapp/calling#signaling-and-media-possible-configurations).
 
 ## Fluxos de ligação usando o SIP
 
-Antes de começar, verifique se você [habilitou e configurou o SIP no número de telefone comercial](/documentation/business-messaging/whatsapp/calling/sip#configure-update-sip-settings-on-business-phone-number). A Meta gera uma senha de usuário de SIP única para cada combinação de número de telefone comercial e app. Você precisará dessas informações e poderá recuperá-las usando o [ponto de extremidade get Call Settings](/documentation/business-messaging/whatsapp/calling/sip#get-phone-number-calling-settings--sip-).
+Antes de começar, verifique se você [habilitou e configurou o SIP no número de telefone comercial](/documentation/business-messaging/whatsapp/calling/sip#configure-update-sip-settings-on-business-phone-number). A Meta gera uma senha de usuário de SIP única para cada combinação de número de telefone comercial e app. Você precisará dessas informações e poderá recuperá-las usando o ponto de extremidade [get Call Settings.](/documentation/business-messaging/whatsapp/calling/sip#get-phone-number-calling-settings--sip-)
 
 ### Segurança
 
--   O transporte de TLS é obrigatório para o SIP. A Meta apresentará um certificado de servidor válido com um nome de assunto que cubra nosso domínio SIP wa.meta.vc. Seu servidor de SIP deve fazer o mesmo, já que a Meta garante que o certificado é válido e o nome de assunto abrange o domínio de SIP configurado no número de telefone comercial
-    -   A Meta NÃO aceita o protocolo TLS mútuo (também conhecido como mTLS). Ou seja, quando a Meta atua como cliente TLS, seu servidor TLS não deve solicitar o certificado do cliente. Se você ainda solicitar o certificado de cliente, a Meta apresentará um certificado de cliente, mas o nome de assunto do certificado vai se referir a um host dinâmico aleatório que não passará na validação do certificado.-   A Meta adiciona `transport=TLS` ao URI de solicitação como parte das solicitações de SIP para o servidor de SIP parceiro-   Para ligações iniciadas pela empresa, o convite de SIP do seu servidor de SIP será desafiado usando a autenticação de digestão. Para mais detalhes, consulte [Ligações iniciadas pela empresa](/documentation/business-messaging/whatsapp/calling/sip#business-initiated-calls)-   Para ligações iniciadas pelo usuário, recomendamos que você desafie a solicitação de INVITE do SIP da Meta a fim de usar a autenticação de digestão para aumentar a segurança. Para saber mais, consulte [Ligações iniciadas pelo usuário](/documentation/business-messaging/whatsapp/calling/sip#user-initiated-calls)
+-   O transporte de TLS é obrigatório para o SIP. A Meta apresentará um certificado de servidor válido com um nome de assunto que cubra nosso domínio SIP wa.meta.vc. Seu servidor SIP deve fazer o mesmo, já que a Meta garante que o certificado é válido e o nome de assunto abrange o domínio de SIP configurado no número de telefone comercial
+    -   A Meta NÃO aceita o protocolo TLS mútuo (também conhecido como mTLS). Ou seja, quando a Meta atua como cliente TLS, seu servidor TLS não deve solicitar o certificado do cliente. Se você ainda solicitar o certificado do cliente, a Meta apresentará um, mas o nome de assunto do certificado vai se referir a um host dinâmico aleatório que não passará na validação do certificado.-   A Meta adiciona `transport=TLS` ao URI de solicitação como parte das solicitações de SIP para o servidor SIP parceiro-   Para ligações iniciadas pela empresa, o SIP invite do seu servidor SIP será desafiado usando a autenticação de digestão. Para mais detalhes, consulte [Ligações iniciadas pela empresa](/documentation/business-messaging/whatsapp/calling/sip#business-initiated-calls)-   Para ligações iniciadas pelo usuário, recomendamos que você desafie a solicitação de INVITE do SIP da Meta a fim de usar a autenticação de digestão para aumentar a segurança. Para saber mais, consulte [Ligações iniciadas pelo usuário](/documentation/business-messaging/whatsapp/calling/sip#user-initiated-calls)
 
 ### Como testar se você tem um certificado TLS válido
 
-Quando um usuário do WhatsApp liga para uma empresa, um motivo comum que pode fazer com que seu servidor SIP **não** receba o convite de SIP da Meta é o erro de validação do certificado. É possível usar as informações exibidas para confirmar se a configuração é válida.
+Quando um usuário do WhatsApp liga para uma empresa, um motivo comum que pode fazer com que seu servidor SIP **não** receba o SIP invite da Meta é o erro de validação do certificado. É possível usar as informações exibidas para confirmar se a configuração é válida.
 
-Execute o comando `openssl s_client -quiet -verify_hostname {hostname} -connect {hostname}:{port}` substituindo "hostname" e "port" pelos seus valores.
+Execute o comando `openssl s_client -quiet -verify_hostname {hostname} -connect {hostname}:{port}` substituindo "hostname" e "port" pelos seus valores
 
 #### Exemplo de certificado de servidor válido
 
@@ -118,41 +74,41 @@ depth=0 jurisdictionC=US, jurisdictionST=California, businessCategory=Private Or
 verify return:1
 ```
 
-Nesse caso, você pode alterar o certificado para corresponder ao nome de host ou [alterar o nome de host configurado do servidor SIP](/documentation/business-messaging/whatsapp/calling/sip#configure-update-sip-settings-on-business-phone-number) para corresponder ao certificado
+Nesse caso, você pode alterar o certificado para corresponder ao nome do host ou [alterar o nome do host configurado do servidor SIP](/documentation/business-messaging/whatsapp/calling/sip#configure-update-sip-settings-on-business-phone-number) para corresponder ao certificado
 
 ### Ligações iniciadas pela empresa
 
 #### Pré-requisitos
 
 -   Você tem a aprovação de permissão de ligação necessária do usuário do WhatsApp
-    -   [Saiba como obter as permissões de ligação de usuários](/documentation/business-messaging/whatsapp/calling/user-call-permissions)-   [Recupere a senha do SIP gerada pela Meta](/documentation/business-messaging/whatsapp/calling/sip#include-sip-user-password) e configure-a no servidor de SIP para que ele possa responder aos desafios de autenticação de digester dos servidores de SIP da Meta
+    -   [Saiba como obter as permissões de ligação de usuários](/documentation/business-messaging/whatsapp/calling/user-call-permissions)-   [Recupere a senha do SIP gerada pela Meta](/documentation/business-messaging/whatsapp/calling/sip#include-sip-user-password) e configure-a no servidor SIP para que ele possa responder aos desafios de autenticação de digester dos servidores SIP da Meta
 
 #### Fluxo da ligação
 
 -   Envie um [SIP INVITE](/documentation/business-messaging/whatsapp/calling/sip#business-initiated-calls--with-webrtc-media-) inicial aos nossos servidores. Nosso domínio de SIP é wa.meta.vc. Para iniciar uma ligação para um usuário do WhatsApp com o número de telefone 11234567890, o URI de solicitação do SIP deve ser "sip: +11234567890@wa.meta.vc;transport=tls".
-    -   Essa solicitação falhará com uma mensagem "SIP 407 Proxy Authentication required".-   Envie um segundo [SIP INVITE](/documentation/business-messaging/whatsapp/calling/sip#business-initiated-calls--with-webrtc-media-) com o cabeçalho de autorização correto de acordo com o [RFC 3261](https://l.facebook.com/l.php?u=https%3A%2F%2Fdatatracker.ietf.org%2Fdoc%2Fhtml%2Frfc3261%23section-22&h=AT3mEXy5SQxoNBM16yWnv-zFRsnAcfQ6U9uaIiy3KJ_IsFv20vYy9FfH1Zr-bpe3yADDDWYthJ_icXcXnSRbf7ddIn_gudRWIOzOABCGQmxolfrrWCSmX2EU4FLIScyrD4dgDdWOeDTj0LrAWBhRYghsS9E).
+    -   Essa solicitação falhará com uma mensagem "SIP 407 Proxy Authentication required".-   Envie um segundo [SIP INVITE](/documentation/business-messaging/whatsapp/calling/sip#business-initiated-calls--with-webrtc-media-) com o cabeçalho de autorização correto de acordo com o [RFC 3261⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fdatatracker.ietf.org%2Fdoc%2Fhtml%2Frfc3261%23section-22&h=AT4pZkIG3QMqnUmD5mXz4zb0L1Tzo6091Nrzw5Ni2anBKs2CCRCpW53vuXNYejuz7gz-1VMqei9aOeek8vP0o5_-Agkt13H707eJI4HGIeL4F1yRJH1-9x4XbquyU9QP59U6O8Bw5NPEAz_qwt74s5ko86c).
     -   O atributo de nome de usuário do campo de autorização deve corresponder ao nome de usuário do cabeçalho "from", que é o número de telefone comercial-   A senha é gerada pela Meta e pode ser recuperada usando o [ponto de extremidade get Call Settings](/documentation/business-messaging/whatsapp/calling/sip#get-phone-number-calling-settings--sip-)-   A parte do nome de usuário do cabeçalho "from" deve ser o número de telefone comercial totalmente normalizado-   O nome de domínio do cabeçalho "from" deve corresponder ao servidor SIP configurado no número de telefone comercial-   O `SDP Offer` incluído é compatível com ICE, DTLS-SRTP e OPUS (basicamente mídia WebRTC)-   Envie o [SIP INVITE](/documentation/business-messaging/whatsapp/calling/sip#business-initiated-calls--with-webrtc-media-) para o número do usuário do WhatsApp que você deseja chamar.
 
 ### Ligações iniciadas pelo usuário
 
 #### Pré-requisitos
 
--   Se você planeja usar a autenticação de digestão do SIP, [recupere a senha do SIP gerada pela Meta](/documentation/business-messaging/whatsapp/calling/sip#include-sip-user-password) e configure-a no servidor de SIP para que ele possa responder aos desafios de autenticação de digestão dos servidores de SIP da Meta
+-   Se você planeja usar a autenticação de digestão do SIP, [recupere a senha do SIP gerada pela Meta](/documentation/business-messaging/whatsapp/calling/sip#include-sip-user-password) e configure-a no servidor SIP para que ele possa responder aos desafios de autenticação de digestão dos servidores SIP da Meta
 
 #### Fluxo da ligação
 
--   O usuário do WhatsApp liga para o número de telefone comercial e não sabe se a empresa está usando o SIP ou a Graph API. Ou seja, a experiência do usuário é idêntica-   Se o número de telefone comercial estiver habilitado para SIP, a Meta enviará um [SIP INVITE](/documentation/business-messaging/whatsapp/calling/sip#user-initiated-calls--with-webrtc-media-) para o servidor [configurado no número de telefone comercial](/documentation/business-messaging/whatsapp/calling/sip#configure-update-sip-settings-on-business-phone-number)-   Você responde com [Desafio de autenticação do SIP](/documentation/business-messaging/whatsapp/calling/sip#user-initiated-calls-with-digest-auth--with-sdes-media-) (recomendado) ou [SIP OK](/documentation/business-messaging/whatsapp/calling/sip#user-initiated-calls--with-webrtc-media-) e transmite em uma resposta SDP
+-   O usuário do WhatsApp liga para o número de telefone comercial e não sabe se a empresa está usando o SIP ou a Graph API. Ou seja, a experiência do usuário é idêntica-   Se o número de telefone comercial estiver habilitado para SIP, a Meta enviará um [SIP INVITE](/documentation/business-messaging/whatsapp/calling/sip#user-initiated-calls--with-webrtc-media-) para o servidor [configurado no número de telefone comercial](/documentation/business-messaging/whatsapp/calling/sip#configure-update-sip-settings-on-business-phone-number)-   Você responde com um [Desafio de autenticação do SIP](/documentation/business-messaging/whatsapp/calling/sip#user-initiated-calls-with-digest-auth--with-sdes-media-) (recomendado) ou [SIP OK](/documentation/business-messaging/whatsapp/calling/sip#user-initiated-calls--with-webrtc-media-) e transmite em uma resposta SDP
 
 Se não estiver recebendo o SIP INVITE da Meta, consulte as [perguntas frequentes específicas sobre o SIP](/documentation/business-messaging/whatsapp/calling/faq#session-initiation-protocol--sip--faq) para solucionar o problema
 
   
 [Confira exemplos de solicitações de SIP](/documentation/business-messaging/whatsapp/calling/sip#sample-sip-requests)
 
-[Saiba mais sobre o Protocolo de Descrição de Sessão (SDP)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.rfc-editor.org%2Frfc%2Frfc8866.html&h=AT3mEXy5SQxoNBM16yWnv-zFRsnAcfQ6U9uaIiy3KJ_IsFv20vYy9FfH1Zr-bpe3yADDDWYthJ_icXcXnSRbf7ddIn_gudRWIOzOABCGQmxolfrrWCSmX2EU4FLIScyrD4dgDdWOeDTj0LrAWBhRYghsS9E)
+[Saiba mais sobre o Protocolo de Descrição de Sessão (SDP)⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.rfc-editor.org%2Frfc%2Frfc8866.html&h=AT4pZkIG3QMqnUmD5mXz4zb0L1Tzo6091Nrzw5Ni2anBKs2CCRCpW53vuXNYejuz7gz-1VMqei9aOeek8vP0o5_-Agkt13H707eJI4HGIeL4F1yRJH1-9x4XbquyU9QP59U6O8Bw5NPEAz_qwt74s5ko86c)
 
-[Confira exemplos de estruturas SDP](/documentation/business-messaging/whatsapp/calling/reference#sdp-overview-and-sample-sdp-structures)
+[Exemplos de estruturas SDP](/documentation/business-messaging/whatsapp/calling/reference#sdp-overview-and-sample-sdp-structures)
 
-#### Cabeçalhos de SIP personalizados
+### Cabeçalhos de SIP personalizados
 
 Usamos os cabeçalhos de SIP personalizados a seguir, específicos para ligações iniciadas pelo usuário
 
@@ -172,9 +128,9 @@ x-wa-meta-deeplink-payload
 
 Opcional; String
 
-É exibido quando o usuário inicia uma ligação a partir de um deep link que tem carga especificada pela empresa. [Saiba mais](/documentation/business-messaging/whatsapp/calling/call-button-messages-deep-links#send-payload-data-in-call-deeplink)
+É exibido quando o usuário inicia uma ligação a partir de um deep link de ligação que tem carga especificada pela empresa. [Saiba mais](/documentation/business-messaging/whatsapp/calling/call-button-messages-deep-links#send-payload-data-in-call-deeplink)
 
-## Definir/atualizar as configurações de SIP no número de telefone comercial
+## Como definir/atualizar as configurações de SIP no número de telefone comercial
 
 Use este ponto de extremidade para atualizar as configurações de ligação para um número de telefone comercial individual.
 
@@ -203,7 +159,7 @@ _Número inteiro_
   
 O número de telefone comercial cujas configurações da API de Ligações estão sendo atualizadas.
 
-[Saiba mais sobre a formatação de números de telefone na API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers)
+[Saiba mais sobre como formatar números de telefone na API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers)
 
 `+12784358810`
 
@@ -228,7 +184,7 @@ _String_
 **Opcional**
 
   
-Habilite ou desabilite a sinalização de ligações para o número de telefone comercial em questão.
+Habilite ou desabilite a sinalização de ligações SIP para o número de telefone comercial em questão.
 
 O padrão é `DISABLED`.
 
@@ -236,7 +192,7 @@ Quando `status` for `ENABLED`, o número de telefone usará exclusivamente o SIP
 
 Quando `status` é definido como `DISABLED`, os valores de `servers` do SIP não são redefinidos.
 
-Se você habilitar o SIP para o mesmo número de telefone novamente, os valores `servers` configurados anteriormente entrarão em vigor.
+Se você habilitar o SIP para o mesmo número de telefone outra vez, os valores `servers` configurados anteriormente entrarão em vigor.
 
 É possível configurar o status e os servidores SIP na mesma solicitação
 
@@ -253,17 +209,19 @@ _String_
   
 A configuração de roteamento do servidor SIP.
 
-Cada app pode ter apenas um servidor SIP configurado. Os servidores são uma matriz preparada para o futuro. Isso também torna o esquema de carga POST consistente com o esquema de carga GET, porque é possível ter vários apps, cada um com o próprio servidor SIP. Na carga GET, se vir vários servidores SIP, isso significa que você usou a API POST com diferentes tokens de acesso que pertencem a diferentes apps.
+Cada app pode ter apenas um servidor SIP configurado. Os servidores são uma matriz preparada para o futuro. Isso também torna o esquema de carga POST consistente com o esquema de carga GET, porque é possível ter vários apps, cada um com o próprio servidor SIP. Na carga GET, se vir vários servidores SIP, isso significa que você usou a API POST com tokens de acesso diferentes que pertencem a apps diferentes.
 
 O app associado é extraído do token de acesso usado para fazer a chamada de API.
 
 Como o número de telefone comercial pode ser usado em vários apps, cada número pode ser atendido por diversos servidores SIP.
 
-Para excluir um servidor SIP previamente configurado, passe uma matriz vazia para este campo. Se alguns servidores permanecerem após a limpeza, isso significa que eles podem pertencer a apps diferentes. Por isso, será necessário usar os tokens de acesso correspondentes para limpá-los
+Para excluir um servidor SIP configurado previamente, passe uma matriz vazia para este campo. Se alguns servidores permanecerem após a limpeza, pode ser que eles pertençam a apps diferentes. Por isso, será necessário usar os tokens de acesso correspondentes para limpá-los.
+
+Deve haver pelo menos um servidor SIP de qualquer app quando o status do SIP for HABILITADO. Para limpar os servidores de todos os apps usados com um número de telefone comercial, o status do SIP deve ser DESABILITADO.
 
 `hostname` – (_String_) **Obrigatório**
 
-O nome de host do servidor SIP.
+O nome do host do servidor SIP.
 
 As solicitações devem usar TLS.
 
@@ -281,7 +239,7 @@ Um campo opcional para passar os parâmetros que você deseja incluir na parte d
 
 O tamanho máximo da chave/valor é de 128 caracteres.
 
-Um exemplo de caso de uso seriam grupos de tronco ([RFC 4904](https://l.facebook.com/l.php?u=https%3A%2F%2Fdatatracker.ietf.org%2Fdoc%2Fhtml%2Frfc4904&h=AT3mEXy5SQxoNBM16yWnv-zFRsnAcfQ6U9uaIiy3KJ_IsFv20vYy9FfH1Zr-bpe3yADDDWYthJ_icXcXnSRbf7ddIn_gudRWIOzOABCGQmxolfrrWCSmX2EU4FLIScyrD4dgDdWOeDTj0LrAWBhRYghsS9E))
+Um exemplo de caso de uso seriam grupos de tronco ([RFC 4904⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fdatatracker.ietf.org%2Fdoc%2Fhtml%2Frfc4904&h=AT4pZkIG3QMqnUmD5mXz4zb0L1Tzo6091Nrzw5Ni2anBKs2CCRCpW53vuXNYejuz7gz-1VMqei9aOeek8vP0o5_-Agkt13H707eJI4HGIeL4F1yRJH1-9x4XbquyU9QP59U6O8Bw5NPEAz_qwt74s5ko86c))
 
 -   sip:+1234567890@sip.example.com;-   tgrp=wacall;-   trunk-context=byoc.example.com
 
@@ -299,9 +257,9 @@ Este exemplo tem dois parâmetros de usuário para tgrp e trunk-context.
 
 ### Resposta de erro
 
-[Consulte "Códigos de erro e solução de problemas da API de Ligações" para saber mais](/documentation/business-messaging/whatsapp/calling/troubleshooting)
+[Veja os códigos de erro e solução de problemas da API de Ligações para saber mais](/documentation/business-messaging/whatsapp/calling/troubleshooting)
 
-[Veja os códigos de erro gerais da API de Nuvem neste link](/documentation/business-messaging/whatsapp/support/error-codes)
+[Veja os códigos de erro gerais da API de Nuvem aqui](/documentation/business-messaging/whatsapp/support/error-codes)
 
 ## Como obter as configurações de ligação do número de telefone (SIP)
 
@@ -334,7 +292,7 @@ _Número inteiro_
   
 O número de telefone comercial para o qual você está atualizando as configurações da API de Ligações.
 
-[Saiba mais sobre a formatação de números de telefone na API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers)
+[Saiba mais sobre como formatar números de telefone na API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers)
 
 `+12784358810`
 
@@ -365,7 +323,7 @@ O número de telefone comercial para o qual você está atualizando as configura
 
 ### Incluir senha de usuário do SIP
 
-Como opção, você pode incluir credenciais de usuário do SIP no corpo da resposta, basta adicionar o parâmetro de consulta de credenciais do SIP na solicitação POST:
+Por padrão, o corpo da resposta não inclui a senha do SIP gerada pela Meta. Para incluir a senha no corpo da resposta, adicione o parâmetro de consulta opcional de credenciais do SIP na solicitação GET:
 
 ```
 GET /<PHONE_NUMBER_ID>/settings?include_sip_credentials=true
@@ -395,15 +353,15 @@ A resposta será semelhante a esta:
 
 ### Resposta de erro
 
-[Consulte "Códigos de erro e solução de problemas da API de Ligações" para saber mais](/documentation/business-messaging/whatsapp/calling/troubleshooting)
+[Veja os códigos de erro e solução de problemas da API de Ligações para saber mais](/documentation/business-messaging/whatsapp/calling/troubleshooting)
 
-[Veja os códigos de erro gerais da API de Nuvem neste link](/documentation/business-messaging/whatsapp/support/error-codes)
+[Veja os códigos de erro gerais da API de Nuvem aqui](/documentation/business-messaging/whatsapp/support/error-codes)
 
-## Redefinir senha do SIP
+## Como redefinir a senha do SIP
 
 Para que a Meta gere uma nova senha do SIP, você precisará desabilitar o SIP, excluir o servidor SIP e adicioná-lo novamente.
 
--   [Obtenha sua configuração de SIP com senha](/documentation/business-messaging/whatsapp/calling/sip#include-sip-user-password) para ver a senha atual e usar como referência-   Desabilitar e excluir o servidor SIP
+-   [Obtenha sua configuração de SIP com senha](/documentation/business-messaging/whatsapp/calling/sip#include-sip-user-password) para ver a senha atual e usar como referência-   Desabilite e exclua o servidor SIP
 
 ```
 curl -X POST \https://graph.facebook.com/{VERSION}/{PHONE_NUMBER_ID}/settings \-H 'Authorization: Bearer {TOKEN}' \-H 'Content-Type: application/json' \-d '{  "calling": {    "status": "DISABLED",    "sip": {      "status": "DISABLED",      "servers": [],    }  }}'{"success":true}
@@ -415,7 +373,7 @@ curl -X POST \https://graph.facebook.com/{VERSION}/{PHONE_NUMBER_ID}/settings
 curl -X POST \https://graph.facebook.com/{VERSION}/{PHONE_NUMBER_ID}/settings \-H 'Authorization: Bearer {TOKEN}' \-H 'Content-Type: application/json' \-d '{  "calling": {    "status": "ENABLED",    "sip": {      "status": "ENABLED",      "servers": [{"hostname":"sip.example.com"}],    }  }}'{"success":true}
 ```
 
--   [Acesse sua configuração de SIP com senha](/documentation/business-messaging/whatsapp/calling/sip#include-sip-user-password) para ver a nova senha
+-   [Acesse a sua configuração de SIP com senha](/documentation/business-messaging/whatsapp/calling/sip#include-sip-user-password) para ver a nova senha
 
 ## Exemplo de solicitações de SIP
 
@@ -885,7 +843,7 @@ a=ptime:20
 a=ssrc:215879358 cname:WhatsAppAudioStream1
 ```
 
-#### SIP OK do servidor de servidor SIP parceiro
+#### SIP OK do servidor SIP do parceiro
 
 ```
 SIP/2.0 200 OK
@@ -926,13 +884,11 @@ a=sendrecv
 
 ## Como configurar o SDES para o protocolo de troca de chave do SRTP
 
-A troca de chave do Protocolo de transporte seguro em tempo real (SRTP) é um protocolo criptográfico usado para trocar com segurança as chaves de criptografia entre duas partes em um canal de comunicação inseguro.
+A troca de chave do Protocolo de Transporte Seguro em Tempo Real (SRTP) é um protocolo criptográfico usado para trocar com segurança as chaves de criptografia entre duas partes em um canal de comunicação inseguro.
 
-Você pode configurar a troca de chave do SRTP de uma destas duas maneiras:
+Há duas maneiras de configurar a troca de chave do SRTP:
 
--   DTLS (padrão): troca de chave criptografada padrão do setor. Recomendado.-   SDES: a chave de texto sem formatação é definida no SDP, que é enviado por meio do protocolo de sinalização seguro (SIP).
-
-Observação: o SDES pode ser usado apenas quando a sinalização do SIP está habilitada.
+-   DTLS (padrão): troca de chave criptografada padrão do setor. Recomendado.-   SDES: a chave de texto sem formatação é incluída no SDP, que é enviado por meio de um protocolo de sinalização segura como o SIP ou a Graph API. Quando o SDES é usado, não há necessidade de STUN, ICE e DTLS, o que pode ajudar a reduzir o tempo de configuração da ligação.
 
 ### Configurar/atualizar o protocolo de troca de chave do SRTP
 
@@ -961,7 +917,7 @@ _Número inteiro_
   
 O número de telefone comercial cujas configurações da API de Ligações estão sendo atualizadas.
 
-[Saiba mais sobre a formatação de números de telefone na API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers)
+[Saiba mais sobre como formatar números de telefone na API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers)
 
 `+12784358810`
 
@@ -1004,11 +960,11 @@ Observação: a Meta ainda espera que o lado da empresa envie o pacote SRTP inic
 
 ### Resposta de erro
 
-[Consulte "Códigos de erro e solução de problemas da API de Ligações" para saber mais](/documentation/business-messaging/whatsapp/calling/troubleshooting)
+[Veja os códigos de erro e solução de problemas da API de Ligações para saber mais](/documentation/business-messaging/whatsapp/calling/troubleshooting)
 
-[Veja os códigos de erro gerais da API de Nuvem neste link](/documentation/business-messaging/whatsapp/support/error-codes)
+[Veja os códigos de erro gerais da API de Nuvem aqui](/documentation/business-messaging/whatsapp/support/error-codes)
 
-### Como obter o protocolo de troca de chave do SRTP
+### Obter o protocolo de troca de chave SRTP
 
 #### Sintaxe da solicitação
 
@@ -1035,7 +991,7 @@ _Número inteiro_
   
 O número de telefone comercial cujas configurações da API de Ligações estão sendo atualizadas.
 
-[Saiba mais sobre a formatação de números de telefone na API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers)
+[Saiba mais sobre como formatar números de telefone na API de Nuvem](/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers)
 
 `+12784358810`
 
@@ -1069,9 +1025,9 @@ O padrão é `DTLS`.
 
 #### Resposta de erro
 
-[Consulte "Códigos de erro e solução de problemas da API de Ligações" para saber mais](/documentation/business-messaging/whatsapp/calling/troubleshooting)
+[Veja os códigos de erro e solução de problemas da API de Ligações para saber mais](/documentation/business-messaging/whatsapp/calling/troubleshooting)
 
-[Veja os códigos de erro gerais da API de Nuvem neste link](/documentation/business-messaging/whatsapp/support/error-codes)
+[Veja os códigos de erro gerais da API de Nuvem aqui](/documentation/business-messaging/whatsapp/support/error-codes)
 
 ## Endereços IP
 
@@ -1081,7 +1037,7 @@ Essa referência serve apenas para indicar os endereços IP que devem ser inclu�
 
 ## Solução de problemas
 
-Consulte [Perguntas frequentes sobre o SIP](/documentation/business-messaging/whatsapp/calling/faq#session-initiation-protocol--sip--faq) para ver mais perguntas e respostas específicas sobre o SIP e [Erros no SIP](/documentation/business-messaging/whatsapp/calling/troubleshooting#sip-errors) para ver erros e soluções específicas do protocolo
+Consulte [Perguntas frequentes sobre o SIP](/documentation/business-messaging/whatsapp/calling/faq#session-initiation-protocol--sip--faq) para mais perguntas e respostas específicas sobre o SIP e [Erros no SIP](/documentation/business-messaging/whatsapp/calling/troubleshooting#sip-errors) para erros e soluções específicas do protocolo
 
 Você achou esta página útil?
 

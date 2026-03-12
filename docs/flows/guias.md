@@ -1,7 +1,7 @@
 <!-- Source: https://developers.facebook.com/docs/whatsapp/flows/guides -->
-<!-- Scraped: 2026-01-24T00:24:27.536Z -->
+<!-- Scraped: 2026-03-10T21:34:56.486Z -->
 
-![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1765810345)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
+![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1770998864)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
 
 [](#)
 

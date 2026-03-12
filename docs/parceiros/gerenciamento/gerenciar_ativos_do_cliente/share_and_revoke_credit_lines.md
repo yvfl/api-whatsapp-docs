@@ -1,9 +1,9 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/share-and-revoke-credit-lines -->
-<!-- Scraped: 2025-12-20T17:52:27.901Z -->
+<!-- Scraped: 2026-03-10T22:06:28.662Z -->
 
 # Como gerenciar linhas de crédito
 
-Updated: 14 de nov de 2025
+Updated: 12 de dez de 2025
 
 Este documento descreve como os parceiros de soluções podem compartilhar e cancelar linhas de crédito com clientes empresariais integrados.
 
@@ -13,7 +13,7 @@ Os clientes empresariais integrados por meio do cadastro incorporado precisam te
 
 Você é a parte responsável pelas cobranças de todas as empresas que compartilham sua linha de crédito. Você é responsável e deverá pagar à Meta por todos os gastos incorridos por essas empresas pelo uso que fizerem da plataforma do WhatsApp Business.
 
-O acesso à sua linha de crédito poderá ser concedido usando as APIs descritas neste documento. É possível cancelar o acesso à sua linha de crédito para empresas específicas no [Meta Business Suite](https://business.facebook.com/home/accounts) ou com uma [série de chamadas de API](#revoke-a-shared-credit-line).
+O acesso à sua linha de crédito poderá ser concedido usando as APIs descritas neste documento. É possível cancelar o acesso à sua linha de crédito para empresas específicas no [Meta Business Suite⁠](https://business.facebook.com/home/accounts) ou com uma [série de chamadas de API](#revoke-a-shared-credit-line).
 
 ## Autenticação e autorização
 
@@ -26,7 +26,7 @@ Quase todas as chamadas de API relacionadas a linhas de crédito exigem a identi
 ### Sintaxe da solicitação
 
 ```
-curl 'https://graph.facebook.com/<API_VERSION>/<WHATSAPP_BUSINESS_ACCOUNT_ID>/extendedcredits' \
+curl 'https://graph.facebook.com/<API_VERSION>/<BUSINESS_ID>/extendedcredits' \
 -H 'Authorization: Bearer <ACCESS_TOKEN>'
 ```
 
@@ -73,7 +73,7 @@ A moeda da empresa, representada por um código de três letras. Valores compat�
 
 -   `AUD`-   `EUR`-   `GBP`-   `IDR`-   `INR`-   `USD`
 
-Esta moeda é usada para fins de faturamento e corresponde às [taxas de precificação](/documentation/business-messaging/whatsapp/pricing).
+Esta moeda é usada para fins de faturamento e corresponde às taxas de [precificação](/documentation/business-messaging/whatsapp/pricing).
 
 `USD`
 
@@ -222,7 +222,7 @@ Use o ponto de extremidade [POST /<EXTENDED\_CREDIT\_ID>/whatsapp\_credit\_shari
 
 ```
 curl -X POST 'https://graph.facebook.com/<API_VERSION>/<EXTENDED_CREDIT_LINE_ID>/whatsapp_credit_sharing?receiving_business_id=<BUSINESS_PORTFOLIO_ID>' \
--H 'Authorization: Bearer <ACCESS_TOKEN>'
+-H 'Authorization: Bearer <SYSTEM_TOKEN>'
 ```
 
 #### Parâmetros de solicitação
@@ -287,7 +287,7 @@ ID de configuração para alocação da linha de crédito estendida.
 
 Use o ponto de extremidade [POST /<EXTENDED\_CREDIT\_LINE\_ID>/whatsapp\_credit\_attach](/docs/marketing-api/reference/extended-credit/whatsapp_credit_attach) para anexar sua linha de crédito à WABA do cliente.
 
-Observação: não é possível alterar as linhas de crédito vinculadas a uma WABA. Caso seja necessário usar novas linhas de crédito, será preciso criar outra WABA.
+Observação: não é possível alterar as linhas de crédito vinculadas a uma WABA. Se a WABA precisar de uma linha de crédito diferente, será necessário criar outra WABA e, em seguida, anexar a nova linha de crédito a ela.
 
 #### Sintaxe da solicitação
 
@@ -441,7 +441,7 @@ Quando você cancela uma linha de crédito da conta de um cliente, esse cancelam
 #### Exemplo de solicitação
 
 ```
-curl -i -X GET "https://graph.facebook.com/v24.0/105954558954427/
+curl -i -X GET "https://graph.facebook.com/v25.0/105954558954427/
   extendedcredits?fields=id,legal_entity_name&
   access_token=EAAFl..."
 ```
@@ -462,7 +462,7 @@ No exemplo abaixo, use a identificação da conta do WhatsApp Business atribuíd
 Solicitação:
 
 ```
-curl -i -X GET "https://graph.facebook.com/v24.0/
+curl -i -X GET "https://graph.facebook.com/v25.0/
   <WHATSAPP_BUSINESS_ACCOUNT_ID>?fields=owner_business_info&
   access_token=<ACCESS_TOKEN>"
 ```
@@ -503,7 +503,7 @@ Resposta:
 Solicitação:
 
 ```
-curl -i -X DELETE "https://graph.facebook.com/v24.0/
+curl -i -X DELETE "https://graph.facebook.com/v25.0/
   {allocation-config-id}?
   access_token={system-user-access-token}"
 ```
@@ -519,7 +519,7 @@ Resposta:
 Solicitação:
 
 ```
-curl -i -X GET "https://graph.facebook.com/v24.0/
+curl -i -X GET "https://graph.facebook.com/v25.0/
   {allocation-config-id}?fields=receiving_business,request_status&
   access_token={system-user-access-token}"
 ```
@@ -527,22 +527,22 @@ curl -i -X GET "https://graph.facebook.com/v24.0/
 Resposta:
 
 ```
-{  "receiving_business": {    "name": "Client Business Name"    "id": "1972385232742147"  },  "request_status": "DELETED"}
+{  "receiving_business": {    "name": "Customer Business Name"    "id": "1972385232742147"  },  "request_status": "DELETED"}
 ```
 
 ## Solução de problemas
 
 ### Contas do WhatsApp Business não compartilhadas
 
-Se a conta do WhatsApp Business não estiver mais sendo compartilhada com o parceiro de soluções ou a empresa do cliente tiver removido o parceiro da conta do WhatsApp Business, não será possível acessar a identificação da empresa do cliente pela chamada de API indicada na [Etapa 2](#step-2--retrieve-the-client-s-business-id).
+Caso um cliente empresarial pare de compartilhar a WABA com você ou remova seu perfil de parceiro da conta do WhatsApp Business, você não conseguirá obter o ID do portfólio empresarial dele por meio da API.
 
-Nesse caso, você poderá recuperar a identificação da empresa do cliente pelo email de notificação enviado ao administrador da empresa do parceiro de soluções quando a empresa do cliente o removeu como parceiro da conta do WhatsApp Business.
+Em vez disso, você pode obter o ID do portfólio no email enviado aos administradores do portfólio empresarial quando o cliente removeu você como parceiro ou deixou de compartilhar a WABA.
 
-Quando a conta do WhatsApp Business não é compartilhada, todas as mensagens dessa conta são bloqueadas para proteger a linha de crédito do parceiro de soluções. Para obter segurança completa, recomendamos que os parceiros de soluções cancelem as próprias linhas de crédito assim que o fim do compartilhamento ocorrer.
+Quando a WABA não é compartilhada com você, todas as mensagens relacionadas são bloqueadas para proteger sua linha de crédito. Para garantir total segurança, recomendamos que você cancele sua linha de crédito da WABA do cliente assim que ela deixar de ser compartilhada com você.
 
 ## Veja também
 
--   Referência: [Empresas](/docs/marketing-api/reference/business)-   Referência: [Conta do WhatsApp Business](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/whatsapp-business-account-api)-   Referência: [Crédito estendido](/docs/marketing-api/reference/extended-credit)
+-   Referência: [Business](/docs/marketing-api/reference/business)-   Referência: [conta do WhatsApp Business](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/whatsapp-business-account-api)-   Referência: [crédito estendido](/docs/marketing-api/reference/extended-credit)
 
 Você achou esta página útil?
 

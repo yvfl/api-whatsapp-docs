@@ -1,7 +1,7 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/overview -->
-<!-- Scraped: 2026-01-24T00:42:36.710Z -->
+<!-- Scraped: 2026-03-10T21:50:14.902Z -->
 
-        
+                                          
 
 [![Logotipo Nav](https://static.xx.fbcdn.net/rsrc.php/y9/r/tL_v571NdZ0.svg)](https://developers.facebook.com/)
 
@@ -65,7 +65,7 @@ Preços
 
 [
 
-Tarifas de autenticação internacional
+Tarifas de autenticação internacionais
 
 ](/documentation/business-messaging/whatsapp/pricing/authentication-international-rates/)
 
@@ -77,7 +77,13 @@ Preços baseados em conversa
 
 [
 
-Começar
+Provedores de IA
+
+](/documentation/business-messaging/whatsapp/pricing/ai-providers/)
+
+[
+
+Primeiros passos
 
 ](/documentation/business-messaging/whatsapp/get-started/)
 
@@ -119,7 +125,7 @@ Componentes de conversa
 
 [
 
-IDs de usuário no escopo da empresa
+IDs do usuário no escopo da empresa
 
 ](/documentation/business-messaging/whatsapp/business-scoped-user-ids/)
 
@@ -149,7 +155,7 @@ Contas do WhatsApp Business
 
 [
 
-QR codes e links de mensagens
+QR codes e links de mensagem
 
 ](/documentation/business-messaging/whatsapp/qr-codes/)
 
@@ -257,7 +263,7 @@ Visão geral
 
 [
 
-Autenticação de usuários
+Autenticar usuários
 
 ](/documentation/business-messaging/whatsapp/templates/authentication-templates/authentication-best-practices/)
 
@@ -353,7 +359,7 @@ Interativo
 
 [
 
-Botão URL
+Botão de URL
 
 ](/documentation/business-messaging/whatsapp/messages/interactive-cta-url-messages/)
 
@@ -392,12 +398,6 @@ Localização
 Solicitação de localização
 
 ](/documentation/business-messaging/whatsapp/messages/location-request-messages/)
-
-[
-
-Mensagem com link
-
-](/documentation/business-messaging/whatsapp/messages/message-with-link/)
 
 [
 
@@ -473,15 +473,9 @@ Indicadores de digitação
 
 [
 
-Prévias de links
+Prévias de link
 
 ](/documentation/business-messaging/whatsapp/link-previews/)
-
-[
-
-Criptografia de carga
-
-](/documentation/business-messaging/whatsapp/messages/payload-encryption/)
 
 [
 
@@ -602,12 +596,6 @@ Biblioteca
 Gerenciamento
 
 ](/documentation/business-messaging/whatsapp/templates/template-management/)
-
-[
-
-Mídia
-
-](/documentation/business-messaging/whatsapp/templates/template-media/)
 
 [
 
@@ -749,7 +737,7 @@ message\_template\_status\_update
 
 [
 
-messages
+mensagens
 
 ](#)
 
@@ -761,103 +749,115 @@ Visão geral
 
 [
 
-mensagens de áudio
+audio messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/audio/)
 
 [
 
-mensagens de botões
+button messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/button/)
 
 [
 
-mensagens de contatos
+contacts messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/contacts/)
 
 [
 
-mensagens de documento
+document messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/document/)
 
 [
 
-mensagens de erro
+edit messages
+
+](/documentation/business-messaging/whatsapp/webhooks/reference/messages/edit)
+
+[
+
+errors messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/errors/)
 
 [
 
-mensagens de grupo
+group messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/group/)
 
 [
 
-mensagens de imagem
+image messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/image/)
 
 [
 
-mensagens interativas
+interactive messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/interactive/)
 
 [
 
-mensagens de localização
+location messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/location/)
 
 [
 
-mensagens de pedido
+order messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/order/)
 
 [
 
-mensagens de reação
+reaction messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/reaction/)
 
 [
 
-mensagens de status
+revoke messages
+
+](/documentation/business-messaging/whatsapp/webhooks/reference/messages/revoke)
+
+[
+
+status messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/status/)
 
 [
 
-mensagens com figurinhas
+sticker messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/sticker/)
 
 [
 
-mensagens do sistema
+system messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/system/)
 
 [
 
-mensagens de texto
+text messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/text/)
 
 [
 
-mensagens incompatíveis
+unsupported messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/unsupported/)
 
 [
 
-mensagens de vídeo
+video messages
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/messages/video/)
 
@@ -887,7 +887,7 @@ phone\_number\_quality\_update
 
 [
 
-segurança
+security
 
 ](/documentation/business-messaging/whatsapp/webhooks/reference/security/)
 
@@ -947,25 +947,19 @@ Obter permissões de ligação do usuário
 
 [
 
-Ligação de vídeo
-
-](/documentation/business-messaging/whatsapp/calling/video-calling/)
-
-[
-
 Ligações iniciadas pelo usuário
 
 ](/documentation/business-messaging/whatsapp/calling/user-initiated-calls/)
 
 [
 
-Configurar o Protocolo de Iniciação de Sessão (SIP, na sigla em inglês)
+Configurar o protocolo de início de sessão (SIP)
 
 ](/documentation/business-messaging/whatsapp/calling/sip/)
 
 [
 
-Mensagens do botão Ligar e deep links
+Mensagens de botão de ligação e deep links
 
 ](/documentation/business-messaging/whatsapp/calling/call-button-messages-deep-links/)
 
@@ -1001,7 +995,7 @@ Conta de sandbox para chamadas
 
 [
 
-Diretrizes de Análise do App
+Diretrizes da Análise do App
 
 ](/documentation/business-messaging/whatsapp/calling/app-review-guidelines/)
 
@@ -1073,7 +1067,7 @@ Perguntas frequentes
 
 [
 
-Informações
+Insights
 
 ](/documentation/business-messaging/whatsapp/analytics/)
 
@@ -1109,7 +1103,7 @@ Carregar inventário
 
 [
 
-Definir configurações comerciais
+Definir configurações de comércio
 
 ](/documentation/business-messaging/whatsapp/catalogs/sell-products-and-services/set-commerce-settings/)
 
@@ -1217,7 +1211,7 @@ Modelos de status do pedido
 
 [
 
-Modelos com botão de finalização da compra
+Modelos de botão de finalização da compra
 
 ](/documentation/business-messaging/whatsapp/payments/payments-in/checkout-button-templates/)
 
@@ -1259,7 +1253,7 @@ Boleto
 
 [
 
-Pagamentos em um clique
+Pagamentos com um clique
 
 ](/documentation/business-messaging/whatsapp/payments/payments-br/one-click-payments/)
 
@@ -1268,12 +1262,6 @@ Pagamentos em um clique
 Modelos de detalhes do pedido
 
 ](/documentation/business-messaging/whatsapp/payments/payments-br/orderdetailstemplate/)
-
-[
-
-Cartões de crédito e de débito
-
-](/documentation/business-messaging/whatsapp/payments/payments-br/cards)
 
 [
 
@@ -1313,13 +1301,13 @@ Tornar-se um parceiro de mensuração
 
 [
 
-Tornar-se um parceiro de tecnologia
+Atualizar para parceiro de tecnologia
 
 ](/documentation/business-messaging/whatsapp/solution-providers/upgrade-to-tech-partner/)
 
 [
 
-Análise do App
+Análise do app
 
 ](/documentation/business-messaging/whatsapp/solution-providers/app-review/)
 
@@ -1355,7 +1343,7 @@ Integração para Provedores de Tecnologia
 
 [
 
-Integração para Parceiros de Soluções
+Integração de parceiros de soluções
 
 ](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-customers-as-a-solution-partner/)
 
@@ -1367,7 +1355,7 @@ Fluxo da API de Nuvem
 
 [
 
-Personalização do fluxo
+Personalizar o fluxo
 
 ](#)
 
@@ -1469,7 +1457,7 @@ Erros
 
 [
 
-Criação da WABA iniciada pelo parceiro
+Criação da conta do WhatsApp Business iniciada por parceiro
 
 ](/documentation/business-messaging/whatsapp/solution-providers/partner-initiated-waba-creation/)
 
@@ -1487,31 +1475,31 @@ Soluções multiparceiro
 
 [
 
-Criação Incorporada
+Criação incorporada
 
 ](/documentation/business-messaging/whatsapp/solution-providers/multi-partner-solution-embedded-creation/)
 
 [
 
-Migrar WABAs entre soluções via Cadastro incorporado
+Migrar contas do WhatsApp Business entre soluções via Cadastro incorporado
 
 ](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-wabas-among-solutions-via-embedded-signup/)
 
 [
 
-Migrar WABAs entre soluções via Meta Business Suite
+Migrar contas do WhatsApp Business entre soluções via Meta Business Suite
 
 ](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-wabas-among-solutions-via-meta-business-suite/)
 
 [
 
-Migrar WABAs entre parceiros via Cadastro incorporado
+Migrar contas do WhatsApp Business entre parceiros via Cadastro incorporado
 
 ](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-wabas-among-solution-partners-via-embedded-signup/)
 
 [
 
-Migrar clientes de soluções via Cadastro Incorporado
+Migrar clientes de soluções via Cadastro incorporado
 
 ](/documentation/business-messaging/whatsapp/solution-providers/support/migrating-customers-off-solutions-via-embedded-signup/)
 
@@ -1523,7 +1511,7 @@ Migrar clientes de soluções via Meta Business Suite
 
 [
 
-Adicionar WABAs a uma solução multiparceiros
+Adicionar contas do WhatsApp Business a uma solução multiparceiros
 
 ](/documentation/business-messaging/whatsapp/solution-providers/support/adding-waba-to-mps/)
 
@@ -1535,7 +1523,7 @@ Conversas multisoluções
 
 [
 
-Verificação da empresa liderada por parceiro
+Verificação da empresa conduzida pelo parceiro
 
 ](/documentation/business-messaging/whatsapp/solution-providers/partner-led-business-verification/)
 
@@ -1547,7 +1535,7 @@ Rastreamento de Pixel
 
 [
 
-Gerenciar ativos do cliente
+Gerenciar ativos de clientes
 
 ](#)
 
@@ -1595,7 +1583,7 @@ Webhooks
 
 [
 
-Suporte ao parceiro
+Suporte para parceiros
 
 ](#)
 
@@ -1655,13 +1643,7 @@ Bloquear usuários
 
 [
 
-Criptografia
-
-](/documentation/business-messaging/whatsapp/encryption/)
-
-[
-
-Privacidade e segurança dos dados
+Privacidade e segurança de dados
 
 ](/documentation/business-messaging/whatsapp/data-privacy-and-security/)
 
@@ -1679,13 +1661,13 @@ Sem armazenamento
 
 [
 
-Obter aceitação do usuário
+Obter a aceitação do usuário
 
 ](/documentation/business-messaging/whatsapp/getting-opt-in/)
 
 [
 
-Alterações de identidade do usuário
+Alterações na identidade do usuário
 
 ](/documentation/business-messaging/whatsapp/identity-change/)
 
@@ -1724,12 +1706,6 @@ Teste de carga
 Experimentos
 
 ](/documentation/business-messaging/whatsapp/support/experiments/)
-
-[
-
-Migrar da API Local e a API de Nuvem
-
-](/documentation/business-messaging/whatsapp/support/migrating-from-onprem-to-cloud/)
 
 [
 
@@ -2049,12 +2025,6 @@ API de Configurações Comerciais
 
 [
 
-API de Mensagens Criptografadas
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/encrypted-messages-api)
-
-[
-
 API de Gerenciamento de Grupos
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/groups-management-api)
@@ -2106,12 +2076,6 @@ API de Configurações
 API de Verificação de Código
 
 ](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/verify-code-api)
-
-[
-
-API do Histórico de Mensagens da Conta do WhatsApp Business
-
-](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-message-history-api)
 
 [
 
@@ -2259,7 +2223,7 @@ Começar
 
 Veja uma prévia de uma experiência interativa que mostra como o Jasper's Market (nossa empresa varejista de demonstração) se conecta com os clientes usando a Plataforma do WhatsApp Business.
 
-Empresa varejista de demonstração![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.8562-6/547429620_764982376167016_715228206216507834_n.png?stp=dst-webp&_nc_cat=105&ccb=1-7&_nc_sid=9a942e&_nc_ohc=coFUZE644WQQ7kNvwFQdY68&_nc_oc=AdnSFEjeh263CIhzJJjXj_t_kt4qwsLEQaL_yPAbm-gKPRgAYuylI_-Tm_-XH9rgOD0&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=UIarBY6flvdKR9Fwzkumww&oh=00_AfqlSglF5hcAFmpCzWxe1ZQTLHeR-V0nbXXI4KNXutZngA&oe=6979F13E)
+Empresa varejista de demonstração![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.8562-6/547429620_764982376167016_715228206216507834_n.png?stp=dst-webp&_nc_cat=105&ccb=1-7&_nc_sid=9a942e&_nc_ohc=h-86GpMyGZ0Q7kNvwFdSVbM&_nc_oc=AdlXpfJrNCH_1880qG1U4lbhDzYrDYhGrVKmtzbi0pzTPEARuGyvqbbtGRhAkOCgqzw&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=ODOYPb0eH5R9fYOMYEs_5Q&_nc_ss=8&oh=00_AfyAmNzPzdId1QTrn_UYhF7Sn7cYv_w5fGlWUbJ1S6UAsQ&oe=69B65DFE)
 
 Experimente a demonstração
 
@@ -2465,23 +2429,23 @@ Você achou esta página útil?
 
 ![Meta](https://static.xx.fbcdn.net/rsrc.php/y9/r/tL_v571NdZ0.svg)
 
-[![Facebook](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/425860105_925920989121941_6933048753023841367_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=acobLcd_XDsQ7kNvwE2d1wz&_nc_oc=Adkl7sfGJBLcz94vCNwhVhPj99R-_hPW39-bXP5xhctWb07BAfX9ypYoUX7vWEPTr4Y&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_Afo0Cm4Of-NRcxsdi4x0X1q4-nL-5srrk9uFyRO2gA8x6Q&oe=6979F2A2)](https://www.facebook.com/MetaforDevelopers)[![Instagram](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/425804778_757649995874129_6917476492193301523_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=5NIxzaFbvlsQ7kNvwHhwOKx&_nc_oc=AdnWJ_HC9BK-s5N3rfZ466jUR6stDxfIJyHVd1CMwdcrX9hdWWqEYNICeH6fjnKVKVQ&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_AfpU9p9N-DVoLMm1S0wziDOmxGJnbXqUxWC6_ifONyX-zQ&oe=6979DCB8)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmetafordevelopers%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[![X](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/426747931_385023204117867_5811151062540225287_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=uJtcecfk28UQ7kNvwEaVw7C&_nc_oc=AdnGVyk9br-4ekadVa9R97KlHCkPpieAdQoI3m2XMpt_UR31NP9T6RUIKzyr_972WPk&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_AfqUwuOHKL_kBLSWmE5_JgVwidieOcd6wFIAUQrtiNePcA&oe=6979FB2A)](https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2Fmetafordevs&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[![LinkedIn](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/467689750_1684384502343829_7561568713040200172_n.svg?_nc_cat=103&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=Ij-MvYKxM9YQ7kNvwHMAPSj&_nc_oc=AdkooTNz6ArgyPG-eX66EEvv6Gcz43KuWoYz4UQnppZHHKlcJCarXO9t0ITZUFAwntg&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_AfrO5UxirjDoyfwskYS6CPRblSc5xtxeBjakq5YG7usjcg&oe=6979D27E)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fshowcase%2Fmeta-for-developers%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[![YouTube](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/425519002_724756916408357_7491658959807896355_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=KZytKdgN__0Q7kNvwGSY-Ie&_nc_oc=AdkvyyJaMh8lmS72tIill6_FwNUwEGkxGJGRzvpK9Km-DPtKLXCbiFtVh0qOturykKQ&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=HWR8fRFM9b-79_Zei3XaAA&oh=00_AfocnC6hmIfJWHy3_jDpVW1v2uKDMQArbZRKlCM0jHT8yw&oe=6979F5DF)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2FMetaDevelopers%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[![Facebook](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/425860105_925920989121941_6933048753023841367_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=M7vqG1r-PEYQ7kNvwFiDhqN&_nc_oc=AdmtoqG4roJHrB6X5IPg9GE0ZlLSXdJKQItpNUB71KpOumBXNbWKzNThgHeZVpbF8uc&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=ODOYPb0eH5R9fYOMYEs_5Q&_nc_ss=8&oh=00_AfzqcrjSfA-IjOZiyjPuRExyNWP5QS2v3Rsu7F9k3DASNg&oe=69B65F62)](https://www.facebook.com/MetaforDevelopers)[![Instagram](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/425804778_757649995874129_6917476492193301523_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=HWQmBR2m5ggQ7kNvwEPJk9q&_nc_oc=AdmrWO30-qn0RRBUuzJ5iTwS4SVztTprMNRzEwu8ZJQYsMDlXEbUFYmMRx98C8mE-t8&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=ODOYPb0eH5R9fYOMYEs_5Q&_nc_ss=8&oh=00_AfzcfVjN3w4cr7f-MVQeJGAEMMwokkqpH_UPp3dX-KbNYA&oe=69B64978)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmetafordevelopers%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)[![X](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/426747931_385023204117867_5811151062540225287_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=e1petI6EapQQ7kNvwFbc6tF&_nc_oc=AdlnPubL8CBC8JrgbSrCJrTR5ZIhYUstA7TAtPfB327YI3rGLTIgl54pqBov41krLDA&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=ODOYPb0eH5R9fYOMYEs_5Q&_nc_ss=8&oh=00_AfwQ5jQKVD7_6xL-gAT8JDfVXrnqmjMoo9Z9sQbs7-EjTw&oe=69B667EA)](https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2Fmetafordevs&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)[![LinkedIn](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/467689750_1684384502343829_7561568713040200172_n.svg?_nc_cat=103&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=CadvW8RK1dIQ7kNvwHDM05C&_nc_oc=AdkcPru4Yj6ymogiki-Dqrf2w6HtXnhm3tug9ZJhhUrEh5XryCLDHUXJhz-HFCwF45w&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=ODOYPb0eH5R9fYOMYEs_5Q&_nc_ss=8&oh=00_Afyv_Std8P8TIp0NfLebIXajxvDzkcdJX2rbK_YlLANHNg&oe=69B6777E)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fshowcase%2Fmeta-for-developers%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)[![YouTube](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/425519002_724756916408357_7491658959807896355_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=aa6a2f&_nc_ohc=_2sH1005CWcQ7kNvwGNA8S-&_nc_oc=AdkJUuFgNhIph46m5-7ttRSSrKsTg5qp28pSrrodwmVR5p8JqDegdffXhgXxMKFwNk0&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=ODOYPb0eH5R9fYOMYEs_5Q&_nc_ss=8&oh=00_Afz1optFE02bT4uKL-BJB5w8evOg0Z4YxcFwg_9ljKiH-w&oe=69B6629F)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2FMetaDevelopers%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 Desenvolva com a Meta
 
-[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw) [Tecnologias sociais](/social-technologies/)
+[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE) [Tecnologias sociais](/social-technologies/)
 
 * * *
 
 Notícias
 
-[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[Blog](/blog/)[Casos de sucesso](/success-stories/)
+[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)[Blog](/blog/)[Casos de sucesso](/success-stories/)
 
 * * *
 
 Suporte
 
-[Suporte ao desenvolvedor](/support/)[Ferramenta de bug](/support/bugs/)[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)[Relatar um incidente](/incident/report/)
+[Suporte ao desenvolvedor](/support/)[Ferramenta de bug](/support/bugs/)[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)[Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)[Relatar um incidente](/incident/report/)
 
 * * *
 
@@ -2493,21 +2457,21 @@ Termos e políticas
 
 Quem somos
 
-[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)[Carreiras](https://www.facebook.com/careers)
+[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)[Carreiras](https://www.facebook.com/careers)
 
 * * *
 
 Desenvolva com a Meta
 
-[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
-[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Tecnologias sociais](/social-technologies/)
 
 Notícias
 
-[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Blog](/blog/)
 
@@ -2519,7 +2483,7 @@ Suporte
 
 [Ferramenta de bug](/support/bugs/)
 
-[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)
 
@@ -2527,7 +2491,7 @@ Suporte
 
 Quem somos
 
-[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Carreiras](https://www.facebook.com/careers)
 
@@ -2545,15 +2509,15 @@ Termos e políticas
 
 Desenvolva com a Meta
 
-[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
-[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Tecnologias sociais](/social-technologies/)
 
 Notícias
 
-[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Blog](/blog/)
 
@@ -2565,7 +2529,7 @@ Suporte
 
 [Ferramenta de bug](/support/bugs/)
 
-[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)
 
@@ -2573,7 +2537,7 @@ Suporte
 
 Quem somos
 
-[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Carreiras](https://www.facebook.com/careers)
 
@@ -2591,15 +2555,15 @@ Termos e políticas
 
 Desenvolva com a Meta
 
-[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[IA](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fai%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
-[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Meta Horizon](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fhorizon%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Tecnologias sociais](/social-technologies/)
 
 Notícias
 
-[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Meta for Developers](https://l.facebook.com/l.php?u=https%3A%2F%2Fdevelopers.meta.com%2Fblog%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Blog](/blog/)
 
@@ -2611,7 +2575,7 @@ Suporte
 
 [Ferramenta de bug](/support/bugs/)
 
-[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Status da plataforma](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Fórum da Comunidade de Desenvolvedores](https://www.facebook.com/groups/fbdevelopers/)
 
@@ -2619,7 +2583,7 @@ Suporte
 
 Quem somos
 
-[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT20R-PLA0Lj3XPwkJ0a4dYYNTWOb6jemVfiTa-DM-LlVhywdzJizY0dgAXMIJWXvisQ7yFAekbfAH34iuB83kAHnqqg47vd3VBuNtZOfZK1USxORXFFOk2BQ1glLKj0CIjZpE7n8XdlTFfzk7cj_dwSSbw)
+[Sobre](https://l.facebook.com/l.php?u=https%3A%2F%2Fabout.fb.com%2F&h=AT4UTdGdA5vfvt1VeMHcLTH99HiFVCKk2gVEwohGJnt1arzgm-rWFiJeeGsiWUo6nyoJvo_TBK_mecHvrI0CstMtu4MUNdq3t_Mlvq3o0A3-NJBbh3nC2xyn-IAEz-kpBjK2P_9twSj5pHO-sGIjImmNyiE)
 
 [Carreiras](https://www.facebook.com/careers)
 

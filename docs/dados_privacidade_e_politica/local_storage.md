@@ -1,22 +1,22 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/local-storage -->
-<!-- Scraped: 2025-12-20T17:55:01.079Z -->
+<!-- Scraped: 2026-03-10T21:45:04.318Z -->
 
 # Armazenamento local
 
-Updated: 21 de out de 2025
+Updated: 12 de dez de 2025
 
-Com o recurso Armazenamento Local, você tem uma camada adicional de controle no gerenciamento de dados e pode especificar onde os dados das suas mensagens são armazenados em repouso. Caso sua empresa seja de um setor regulamentado (como finanças, organizações governamentais ou serviços de saúde), talvez você prefira que os dados em repouso das mensagens sejam armazenados em um país específico devido às políticas regulatórias ou da empresa.
+Com o armazenamento local, você tem uma camada adicional de controle no gerenciamento de dados e pode especificar onde os dados das suas mensagens são armazenados em repouso. Caso sua empresa seja de um setor regulamentado (como finanças, organizações governamentais ou serviços de saúde), talvez você prefira que os dados em repouso das mensagens sejam armazenados em um país específico devido às políticas regulatórias ou da empresa.
 
 ## Como funciona o armazenamento local
 
-O armazenamento local é controlado por uma configuração habilitada ou desabilitada no nível do número de telefone comercial do WhatsApp. Tanto a API de Nuvem quanto a API de MM Lite são compatíveis com o armazenamento local. A configuração será aplicada a qualquer mensagem enviada por meio dessas APIs, se o armazenamento estiver habilitado.
+O armazenamento local é controlado por uma configuração habilitada ou desabilitada no nível do número de telefone comercial do WhatsApp. Tanto a API de Nuvem quanto a API de MM Lite são compatíveis com o armazenamento local. A configuração será aplicada a qualquer mensagem enviada por meio dessas APIs se o armazenamento estiver habilitado.
 
 Quando o armazenamento local está habilitado, as seguintes restrições são aplicadas ao conteúdo de mensagens para um número de telefone comercial:
 
 -   **Dados em uso:** quando o conteúdo da mensagem é enviado ou recebido pela API de Nuvem ou pela API de MM Lite, ele pode ser armazenado nos data centers da Meta em todo o mundo durante o processamento.-   **Dados em repouso:** após o período de dados em uso, o conteúdo da mensagem é excluído dos data centers da Meta fora da região de armazenamento local especificada e persiste apenas nos data centers dentro da região de armazenamento local selecionada. O período de dados em uso é diferente para a API de Nuvem e a API de MM Lite, conforme especificado abaixo:
     -   Ao usar o armazenamento local na API de Nuvem, o período de dados em uso é de até 60 minutos.-   Ao usar o armazenamento local na API de MM Lite, o período de dados em uso é de até 90 minutos.
 
-O armazenamento local complementa outros [controles de privacidade e segurança da Plataforma do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Ftrust-and-safety%3Ffbclid%3DIwZXh0bgNhZW0CMTEAYnJpZBExNkRZWTlJbDFSMDBUVlRLZwEe2Qq3X5Y-XnlgB832KjRawCRQOBQGgvzV0IgHxrk5kplGc2LAfA7cvutA9ms_aem_HXrl5zwbIRR1MUiy5tf6Cw&h=AT3UHqLwYU7Bb-85xI2Dn-oTHoESdchy9on_IJHUZQ0uMM-cfAnEQKDGbd1L_ao2QGEk9P27-17YpYYjERTwECJ8QSWxw6DeaOIWhJyblTChWN1teIo2QqHpzUZFtuBrlFEGu5gz5J4) e permite que os clientes garantam a conformidade com regulamentos locais de proteção de dados.
+O armazenamento local complementa outros [controles de privacidade e segurança da Plataforma do WhatsApp Business⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Ftrust-and-safety%3Ffbclid%3DIwZXh0bgNhZW0CMTEAYnJpZBExNkRZWTlJbDFSMDBUVlRLZwEe2Qq3X5Y-XnlgB832KjRawCRQOBQGgvzV0IgHxrk5kplGc2LAfA7cvutA9ms_aem_HXrl5zwbIRR1MUiy5tf6Cw&h=AT3UHqLwYU7Bb-85xI2Dn-oTHoESdchy9on_IJHUZQ0uMM-cfAnEQKDGbd1L_ao2QGEk9P27-17YpYYjERTwECJ8QSWxw6DeaOIWhJyblTChWN1teIo2QqHpzUZFtuBrlFEGu5gz5J4) e permite que os clientes garantam a conformidade com regulamentos locais de proteção de dados.
 
 ## Dados em escopo
 
@@ -34,13 +34,13 @@ Para ver quais regiões são compatíveis com o armazenamento local, confira o p
 
 -   Os arquivos de mídia enviados por um número de telefone comercial com armazenamento local habilitado só poderão ser acessados ​​por esse número de telefone específico e não poderão ser compartilhados com outros números associados à empresa.
 
-## Como habilitar o Armazenamento Local
+## Como habilitar o armazenamento local
 
-Siga as etapas abaixo para habilitar o Armazenamento Local em um número de telefone comercial não registrado usando a versão 21.0 ou mais recente da API. Se estiver usando uma versão mais antiga da API, consulte [Como habilitar o Armazenamento Local (v20 e versões anteriores)](/documentation/business-messaging/whatsapp/local-storage#enabling-local-storage--v20-and-older-).
+Siga as etapas abaixo para habilitar o armazenamento local em um número de telefone comercial não registrado usando a versão 21.0 ou mais recente da API. Se estiver usando uma versão mais antiga da API, consulte [Como habilitar o armazenamento local (v20 e versões anteriores)](/documentation/business-messaging/whatsapp/local-storage#enabling-local-storage--v20-and-older-).
 
-### Etapa 1: habilitar o Armazenamento Local no número de telefone
+### Etapa 1: habilitar o armazenamento local no número de telefone
 
-O recurso de Armazenamento Local só poderá ser habilitado ou desabilitado em números de telefone comerciais do WhatsApp que estiverem em um estado não registrado. Caso o número de telefone esteja registrado, será preciso cancelar o registro e registrá-lo novamente com o armazenamento local habilitado.
+O armazenamento local só poderá ser habilitado ou desabilitado em números de telefone comerciais do WhatsApp que estiverem em um estado não registrado. Caso o número de telefone esteja registrado, será preciso cancelar o registro e registrá-lo novamente com o armazenamento local habilitado.
 
 Use o ponto de extremidade [**POST /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>/settings**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/settings-api#Updating) para habilitar o armazenamento local no número de telefone comercial não registrado:
 
@@ -57,7 +57,7 @@ POST /<WHATSAPP_BUSINESS_PHONE_NUMBER_ID>/settings
 }
 ```
 
-Defina `<COUNTRY_CODE>` como o [country code](#available-regions) do local onde os dados em repouso devem ser armazenados.
+Defina `<COUNTRY_CODE>` como o [código do país](#available-regions) do local onde os dados em repouso devem ser armazenados.
 
 #### Sintaxe da resposta
 
@@ -72,7 +72,7 @@ Em caso de sucesso, `<SUCCESS>` será definido como `true`.
 #### Exemplo de solicitação
 
 ```
-curl 'https://graph.facebook.com/v24.0/106540352242922/settings' \
+curl 'https://graph.facebook.com/v25.0/106540352242922/settings' \
 -H 'Content-Type: application/json' \
 -H 'Authorization: Bearer EAAJB...' \
 -d '
@@ -90,7 +90,7 @@ curl 'https://graph.facebook.com/v24.0/106540352242922/settings' \
 {  "success": true}
 ```
 
-### Etapa 2: registrar o número de telefone
+### Etapa 2: registrar o número
 
 Use o ponto de extremidade [**POST /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>/register**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/register-api#Creating) para registrar o número de telefone comercial.
 
@@ -105,7 +105,7 @@ POST /<WHATSAPP_BUSINESS_PHONE_NUMBER_ID>/register
 }
 ```
 
-Defina `<TWO_STEP_PIN>` como o PIN de verificação em duas etapas desejado para o número de telefone comercial.
+Defina `<TWO_STEP_PIN>` como o PIN de confirmação em duas etapas desejado para o número de telefone comercial.
 
 #### Sintaxe da resposta
 
@@ -120,7 +120,7 @@ Em caso de sucesso, `<SUCCESS>` será definido como `true`.
 #### Exemplo de solicitação
 
 ```
-curl 'https://graph.facebook.com/v21.0/v24.0/register' \
+curl 'https://graph.facebook.com/v21.0/v25.0/register' \
 -H 'Content-Type: application/json' \
 -H 'Authorization: Bearer EAAJB...' \
 -d '
@@ -141,7 +141,7 @@ curl 'https://graph.facebook.com/v21.0/v24.0/register' \
 Use o ponto de extremidade [**GET /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>/settings**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/settings-api#Reading) para ver as configurações de armazenamento local em um número de telefone do WhatsApp Business. Por exemplo:
 
 ```
-curl 'https://graph.facebook.com/v24.0/179776755229976/settings' \
+curl 'https://graph.facebook.com/v25.0/179776755229976/settings' \
 -H 'Authorization: Bearer EAAJB...'
 ```
 
@@ -151,9 +151,9 @@ Isso retornará um [nó que representa as configurações de armazenamento local
 {  "storage_configuration": {    "status": "IN_COUNTRY_STORAGE_ENABLED",    "data_localization_region": "BR"  }}
 ```
 
-## Como desabilitar o Armazenamento Local
+## Como desabilitar o armazenamento local
 
-Use o ponto de extremidade [**POST /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>/settings**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/settings-api#Updating) para desabilitar o armazenamento local em um número de telefone comercial não registrado com a versão 21.0 ou mais recente da API. Se estiver usando uma versão mais antiga da API, consulte [Como desabilitar o Armazenamento Local (v20 e versões anteriores)](#disabling-local-storage--v20-and-older-).
+Use o ponto de extremidade [**POST /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>/settings**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/settings-api#Updating) para desabilitar o armazenamento local em um número de telefone comercial não registrado com a versão 21.0 ou mais recente da API. Se estiver usando uma versão mais antiga da API, consulte [Como desabilitar o armazenamento lLocal (v20 e versões anteriores)](#disabling-local-storage-using-v20-and-older).
 
 #### Sintaxe da solicitação
 
@@ -167,7 +167,7 @@ POST /<WHATSAPP_BUSINESS_PHONE_NUMBER_ID/>settings
 }
 ```
 
-Defina `<COUNTRY_CODE>` como o [country code](#available-regions) do local onde os dados em repouso devem ser armazenados.
+Defina `<COUNTRY_CODE>` como o [código do país](#available-regions) do local onde os dados em repouso devem ser armazenados.
 
 #### Sintaxe da resposta
 
@@ -182,7 +182,7 @@ Em caso de sucesso, `<SUCCESS>` será definido como `true`.
 #### Exemplo de solicitação
 
 ```
-curl 'https://graph.facebook.com/v24.0/106540352242922/settings' \
+curl 'https://graph.facebook.com/v25.0/106540352242922/settings' \
 -H 'Content-Type: application/json' \
 -H 'Authorization: Bearer EAAJB...' \
 -d '
@@ -199,19 +199,19 @@ curl 'https://graph.facebook.com/v24.0/106540352242922/settings' \
 {  "success": true}
 ```
 
-## Como habilitar o Armazenamento Local (v20 e versões anteriores)
+## Como habilitar o armazenamento local com a versão 20 e anteriores
 
-Para habilitar o Armazenamento Local em um número de telefone comercial não registrado usando a v20.0 ou versões anteriores da API:
+Para habilitar o armazenamento local em um número de telefone comercial não registrado usando a v20.0 ou versões anteriores da API:
 
 ### Etapa 1: consultar o status de verificação
 
 Use o ponto de extremidade [**GET /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER>**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-phone-number-api#Reading) e solicite o campo `code_verification_status`. Se o status de verificação de código for `VERIFIED`, pule para a etapa 4. Caso contrário, prossiga para a etapa 2.
 
-### Etapa 2: solicitar um código de verificação
+### Etapa 2: solicite um código de verificação
 
-Use o ponto de extremidade [**POST /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>/request\_code**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-pre-verified-phone-number/request-verification-code-api#Creating) para solicitar um código de verificação. Em caso de sucesso, a API responderá com `true`, e um código de verificação será enviado ao número de telefone comercial por meio do método especificado no parâmetro `code_method`.
+Use o ponto de extremidade [**POST /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>/request\_code**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-pre-verified-phone-number/request-verification-code-api#Creating) para solicitar um código de verificação. Em caso de sucesso, a API responderá com `true` e um código de verificação será enviado ao número de telefone comercial por meio do método especificado no parâmetro `code_method`.
 
-Por exemplo, esta consulta solicita que um código de verificação seja enviado via SMS em inglês (localidade nos EUA).
+Por exemplo, essa consulta solicita que um código de verificação seja enviado via SMS em inglês (localidade nos EUA).
 
 ```
 curl -X POST 'https://graph.facebook.com/v20.0/110200345501442/request_code?code_method=SMS&language=en_US' \-H 'Authorization: Bearer EAAJB...'
@@ -233,42 +233,42 @@ curl -X POST 'https://graph.facebook.com/v20.0/110200345501442/verify_code?co
 
 Use o ponto de extremidade [**POST /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>/register**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/register-api#Creating) para registrar o número de telefone comercial. Indique o país onde os dados em repouso devem ser armazenados usando o parâmetro `data_localization_region`.
 
-Esta solicitação habilita o Armazenamento Local em um número de telefone comercial e define o país onde os dados devem ser armazenados (por exemplo, Índia):
+Essa solicitação habilita o armazenamento local em um número de telefone comercial e define o país onde os dados devem ser armazenados (por exemplo, Índia):
 
 ```
 curl 'https://graph.facebook.com/v20.0/110200345501442/register' \-H 'Content-Type: application/json' \-H 'Authorization: Bearer EAAJB...' \-d '{  "messaging_product": "whatsapp",  "pin": "123456",  "data_localization_region": "IN"}'
 ```
 
-## Como desabilitar o Armazenamento Local (v20 e versões anteriores)
+## Como desabilitar o armazenamento local usando a versão 20 e anteriores
 
 Use o ponto de extremidade [**POST /<WHATSAPP\_BUSINESS\_PHONE\_NUMBER\_ID>/deregister**](/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/phone-number-deregister-api#Creating) para desabilitar o armazenamento local em um número de telefone comercial com a versão 20.0 ou versões anteriores da API.
 
 Por exemplo:
 
 ```
-curl -X POST 'https://graph.facebook.com/v24.0/110200345501442/deregister' \
+curl -X POST 'https://graph.facebook.com/v25.0/110200345501442/deregister' \
 -H 'Authorization: Bearer EAAJB...'
 ```
 
-Vale ressaltar que isso cancelará o registro do número de telefone comercial e impedirá o uso dele com a API de Nuvem do WhatsApp. Se quiser continuar usando o número com a API de Nuvem, mas sem o Armazenamento Local habilitado, você deverá registrá-lo novamente sem incluir o parâmetro `data_localization_region`.
+Vale ressaltar que isso cancelará o registro do número de telefone comercial e impedirá o uso dele com a API de Nuvem do WhatsApp. Se quiser continuar usando o número com a API de Nuvem, mas sem o armazenamento local habilitado, você deverá registrá-lo novamente sem incluir o parâmetro `data_localization_region`.
 
 ## Perguntas frequentes
 
-**P. Quais são os caminhos de migração para mover um número de telefone para a versão da API de Nuvem com Armazenamento Local?**
+**P. Quais são os caminhos de migração para mover um número de telefone para a versão da API de Nuvem com armazenamento local?**
 
-Aceitamos todos os caminhos de migração para a versão da API de Nuvem com Armazenamento Local, incluindo:
+Aceitamos todos os caminhos de migração para a versão da API de Nuvem com armazenamento local, incluindo:
 
--   Migrar um número existente da API Local para a versão da API de Nuvem com Armazenamento Local-   Migrar um número existente da API de Nuvem para a versão com Armazenamento Local-   Habilitar um número novo na API de Nuvem com Armazenamento Local
+-   Migrar um número existente da API Local para a versão da API de Nuvem com armazenamento local-   Migrar um número existente da API de Nuvem para a versão com armazenamento local-   Habilitar um número novo na API de Nuvem com armazenamento local
 
 Em todos esses casos, é necessário enviar uma solicitação POST ao ponto de extremidade [/register](/documentation/business-messaging/whatsapp/business-phone-numbers/registration#register) para o número de telefone selecionado, especificando o país no qual os dados devem ser localizados em um novo parâmetro `data_localization_region`.
 
 **P. A migração traz algum risco? Haverá um período de inatividade?**
 
-Não existem riscos. Esse processo é semelhante ao da migração da API Local para a API de Nuvem. Consulte nossa [documentação para desenvolvedores neste link](/documentation/business-messaging/whatsapp/support/migrating-from-onprem-to-cloud). Normalmente, o tempo de inatividade é inferior a 5 minutos, e não é preciso verificar o número de telefone comercial novamente.
+Não existem riscos. Esse processo é semelhante ao da migração da API Local para a API de Nuvem. Consulte nossa [documentação para desenvolvedores neste link](/documentation/business-messaging/whatsapp/support/migrating-from-onprem-to-cloud). Normalmente, o tempo de inatividade é inferior a 5 minutos e não é preciso verificar o número de telefone comercial outra vez.
 
 **P. Há algum tempo de inatividade associado à habilitação do armazenamento local para um número de telefone comercial?**
 
-Se o número de telefone comercial já estiver registrado, será necessário excluí-lo e registrá-lo novamente com o armazenamento local habilitado. Esse processo normalmente demora menos de cinco minutos. Não é necessária uma nova verificação do número de telefone comercial durante esse processo.
+Se o número de telefone comercial já estiver registrado, será necessário excluí-lo e registrá-lo novamente com o armazenamento local habilitado. Esse processo costuma levar menos de cinco minutos. Não é necessária uma nova verificação do número de telefone comercial enquanto isso.
 
 Você achou esta página útil?
 

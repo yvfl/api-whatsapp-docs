@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/whatsapp-business-phone-number/whatsapp-business-account-message-history-api -->
-<!-- Scraped: 2026-01-24T00:54:22.953Z -->
+<!-- Scraped: 2026-03-10T22:01:46.840Z -->
 
 ## Esta página não está disponível no momento
 

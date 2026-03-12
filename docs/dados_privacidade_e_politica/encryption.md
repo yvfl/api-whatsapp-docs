@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/encryption -->
-<!-- Scraped: 2026-01-24T00:34:33.794Z -->
+<!-- Scraped: 2026-03-10T21:43:25.710Z -->
 
 ## Esta página não está disponível no momento
 

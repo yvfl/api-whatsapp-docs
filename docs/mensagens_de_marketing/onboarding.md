@@ -1,9 +1,9 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/onboarding -->
-<!-- Scraped: 2026-01-24T00:37:44.220Z -->
+<!-- Scraped: 2026-03-10T21:46:24.477Z -->
 
 # Integração
 
-Updated: 10 de dez de 2025
+Updated: 10 de fev de 2026
 
 A API de Mensagens de Marketing para o WhatsApp (anteriormente conhecida como API de Mensagens de Marketing Lite) agora está disponível para todos.
 
@@ -21,7 +21,7 @@ Siga as etapas abaixo para integrar a API de MM para o WhatsApp.
 
 ## Requisitos de qualificação
 
-Para usar a API de Mensagens de Marketing para o WhatsApp (API de MM para o WhatsApp), a empresa precisa cumprir as restrições legais, setoriais e de conteúdo aplicáveis (que variam de acordo com o país), conforme descrito nas [Políticas de Mensagens do WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fpolicy&h=AT3R2yIDRQ5FhkYT0IZq_hcT6L15PVOkgTpNAstd-b0_AJZmto9pPl3CX7FD3UYL6pq5DIVNy-dQ_FCIF2yUFmoG5UC_hx7IDoYgXhJYSPaay1OFI4SQF3Uyw895Ervr3eE7dvFPigt-dGINTnAaDRH_umI).
+Para usar a API de Mensagens de Marketing para o WhatsApp (API de MM para o WhatsApp), a empresa precisa cumprir as restrições legais, setoriais e de conteúdo aplicáveis (que variam de acordo com o país), conforme descrito nas [Políticas de Mensagens do WhatsApp Business⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fpolicy&h=AT5yYkPUum-DhgC0bbx4kKHhUsF0CmCwZx5YbLoVQRtTGoQWyNm8unMds1iGzsbuFsUwmikBarsNgLbuHj4lnvnqSaZARVydVvr40mS-9lZ9qSoBcWYuu6U-awTNb9tH5NP3-M4atFV-vVJKlb3HpMkJLOc).
 
 Além disso, os seguintes requisitos devem ser atendidos:
 
@@ -38,7 +38,7 @@ Nas WABAs qualificadas, o campo é definido como `ELIGIBLE`. Um valor definido c
 **Exemplo de solicitação**
 
 ```
-curl 'https://graph.facebook.com/v24.0/25002526842541/?fields=marketing_messages_onboarding_status' \
+curl 'https://graph.facebook.com/v25.0/25002526842541/?fields=marketing_messages_onboarding_status' \
     -H 'Authorization: Bearer EAAAl...'
 ```
 
@@ -66,7 +66,7 @@ GET /<BUSINESS_PORTFOLIO_ID>/client_whatsapp_business_accounts
 **Exemplo de solicitação**
 
 ```
-curl -g 'https://graph.facebook.com/v24.0/19502398688333/client_whatsapp_business_accounts?filtering=[{'field':'marketing_messages_onboarding_status','operator':'IN','value':['ELIGIBLE']}]' \
+curl -g 'https://graph.facebook.com/v25.0/19502398688333/client_whatsapp_business_accounts?filtering=[{'field':'marketing_messages_onboarding_status','operator':'IN','value':['ELIGIBLE']}]' \
     -H 'Authorization: Bearer EAAAj...'
 ```
 
@@ -102,7 +102,7 @@ Use o ponto de extremidade [GET /<BUSINESS\_PORTFOLIO\_ID>/](/docs/marketing-api
 
 -   `business_management`
 
-#### Exemplo de solicitação
+#### Exemplo de pedido
 
 ```
 curl "https://graph.facebook.com/v24.0/52002526842524351/?fields=marketing_messages_onboarding_status" \-H 'Authorization: Bearer EAAAl...'
@@ -120,7 +120,7 @@ Use o ponto de extremidade [GET /<WHATSAPP\_BUSINESS\_ACCOUNT\_ID>](/documentati
 
 -   `whatsapp_business_management`-   `whatsapp_business_messaging`
 
-#### Exemplo de solicitação
+#### Exemplo de pedido
 
 ```
 curl GET "https://graph.facebook.com/v24.0/69843579834234?fields=owner_business_info" \-H 'Authorization: Bearer EAAAl...'
@@ -173,9 +173,9 @@ Caso sua empresa faça a integração direta com a API de Nuvem sem um parceiro,
 
 -   Acesse **[Painel de Apps](/apps)** > **WhatsApp** > **Início rápido**.-   Na página **Início rápido** , localize o cartão “Aumente o ROI com a API de Mensagens de Marketing para o WhatsApp” e clique no botão “Começar”.-   Clique em "Continuar para o guia de integração" e aceite os Termos de Serviço
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/476020445_3647418092312679_4465719704295641193_n.png?_nc_cat=110&ccb=1-7&_nc_sid=e280be&_nc_ohc=hWuUJeCMyt4Q7kNvwG8JLgF&_nc_oc=AdmW2vMoUb_Z1KGAFv3wAC-LIzpFKRzSq3gwE3D5eBKG1bKNgz-cEp5-oJ3fhYCt1Ss&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=Op4XEqVddXCxdm6-eUGXiw&oh=00_AfpQZh1dwKKcgYGbFjO4OHhkA6IkaSAi_yJFDljBiKstzQ&oe=698E460B)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/476020445_3647418092312679_4465719704295641193_n.png?stp=dst-webp&_nc_cat=110&ccb=1-7&_nc_sid=e280be&_nc_ohc=Mc6bW1C_XNsQ7kNvwHb8Nt5&_nc_oc=AdmExcX1cHsOOtGZ_mrtyKb4Gd3v7R4MD7ZjF3ygzLUJViRkTrmfgsnsFvWWSE_6DR8&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=nkhsZGpTcawRv1rmldnDcg&_nc_ss=8&oh=00_Afz-_Tv4XPiFngcuaTMwzZpBq5AzUL4Nj63r6CgHqt2MSw&oe=69CAEB0B)
 
-![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/476114538_1636490170408141_5744881403199109308_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=W0rATKznZesQ7kNvwEIPeN9&_nc_oc=Adl1_5O6LOzlh6IElOkSr067ErFDOARgelYTNa0DXpjPRdJEiW8j2ePRPsBWHfz-NrY&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=Op4XEqVddXCxdm6-eUGXiw&oh=00_Afr_tzGOzR2Ah_o1qYi_cX6dV87GRe4nTMdcu0S0Vbbf8Q&oe=698E6D91)
+![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/476114538_1636490170408141_5744881403199109308_n.png?stp=dst-webp&_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=Lv7NLecLxIYQ7kNvwFm1Lxo&_nc_oc=AdlEr7Th30-zT24HglV6gnaaVyyv8LwPMvNN0TbVyZj9QQWwvxr5XDhfrpNAuSVs6Gs&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=nkhsZGpTcawRv1rmldnDcg&_nc_ss=8&oh=00_Afx2-s44nsXj-S3IV2eAKo84wQX2lax02UubxtFBEB67NA&oe=69CADA51)
 
 ## Como compartilhar a atividade do evento
 
@@ -183,9 +183,9 @@ Assim que a empresa for integrada, os eventos de status de mensagem (entregue, l
 
 ### Gerenciar via configurações da conta do WhatsApp
 
-É possível desabilitar o compartilhamento da atividade do evento na [configuração da conta do WhatsApp Business](https://business.facebook.com/latest/settings/whatsapp_account).
+É possível desabilitar o compartilhamento da atividade do evento na [configuração da conta do WhatsApp Business⁠](https://business.facebook.com/latest/settings/whatsapp_account).
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/532666735_24223328414028742_8881901315029283677_n.png?_nc_cat=103&ccb=1-7&_nc_sid=e280be&_nc_ohc=tyEQ5sWl38UQ7kNvwHWFLVB&_nc_oc=AdkOo2S8Vfq9qvx-FOv7LFnjt97OdhmIUrxUFZagvlCr9JxfZjMpKh8DKxPheCq0SsQ&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=Op4XEqVddXCxdm6-eUGXiw&oh=00_AfpQoNqivFRyeXaHJvFyHZ7GTqbnBqrkUJGIT9tdU_uFWQ&oe=698E489C)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/532666735_24223328414028742_8881901315029283677_n.png?stp=dst-webp&_nc_cat=103&ccb=1-7&_nc_sid=e280be&_nc_ohc=qtsUXoTxI90Q7kNvwEuq3nf&_nc_oc=AdlKXDw63PoOO15uCLodkC9E783e5v4pbFOs3z6n7uxloDuaDfSiRPpy-W_v_cE6_P8&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=nkhsZGpTcawRv1rmldnDcg&_nc_ss=8&oh=00_AfyhFdc5OvoLnFeG7fQi9LcRriTa8Lqcx9Nn7yByWXWVNQ&oe=69CAED9C)
 
 ### Configurar via API
 

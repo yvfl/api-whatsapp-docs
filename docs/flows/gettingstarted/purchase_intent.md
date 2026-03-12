@@ -1,7 +1,7 @@
 <!-- Source: https://developers.facebook.com/docs/whatsapp/flows/gettingstarted/purchase-intent -->
-<!-- Scraped: 2026-01-24T00:24:21.469Z -->
+<!-- Scraped: 2026-03-10T21:34:49.662Z -->
 
-![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1765810345)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
+![](https://lookaside.fbsbx.com/elementpath/media/?media_id=595945097590761&version=1770998864)[Plataforma do WhatsApp Business](https://developers.facebook.com/docs/whatsapp)
 
 [](#)
 
@@ -206,7 +206,7 @@ You can publish your Flow once you have ensured that:
 
 -   All validation errors and [publishing checks](/docs/whatsapp/flows/guides/healthmonitoring#publishing-checks) have been resolved.
 -   The Flow meets the [design principles](https://developers.facebook.com/docs/whatsapp/flows/guides/bestpractices) of WhatsApp Flows
--   The Flow complies with [WhatsApp Terms of Service](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fterms-of-service%2F%3Flang%3Den&h=AT3wV6RHCA-yGg1M19AeI8yB0DjqB0gGRj8oFW-Eq1a3pc878Wt-9p6ywaWgikNbWfZiyBN8yMnoABJAtZw2VfW2ZvSefYPORKKPDxasN8QtyB7VvEUcHglXKh7DeeyZ6dEN7BHJCTgLQ6YLyqkNtP-c5cQ), the [WhatsApp Business Messaging Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F933578044281252&h=AT1l2-TiMTA8TWGR2aTvMYrnbU5kPEVYk1OhLU24CAp8JKOjRqqvabZTBxyDOKSn92aXXC0Ug2eB-UkUaqCGdU8CgDlaHLmdmoan-s9344RPqW4AHnzlImXIUiFT8a3MZu9CYscuiuTHxhjYiwUP5hNuVi4) and, if applicable, the [WhatsApp Commerce Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fcommerce-policy%2F%3Flang%3Den&h=AT0SioeMwJEgLAIsGyDt_HCoa7Ee4dbBlWA3MfDcyfc65gIyaRqzZBD4zYzBW7zv2V7DStwEeNDmExsPjcXs52hdgizthaoXwqZnPsg1TfQ9IyPK-xD83ttjPQmTvTlkITwBQhHkx-HUlqd2TVeo3nThUFc)
+-   The Flow complies with [WhatsApp Terms of Service](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fterms-of-service%2F%3Flang%3Den&h=AT69cRPB5HpiqRLffHTY0apSz_ahIPWfwgughL75j4yhqTl7d1MMA1nLVLPi917lzlDXTP7qk975-BHeOL-JEHCw3Y8HxA301g1dJXfBF2wFxx4zscXw329dzz27AZAiCVqvFB__6UZCRU1sGH1P15iCHmQ), the [WhatsApp Business Messaging Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F933578044281252&h=AT7mHkhZ1y3uVzpYkiBL_XFAyukDK-AIYYzVCaYRJT20GQSdx0yZDb4qZIA1kK1ng8UMeEMVgKCC8k_zj11N004e9RQGoQ2y1ud-qgZg2ltumyobU8c1FpCwcPfgil8C7No3jsAFqj-PHwm5ppI19Soxttc) and, if applicable, the [WhatsApp Commerce Policy](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp.com%2Flegal%2Fcommerce-policy%2F%3Flang%3Den&h=AT7eqRQ1t6B6rXhtUJcRCPaBm53vdGL6fVpx6q2FYPnbgxvwi6uCaq_3wv-UVXLLy3p6pbBHDQX_c4GIdyr8yawK0V2ZBWz8tepVWXDZzaLhMMBgmM8YQtmKoh1cEkcGnbukAhdBYQV0dVVeFkJr-zMZ1GU)
 
 Remember, once a Flow has been published it can no longer be modified. See [Flow Status Lifecycle](/docs/whatsapp/flows/gettingstarted/flows-lifecycle) for more information on the different Flow states.
 

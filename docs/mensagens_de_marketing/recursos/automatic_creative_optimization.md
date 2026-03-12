@@ -1,5 +1,5 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/automatic-creative-optimization -->
-<!-- Scraped: 2026-01-24T00:36:32.123Z -->
+<!-- Scraped: 2026-03-10T21:45:09.703Z -->
 
 ## Esta página não está disponível no momento
 

@@ -1,15 +1,81 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/changelog -->
-<!-- Scraped: 2026-01-24T00:30:48.963Z -->
+<!-- Scraped: 2026-03-10T21:40:16.181Z -->
 
 Registro de alterações
 
-Atualizado em: 8 de dezembro de 2025
+Atualizado em: 2 de março de 2026
+
+[
+
+Get notified
+
+](/documentation/business-messaging/whatsapp/changelog/rss/)
 
 * * *
 
-Registro de alterações (173)
+Registro de alterações (180)
 
 Pesquisar no registro de alterações
+
+2 de março de 2026
+
+_Cloud API_, _Marketing Messages API for WhatsApp_, _Pricing_
+
+Added [upcoming rates](/documentation/business-messaging/whatsapp/pricing#upcoming-updates-to-rate-cards) for 2026 for the following countries:
+
+Argentina (ARS), Australia (AUD), Chile (CLP), Colombia (COP), Euro (EUR), India (INR), Indonesia (IDR), Malaysia (MYR), Mexico (MXN), Peru (PEN), Saudi Arabia (SAR), Singapore (SGD), United Arab Emirates (AED), United Kingdom (GBP), United States (USD).
+
+* * *
+
+19 de fevereiro de 2026
+
+_Marketing Messages API for WhatsApp_
+
+Added a new [Automatic Creative Optimization](/documentation/business-messaging/whatsapp/marketing-messages/send-marketing-messages#send-marketing-template-messages) type: Auto promotion tag.
+
+* * *
+
+19 de fevereiro de 2026
+
+_Cloud API_
+
+Added new [unsupported message types](/documentation/business-messaging/whatsapp/webhooks/reference/messages/unsupported) in the unsupported messages webhook.
+
+* * *
+
+4 de fevereiro de 2026
+
+_Embedded Signup_
+
+Added `account_offboarded` and `account_reconnected` webhooks for [Coexistence](/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users).
+
+* * *
+
+3 de fevereiro de 2026
+
+_Cloud API_
+
+[Cloud API Groups](/documentation/business-messaging/whatsapp/groups) are now available to all businesses with an [Official Business Account](/documentation/business-messaging/whatsapp/official-business-accounts).
+
+* * *
+
+29 de janeiro de 2026
+
+_Marketing Messages API for WhatsApp_
+
+[Multi-solution conversations](/documentation/business-messaging/whatsapp/solution-providers/multi-solution-conversations) are now available for Marketing Messages API for WhatsApp.
+
+* * *
+
+28 de janeiro de 2026
+
+_Cloud API_
+
+Added new [pricing policy for AI Providers](/documentation/business-messaging/whatsapp/pricing/ai-providers).
+
+Effective February 16, 2026, in countries where Meta is legally required to support AI Providers, Meta will charge AI Providers for non-template messages sent to WhatsApp users.
+
+* * *
 
 8 de dezembro de 2025
 
@@ -119,7 +185,7 @@ _MM Lite API_
 
 _Cloud API_
 
-Ad click IDs will not be included in incoming [text messages](/documentation/business-messaging/whatsapp/webhooks/reference/messages/text) webhooks payloads describing an incoming message that originated from a [WhatsApp Status ad placements](https://www.facebook.com/business/help/1074444721456755?id=805840565113559).
+Ad click IDs will not be included in incoming [text messages](/documentation/business-messaging/whatsapp/webhooks/reference/messages/text) webhooks payloads describing an incoming message that originated from a [WhatsApp Status ad placements⁠](https://www.facebook.com/business/help/1074444721456755?id=805840565113559).
 
 * * *
 
@@ -139,7 +205,7 @@ If you don’t want to configure and host the Embedded Signup [implementation co
 
 Hosted ES is a pre-configured implementation of Embedded Signup that is hosted by Meta. You can get a link to Hosted ES in the App Dashboard and add it to your website or customer portal. Business customers who click the link will be presented with a webpage with a “Get started” button that launches the Embedded Signup flow:
 
-![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/557247008_1487309905743315_2332288243528054136_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=-wEermqbE-4Q7kNvwFOE40k&_nc_oc=AdnkaSfUS3hmcVIxPmVk7BB4Jh6LxSBg_9Qdj7QHHoQZhkyM68XqHmG3AiwWqk1JR_w&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=YPIcMpRyzmvlfNWhG3SgGw&oh=00_AfpZLniQEXMb0uvU-xpRovqcBQIK5V_VgwXvS_5TVXfYQw&oe=698E604A)
+![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/557247008_1487309905743315_2332288243528054136_n.png?stp=dst-webp&_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=9xTsAKri29kQ7kNvwE9fXVg&_nc_oc=AdlQP6IEn7Hgwt21a6CY97IY6r2-rkslUWa1S_Ymu6QogpK_Vq5uKkmFJC8vu7kBEaQ&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=pcc-om_10wWbs4p3brennQ&_nc_ss=8&oh=00_AfyBGD7bimvpV1B7Pd0emNYnhg7QWusJrwAO4BsQTAugjw&oe=69CACD0A)
 
 * * *
 
@@ -147,9 +213,9 @@ Hosted ES is a pre-configured implementation of Embedded Signup that is hosted b
 
 _Cloud API, Business Management API_
 
--   Incoming media messages webhooks ([image messages](/documentation/business-messaging/whatsapp/webhooks/reference/messages/image), [video messages](/documentation/business-messaging/whatsapp/webhooks/reference/messages/video), etc.) now include the incoming media asset’s media URL, which is assigned to the `url` property.-   You can now designate an [audio message](/documentation/business-messaging/whatsapp/messages/audio-messages) as a **voice message**. Delivered voice messages appear in the WhatsApp client with a play icon, waveform graphic, profile image, and a microphone icon. If the recipient has enabled [voice message transcripts](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F241617298315321%2F&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc), a text transcription of the message can also appear:
+-   Incoming media messages webhooks ([image messages](/documentation/business-messaging/whatsapp/webhooks/reference/messages/image), [video messages](/documentation/business-messaging/whatsapp/webhooks/reference/messages/video), etc.) now include the incoming media asset’s media URL, which is assigned to the `url` property.-   You can now designate an [audio message](/documentation/business-messaging/whatsapp/messages/audio-messages) as a **voice message**. Delivered voice messages appear in the WhatsApp client with a play icon, waveform graphic, profile image, and a microphone icon. If the recipient has enabled [voice message transcripts⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F241617298315321%2F&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE), a text transcription of the message can also appear:
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/562379210_2249057198900177_5743647093897895635_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=3XmPlQHJReMQ7kNvwEQ36F6&_nc_oc=AdnXOIvRMPcqUS4hSksj_CdJ6fWqdh1U9jCSSt0ZFsFFtVHmyT_atVu1EvkbuJBSKRY&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=YPIcMpRyzmvlfNWhG3SgGw&oh=00_AfplddaMy41akZGYf1BXJPSLdcTkSnpnOFA5P70clqTYxQ&oe=698E674C)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/562379210_2249057198900177_5743647093897895635_n.png?stp=dst-webp&_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=q2bVTJ5P0cYQ7kNvwFAat6h&_nc_oc=AdnDlak08xq88bYmIqFMhsJbQqCkzGCFAEHI7NCZVmZv3kyOXQh0Fbe1KQmh17njB9g&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=pcc-om_10wWbs4p3brennQ&_nc_ss=8&oh=00_AfzsdFUL1r0KLR_OsMndzCxx5LmjZxhQebnsh6K438WxgA&oe=69CAD40C)
 
 * * *
 
@@ -170,7 +236,7 @@ _Cloud API, Business Management API_
 
 _Embedded Signup_
 
-[Embedded Signup version 4](/documentation/business-messaging/whatsapp/embedded-signup/version-4) is now available. Version 4 provides a simplified onboarding experience and allows you to onboard business customers to multiple products (WhatsApp Cloud API, Marketing Messages Lite API, [Ads that click-to-WhatsApp](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fproducts%2Fads-that-click-to-whatsapp&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc) and the [Conversions API](/docs/marketing-api/conversions-api)).
+[Embedded Signup version 4](/documentation/business-messaging/whatsapp/embedded-signup/version-4) is now available. Version 4 provides a simplified onboarding experience and allows you to onboard business customers to multiple products (WhatsApp Cloud API, Marketing Messages Lite API, [Ads that click-to-WhatsApp⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fproducts%2Fads-that-click-to-whatsapp&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE) and the [Conversions API](/docs/marketing-api/conversions-api)).
 
 * * *
 
@@ -273,7 +339,7 @@ _MM Lite API_
 
 Added a [features page](/docs/whatsapp/marketing-messages-lite-api/features) comparing MM Lite and Cloud API features.
 
-MM Lite API [uptime and availability metrics](/documentation/business-messaging/whatsapp/support/api-status-page) are now live on [metastatus.com](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api%3Ffbclid%3DIwY2xjawM2tbNleHRuA2FlbQIxMQBicmlkETFPWE5PUldSeE95a2tuMnA1AR66setbfmUOYwOMQ3HtM7k277dWGE5sNlomsS6qAp8WTv_DlOf4Y10k6Dhf2w_aem_ieXDJ6jqZJA6QbtWWAA2Dw&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc), providing visibility into service status.
+MM Lite API [uptime and availability metrics](/documentation/business-messaging/whatsapp/support/api-status-page) are now live on [metastatus.com⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api%3Ffbclid%3DIwY2xjawM2tbNleHRuA2FlbQIxMQBicmlkETFPWE5PUldSeE95a2tuMnA1AR66setbfmUOYwOMQ3HtM7k277dWGE5sNlomsS6qAp8WTv_DlOf4Y10k6Dhf2w_aem_ieXDJ6jqZJA6QbtWWAA2Dw&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE), providing visibility into service status.
 
 * * *
 
@@ -355,7 +421,7 @@ _MM Lite API_
 
 Added a troubleshooting guide on how to identify admins of a business portfolio using Meta Business Suite or the API. Both methods return the same results.
 
--   [Meta Business Suite](https://business.facebook.com): Navigate to the Business Settings to view users with **Full Control** access.-   API: [GET /<WHATSAPP\_BUSINESS\_ACCOUNT\_ID>](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/whatsapp-business-account-api) and [GET /<BUSINESS\_PORTFOLIO\_ID>/business\_users](/docs/marketing-api/reference/business/business_users) endpoints to get a list of business portfolio admins.
+-   [Meta Business Suite⁠](https://business.facebook.com): Navigate to the Business Settings to view users with **Full Control** access.-   API: [GET /<WHATSAPP\_BUSINESS\_ACCOUNT\_ID>](/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/whatsapp-business-account-api) and [GET /<BUSINESS\_PORTFOLIO\_ID>/business\_users](/docs/marketing-api/reference/business/business_users) endpoints to get a list of business portfolio admins.
 
 * * *
 
@@ -459,7 +525,7 @@ _Embedded Signup_
 
 Embedded Signup now gives business customers the option to have us automatically identify purchase or lead gen events in message threads that originate from ads that click to WhatsApp.
 
-![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/503425036_1029531339304862_7305936950282438326_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=jM1y6pktsg8Q7kNvwEhsmE0&_nc_oc=Adlf1Hq7KHh8MklKKZSVq9e4QIGY3mAheWay38FPA_0sfeP5pTFIJ0KQlzr3XUCan5U&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=YPIcMpRyzmvlfNWhG3SgGw&oh=00_Afo27SYHnfISsGKth2cWguELmjGEATaa207quK_ZiLjtXA&oe=698E4F4D)
+![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/503425036_1029531339304862_7305936950282438326_n.png?stp=dst-webp&_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=t3ER3YVRL8sQ7kNvwEebbyC&_nc_oc=AdmD6_LV9CONzF1Zw8q3JeO49vIPFC0W5bEjbc4eU3rda-U7cnFL51sTHfDw4tDhLLs&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=pcc-om_10wWbs4p3brennQ&_nc_ss=8&oh=00_AfwDiSC9CEODUkan7h36m2ZUzTB8fp88gJ2WJRDOIUtz2g&oe=69CABC0D)
 
 To be notified of these events, you can subscribe to the new new **automatic\_events** webhook, and optionally, report them via Conversions API. See [Automatic Events API](/documentation/business-messaging/whatsapp/embedded-signup/automatic-events-api) for more details.
 
@@ -633,7 +699,7 @@ Added additional tiles to the [App Dashboard](/apps) > **WhatsApp** > **Quicksta
 
 These tiles make it easier to find documentation for these products and automatically add required permissions to an App Review request, which you can review and submit at your convenience.
 
-![](https://scontent-gru1-1.xx.fbcdn.net/v/t39.2365-6/485152013_950048063974284_3173044385037889136_n.png?_nc_cat=101&ccb=1-7&_nc_sid=e280be&_nc_ohc=h3hgYYFflykQ7kNvwE8GVgq&_nc_oc=Adk6XM67Gu72uAK2MsQ_XFNHCyFZsZ-XH1mNYFGaIQtOjUVlMEMs3gvLTIaVmpcUcsE&_nc_zt=14&_nc_ht=scontent-gru1-1.xx&_nc_gid=YPIcMpRyzmvlfNWhG3SgGw&oh=00_AfqPgGtBpMYtLJ4V7VC-NZkc-1QyHtOUlwrY1Ejaf-Y5rw&oe=698E498F)
+![](https://scontent-gru1-1.xx.fbcdn.net/v/t39.2365-6/485152013_950048063974284_3173044385037889136_n.png?stp=dst-webp&_nc_cat=101&ccb=1-7&_nc_sid=e280be&_nc_ohc=kSKyTOJXSuoQ7kNvwHft9BB&_nc_oc=Adnu4_WmJL6SvFHxk9to_KBrpGv4E0PKJC5nP0pzNcZjUiHZ0LzWPKyfDsBWC0nrF3w&_nc_zt=14&_nc_ht=scontent-gru1-1.xx&_nc_gid=pcc-om_10wWbs4p3brennQ&_nc_ss=8&oh=00_AfxpegSIPjBhptz_A4hlKq6Lkt7WV4Ke5sz6a868YSGyFQ&oe=69CAB64F)
 
 Note that these tiles only appear for products that you are eligible to use.
 
@@ -805,7 +871,7 @@ For full details on how to see MM Lite API metrics via API and in pricing webhoo
 
 Businesses can now see MM Lite metrics as “Marketing - lite” in the WhatsApp Manager UI:
 
-![](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/475969840_997283928986096_7019011551543213590_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=L91Wag7jdGwQ7kNvwGzipuP&_nc_oc=AdniaddzqidloZtO6ggXj6zImfIIcimWZko-GZjOPJ_Jzj7M544xgikJhhUHIhRJEqA&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=YPIcMpRyzmvlfNWhG3SgGw&oh=00_AfrLLxU5_5EC0sNTh66PPlhip57gEmoAvy-bxwFMZ3aZFw&oe=698E5FE3)
+![](https://scontent-gru2-1.xx.fbcdn.net/v/t39.2365-6/475969840_997283928986096_7019011551543213590_n.png?stp=dst-webp&_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=KiJZnpeTfMwQ7kNvwEby-ES&_nc_oc=Adnikrv7Uy5ihJnpTxOJH7Y4dinFsoso2K9WkrzLfZ1mlYxBv4ZSWHbs0PzPVX9-5L8&_nc_zt=14&_nc_ht=scontent-gru2-1.xx&_nc_gid=pcc-om_10wWbs4p3brennQ&_nc_ss=8&oh=00_Afy2FzEj2tC4SbZ98sa7XYd6LnuIhTAsHovoX4koANaSpA&oe=69CACCA3)
 
 We recommend you integrate with the Marketing API “Insights API” for MM Lite Metrics, and encourage end businesses to log into Ads Manager UI to see their metrics, instead of using the WhatsApp business surface. Ads Mgr UI and Insights API show conversion metrics that are not available on WhatsApp surfaces, and will continue to support new metrics and features as the primary surface for MM Lite API reporting as the API grows.
 
@@ -825,7 +891,7 @@ We continue to invest to improve consumer experiences and business outcomes. We 
 
 -   Marketing: From 12 hours to 30 days, for businesses on MM Lite API-   Utility: From 30 seconds to 12 hours, for businesses on Cloud API-   Authentication: From 30 seconds to 15 minutes, for businesses on Cloud API or On-Premises API
 
-Businesses can customize the TTL of marketing, utility and authentication templates during template creation via WhatsApp Manager (via pre-set increments) and via API (in 1-second increments). This is reflected in our [dev docs](/documentation/business-messaging/whatsapp/templates/overview#time-to-live--customization-and-defaults) and [Business Help Center](https://www.facebook.com/business/help/1305007343713790).
+Businesses can customize the TTL of marketing, utility and authentication templates during template creation via WhatsApp Manager (via pre-set increments) and via API (in 1-second increments). This is reflected in our [dev docs](/documentation/business-messaging/whatsapp/templates/overview#time-to-live--customization-and-defaults) and [Business Help Center⁠](https://www.facebook.com/business/help/1305007343713790).
 
 * * *
 
@@ -1118,7 +1184,7 @@ Added [granular business tokens](/docs/whatsapp/embedded-signup/embed-the-flow) 
 
 _Cloud API_
 
--   Added Cloud API localized storage status to [WhatsApp Business API Status](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc) page.
+-   Added Cloud API localized storage status to [WhatsApp Business API Status⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE) page.
 
 _Business Management API_
 
@@ -1166,7 +1232,7 @@ We are [requiring Solution Partners to request the whatsapp\_business\_messaging
 
 _Cloud API_
 
-Added latency to the [WhatsApp Business API Status Page](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc).
+Added latency to the [WhatsApp Business API Status Page⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE).
 
 _Business Management API_
 
@@ -1291,7 +1357,7 @@ Conversely, users can now share their location information with businesses via [
 
 _Cloud API_, _On-Premises API_
 
-Migrating an India-based business phone number from On-Premises API to Cloud API no longer deletes its [online selling compliance data](https://www.facebook.com/business/help/1104628230079278), so you no longer have to manually repopulate this data after migration.
+Migrating an India-based business phone number from On-Premises API to Cloud API no longer deletes its [online selling compliance data⁠](https://www.facebook.com/business/help/1104628230079278), so you no longer have to manually repopulate this data after migration.
 
 * * *
 
@@ -1454,7 +1520,7 @@ _Business Management API_
 
 **Message Template Limit Increased**
 
-WhatsApp Business Accounts can now have up to 6,000 message templates if their parent business has been [verified](https://www.facebook.com/business/help/1095661473946872) and at least one of the parent business’s WhatsApp Business Accounts has a business phone number with an approved [display name](https://www.facebook.com/business/help/338047025165344).
+WhatsApp Business Accounts can now have up to 6,000 message templates if their parent business has been [verified⁠](https://www.facebook.com/business/help/1095661473946872) and at least one of the parent business’s WhatsApp Business Accounts has a business phone number with an approved [display name⁠](https://www.facebook.com/business/help/338047025165344).
 
 As part of this change, translated versions of a message template now count against a WhatsApp Business Account’s template limit.
 
@@ -1464,7 +1530,7 @@ As part of this change, translated versions of a message template now count agai
 
 _Cloud API_
 
-Businesses in India can now use a credit card to pay for messages sent using the platform. See [Add a Credit Card to Your WhatsApp Business Platform Account](https://www.facebook.com/business/help/488291839463771).
+Businesses in India can now use a credit card to pay for messages sent using the platform. See [Add a Credit Card to Your WhatsApp Business Platform Account⁠](https://www.facebook.com/business/help/488291839463771).
 
 * * *
 
@@ -1548,7 +1614,7 @@ _Cloud API_
 
 _Cloud API_
 
--   Businesses can now reply to any message in a conversation thread. Replies will include a contextual bubble referencing the replied-to message. Refer to the [Send Messages](/documentation/business-messaging/whatsapp/messages/send-messages#replies) guide to learn how to reply to a message.-   Cloud API now supports up to 250 messages per second of combined sending and receiving (inclusive of text and media messages), by request. If you are an enterprise partner you can open a [Direct Support](https://business.facebook.com/direct-support) ticket to request 250 MPS throughput by selecting Question Topic: “Cloud API Issues”, Request Type: “Request to migrate to 250 MPS throughput” and filling out the required information.
+-   Businesses can now reply to any message in a conversation thread. Replies will include a contextual bubble referencing the replied-to message. Refer to the [Send Messages](/documentation/business-messaging/whatsapp/messages/send-messages#replies) guide to learn how to reply to a message.-   Cloud API now supports up to 250 messages per second of combined sending and receiving (inclusive of text and media messages), by request. If you are an enterprise partner you can open a [Direct Support⁠](https://business.facebook.com/direct-support) ticket to request 250 MPS throughput by selecting Question Topic: “Cloud API Issues”, Request Type: “Request to migrate to 250 MPS throughput” and filling out the required information.
 
 * * *
 
@@ -1582,7 +1648,7 @@ We recommend increasing the query timeout on your database servers to one hour, 
 
 _Cloud API_
 
-Starting today, the WhatsApp Business Cloud API is open to all developers building products or services for themselves or their organizations. To get started, [see our guide](/docs/whatsapp/getting-started/signing-up). If you are interested in offering API access to your customers, please [join our waitlist](https://l.facebook.com/l.php?u=http%3A%2F%2Fbusiness.whatsapp.com%2Flearn-more&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc).
+Starting today, the WhatsApp Business Cloud API is open to all developers building products or services for themselves or their organizations. To get started, [see our guide](/docs/whatsapp/getting-started/signing-up). If you are interested in offering API access to your customers, please [join our waitlist⁠](https://l.facebook.com/l.php?u=http%3A%2F%2Fbusiness.whatsapp.com%2Flearn-more&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE).
 
 _Business Management API_
 
@@ -1622,7 +1688,7 @@ _On-Premises API_
 
 AWS Service Templates and Template URLs:
 
--   Enterprise: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent.yml?versionId=0pACuWHFUL7U1RjxGcTkAsza7rj.\_5tK](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent.yml%3FversionId%3D0pACuWHFUL7U1RjxGcTkAsza7rj._5tK&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)-   DB: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_db.yml?versionId=4BtYzof0\_z0yl7Pbat9mln8Xj5CYS07Z](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_db.yml%3FversionId%3D4BtYzof0_z0yl7Pbat9mln8Xj5CYS07Z&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)-   Lambda: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_lambda.yml?versionId=o1JUcpuOHKfTU\_hRExFxhib5YCeXeZx.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_lambda.yml%3FversionId%3Do1JUcpuOHKfTU_hRExFxhib5YCeXeZx.&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)-   Network: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_net.yml?versionId=\_D2yaFcS1zEqRLf23t2Wesnh3M.Qw1UF](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_net.yml%3FversionId%3D_D2yaFcS1zEqRLf23t2Wesnh3M.Qw1UF&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)-   Monitoring: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_monitoring.yml?versionId=H534ejFNiHnMpWyy1ERh3kr9TvM5VtyS](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_monitoring.yml%3FversionId%3DH534ejFNiHnMpWyy1ERh3kr9TvM5VtyS&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)
+-   Enterprise: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent.yml?versionId=0pACuWHFUL7U1RjxGcTkAsza7rj.\_5tK](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent.yml%3FversionId%3D0pACuWHFUL7U1RjxGcTkAsza7rj._5tK&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)-   DB: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_db.yml?versionId=4BtYzof0\_z0yl7Pbat9mln8Xj5CYS07Z](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_db.yml%3FversionId%3D4BtYzof0_z0yl7Pbat9mln8Xj5CYS07Z&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)-   Lambda: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_lambda.yml?versionId=o1JUcpuOHKfTU\_hRExFxhib5YCeXeZx.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_lambda.yml%3FversionId%3Do1JUcpuOHKfTU_hRExFxhib5YCeXeZx.&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)-   Network: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_net.yml?versionId=\_D2yaFcS1zEqRLf23t2Wesnh3M.Qw1UF](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_net.yml%3FversionId%3D_D2yaFcS1zEqRLf23t2Wesnh3M.Qw1UF&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)-   Monitoring: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_monitoring.yml?versionId=H534ejFNiHnMpWyy1ERh3kr9TvM5VtyS](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_monitoring.yml%3FversionId%3DH534ejFNiHnMpWyy1ERh3kr9TvM5VtyS&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)
 
 Changelog:
 
@@ -1646,7 +1712,7 @@ _On-Premises API_
 
 AWS Service Templates and Template URLs
 
--   Enterprise: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent.yml?versionId=bNECfwPYZZNGlhzkfCyheoQugydIiui4](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent.yml%3FversionId%3DbNECfwPYZZNGlhzkfCyheoQugydIiui4&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)-   DB: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_db.yml?versionId=RRa0vGtuodHnWNyww8uLyZUAWFOfQ7hN](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_db.yml%3FversionId%3DRRa0vGtuodHnWNyww8uLyZUAWFOfQ7hN&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)-   Lambda: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_lambda.yml?versionId=Sp2BO2LgxkVWH2XTxZ6pgOx3yf1xEqUQ](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_lambda.yml%3FversionId%3DSp2BO2LgxkVWH2XTxZ6pgOx3yf1xEqUQ&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)-   Network: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_net.yml?versionId=uNubDzGLs1WddCGB0EgEa6OMSF1vw4Mn](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_net.yml%3FversionId%3DuNubDzGLs1WddCGB0EgEa6OMSF1vw4Mn&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)-   Monitoring: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_monitoring.yml?versionId=HyC5PA5IZy9d.CFDkNTGDBEyxSHf5gHI](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_monitoring.yml%3FversionId%3DHyC5PA5IZy9d.CFDkNTGDBEyxSHf5gHI&h=AT0db6wDqIboh9xbTi1n8TKLh_S-sxQ-S3Iu9tdCz-EdRh6SNM2nYby9ymIZ_dgsEacg5ZEv5ZGFbb_n-kPiod-3JlKHFuPwQzMUpWGsWl0GN-g3xhy2Le-qny6_Ii3DaqcRx_1ILOPfaw1oBDDdrqGtMtc)
+-   Enterprise: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent.yml?versionId=bNECfwPYZZNGlhzkfCyheoQugydIiui4](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent.yml%3FversionId%3DbNECfwPYZZNGlhzkfCyheoQugydIiui4&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)-   DB: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_db.yml?versionId=RRa0vGtuodHnWNyww8uLyZUAWFOfQ7hN](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_db.yml%3FversionId%3DRRa0vGtuodHnWNyww8uLyZUAWFOfQ7hN&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)-   Lambda: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_lambda.yml?versionId=Sp2BO2LgxkVWH2XTxZ6pgOx3yf1xEqUQ](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_lambda.yml%3FversionId%3DSp2BO2LgxkVWH2XTxZ6pgOx3yf1xEqUQ&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)-   Network: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_net.yml?versionId=uNubDzGLs1WddCGB0EgEa6OMSF1vw4Mn](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_net.yml%3FversionId%3DuNubDzGLs1WddCGB0EgEa6OMSF1vw4Mn&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)-   Monitoring: [https://wa-biz-cfn.s3-us-west-2.amazonaws.com/wa\_ent\_monitoring.yml?versionId=HyC5PA5IZy9d.CFDkNTGDBEyxSHf5gHI](https://l.facebook.com/l.php?u=https%3A%2F%2Fwa-biz-cfn.s3-us-west-2.amazonaws.com%2Fwa_ent_monitoring.yml%3FversionId%3DHyC5PA5IZy9d.CFDkNTGDBEyxSHf5gHI&h=AT5bNuxI3oRfZ5yeq8kdeNAN5LGc78unD9VOUdTB4g7xNsxqypNt-F_Sq4M_G0mVuof9pwMq-Vpd2s9OFjzSB_RPR5Xw5AYz_86NYdruR-nJnUljSKtks7-SEuRLcAIAad1xGfSO2tbEmnV6QwHxIauLENE)
 
 Changelog:
 

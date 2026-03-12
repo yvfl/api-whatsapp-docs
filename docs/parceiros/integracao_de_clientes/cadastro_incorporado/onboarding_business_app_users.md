@@ -1,41 +1,41 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users -->
-<!-- Scraped: 2026-01-24T00:32:37.425Z -->
+<!-- Scraped: 2026-03-10T21:41:53.054Z -->
 
 # Como integrar usuários do app WhatsApp Business ("Coexistência")
 
-Updated: 12 de dez de 2025
+Updated: 4 de fev de 2026
 
-Você pode configurar o Cadastro Incorporado para permitir que os clientes comerciais façam a integração usando a conta do [app WhatsApp Business](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fproducts%2Fbusiness-app&h=AT04nPboUP6dmbfvuDj_qB0MgJvblVYA850Uq3sNmYzs2tbfbxHRhFCajAKXUcizwesZJ3qEYnZjfKAMjRkVd41c9tnTdPGwCtbgeIjSD5YlEgkTG53tuH9vI9IQQpTNWPZfnyptY5nceHNEHrphn9mM5Ro) e o número de telefone. Depois de escolher essa opção e concluir a integração, os clientes poderão usar o app para enviar mensagens aos clientes em grande escala, além de enviar mensagens individuais pelo app WhatsApp Business. Além disso, o histórico de mensagens será sincronizado entre ambos os apps.
+Você pode configurar o Cadastro Incorporado para permitir que os clientes comerciais façam a integração usando a conta do [app WhatsApp Business⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fbusiness.whatsapp.com%2Fproducts%2Fbusiness-app&h=AT7orPwRDOP0N8mpOpGu53Y3hlm2JRNlBSJ2qxlUhl7eJMW5D-vWSBB9slp6sE1akPkr1JbqBAOQ1Bp1ItvmZ_JNyqUAW5g7NHgE_7wlpBiR5QCEx32R7yvEX94YBv2FMYnnMtIZTEk65lXAZeBG5WoeNlA) e o número de telefone. Depois de escolher essa opção e concluir a integração, os clientes poderão usar o app para enviar mensagens aos clientes em grande escala, além de enviar mensagens individuais pelo app WhatsApp Business. Além disso, o histórico de mensagens será sincronizado entre ambos os apps.
 
 ## Como funciona
 
 Se você configurar o Cadastro Incorporado para números de telefone do app WhatsApp Business, os clientes que passarem pelo fluxo terão a opção de conectar uma conta existente do app WhatsApp Business à API de Nuvem:
 
-![](https://scontent-gru1-1.xx.fbcdn.net/v/t39.2365-6/594963134_868478475878739_1087736207670610686_n.png?_nc_cat=104&ccb=1-7&_nc_sid=e280be&_nc_ohc=uukfsL3u1MoQ7kNvwG5nJhk&_nc_oc=Adkdu0LWrWwedr8olEO0afgQ-PQncxKNqlsEVje705VFu_OYOn8vdGMM1-ta_OtiGf4&_nc_zt=14&_nc_ht=scontent-gru1-1.xx&_nc_gid=hhE_dMhFN0bpAcUvCZqGPg&oh=00_AfrI4IoNc9u87VhWZCxBgvBiCa1xwdHyk-WwyduejoeUew&oe=698E5EAA)
+![](https://scontent-gru1-1.xx.fbcdn.net/v/t39.2365-6/594963134_868478475878739_1087736207670610686_n.png?stp=dst-webp&_nc_cat=104&ccb=1-7&_nc_sid=e280be&_nc_ohc=agfUmRs3iykQ7kNvwEqBboQ&_nc_oc=Admqo8-VyC5cbHxDUuVkb9JIryaBYG0Qvmxct0FyEXkiuP2e2VobCo6z5jCVCdsYw5M&_nc_zt=14&_nc_ht=scontent-gru1-1.xx&_nc_gid=rthpI-ipYVauDBm0xWNq1Q&_nc_ss=8&oh=00_Afyr46CS28qUFDsxkE9tXBnOh7D2_jYK91X_RIoLYFL7ww&oe=69CACB6A)
 
 As empresas que escolherem essa opção e inserirem o número de telefone do app WhatsApp Business verão um código de verificação para inserir.
 
-![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/597395987_869663325479495_9037141925476479232_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=WGP6HDjH_Z8Q7kNvwFG1ref&_nc_oc=AdlS4R5e5JnkGqtaHrSSSQWK8tGC5Fya8zdHWZUFGRlOqY1PPIdwZA-Rr9bFkTT7aRo&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=hhE_dMhFN0bpAcUvCZqGPg&oh=00_AfqSzpVA4psP9-9iAQdbr2L30RJfXEVJVe7BArQefdtd7A&oe=698E6579)
+![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/597395987_869663325479495_9037141925476479232_n.png?stp=dst-webp&_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=ufHPum8l5DUQ7kNvwGvt7JE&_nc_oc=Adli-VzpE9MduCmty9VuE_b_U8DkicxvNLEg4e95E6j2WM7BHJ3MQ1hRz66qQrq_utU&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=rthpI-ipYVauDBm0xWNq1Q&_nc_ss=8&oh=00_Afw_OXnOsYE8ioM516esVctiwAbyESIWdrKSDI9nPxqbIw&oe=69CAD239)
 
 A mensagem instrui a empresa a copiar o código de verificação e seguir as etapas:
 
-![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/594964209_9901262313331817_1729648792793400624_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=WRi-QGWAKkYQ7kNvwHPda0S&_nc_oc=AdlcK3OsIWnXm7g0oRVzWwc6V_xoyw4AQhar8l-ETvzGZl6uFjTawDGpHNA2f-P8Y9Q&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=hhE_dMhFN0bpAcUvCZqGPg&oh=00_AfqOArtKxQFA0ykW4RMlgTEtDVkBcK1yboduKsn6qbHlKw&oe=698E5755)
+![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/594964209_9901262313331817_1729648792793400624_n.png?stp=dst-webp&_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=v8DaPtib_yEQ7kNvwF02NwQ&_nc_oc=Adn0W41N7wAXglhC1BxYGNUEgekJ05Hp9wT0jy69YL6VSIlM4QKfwgWeJA_pnORaL1A&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=rthpI-ipYVauDBm0xWNq1Q&_nc_ss=8&oh=00_Afws31JMRZK69z-AFBJiTPXZ8n2rQ9xTui39wZAsz-6-4g&oe=69CAC415)
 
 Você receberá uma mensagem da conta comercial oficial do Facebook. Clique em Conectar.
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/594961051_1373101364351984_5370676390334015719_n.png?_nc_cat=110&ccb=1-7&_nc_sid=e280be&_nc_ohc=4ujaJHs6GigQ7kNvwES-bkt&_nc_oc=Adm5wZ-wlBEbXWV6vWX8lkNQiuOPx8PqztWkoAnTip92or8TIx_tODM_Fd9OACRDDN0&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=hhE_dMhFN0bpAcUvCZqGPg&oh=00_Afr_Gb329fgUbybNuwucJMNXcNg_fAgS29OewbphvP-3bw&oe=698E3FC7)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/594961051_1373101364351984_5370676390334015719_n.png?stp=dst-webp&_nc_cat=110&ccb=1-7&_nc_sid=e280be&_nc_ohc=eiWnv7-kzNwQ7kNvwGmpWNk&_nc_oc=Adk8YbfpP8Mq4uzIpKIJp7K3vxqEReBPcJxaMwC6UKbNmzVJMBU8z0D6dJraTfGvrgk&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=rthpI-ipYVauDBm0xWNq1Q&_nc_ss=8&oh=00_Afw8nqC4y4SNrKdCjF2ov6kQoHuWZH35X2IHInZQ8QDLLw&oe=69CAE4C7)
 
 Toque no botão Conectar à Plataforma do WhatsApp Business para continuar o processo de integração.
 
-![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/597170039_2568406460203291_8926108086902613098_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=7BEdlXiPbWwQ7kNvwHT33bZ&_nc_oc=Adng0LFBxDRMDVBLnvuVibT4fiuNx5FVKRZLcjMhjsKUXeWQGzyHSHA1AdpQwsOKibU&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=hhE_dMhFN0bpAcUvCZqGPg&oh=00_AfruHY1BMEUANpzd7P7gXZdLP7WgFmSIcPKsHmY1XeUrFQ&oe=698E4F56)
+![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/597170039_2568406460203291_8926108086902613098_n.png?stp=dst-webp&_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=wf3UJh3t6HoQ7kNvwHH8rT4&_nc_oc=AdnAoOBFAGI6devl0l-1SQYwD9fXLzgQP9G3M1AfCNC-P8YZShI85GKgvBNuIs0PC8o&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=rthpI-ipYVauDBm0xWNq1Q&_nc_ss=8&oh=00_AfxQ9wv9CkawlDNafTtNtKUM-kAChXYSIgCtKV7i5rJzmg&oe=69CABC16)
 
 Toque no botão Confirmar no app para dar à empresa a opção de compartilhar o histórico de conversas com você.
 
-![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/598069231_2034072847437945_6021154947158300647_n.png?_nc_cat=102&ccb=1-7&_nc_sid=e280be&_nc_ohc=sgE0ZFK2vzAQ7kNvwFgJMmt&_nc_oc=AdkPq2KemB4oFGzkUgqNDZJ09cinnQkzRLNZ1lHohYFfAdq-aYXu_OuDoapTVWtYG1g&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=hhE_dMhFN0bpAcUvCZqGPg&oh=00_AfrJ_UZjVh6C0nRUXMJW5mQxHeqAzJ_c7bqlne4YzeYG4A&oe=698E4BB0)
+![](https://scontent-gru2-2.xx.fbcdn.net/v/t39.2365-6/598069231_2034072847437945_6021154947158300647_n.png?stp=dst-webp&_nc_cat=102&ccb=1-7&_nc_sid=e280be&_nc_ohc=8fjXpZ4nCdsQ7kNvwFV9_qU&_nc_oc=AdmnW1kBQ_p5U4WUZIer8vjXTE2YlGJEzWK1Zpz6sszJRdQOLmlS3y9s2nKuELK3c0s&_nc_zt=14&_nc_ht=scontent-gru2-2.xx&_nc_gid=rthpI-ipYVauDBm0xWNq1Q&_nc_ss=8&oh=00_AfyKdC39l_46LoHLnfMfoBq-3TYmf2aHugaMsYYymu9f7Q&oe=69CAB870)
 
 Cole o código de verificação.
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/594972252_819348487750100_262170023760155076_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=NWQlOOkBQpMQ7kNvwE-jCE2&_nc_oc=AdnA2BDSj51n3-W9F9dH3AF1FMoFHBHhlNsuLbzYHbKZrWssdXUgI2a1JieEfcbKACI&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=hhE_dMhFN0bpAcUvCZqGPg&oh=00_AfoIoyPBO5_lPqWl93RKAEzGEIqCMJzSmrUlG5Km2Lx7YQ&oe=698E51C4)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/594972252_819348487750100_262170023760155076_n.png?stp=dst-webp&_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=JGUICl3um8EQ7kNvwGcvod-&_nc_oc=AdldIBn3pvDKEXw0TEIVe913aRNM1qWtFAywn946lWzDx2pLinZtExWB3LBrmroJ0fU&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=rthpI-ipYVauDBm0xWNq1Q&_nc_ss=8&oh=00_AfzRhvdPmdd3NsbF63nLF4z6pWN37fUED7xnSi5fAZi7kg&oe=69CABE84)
 
 Será possível concluir o fluxo de Cadastro Incorporado. Isso retorna o [número de identificação do ativo](/documentation/business-messaging/whatsapp/embedded-signup/implementation#session-logging-message-event-listener) e o [código de token trocável](/documentation/business-messaging/whatsapp/embedded-signup/implementation#response-callback) para a janela de criação, como de costume. Depois, você pode usar essas informações em chamadas de API para (1) integrar o cliente comercial da mesma forma que faria com qualquer outro cliente comercial e (2) sincronizar os respectivos contatos e histórico de mensagens (se a empresa permitir) para que você possa preencher essas informações no seu app.
 
@@ -63,6 +63,8 @@ Confira o PDF de detalhamento de preços [Soluções de API para usuários do ap
 
 As [janelas de atendimento ao cliente](/documentation/business-messaging/whatsapp/messages/send-messages#customer-service-windows) serão abertas apenas quando um usuário do WhatsApp enviar mensagem a um cliente comercial que já tenha feito a integração à API de Nuvem. Se um usuário do WhatsApp enviar uma mensagem para a empresa antes da integração da API de Nuvem, a empresa só poderá responder com um modelo de mensagem, já que nenhum atendimento ao cliente foi aberto. Se o usuário enviar uma mensagem à empresa depois da integração da API de Nuvem, uma janela de atendimento ao cliente será aberta normalmente e a empresa poderá responder com uma mensagem que não seja um modelo.
 
+A restrição da janela de atendimento de 24 horas se aplica a mensagens enviadas pela API de Nuvem. As mensagens enviadas pelo app WhatsApp Business não estão sujeitas à janela de atendimento ao cliente nem criam, estendem ou afetam as janelas de conversa da API de Nuvem ou os respectivos preços.
+
 ## Comparação de recursos
 
 A tabela a seguir descreve os recursos disponíveis para clientes comerciais que fizeram a integração à API de Nuvem, bem como todas as alterações na funcionalidade do app WhatsApp Business após a integração.
@@ -75,7 +77,7 @@ Os recursos do app WhatsApp Business são compatíveis com a API de Nuvem?
 
 Conversas individuais (1:1)
 
-A edição ou revogação de mensagens não é mais compatível.
+Agora, é possível editar e revogar mensagens.
 
 Compatível.
 
@@ -105,7 +107,7 @@ O recurso de mensagens temporárias será desativado para todas as conversas ind
 
 Não há suporte.
 
-[Mensagem de visualização única](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1077018839582332&h=AT04nPboUP6dmbfvuDj_qB0MgJvblVYA850Uq3sNmYzs2tbfbxHRhFCajAKXUcizwesZJ3qEYnZjfKAMjRkVd41c9tnTdPGwCtbgeIjSD5YlEgkTG53tuH9vI9IQQpTNWPZfnyptY5nceHNEHrphn9mM5Ro)
+[Mensagem de visualização única⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1077018839582332&h=AT7orPwRDOP0N8mpOpGu53Y3hlm2JRNlBSJ2qxlUhl7eJMW5D-vWSBB9slp6sE1akPkr1JbqBAOQ1Bp1ItvmZ_JNyqUAW5g7NHgE_7wlpBiR5QCEx32R7yvEX94YBv2FMYnnMtIZTEk65lXAZeBG5WoeNlA)
 
 O recurso de visualização única será desabilitado para todas as conversas individuais
 
@@ -159,9 +161,9 @@ Não há suporte.
 
 ## Dispositivos conectados
 
-As empresas podem conectar até quatro clientes "companheiros" do WhatsApp à conta do app WhatsApp Business em outros dispositivos (descrito como "[dispositivos conectados](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F378279804439436%2F&h=AT04nPboUP6dmbfvuDj_qB0MgJvblVYA850Uq3sNmYzs2tbfbxHRhFCajAKXUcizwesZJ3qEYnZjfKAMjRkVd41c9tnTdPGwCtbgeIjSD5YlEgkTG53tuH9vI9IQQpTNWPZfnyptY5nceHNEHrphn9mM5Ro)" na Central de Ajuda).
+As empresas podem conectar até quatro clientes "companheiros" do WhatsApp à conta do app WhatsApp Business em outros dispositivos (descrito como "[dispositivos conectados⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F378279804439436%2F&h=AT7orPwRDOP0N8mpOpGu53Y3hlm2JRNlBSJ2qxlUhl7eJMW5D-vWSBB9slp6sE1akPkr1JbqBAOQ1Bp1ItvmZ_JNyqUAW5g7NHgE_7wlpBiR5QCEx32R7yvEX94YBv2FMYnnMtIZTEk65lXAZeBG5WoeNlA)" na Central de Ajuda).
 
-Todos os clientes complementares são compatíveis, exceto [WhatsApp para Windows](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1317564962315842%2F%3Fcms_platform%3Dwindows-desktop&h=AT04nPboUP6dmbfvuDj_qB0MgJvblVYA850Uq3sNmYzs2tbfbxHRhFCajAKXUcizwesZJ3qEYnZjfKAMjRkVd41c9tnTdPGwCtbgeIjSD5YlEgkTG53tuH9vI9IQQpTNWPZfnyptY5nceHNEHrphn9mM5Ro) e [WhatsApp para WearOS](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F564431798835071%2F&h=AT04nPboUP6dmbfvuDj_qB0MgJvblVYA850Uq3sNmYzs2tbfbxHRhFCajAKXUcizwesZJ3qEYnZjfKAMjRkVd41c9tnTdPGwCtbgeIjSD5YlEgkTG53tuH9vI9IQQpTNWPZfnyptY5nceHNEHrphn9mM5Ro).
+Todos os clientes complementares são compatíveis, exceto [WhatsApp para Windows⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1317564962315842%2F%3Fcms_platform%3Dwindows-desktop&h=AT7orPwRDOP0N8mpOpGu53Y3hlm2JRNlBSJ2qxlUhl7eJMW5D-vWSBB9slp6sE1akPkr1JbqBAOQ1Bp1ItvmZ_JNyqUAW5g7NHgE_7wlpBiR5QCEx32R7yvEX94YBv2FMYnnMtIZTEk65lXAZeBG5WoeNlA) e [WhatsApp para WearOS⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F564431798835071%2F&h=AT7orPwRDOP0N8mpOpGu53Y3hlm2JRNlBSJ2qxlUhl7eJMW5D-vWSBB9slp6sE1akPkr1JbqBAOQ1Bp1ItvmZ_JNyqUAW5g7NHgE_7wlpBiR5QCEx32R7yvEX94YBv2FMYnnMtIZTEk65lXAZeBG5WoeNlA).
 
 Quando um cliente comercial integrar a API de Nuvem com uma conta existente do app WhatsApp Business e um número de telefone, todos os apps complementares serão desvinculados da conta. Em seguida, a empresa poderá vincular novamente os apps complementares compatíveis.
 
@@ -197,7 +199,7 @@ Adicione uma propriedade `featureType` definida como `whatsapp_business_app_onbo
 
 Para verificar se você habilitou o recurso corretamente, acesse a sua implementação do Cadastro Incorporado. Se a tela de seleção de [conta do WhatsApp Business](/documentation/business-messaging/whatsapp/embedded-signup/default-flow#business-asset-selection-screen) for substituída por uma tela que oferecer a opção de conectar sua conta do WhatsApp Business existente, o recurso será habilitado:
 
-![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/583640207_829673969692795_3749727619181245789_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e280be&_nc_ohc=3rJ7QjKPViUQ7kNvwFB97IR&_nc_oc=AdlYu18N8XP5A-hNo-Q4PFFsJ6xpdvmTE-WfB5rLcEwlJWdXoXoyZ1zv2C4B79HMtVQ&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=hhE_dMhFN0bpAcUvCZqGPg&oh=00_Afq7nTrPMXHikpo1myfgXR7Wx7DQ4JSy6DkOfOufDKHn9g&oe=698E5EA5)
+![](https://scontent-gru1-2.xx.fbcdn.net/v/t39.2365-6/583640207_829673969692795_3749727619181245789_n.png?stp=dst-webp&_nc_cat=108&ccb=1-7&_nc_sid=e280be&_nc_ohc=7E1lGd9g9wcQ7kNvwGLH9XU&_nc_oc=AdleqaxK-LTEfY3DtguaxtBbw6wDbzlot-tBCaxnRYU-4WpWVLtEsv2QVtsSvi35pC4&_nc_zt=14&_nc_ht=scontent-gru1-2.xx&_nc_gid=rthpI-ipYVauDBm0xWNq1Q&_nc_ss=8&oh=00_AfziS5HMHzoHIxK0US_vwlQT__vDxTmMTfVVy5RFoyz9ew&oe=69CACB65)
 
 ### Etapa 3: exibir o Cadastro Incorporado para os clientes
 
@@ -211,7 +213,7 @@ A integração e a sincronização podem levar vários minutos, dependendo de di
 
 Quando você concluir o **processo de integração**, o app WhatsApp Business será atualizado automaticamente e indicará à empresa que o número de telefone agora está conectado à API:
 
-![](https://scontent-gru1-1.xx.fbcdn.net/v/t39.2365-6/476788868_1168860751914222_5506074718266109385_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e280be&_nc_ohc=8gM2Q0PxJcYQ7kNvwG5XuSL&_nc_oc=AdkOvS6eHQvI0T0WanBBAkzZEZrLzULCFC4mQRQshLnppEV4uMaVxSOMVsQWmpV2A8g&_nc_zt=14&_nc_ht=scontent-gru1-1.xx&_nc_gid=hhE_dMhFN0bpAcUvCZqGPg&oh=00_AfoP7dEekPkDoi4gT9vRcaGe--XoGwG3XTXp6WRxSU-L1A&oe=698E5050)
+![](https://scontent-gru1-1.xx.fbcdn.net/v/t39.2365-6/476788868_1168860751914222_5506074718266109385_n.jpg?stp=dst-webp&_nc_cat=104&ccb=1-7&_nc_sid=e280be&_nc_ohc=4n6V0e4HMB8Q7kNvwHjtDPJ&_nc_oc=Adn5XvLsbx9YOExgKmqevOSyHQJnGJm7D6S4UrXbwq-u5H7-Uxg2LRUpdvfM_GExwJ4&_nc_zt=14&_nc_ht=scontent-gru1-1.xx&_nc_gid=rthpI-ipYVauDBm0xWNq1Q&_nc_ss=8&oh=00_AfwlfFrbBljM84gqnPmXulBLzgmrnNBRMvy3TeD7uvSYsg&oe=69CABD10)
 
 Depois de concluir a sincronização do histórico de mensagens da empresa, informe ao cliente que o processo foi finalizado.
 
@@ -243,11 +245,11 @@ Se quiser, você pode verificar se o número de telefone comercial do cliente es
 Exemplo de solicitação:
 
 ```
-curl 'https://graph.facebook.com/v24.0/106540352242922?fields=is_on_biz_app,platform_type' \
+curl 'https://graph.facebook.com/v25.0/106540352242922?fields=is_on_biz_app,platform_type' \
 -H 'Authorization: Bearer EAAJB...'
 ```
 
-Exemplo de resposta:
+Exemplo de resposta
 
 Se `is_on_biz_app` for `true` e `platform_type` for `CLOUD_API`, o número de telefone comercial poderá usar a API de Nuvem e o app WhatsApp Business:
 
@@ -265,7 +267,7 @@ Verifique se você assinou a WABA da empresa quando [fez a integração](#onboar
 
 Use o ponto de extremidade [POST /<BUSINESS\_PHONE\_NUMBER\_ID>/smb\_app\_data](/docs/graph-api/reference/whats-app-business-account-to-number-current-status/smb_app_data#Creating) para solicitar as informações de contato do cliente comercial.
 
-Se o pedido for bem-sucedido, um conjunto de webhooks [smb\_app\_state\_sync](#smb-app-state-sync) será disparado descrevendo os contatos do WhatsApp no app WhatsApp Business da empresa. Adições ou alterações futuras aos [contatos](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1270784217226727%2F&h=AT04nPboUP6dmbfvuDj_qB0MgJvblVYA850Uq3sNmYzs2tbfbxHRhFCajAKXUcizwesZJ3qEYnZjfKAMjRkVd41c9tnTdPGwCtbgeIjSD5YlEgkTG53tuH9vI9IQQpTNWPZfnyptY5nceHNEHrphn9mM5Ro) do WhatsApp da empresa acionarão um webhook smb\_app\_state\_sync correspondente.
+Se o pedido for bem-sucedido, um conjunto de webhooks [smb\_app\_state\_sync](#smb-app-state-sync) será disparado descrevendo os contatos do WhatsApp no app WhatsApp Business da empresa. Adições ou alterações futuras aos [contatos⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1270784217226727%2F&h=AT7orPwRDOP0N8mpOpGu53Y3hlm2JRNlBSJ2qxlUhl7eJMW5D-vWSBB9slp6sE1akPkr1JbqBAOQ1Bp1ItvmZ_JNyqUAW5g7NHgE_7wlpBiR5QCEx32R7yvEX94YBv2FMYnnMtIZTEk65lXAZeBG5WoeNlA) do WhatsApp da empresa acionarão um webhook smb\_app\_state\_sync correspondente.
 
 Essa etapa pode ser realizada apenas uma vez. Se for necessário executá-lo novamente, o cliente precisará cancelar a integração e, depois, concluir o fluxo de Cadastro Incorporado outra vez.
 
@@ -285,7 +287,7 @@ curl -X  POST \
 
 #### Exemplo de resposta
 
-Caso a solicitação seja bem-sucedida:
+Em caso de sucesso:
 
 ```
 {
@@ -398,15 +400,87 @@ Descreve as alterações feitas em uma conta do WhatsApp Business ("WABA").
 {  "object": "whatsapp_business_account",  "entry": [    {      "id": "102290129340398",      "time": 1739212624,      "changes": [        {          "value": {              "phone_number": "15550783881",              "event": "PARTNER_REMOVED",           },          "field": "account_update"        }      ]    }  ]}
 ```
 
+### account\_offboarded
+
+Descreve as alterações em uma conta do WhatsApp Business ("WABA") quando a empresa é removida devido a uma mudança ou reinscrição do dispositivo.
+
+### Eventos de gatilho
+
+-   O número de telefone comercial associado à conta do WhatsApp Business muda de dispositivo e é registrado novamente.-   O status da conta do WhatsApp Business é alterado devido à remoção do Coexistence.
+
+#### Sintaxe da carga
+
+```
+{
+ "entry": [
+   {
+     "id": "<WABA_ID>",
+     "time": "<WEBHOOK_TIMESTAMP>",
+     "changes": [
+       {
+         "value": {
+           "event": "ACCOUNT_OFFBOARDED"
+         },
+         "field": "account_update"
+       }
+     ]
+   }
+ ],
+ "object": "whatsapp_business_account"
+}
+```
+
+#### Exemplo de carga
+
+```
+{ "entry": [   {     "id": "862475293675413",     "time": 1768477204,     "changes": [       {         "value": {           "event": "ACCOUNT_OFFBOARDED"         },         "field": "account_update"       }     ]   } ], "object": "whatsapp_business_account"}
+```
+
+### account\_reconnected
+
+Descreve quando uma conta do WhatsApp Business ("WABA") é reconectada (reintegrada) depois de ter sido desconectada.
+
+### Eventos de gatilho
+
+-   A empresa é reintegrada para o mesmo parceiro após a desintegração.-   O status da conta do WhatsApp Business será alterado para "reconectada".
+
+#### Sintaxe da carga
+
+```
+{
+ "entry": [
+   {
+     "id": "<WABA_ID>",
+     "time": "<WEBHOOK_TIMESTAMP>",
+     "changes": [
+       {
+         "value": {
+           "event": "ACCOUNT_RECONNECTED"
+         },
+         "field": "account_update"
+       }
+     ]
+   }
+ ],
+ "object": "whatsapp_business_account"
+}
+```
+
+#### Exemplo de carga
+
+```
+{ "entry": [   {     "id": "862475293675413",     "time": 1768477203,     "changes": [       {         "value": {           "event": "ACCOUNT_RECONNECTED"         },         "field": "account_update"       }     ]   } ], "object": "whatsapp_business_account"}
+```
+
 ### Editar
 
-Esta referência descreve os eventos de edição e o conteúdo da carga do webhook de mensagens da conta do WhatsApp Business para respostas a mensagens interativas.
+Essa referência descreve os eventos de edição e o conteúdo da carga do webhook de mensagens da conta do WhatsApp Business para respostas a mensagens interativas.
 
 ### Eventos de gatilho
 
 -   Um usuário do WhatsApp edita uma mensagem enviada anteriormente (texto, mídia com legenda).-   Um usuário do WhatsApp edita uma mensagem enviada anteriormente até 15 minutos depois do envio.
 
-### Sintaxe
+### Sintaxe da carga
 
 ```
 {
@@ -955,11 +1029,11 @@ O conteúdo da mensagem de mídia na primeira conversa não é descrito. Em vez 
 
 ### smb\_app\_state\_sync
 
-Descreve um ou mais [contatos do WhatsApp](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1270784217226727%2F&h=AT04nPboUP6dmbfvuDj_qB0MgJvblVYA850Uq3sNmYzs2tbfbxHRhFCajAKXUcizwesZJ3qEYnZjfKAMjRkVd41c9tnTdPGwCtbgeIjSD5YlEgkTG53tuH9vI9IQQpTNWPZfnyptY5nceHNEHrphn9mM5Ro) no app WhatsApp Business de um cliente comercial.
+Descreve um ou mais [contatos do WhatsApp⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1270784217226727%2F&h=AT7orPwRDOP0N8mpOpGu53Y3hlm2JRNlBSJ2qxlUhl7eJMW5D-vWSBB9slp6sE1akPkr1JbqBAOQ1Bp1ItvmZ_JNyqUAW5g7NHgE_7wlpBiR5QCEx32R7yvEX94YBv2FMYnnMtIZTEk65lXAZeBG5WoeNlA) no app WhatsApp Business de um cliente comercial.
 
 #### Eventos de gatilho:
 
--   um provedor de soluções [sincroniza os contatos do WhatsApp](#step-1-initiate-contacts-synchronization) de um cliente comercial que foi integrado com um número de telefone do app WhatsApp Business-   um cliente comercial, integrado por um provedor de soluções, com um número de telefone do app WhatsApp Business adiciona, edita ou remove um [contato do WhatsApp](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1270784217226727%2F&h=AT04nPboUP6dmbfvuDj_qB0MgJvblVYA850Uq3sNmYzs2tbfbxHRhFCajAKXUcizwesZJ3qEYnZjfKAMjRkVd41c9tnTdPGwCtbgeIjSD5YlEgkTG53tuH9vI9IQQpTNWPZfnyptY5nceHNEHrphn9mM5Ro)
+-   um provedor de soluções [sincroniza os contatos do WhatsApp](#step-1-initiate-contacts-synchronization) de um cliente comercial que foi integrado com um número de telefone do app WhatsApp Business-   um cliente comercial, integrado por um provedor de soluções, com um número de telefone do app WhatsApp Business adiciona, edita ou remove um [contato do WhatsApp⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Ffaq.whatsapp.com%2F1270784217226727%2F&h=AT7orPwRDOP0N8mpOpGu53Y3hlm2JRNlBSJ2qxlUhl7eJMW5D-vWSBB9slp6sE1akPkr1JbqBAOQ1Bp1ItvmZ_JNyqUAW5g7NHgE_7wlpBiR5QCEx32R7yvEX94YBv2FMYnnMtIZTEk65lXAZeBG5WoeNlA)
 
 #### Sintaxe da carga
 

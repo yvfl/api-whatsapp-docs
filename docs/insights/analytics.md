@@ -1,13 +1,13 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/analytics -->
-<!-- Scraped: 2026-01-24T00:25:48.873Z -->
+<!-- Scraped: 2026-03-10T21:36:00.296Z -->
 
 # Análise
 
-Updated: 12 de dez de 2025
+Updated: 12 de fev de 2026
 
 A partir de 1º de dezembro de 2025, a janela máxima de retrospectiva para análises de mensagens, conversas e preços será alterada de dez anos para um ano. A janela de retrospectiva para análises de modelos e grupos de modelos não será afetada e continuará sendo de 90 dias.
 
-Este documento descreve como consultar análises de mensagens, conversas e modelos. Isso inclui o número de mensagens enviadas de um número de telefone comercial, o número de conversas e os respectivos custos para uma conta comercial do WhatsApp (WABA) ou o número de vezes que determinado modelo foi lido.
+Este documento descreve como consultar análises de mensagens, conversas, modelos e grupos. Isso inclui o número de mensagens enviadas de um número de telefone comercial, o número de conversas e os respectivos custos para uma conta do WhatsApp Business (WABA) ou o número de vezes que determinado modelo foi lido.
 
 Somente métricas de números de telefone comerciais e modelos associados à sua WABA no momento da solicitação serão incluídas nas respostas.
 
@@ -22,13 +22,13 @@ curl -g 'https://graph.facebook.com/<API_VERSION>/<WHATSAPP_BUSINESS_ACCOUNT_ID>
 -H 'Authorization: Bearer <ACCESS_TOKEN>'
 ```
 
-### Parâmetros da solicitação
+### Parâmetros de solicitação
 
 Espaço reservado
 
 Descrição
 
-Exemplo de valor
+Valor de exemplo
 
 `<FIELD>`
 
@@ -36,7 +36,7 @@ Exemplo de valor
 
 Métrica. O valor pode ser um destes:
 
--   [`analytics`](#messaging-analytics)-   [`conversation_analytics`](#conversation-analytics)-   [`pricing_analytics`](#pricing-analytics)-   [`template_analytics`](#template-analytics)-   [`template_group_analytics`](#template-group-analytics)-   [`call_analytics`](#call-analytics)
+-   [`analytics`](#messaging-analytics)-   [`conversation_analytics`](#conversation-analytics)-   [`pricing_analytics`](#pricing-analytics)-   [`template_analytics`](#template-analytics)-   [`template_group_analytics`](#template-group-analytics)-   [`call_analytics`](#call-analytics)-   [`group_analytics`](#group-analytics)
 
 `analytics`
 
@@ -48,7 +48,7 @@ Parâmetro de filtragem de métricas. Inclua parâmetros adicionais de filtragem
 
 Consulte possíveis valores nestas seções:
 
--   [Parâmetros de análise de mensagens](#messaging-analytics-parameters)-   [Parâmetros de análise de conversas](#conversation-analytics-parameters)-   [Parâmetros de análise de modelos](#template-analytics-parameters)-   [Parâmetros de análise de grupo de modelos](#template-group-analytics-parameters)-   [Parâmetros de análise de ligações](#call-analytics-parameters)
+-   [Parâmetros de análise de mensagens](#messaging-analytics-parameters)-   [Parâmetros de análise de conversas](#conversation-analytics-parameters)-   [Parâmetros de análise de modelos](#template-analytics-parameters)-   [Parâmetros de análise de grupo de modelos](#template-group-analytics-parameters)-   [Parâmetros de análise de ligações](#call-analytics-parameters)-   [Parâmetros de análise de grupos](#group-analytics-parameters)
 
 `.start(1543543200).end(1544148000).granularity(DAY)`
 
@@ -123,7 +123,7 @@ São os países referentes à análise que você quer recuperar. Forneça uma ma
 **Solução sugerida:** use os seguintes parâmetros de filtragem: `start`, `end`, `granularity`.
 
 ```
-curl -i -X GET "https://graph.facebook.com/v24.0/102290129340398
+curl -i -X GET "https://graph.facebook.com/v25.0/102290129340398
   ?fields=analytics
   .start(1543543200)
   .end(1544148000)
@@ -145,7 +145,7 @@ O campo `conversation_analytics` fornece [informações de custo e conversa](/do
 
 Nome
 
-Descrição _(clique na seta da coluna da esquerda para ver as opções compatíveis.)_
+Descrição _(clique na seta da coluna à esquerda para ver as opções compatíveis)_
 
 `start`
 
@@ -254,7 +254,7 @@ Nesse caso, não é preciso especificar `country_codes`, `metric_types`, `conver
 
 ```
 curl -i -X GET
-"https://graph.facebook.com/v24.0/102290129340398
+"https://graph.facebook.com/v25.0/102290129340398
   ?fields=conversation_analytics
   .start(1685602800).end(1688194800)
   .granularity(MONTHLY)
@@ -281,7 +281,7 @@ Nesse caso, não é preciso especificar `country_codes`, `metric_types`, `conver
 
 ```
 curl -i -X GET \
-"https://graph.facebook.com/v24.0/102290129340398
+"https://graph.facebook.com/v25.0/102290129340398
   ?fields=conversation_analytics
   .start(1685602800)
   .end(1685689200)
@@ -308,7 +308,7 @@ Uma resposta bem-sucedida retornará um objeto `conversation_analytics` com os d
 Nesse caso, não é preciso especificar `country_codes`, `metric_types`, `conversation_types`, `conversation_directions` nem `conversation_categories`. Se você não enviar um valor para esses campos, retornaremos todas as opções disponíveis. Depois de configurar o URL, faça uma solicitação GET:
 
 ```
-curl -i -X GET "https://graph.facebook.com/v24.0/102290129340398
+curl -i -X GET "https://graph.facebook.com/v25.0/102290129340398
       ?fields=conversation_analytics
       .start(1643702400).end(1646121600)
       .granularity(MONTHLY)
@@ -328,7 +328,7 @@ Uma resposta bem-sucedida retornará um objeto `conversation_analytics` com os d
 Solicitação:
 
 ```
-curl -i -X GET "https://graph.facebook.com/v24.0/102290129340398
+curl -i -X GET "https://graph.facebook.com/v25.0/102290129340398
   ?fields=conversation_analytics
   .start(1685527200)
   .end(1685613600)
@@ -350,7 +350,7 @@ Solicitação:
 
 ```
 curl -i -X GET \
- "https://graph.facebook.com/v24.0/102290129340398
+ "https://graph.facebook.com/v25.0/102290129340398
   ?fields=conversation_analytics
   .start(1685527200)
   .end(1685613600)
@@ -392,7 +392,7 @@ Filtro
 
 Descrição
 
-Exemplo de valor
+Valor de exemplo
 
 `<COUNTRY_CODES>`
 
@@ -542,10 +542,10 @@ O valor da propriedade `tier` representa uma concatenação dos limites inferior
 
 -   Para verificar o nível de volume atual, leia os valores `tier`, `country` e `pricing_category`. O número inteiro `tier` de `<UPPER>` (o número inteiro depois dos dois pontos) indica seu nível atual para `country` e `pricing_category` (por exemplo, Índia e utilidade, respectivamente).-   Se quiser saber quantas mensagens você precisa enviar para atingir o próximo nível em um `country` e uma `pricing_category`, subtraia o número inteiro de `volume` do número inteiro `<UPPER>` do valor do nível.-   Os níveis de volume estarão disponíveis somente para mensagens de modelo de autenticação e utilidade. Para mensagens de modelo de marketing (às quais os níveis de volume não serão aplicados), o nível será definido como `0:MAX`.-   A propriedade `tier` será omitida em pontos de dados que representam mensagens gratuitas, já que elas não contribuem para a contagem dos níveis.-   Os níveis de volume serão determinados exclusivamente pela Meta. Todos os dados de insights são aproximados devido a pequenas variações no processamento de dados. Não se deve depositar confiança excessiva nos dados de insights.
 
-### Exemplo de solicitação
+### Exemplo de pedido
 
 ```
-curl 'https://graph.facebook.com/v24.0/161311403722088?fields=pricing_analytics.start(1748761200).end(1749687703).granularity(DAILY).dimensions(PRICING_CATEGORY,PRICING_TYPE,TIER,COUNTRY).country_codes(US,IN)' \
+curl 'https://graph.facebook.com/v25.0/161311403722088?fields=pricing_analytics.start(1748761200).end(1749687703).granularity(DAILY).dimensions(PRICING_CATEGORY,PRICING_TYPE,TIER,COUNTRY).country_codes(US,IN)' \
 -H 'Authorization: Bearer EAAJB'
 ```
 
@@ -569,7 +569,7 @@ Exibir dados no fuso horário configurado da WABA transmitindo o parâmetro `use
 
 ### Limitações
 
--   As análises de modelos só estarão disponíveis na API Local se a conta não estiver usando a API de Nuvem para isso.-   A análise de cliques no botão está disponível apenas para modelos categorizados como `MARKETING` ou `UTILITY`.-   Não há compatibilidade com WABAs pertencentes ou compartilhadas com contas empresariais da Meta na União Europeia, no Reino Unido ou no Japão, tampouco com WABAs que tenham um número de telefone comercial com código do país desses locais.-   As métricas de conversão fora do site estão disponíveis apenas para empresas integradas à API de Mensagem de Marketing para o WhatsApp.-   Os dados de eventos de leitura e clique em mensagens de modelo do WhatsApp estão disponíveis por até sete dias a partir da data de envio da mensagem. Depois desse período, o número de leituras/cliques correspondente será redefinido para zero e nenhuma outra atualização será registrada para essas mensagens.
+-   A análise de cliques no botão está disponível apenas para modelos categorizados como `MARKETING` ou `UTILITY`.-   Não há compatibilidade com WABAs pertencentes ou compartilhadas com contas empresariais da Meta na União Europeia, no Reino Unido ou no Japão, tampouco com WABAs que tenham um número de telefone comercial com código do país desses locais.-   As métricas de conversão fora do site estão disponíveis apenas para empresas integradas à API de Mensagem de Marketing para o WhatsApp.-   Os dados de eventos de leitura e clique em mensagens de modelo do WhatsApp estão disponíveis por até sete dias a partir da data de envio da mensagem. Depois desse período, o número de leituras/cliques correspondente será redefinido para zero e nenhuma outra atualização será registrada para essas mensagens.
 
 ### Como confirmar as análises de modelos
 
@@ -597,7 +597,7 @@ Nome
 
 Descrição
 
-Exemplo de valor
+Valor de exemplo
 
 `start`
 
@@ -698,11 +698,11 @@ Se forem"true", os parâmetros de início e término deverão estar no formato A
 Exemplo de solicitação:
 
 ```
-curl -g 'https://graph.facebook.com/v24.0/109259195336416/template_analytics?start=1718064000&end=1718122745&granularity=daily&metric_types=cost%2Cclicked%2Cdelivered%2Cread%2Csent&template_ids=[1421988012088524%2C2632273056924580]' \
+curl -g 'https://graph.facebook.com/v25.0/109259195336416/template_analytics?start=1718064000&end=1718122745&granularity=daily&metric_types=cost%2Cclicked%2Cdelivered%2Cread%2Csent&template_ids=[1421988012088524%2C2632273056924580]' \
 -H 'Authorization: Bearer EAAJB...'
 ```
 
-Exemplo de resposta
+Exemplo de resposta:
 
 ```
 {  "data": [    {      "granularity": "DAILY",      "product_type": "cloud_api", // Only available to businesses in the Marketing Messages API for WhatsApp alpha      "data_points": [        {          "template_id": "1421988012088524",          "start": 1718064000,          "end": 1718150400,          "sent": 1,          "delivered": 1,          "read": 1,          "cost": [            {              "type": "amount_spent",              "value": 0.01            },            {              "type": "cost_per_delivered",              "value": 0.01            }          ]        },        {          "template_id": "2632273056924580",          "start": 1718064000,          "end": 1718150400,          "sent": 1,          "delivered": 1,          "read": 1,          "clicked": [            {              "type": "quick_reply_button",              "button_content": "Contact Support",              "count": 108            },            {              "type": "unique_url_button",              "button_content": "Tell me more",              "count": 16            }          ],          "cost": [            {              "type": "amount_spent",              "value": 0.03            },            {              "type": "cost_per_delivered",              "value": 0.03            },            {              "type": "cost_per_url_button_click",              "value": 0.03            }          ]        }      ]    }  ],  "paging": {    "cursors": {      "before": "MAZDZD",      "after": "MjQZD"    }  }}
@@ -732,13 +732,13 @@ POST /<TEMPLATE_ID>
   &category=<TEMPLATE_CATEGORY>
 ```
 
-#### Parâmetros da solicitação
+#### Parâmetros de solicitação
 
 Espaço reservado
 
 Descrição
 
-Exemplo de valor
+Valor de exemplo
 
 `<WHATSAPP_TEMPLATE_ID>`
 
@@ -774,10 +774,10 @@ Se você definir a categoria do modelo como um valor diferente da opção atual,
 
 `marketing`
 
-#### Exemplo de solicitação
+#### Exemplo de pedido
 
 ```
-curl -X POST 'https://graph.facebook.com/v24.0/245435364965041?cta_url_link_tracking_opted_out=true&category=marketing' \
+curl -X POST 'https://graph.facebook.com/v25.0/245435364965041?cta_url_link_tracking_opted_out=true&category=marketing' \
 -H 'Authorization: Bearer EAAJB...'
 ```
 
@@ -918,10 +918,10 @@ Se forem"true", os parâmetros de início e término deverão estar no formato A
 
 `true`
 
-### Exemplo de solicitação
+### Exemplo de pedido
 
 ```
-curl -g 'https://graph.facebook.com/v24.0/102290129340398/template_group_analytics?granularity=daily&start=1738465116&end=1739559516&metric_types=sent,delivered,read&template_group_ids=[1044106240855852]' \
+curl -g 'https://graph.facebook.com/v25.0/102290129340398/template_group_analytics?granularity=daily&start=1738465116&end=1739559516&metric_types=sent,delivered,read&template_group_ids=[1044106240855852]' \
 -H 'Authorization: Bearer EAAJB...'
 ```
 
@@ -1052,7 +1052,7 @@ _Matriz de enumerações_
 **Solução sugerida:** use estes parâmetros de filtragem: `start`, `end`, `granularity`, `directions`.
 
 ```
-curl -i -X GET "https://graph.facebook.com/v24.0/102290129340398
+curl -i -X GET "https://graph.facebook.com/v25.0/102290129340398
   ?fields=call_analytics
   .start(1759302000)
   .end(1767168000)
@@ -1065,6 +1065,108 @@ Uma resposta bem-sucedida retornará um objeto `call_analytics` com os dados sol
 
 ```
 {  "call_analytics": {    "granularity": "DAILY",    "directions": "USER_INITIATED",    "data_points": [      {          "start": 1765958400,          "end": 1766044800,          "cost": 0.47795,          "count": 35,          "average_duration": 106      },      {          "start": 1760943600,          "end": 1761030000,          "cost": 0,          "count": 20,          "average_duration": 103      },      {          "start": 1760857200,          "end": 1760943600,          "cost": 0,          "count": 24,          "average_duration": 103      },      # more data points    ]  },  "id": "102290129340398"}
+```
+
+## Análise de grupo
+
+A API de Análise de Grupo permite obter o número de mensagens enviadas, entregues e lidas nos grupos do WhatsApp, assim como o número de participantes que entraram ou saíram.
+
+Os dados são retornados com granularidade diária, com uma janela de histórico de até 90 dias.
+
+### Sintaxe da solicitação
+
+```
+GET /<WHATSAPP_BUSINESS_ACCOUNT_ID>/group_analytics
+  ?granularity=daily
+  &start=<START_TIME>
+  &end=<END_TIME>
+  &metric_types=[<METRIC_TYPES>]
+  &group_ids=[<GROUP_IDS>]
+```
+
+### Parâmetros de análise de grupo
+
+Espaço reservado
+
+Descrição
+
+Valor de exemplo
+
+`<START_TIME>`
+
+_Registro de data e hora UNIX_
+
+**Obrigatório.**
+
+É a hora de início do intervalo para o qual você está recuperando análises. Não pode ser maior que 90 dias a partir da data atual.
+
+`1685548801`
+
+`<END_TIME>`
+
+_Registro de data e hora UNIX_
+
+**Obrigatório.**
+
+É a hora de término do intervalo para o qual você está recuperando análises.
+
+`1685721600`
+
+`<GROUP_IDS>`
+
+_Matriz de strings_
+
+**Obrigatório.**
+
+É a matriz de IDs de grupo para os quais você quer consultar métricas.
+
+No momento, só é compatível com um ID.
+
+`["GROUP_ID"]`
+
+`<GRANULARITY>`
+
+_String_
+
+**Opcional.**
+
+É o detalhamento desejado para a análise.
+
+Os valores podem ser os seguintes:
+
+-   `DAILY`
+
+Padrão: `DAILY`.
+
+`DAILY`
+
+`<METRIC_TYPES>`
+
+_Matriz de strings_
+
+**Obrigatório.**
+
+É a matriz de métricas que você quer receber.
+
+Os valores podem ser os seguintes:
+
+-   `SENT` – O número de mensagens enviadas pela empresa ao grupo.-   `DELIVERED` – Refere-se ao número de vezes que uma mensagem foi entregue a um participante do grupo.-   `READ` – Refere ao número de vezes que uma mensagem foi lida por um participante no grupo.-   `PARTICIPANTS_JOINED` – Refere-se ao número de vezes que um participante entrou no grupo.-   `PARTICIPANTS_LEFT` – Refere-se ao número de vezes que um participante saiu do grupo.
+
+`["SENT","READ","PARTICIPANTS_JOINED"]`
+
+### Exemplo de pedido
+
+```
+curl -g 'https://graph.facebook.com/v25.0/102290129340398/group_analytics?start=1764662400&end=1764921600&granularity=DAILY&group_ids=['GROUP_ID']&metric_types=['SENT','DELIVERED', 'READ','PARTICIPANTS_JOINED','PARTICIPANTS_LEFT']' \
+-H 'Authorization: Bearer EAAJB...'
+```
+
+### Exemplo de resposta
+
+O exemplo abaixo foi truncado com uma elipse (`...`) para fins de concisão.
+
+```
+{  "data": [    {      "granularity": "DAILY",      "data_points": [          {            "group_id": "GROUP_ID",            "start": 1685548801,            "end": 1685635200,            "sent": 100,            "delivered": 250,            "read": 200,            "joined": 3,            "left": 1          },          {            "group_id": "GROUP_ID",            "start": 1685635201,            "end": 1685721600,            "sent": 80,            "delivered": 200,            "read": 150,            "joined": 1,            "left": 0          },          ...        ]    }  ],  "paging": {    "cursors": {      "before": "MAZDZD",      "after": "MjQZD"    }  }}
 ```
 
 ## Referência

@@ -1,9 +1,9 @@
 <!-- Source: https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/features -->
-<!-- Scraped: 2026-01-24T00:37:06.484Z -->
+<!-- Scraped: 2026-03-10T21:45:39.563Z -->
 
 # Recursos
 
-Updated: 12 de dez de 2025
+Updated: 10 de fev de 2026
 
 A API de Mensagens de Marketing para o WhatsApp (anteriormente conhecida como API de Mensagens de Marketing Lite) agora está disponível para todos.
 
@@ -123,7 +123,7 @@ API de Nuvem (compatível com mensagens de autenticação, utilidade, serviço e
 
 **Sim**
 
-**Certificação de conformidade:** confira os recursos de conformidade disponíveis na [Central de Conformidade para Business Messaging](https://www.facebook.com/business/business-messaging/compliance).
+**Certificação de conformidade:** confira os recursos de conformidade disponíveis na [Central de Conformidade para Business Messaging⁠](https://www.facebook.com/business/business-messaging/compliance).
 
 **Sim:** certificação para LGPD, RGPD, relatório de auditoria do sistema, SOC e ISO27001.
 
@@ -135,7 +135,7 @@ API de Nuvem (compatível com mensagens de autenticação, utilidade, serviço e
 
 **Sim**
 
-**Atualizações de status do serviço em tempo real:** as [métricas de disponibilidade e tempo de atividade](/documentation/business-messaging/whatsapp/support/api-status-page) estão disponíveis em [metastatus.com](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api%3Ffbclid%3DIwY2xjawM2uLNleHRuA2FlbQIxMQBicmlkETFPWE5PUldSeE95a2tuMnA1AR4r-Af63nidsmVRDdEJ4WtriGpxdlenOA60_uzhuqXHr06lE0-d2S9pnJm_Ww_aem_WtrDEZEwN2EZflsD4vmusQ&h=AT1_xce-KrxWuhK-I02YFyHA1MGf8zBQCTm76kkt_VjoMShCO_eSAP8cM3kyhyiK5QTA6m0fU4nIBfN1ZNQS_QU4ezqLSEMHPqWxFxOG4XFgR8FTVX80JYnG2a1I4GyYt0SzUk7T_A_bX7ZKC_GVAn01dus).
+**Atualizações de status do serviço em tempo real:** as [métricas de disponibilidade e tempo de atividade](/documentation/business-messaging/whatsapp/support/api-status-page) estão disponíveis em [metastatus.com⁠](https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api%3Ffbclid%3DIwY2xjawM2uLNleHRuA2FlbQIxMQBicmlkETFPWE5PUldSeE95a2tuMnA1AR4r-Af63nidsmVRDdEJ4WtriGpxdlenOA60_uzhuqXHr06lE0-d2S9pnJm_Ww_aem_WtrDEZEwN2EZflsD4vmusQ&h=AT652Be3xi0RrToSgzRGknoFsZqrY7Y4NSx6I9SsSX8K5UyRLmg9H2t0QORpnAzsAQwHjMtBM_uUgzqhzvMDhhsAEYaCc779EJYK68NHLYM4feJDsdyMmTsxWKJZ-zmZgbpWYDN2Wb0m4PWENJpXovUEJJs).
 
 **Sim**
 
